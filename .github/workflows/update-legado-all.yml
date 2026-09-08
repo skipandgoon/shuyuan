@@ -1,0 +1,36 @@
+name: Auto-merge legado-all
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'legado/*.json'
+      - '!legado/legado-all.json'
+
+permissions:
+  contents: write
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run merge script
+        run: python scripts/merge_legado_all.py
+
+      - name: Commit and push legado-all.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add legado/legado-all.json
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: auto-update legado-all.json"
+            git push
+          else
+            echo "No change to legado-all.json"
+          fi
