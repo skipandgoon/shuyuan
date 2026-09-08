@@ -1,17 +1,17 @@
 {
  "久久小说": {
   "sourceName": "久久小说",
-  "sourceUrl": "https://www.aijjxs.com/",
+  "sourceUrl": "https://www.ijjxsxzw.com/",
   "sourceType": "text",
   "enable": 1,
   "weight": "9999",
-  "desc": "久久小说下载网（aijjxs.com），含在线全文阅读与完整分页。搜索走站内 POST。",
+  "desc": "久久小说下载网（ijjxsxzw.com）。含在线全文阅读与站内搜索。",
   "miniAppVersion": "2.53.2",
-  "lastModifyTime": "1788879257",
+  "lastModifyTime": "1788879776",
   "authorId": "",
   "httpHeaders": {
    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-   "Referer": "https://www.aijjxs.com/",
+   "Referer": "https://www.ijjxsxzw.com/",
    "Accept-Language": "zh-CN,zh;q=0.9",
    "Content-Type": "application/x-www-form-urlencoded"
   },
@@ -19,7 +19,7 @@
    "actionID": "searchBook",
    "parserID": "DOM",
    "responseFormatType": "html",
-   "host": "https://www.aijjxs.com",
+   "host": "https://www.ijjxsxzw.com",
    "requestInfo": "@js:\nreturn {\n  'url': config.host + '/e/search/index.php',\n  'POST': true,\n  'httpParams': {\n    'keyboard': String(params && params.keyWord ? params.keyWord : ''),\n    'show': 'title,writer',\n    'tbname': 'download',\n    'tempid': '2',\n    'orderby': 'newstime',\n    'myorder': '0'\n  },\n  'httpHeaders': config.httpHeaders\n};",
    "list": "//div[@id='searchList']//div[contains(@class,'searchTopic')]",
    "bookName": ".//a[contains(@class,'searchtitle')]//text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
@@ -32,8 +32,8 @@
    "actionID": "bookDetail",
    "parserID": "DOM",
    "responseFormatType": "html",
-   "host": "https://www.aijjxs.com",
-   "requestInfo": "@js:\nvar host = String(config.host || '') || 'https://www.aijjxs.com';\nvar u = '';\nif (typeof result === 'string' && result) u = result;\nif (!u && result && result.url) u = result.url;\nif (!u && result && result.detailUrl) u = result.detailUrl;\nif (!u && params && params.queryInfo) u = params.queryInfo.url || params.queryInfo.detailUrl || '';\nif (!u && params && params.responseUrl) u = params.responseUrl;\nu = String(u || '').trim().split(/\\s+/)[0] || '';\nif (u && u.indexOf('http') !== 0) {\n  if (u.indexOf('//') === 0) u = 'https:' + u;\n  else if (u.indexOf('/') === 0) u = host + u;\n  else u = host + '/' + u;\n}\nreturn {'url': u, 'httpHeaders': config.httpHeaders};",
+   "host": "https://www.ijjxsxzw.com",
+   "requestInfo": "@js:\nvar host = String(config.host || '') || 'https://www.ijjxsxzw.com';\nvar u = '';\nif (typeof result === 'string' && result) u = result;\nif (!u && result && result.url) u = result.url;\nif (!u && result && result.detailUrl) u = result.detailUrl;\nif (!u && params && params.queryInfo) u = params.queryInfo.url || params.queryInfo.detailUrl || '';\nif (!u && params && params.responseUrl) u = params.responseUrl;\nu = String(u || '').trim().split(/\\s+/)[0] || '';\nif (u && u.indexOf('http') !== 0) {\n  if (u.indexOf('//') === 0) u = 'https:' + u;\n  else if (u.indexOf('/') === 0) u = host + u;\n  else u = host + '/' + u;\n}\nreturn {'url': u, 'httpHeaders': config.httpHeaders};",
    "bookName": "//meta[@name='description']/@content||@js:var t=String(result||'');var m=t.match(/《([^》]+)》/);return m?m[1].trim():'';",
    "author": "//meta[@name='description']/@content||@js:var t=String(result||'');var m=t.match(/作者[：:]\\s*([^，,。]+)/);return m?m[1].trim():'';",
    "cover": "//div[contains(@class,'book')][1]//img/@src",
@@ -46,8 +46,8 @@
    "actionID": "chapterList",
    "parserID": "DOM",
    "responseFormatType": "html",
-   "host": "https://www.aijjxs.com",
-   "requestInfo": "@js:\nvar host = String(config.host || '') || 'https://www.aijjxs.com';\nvar u = '';\nif (typeof result === 'string' && result) u = result;\nif (!u && params && params.queryInfo) u = params.queryInfo.url || params.queryInfo.detailUrl || '';\nif (!u && params && params.responseUrl) u = params.responseUrl;\nu = String(u || '').trim().split(/\\s+/)[0] || '';\nif (u && u.indexOf('http') !== 0) {\n  if (u.indexOf('//') === 0) u = 'https:' + u;\n  else if (u.indexOf('/') === 0) u = host + u;\n  else u = host + '/' + u;\n}\nreturn {'url': u, 'httpHeaders': config.httpHeaders};",
+   "host": "https://www.ijjxsxzw.com",
+   "requestInfo": "@js:\nvar host = String(config.host || '') || 'https://www.ijjxsxzw.com';\nvar u = '';\nif (typeof result === 'string' && result) u = result;\nif (!u && params && params.queryInfo) u = params.queryInfo.url || params.queryInfo.detailUrl || '';\nif (!u && params && params.responseUrl) u = params.responseUrl;\nu = String(u || '').trim().split(/\\s+/)[0] || '';\nif (u && u.indexOf('http') !== 0) {\n  if (u.indexOf('//') === 0) u = 'https:' + u;\n  else if (u.indexOf('/') === 0) u = host + u;\n  else u = host + '/' + u;\n}\nreturn {'url': u, 'httpHeaders': config.httpHeaders};",
    "list": "//ul[contains(@class,'chapter-list')]/li[position() > 1]/a",
    "title": "//text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
    "url": "//@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
@@ -58,8 +58,8 @@
    "actionID": "chapterContent",
    "parserID": "DOM",
    "responseFormatType": "html",
-   "host": "https://www.aijjxs.com",
-   "requestInfo": "@js:\nvar host = String(config.host || '') || 'https://www.aijjxs.com';\nvar u = '';\nif (typeof result === 'string' && result) u = result;\nif (!u && result && result.url) u = result.url;\nif (!u && result && result.detailUrl) u = result.detailUrl;\nif (!u && params && params.queryInfo) u = params.queryInfo.url || params.queryInfo.detailUrl || '';\nif (!u && params && params.responseUrl) u = params.responseUrl;\nu = String(u || '').trim().split(/\\s+/)[0] || '';\nif (u && u.indexOf('http') !== 0) {\n  if (u.indexOf('//') === 0) u = 'https:' + u;\n  else if (u.indexOf('/') === 0) u = host + u;\n  else u = host + '/' + u;\n}\nreturn {'url': u, 'httpHeaders': config.httpHeaders};",
+   "host": "https://www.ijjxsxzw.com",
+   "requestInfo": "@js:\nvar host = String(config.host || '') || 'https://www.ijjxsxzw.com';\nvar u = '';\nif (typeof result === 'string' && result) u = result;\nif (!u && result && result.url) u = result.url;\nif (!u && result && result.detailUrl) u = result.detailUrl;\nif (!u && params && params.queryInfo) u = params.queryInfo.url || params.queryInfo.detailUrl || '';\nif (!u && params && params.responseUrl) u = params.responseUrl;\nu = String(u || '').trim().split(/\\s+/)[0] || '';\nif (u && u.indexOf('http') !== 0) {\n  if (u.indexOf('//') === 0) u = 'https:' + u;\n  else if (u.indexOf('/') === 0) u = host + u;\n  else u = host + '/' + u;\n}\nreturn {'url': u, 'httpHeaders': config.httpHeaders};",
    "content": "//*[@id='view_content_txt']//p//text()||@js:var t = String(result || '');t = t.replace(/\\s*[\\u3000\\s]+/g, '\\n');t = t.replace(/\\n{3,}/g, '\\n\\n');return t.trim();",
    "nextPageUrl": "//a[contains(text(),'下一页')]/@href||@js:\nvar nxt = String(result || '').trim().split(/\\s+/)[0] || '';\nif (!nxt || nxt.indexOf('/read/') < 0) return '';\nreturn nxt;",
    "moreKeys": {
@@ -68,305 +68,86 @@
    "validConfig": ""
   },
   "bookWorld": {
-   "最新上传": {
+   "最新书单": {
     "actionID": "bookWorld",
     "parserID": "DOM",
     "responseFormatType": "html",
-    "host": "https://www.aijjxs.com",
-    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://www.aijjxs.com';\nvar u = '/txt/toplist-p_' + String(p - 1) + '-c_1-n_0-l_10-t_3-p_1-s_0-q_0-r_0-m_0.html';\nreturn host + u;",
-    "list": "//ul[contains(@class,'lines')]/li[span[contains(@class,'date')]]",
-    "bookName": "//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "author": "//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "detailUrl": "//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "host": "https://www.ijjxsxzw.com",
+    "requestInfo": "@js:\nreturn String(config.host || '') || 'https://www.ijjxsxzw.com' + '/';",
+    "list": "//ul[contains(@class,'lines-books')][1]/li",
+    "bookName": "//span[contains(@class,'line-main')]/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//span[contains(@class,'line-main')]/span[contains(@class,'author')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "cat": "//span[contains(@class,'line-main')]/span[contains(@class,'cat')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//span[contains(@class,'line-main')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
     "_sIndex": 0,
     "moreKeys": {
-     "pageSize": 10
+     "pageSize": 20
     },
     "validConfig": ""
    },
-   "女生最新": {
+   "女生小说": {
     "actionID": "bookWorld",
     "parserID": "DOM",
     "responseFormatType": "html",
-    "host": "https://www.aijjxs.com",
-    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://www.aijjxs.com';\nvar u = '/txt/toplist-p_' + String(p - 1) + '-c_1-n_0-l_10-t_6-p_1-s_0-q_0-r_1-m_0.html';\nreturn host + u;",
-    "list": "//ul[contains(@class,'lines')]/li[span[contains(@class,'date')]]",
-    "bookName": "//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "author": "//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "detailUrl": "//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "host": "https://www.ijjxsxzw.com",
+    "requestInfo": "@js:\nreturn String(config.host || '') || 'https://www.ijjxsxzw.com' + '/';",
+    "list": "//ul[contains(@class,'lines-books')][2]/li",
+    "bookName": "//span[contains(@class,'line-main')]/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//span[contains(@class,'line-main')]/span[contains(@class,'author')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "cat": "//span[contains(@class,'line-main')]/span[contains(@class,'cat')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//span[contains(@class,'line-main')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
     "_sIndex": 1,
     "moreKeys": {
-     "pageSize": 10
+     "pageSize": 20
     },
     "validConfig": ""
    },
-   "男生最新": {
+   "耽美纯美": {
     "actionID": "bookWorld",
     "parserID": "DOM",
     "responseFormatType": "html",
-    "host": "https://www.aijjxs.com",
-    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://www.aijjxs.com';\nvar u = '/txt/toplist-p_' + String(p - 1) + '-c_2-n_0-l_10-t_6-p_1-s_0-q_0-r_1-m_0.html';\nreturn host + u;",
-    "list": "//ul[contains(@class,'lines')]/li[span[contains(@class,'date')]]",
-    "bookName": "//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "author": "//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "detailUrl": "//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "host": "https://www.ijjxsxzw.com",
+    "requestInfo": "@js:\nreturn String(config.host || '') || 'https://www.ijjxsxzw.com' + '/';",
+    "list": "//ul[contains(@class,'lines-books')][3]/li",
+    "bookName": "//span[contains(@class,'line-main')]/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//span[contains(@class,'line-main')]/span[contains(@class,'author')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "cat": "//span[contains(@class,'line-main')]/span[contains(@class,'cat')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//span[contains(@class,'line-main')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
     "_sIndex": 2,
     "moreKeys": {
-     "pageSize": 10
+     "pageSize": 20
     },
     "validConfig": ""
    },
-   "耽美最新": {
+   "男生小说": {
     "actionID": "bookWorld",
     "parserID": "DOM",
     "responseFormatType": "html",
-    "host": "https://www.aijjxs.com",
-    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://www.aijjxs.com';\nvar u = '/txt/toplist-p_' + String(p - 1) + '-c_3-n_0-l_10-t_6-p_1-s_0-q_0-r_1-m_0.html';\nreturn host + u;",
-    "list": "//ul[contains(@class,'lines')]/li[span[contains(@class,'date')]]",
-    "bookName": "//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "author": "//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "detailUrl": "//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "host": "https://www.ijjxsxzw.com",
+    "requestInfo": "@js:\nreturn String(config.host || '') || 'https://www.ijjxsxzw.com' + '/';",
+    "list": "//ul[contains(@class,'lines-books')][4]/li",
+    "bookName": "//span[contains(@class,'line-main')]/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//span[contains(@class,'line-main')]/span[contains(@class,'author')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "cat": "//span[contains(@class,'line-main')]/span[contains(@class,'cat')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//span[contains(@class,'line-main')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
     "_sIndex": 3,
     "moreKeys": {
-     "pageSize": 10
+     "pageSize": 20
     },
     "validConfig": ""
    },
-   "穿越": {
+   "悬疑惊悚": {
     "actionID": "bookWorld",
     "parserID": "DOM",
     "responseFormatType": "html",
-    "host": "https://www.aijjxs.com",
-    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://www.aijjxs.com';\nvar base = host + '/txt/chuanyue/';\nif (p > 1) return base.replace(/\\/$/, '') + '/index_' + p + '.html';\nreturn base;",
-    "list": "//ul[contains(@class,'lines')]/li[span[contains(@class,'date')]]",
-    "bookName": "//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "author": "//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "detailUrl": "//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "host": "https://www.ijjxsxzw.com",
+    "requestInfo": "@js:\nreturn String(config.host || '') || 'https://www.ijjxsxzw.com' + '/';",
+    "list": "//ul[contains(@class,'lines-books')][5]/li",
+    "bookName": "//span[contains(@class,'line-main')]/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//span[contains(@class,'line-main')]/span[contains(@class,'author')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "cat": "//span[contains(@class,'line-main')]/span[contains(@class,'cat')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//span[contains(@class,'line-main')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
     "_sIndex": 4,
-    "moreKeys": {
-     "pageSize": 20
-    },
-    "validConfig": ""
-   },
-   "重生": {
-    "actionID": "bookWorld",
-    "parserID": "DOM",
-    "responseFormatType": "html",
-    "host": "https://www.aijjxs.com",
-    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://www.aijjxs.com';\nvar base = host + '/txt/chongshengxiaoshuo/';\nif (p > 1) return base.replace(/\\/$/, '') + '/index_' + p + '.html';\nreturn base;",
-    "list": "//ul[contains(@class,'lines')]/li[span[contains(@class,'date')]]",
-    "bookName": "//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "author": "//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "detailUrl": "//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
-    "_sIndex": 5,
-    "moreKeys": {
-     "pageSize": 20
-    },
-    "validConfig": ""
-   },
-   "古代架空": {
-    "actionID": "bookWorld",
-    "parserID": "DOM",
-    "responseFormatType": "html",
-    "host": "https://www.aijjxs.com",
-    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://www.aijjxs.com';\nvar base = host + '/txt/lsjs/';\nif (p > 1) return base.replace(/\\/$/, '') + '/index_' + p + '.html';\nreturn base;",
-    "list": "//ul[contains(@class,'lines')]/li[span[contains(@class,'date')]]",
-    "bookName": "//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "author": "//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "detailUrl": "//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
-    "_sIndex": 6,
-    "moreKeys": {
-     "pageSize": 20
-    },
-    "validConfig": ""
-   },
-   "现代言情": {
-    "actionID": "bookWorld",
-    "parserID": "DOM",
-    "responseFormatType": "html",
-    "host": "https://www.aijjxs.com",
-    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://www.aijjxs.com';\nvar base = host + '/txt/young/';\nif (p > 1) return base.replace(/\\/$/, '') + '/index_' + p + '.html';\nreturn base;",
-    "list": "//ul[contains(@class,'lines')]/li[span[contains(@class,'date')]]",
-    "bookName": "//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "author": "//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "detailUrl": "//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
-    "_sIndex": 7,
-    "moreKeys": {
-     "pageSize": 20
-    },
-    "validConfig": ""
-   },
-   "总裁豪门": {
-    "actionID": "bookWorld",
-    "parserID": "DOM",
-    "responseFormatType": "html",
-    "host": "https://www.aijjxs.com",
-    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://www.aijjxs.com';\nvar base = host + '/txt/qinggan/';\nif (p > 1) return base.replace(/\\/$/, '') + '/index_' + p + '.html';\nreturn base;",
-    "list": "//ul[contains(@class,'lines')]/li[span[contains(@class,'date')]]",
-    "bookName": "//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "author": "//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "detailUrl": "//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
-    "_sIndex": 8,
-    "moreKeys": {
-     "pageSize": 20
-    },
-    "validConfig": ""
-   },
-   "仙侠幻想": {
-    "actionID": "bookWorld",
-    "parserID": "DOM",
-    "responseFormatType": "html",
-    "host": "https://www.aijjxs.com",
-    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://www.aijjxs.com';\nvar base = host + '/txt/wuxia/';\nif (p > 1) return base.replace(/\\/$/, '') + '/index_' + p + '.html';\nreturn base;",
-    "list": "//ul[contains(@class,'lines')]/li[span[contains(@class,'date')]]",
-    "bookName": "//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "author": "//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "detailUrl": "//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
-    "_sIndex": 9,
-    "moreKeys": {
-     "pageSize": 20
-    },
-    "validConfig": ""
-   },
-   "同人衍生": {
-    "actionID": "bookWorld",
-    "parserID": "DOM",
-    "responseFormatType": "html",
-    "host": "https://www.aijjxs.com",
-    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://www.aijjxs.com';\nvar base = host + '/txt/tongrenxiaoshuo/';\nif (p > 1) return base.replace(/\\/$/, '') + '/index_' + p + '.html';\nreturn base;",
-    "list": "//ul[contains(@class,'lines')]/li[span[contains(@class,'date')]]",
-    "bookName": "//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "author": "//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "detailUrl": "//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
-    "_sIndex": 10,
-    "moreKeys": {
-     "pageSize": 20
-    },
-    "validConfig": ""
-   },
-   "无限流": {
-    "actionID": "bookWorld",
-    "parserID": "DOM",
-    "responseFormatType": "html",
-    "host": "https://www.aijjxs.com",
-    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://www.aijjxs.com';\nvar base = host + '/txt/wuxianliu/';\nif (p > 1) return base.replace(/\\/$/, '') + '/index_' + p + '.html';\nreturn base;",
-    "list": "//ul[contains(@class,'lines')]/li[span[contains(@class,'date')]]",
-    "bookName": "//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "author": "//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "detailUrl": "//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
-    "_sIndex": 11,
-    "moreKeys": {
-     "pageSize": 20
-    },
-    "validConfig": ""
-   },
-   "耽于纯美": {
-    "actionID": "bookWorld",
-    "parserID": "DOM",
-    "responseFormatType": "html",
-    "host": "https://www.aijjxs.com",
-    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://www.aijjxs.com';\nvar base = host + '/txt/dmtr/';\nif (p > 1) return base.replace(/\\/$/, '') + '/index_' + p + '.html';\nreturn base;",
-    "list": "//ul[contains(@class,'lines')]/li[span[contains(@class,'date')]]",
-    "bookName": "//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "author": "//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "detailUrl": "//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
-    "_sIndex": 12,
-    "moreKeys": {
-     "pageSize": 20
-    },
-    "validConfig": ""
-   },
-   "玄幻魔法": {
-    "actionID": "bookWorld",
-    "parserID": "DOM",
-    "responseFormatType": "html",
-    "host": "https://www.aijjxs.com",
-    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://www.aijjxs.com';\nvar base = host + '/txt/xuanhuan/';\nif (p > 1) return base.replace(/\\/$/, '') + '/index_' + p + '.html';\nreturn base;",
-    "list": "//ul[contains(@class,'lines')]/li[span[contains(@class,'date')]]",
-    "bookName": "//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "author": "//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "detailUrl": "//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
-    "_sIndex": 13,
-    "moreKeys": {
-     "pageSize": 20
-    },
-    "validConfig": ""
-   },
-   "都市异能": {
-    "actionID": "bookWorld",
-    "parserID": "DOM",
-    "responseFormatType": "html",
-    "host": "https://www.aijjxs.com",
-    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://www.aijjxs.com';\nvar base = host + '/txt/dushi/';\nif (p > 1) return base.replace(/\\/$/, '') + '/index_' + p + '.html';\nreturn base;",
-    "list": "//ul[contains(@class,'lines')]/li[span[contains(@class,'date')]]",
-    "bookName": "//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "author": "//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "detailUrl": "//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
-    "_sIndex": 14,
-    "moreKeys": {
-     "pageSize": 20
-    },
-    "validConfig": ""
-   },
-   "历史军事": {
-    "actionID": "bookWorld",
-    "parserID": "DOM",
-    "responseFormatType": "html",
-    "host": "https://www.aijjxs.com",
-    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://www.aijjxs.com';\nvar base = host + '/txt/tiexue/';\nif (p > 1) return base.replace(/\\/$/, '') + '/index_' + p + '.html';\nreturn base;",
-    "list": "//ul[contains(@class,'lines')]/li[span[contains(@class,'date')]]",
-    "bookName": "//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "author": "//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "detailUrl": "//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
-    "_sIndex": 15,
-    "moreKeys": {
-     "pageSize": 20
-    },
-    "validConfig": ""
-   },
-   "网游小说": {
-    "actionID": "bookWorld",
-    "parserID": "DOM",
-    "responseFormatType": "html",
-    "host": "https://www.aijjxs.com",
-    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://www.aijjxs.com';\nvar base = host + '/txt/juben/';\nif (p > 1) return base.replace(/\\/$/, '') + '/index_' + p + '.html';\nreturn base;",
-    "list": "//ul[contains(@class,'lines')]/li[span[contains(@class,'date')]]",
-    "bookName": "//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "author": "//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "detailUrl": "//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
-    "_sIndex": 16,
-    "moreKeys": {
-     "pageSize": 20
-    },
-    "validConfig": ""
-   },
-   "惊悚悬疑": {
-    "actionID": "bookWorld",
-    "parserID": "DOM",
-    "responseFormatType": "html",
-    "host": "https://www.aijjxs.com",
-    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://www.aijjxs.com';\nvar base = host + '/txt/kongbu/';\nif (p > 1) return base.replace(/\\/$/, '') + '/index_' + p + '.html';\nreturn base;",
-    "list": "//ul[contains(@class,'lines')]/li[span[contains(@class,'date')]]",
-    "bookName": "//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "author": "//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "detailUrl": "//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
-    "_sIndex": 17,
-    "moreKeys": {
-     "pageSize": 20
-    },
-    "validConfig": ""
-   },
-   "文学名著": {
-    "actionID": "bookWorld",
-    "parserID": "DOM",
-    "responseFormatType": "html",
-    "host": "https://www.aijjxs.com",
-    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://www.aijjxs.com';\nvar base = host + '/txt/gdmz/';\nif (p > 1) return base.replace(/\\/$/, '') + '/index_' + p + '.html';\nreturn base;",
-    "list": "//ul[contains(@class,'lines')]/li[span[contains(@class,'date')]]",
-    "bookName": "//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "author": "//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "detailUrl": "//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
-    "_sIndex": 18,
     "moreKeys": {
      "pageSize": 20
     },
