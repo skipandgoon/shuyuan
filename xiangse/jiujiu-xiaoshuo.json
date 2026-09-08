@@ -7,7 +7,7 @@
   "weight": "9999",
   "desc": "久久小说下载网（ijjxsxzw.com）。含在线全文阅读与站内搜索。",
   "miniAppVersion": "2.53.2",
-  "lastModifyTime": "1788879776",
+  "lastModifyTime": "1788879988",
   "authorId": "",
   "httpHeaders": {
    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
@@ -77,13 +77,13 @@
     "list": "//ul[contains(@class,'lines-books')][1]/li",
     "bookName": "//span[contains(@class,'line-main')]/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
     "author": "//span[contains(@class,'line-main')]/span[contains(@class,'author')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "cat": "//span[contains(@class,'line-main')]/span[contains(@class,'cat')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
     "detailUrl": "//span[contains(@class,'line-main')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
     "_sIndex": 0,
     "moreKeys": {
      "pageSize": 20
     },
-    "validConfig": ""
+    "validConfig": "",
+    "cat": "//span[contains(@class,'line-main')]/span[contains(@class,'cat')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();"
    },
    "女生小说": {
     "actionID": "bookWorld",
@@ -91,16 +91,16 @@
     "responseFormatType": "html",
     "host": "https://www.ijjxsxzw.com",
     "requestInfo": "@js:\nreturn String(config.host || '') || 'https://www.ijjxsxzw.com' + '/';",
-    "list": "//ul[contains(@class,'lines-books')][2]/li",
+    "list": "//h4[contains(text(),'女生小说')]/../ul/li",
     "bookName": "//span[contains(@class,'line-main')]/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
     "author": "//span[contains(@class,'line-main')]/span[contains(@class,'author')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "cat": "//span[contains(@class,'line-main')]/span[contains(@class,'cat')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
     "detailUrl": "//span[contains(@class,'line-main')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
     "_sIndex": 1,
     "moreKeys": {
      "pageSize": 20
     },
-    "validConfig": ""
+    "validConfig": "",
+    "cat": "//span[contains(@class,'line-main')]/span[contains(@class,'cat')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();"
    },
    "耽美纯美": {
     "actionID": "bookWorld",
@@ -108,16 +108,16 @@
     "responseFormatType": "html",
     "host": "https://www.ijjxsxzw.com",
     "requestInfo": "@js:\nreturn String(config.host || '') || 'https://www.ijjxsxzw.com' + '/';",
-    "list": "//ul[contains(@class,'lines-books')][3]/li",
+    "list": "//h4[contains(text(),'纯美小说')]/../ul/li",
     "bookName": "//span[contains(@class,'line-main')]/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
     "author": "//span[contains(@class,'line-main')]/span[contains(@class,'author')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "cat": "//span[contains(@class,'line-main')]/span[contains(@class,'cat')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
     "detailUrl": "//span[contains(@class,'line-main')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
     "_sIndex": 2,
     "moreKeys": {
      "pageSize": 20
     },
-    "validConfig": ""
+    "validConfig": "",
+    "cat": "//span[contains(@class,'line-main')]/span[contains(@class,'cat')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();"
    },
    "男生小说": {
     "actionID": "bookWorld",
@@ -125,16 +125,16 @@
     "responseFormatType": "html",
     "host": "https://www.ijjxsxzw.com",
     "requestInfo": "@js:\nreturn String(config.host || '') || 'https://www.ijjxsxzw.com' + '/';",
-    "list": "//ul[contains(@class,'lines-books')][4]/li",
+    "list": "//h4[contains(text(),'男生小说')]/../ul/li",
     "bookName": "//span[contains(@class,'line-main')]/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
     "author": "//span[contains(@class,'line-main')]/span[contains(@class,'author')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "cat": "//span[contains(@class,'line-main')]/span[contains(@class,'cat')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
     "detailUrl": "//span[contains(@class,'line-main')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
     "_sIndex": 3,
     "moreKeys": {
      "pageSize": 20
     },
-    "validConfig": ""
+    "validConfig": "",
+    "cat": "//span[contains(@class,'line-main')]/span[contains(@class,'cat')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();"
    },
    "悬疑惊悚": {
     "actionID": "bookWorld",
@@ -142,12 +142,44 @@
     "responseFormatType": "html",
     "host": "https://www.ijjxsxzw.com",
     "requestInfo": "@js:\nreturn String(config.host || '') || 'https://www.ijjxsxzw.com' + '/';",
-    "list": "//ul[contains(@class,'lines-books')][5]/li",
+    "list": "//h4[contains(text(),'悬疑小说')]/../ul/li",
     "bookName": "//span[contains(@class,'line-main')]/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
     "author": "//span[contains(@class,'line-main')]/span[contains(@class,'author')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "cat": "//span[contains(@class,'line-main')]/span[contains(@class,'cat')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
     "detailUrl": "//span[contains(@class,'line-main')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
     "_sIndex": 4,
+    "moreKeys": {
+     "pageSize": 20
+    },
+    "validConfig": "",
+    "cat": "//span[contains(@class,'line-main')]/span[contains(@class,'cat')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();"
+   },
+   "24小时热榜": {
+    "actionID": "bookWorld",
+    "parserID": "DOM",
+    "responseFormatType": "html",
+    "host": "https://www.ijjxsxzw.com",
+    "requestInfo": "@js:\nreturn String(config.host || '') || 'https://www.ijjxsxzw.com' + '/';",
+    "list": "//h3[contains(text(),'24小时热榜')]/..//ul[contains(@class,'lines')]/li",
+    "bookName": "//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "_sIndex": 5,
+    "moreKeys": {
+     "pageSize": 20
+    },
+    "validConfig": ""
+   },
+   "一周热榜": {
+    "actionID": "bookWorld",
+    "parserID": "DOM",
+    "responseFormatType": "html",
+    "host": "https://www.ijjxsxzw.com",
+    "requestInfo": "@js:\nreturn String(config.host || '') || 'https://www.ijjxsxzw.com' + '/';",
+    "list": "//h3[contains(text(),'一周热榜')]/..//ul[contains(@class,'lines')]/li",
+    "bookName": "//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "_sIndex": 6,
     "moreKeys": {
      "pageSize": 20
     },
