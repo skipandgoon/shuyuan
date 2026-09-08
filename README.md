@@ -12,18 +12,3 @@
 
 ### 香色闺阁
 站点 → 导入 → 粘贴 `xiangse/` 下 .xbs 的 raw 链接
-
-## 索引
-
-### legado/
-| 书源 | 站点 | 说明 |
-|---|---|---|
-| 久久小说ijjxsxzw.json | ijjxsxzw.com | 排行榜+分类 19 入口，POST 搜索 |
-| 沱书·文存.json | tuoverse.com | 完本小说，书单+分类发现页 |
-| 爱去小说网.json | aiqu225.com | 言情/耽美等多分类 |
-
-### xiangse/
-| 书源 | 站点 | 说明 |
-|---|---|---|
-| 久久小说.xbs | ijjxsxzw.com | 19 分类/排行入口，POST 搜索 |
-| 沱书·文存.xbs | tuoverse.com | 32 书荒/分类入口 |
