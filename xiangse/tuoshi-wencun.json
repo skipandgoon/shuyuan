@@ -5,8 +5,9 @@
   "sourceType": "text",
   "enable": 1,
   "weight": "9999",
+  "desc": "沱书·文存 完本中文小说站。站内无服务端搜索（前端索引过滤），搜索框显示\"最新上架\"列表；找书请用书荒广场/分类。目录为页码制，章节名显示\"第N页\"。",
   "miniAppVersion": "2.53.2",
-  "lastModifyTime": "1788869871",
+  "lastModifyTime": "1788879306",
   "authorId": "",
   "httpHeaders": {
    "User-Agent": "Mozilla/5.0 (Linux; Android 11) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.120 Mobile Safari/537.36",
