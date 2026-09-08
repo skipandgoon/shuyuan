@@ -1,0 +1,641 @@
+{
+ "沱书·文存": {
+  "sourceName": "沱书·文存",
+  "sourceUrl": "https://tuoverse.com/",
+  "sourceType": "text",
+  "enable": 1,
+  "weight": "9999",
+  "desc": "沱书·文存 完本中文小说站。站内无服务端搜索（前端索引过滤），搜索框显示\"最新上架\"列表；找书请用书荒广场/分类。目录为页码制，章节名显示\"第N页\"。",
+  "miniAppVersion": "2.53.2",
+  "lastModifyTime": "1788869871",
+  "authorId": "",
+  "httpHeaders": {
+   "User-Agent": "Mozilla/5.0 (Linux; Android 11) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.120 Mobile Safari/537.36",
+   "Referer": "https://tuoverse.com/",
+   "Accept-Language": "zh-CN,zh;q=0.9"
+  },
+  "searchBook": {
+   "actionID": "searchBook",
+   "parserID": "JS",
+   "responseFormatType": "json",
+   "host": "https://tuoverse.com",
+   "requestInfo": "@js:\nreturn {'url': config.host + '/search-index.json', 'httpHeaders': config.httpHeaders, 'forbidCookie': true, 'cacheTime': 86400};",
+   "JSParser": "@js:\nvar kw = String(params && params.keyWord ? params.keyWord : '').trim();\nvar out = [];\ntry {\n  var d = JSON.parse(result);\n  var arr = (d && d.novels) ? d.novels : [];\n  for (var i = 0; i < arr.length; i++) {\n    var n = arr[i] || {};\n    var t = String(n.t || '');\n    var a = String(n.a || '');\n    if (!kw || t.indexOf(kw) > -1 || a.indexOf(kw) > -1) {\n      out.push({\n        'bookName': t,\n        'author': String(a).replace(/^作者/, ''),\n        'detailUrl': config.host + '/novel/' + String(n.id || '') + '/',\n        'desc': String(n.d || '')\n      });\n    }\n    if (out.length >= 50) break;\n  }\n} catch (e) {}\nreturn {'list': out};",
+   "validConfig": ""
+  },
+  "bookDetail": {
+   "actionID": "bookDetail",
+   "parserID": "DOM",
+   "responseFormatType": "html",
+   "host": "https://tuoverse.com",
+   "requestInfo": "@js:\nvar host = String(config.host || '') || 'https://tuoverse.com';\nvar u = '';\nif (typeof result === 'string' && result) u = result;\nif (!u && result && result.url) u = result.url;\nif (!u && result && result.detailUrl) u = result.detailUrl;\nif (!u && params && params.queryInfo) u = params.queryInfo.url || params.queryInfo.detailUrl || '';\nif (!u && params && params.responseUrl) u = params.responseUrl;\nu = String(u || '').trim().split(/\\s+/)[0] || '';\nif (u && u.indexOf('http') !== 0) {\n  if (u.indexOf('//') === 0) u = 'https:' + u;\n  else if (u.indexOf('/') === 0) u = host + u;\n  else u = host + '/' + u;\n}\nreturn {'url': u, 'httpHeaders': config.httpHeaders};",
+   "bookName": "//h1[contains(@class,'detail-title')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+   "author": "//div[contains(@class,'detail-author')]//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+   "desc": "//div[contains(@class,'description-content')]//text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+   "validConfig": ""
+  },
+  "chapterList": {
+   "actionID": "chapterList",
+   "parserID": "DOM",
+   "responseFormatType": "html",
+   "host": "https://tuoverse.com",
+   "requestInfo": "@js:\nvar host = String(config.host || '') || 'https://tuoverse.com';\nvar u = '';\nif (typeof result === 'string' && result) u = result;\nif (!u && result && result.url) u = result.url;\nif (!u && result && result.detailUrl) u = result.detailUrl;\nif (!u && params && params.queryInfo) u = params.queryInfo.url || params.queryInfo.detailUrl || '';\nif (!u && params && params.responseUrl) u = params.responseUrl;\nu = String(u || '').trim().split(/\\s+/)[0] || '';\nif (u && u.indexOf('http') !== 0) {\n  if (u.indexOf('//') === 0) u = 'https:' + u;\n  else if (u.indexOf('/') === 0) u = host + u;\n  else u = host + '/' + u;\n}\nreturn {'url': u, 'httpHeaders': config.httpHeaders};",
+   "list": "//a[contains(@class,'page-list__cell')]",
+   "title": "//span[contains(@class,'page-list__num')]/text()||@js:return '第' + String(result || '').trim() + '页';",
+   "url": "//@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+   "detailUrl": "//@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+   "validConfig": ""
+  },
+  "chapterContent": {
+   "actionID": "chapterContent",
+   "parserID": "DOM",
+   "responseFormatType": "html",
+   "host": "https://tuoverse.com",
+   "requestInfo": "@js:\nvar host = String(config.host || '') || 'https://tuoverse.com';\nvar u = '';\nif (typeof result === 'string' && result) u = result;\nif (!u && result && result.url) u = result.url;\nif (!u && result && result.detailUrl) u = result.detailUrl;\nif (!u && params && params.queryInfo) u = params.queryInfo.url || params.queryInfo.detailUrl || '';\nif (!u && params && params.responseUrl) u = params.responseUrl;\nu = String(u || '').trim().split(/\\s+/)[0] || '';\nif (u && u.indexOf('http') !== 0) {\n  if (u.indexOf('//') === 0) u = 'https:' + u;\n  else if (u.indexOf('/') === 0) u = host + u;\n  else u = host + '/' + u;\n}\nreturn {'url': u, 'httpHeaders': config.httpHeaders};",
+   "content": "//*[@id='chapterText']||@js:\nvar html = String(result || '');\nhtml = html.replace(/<script[\\s\\S]*?<\\/script>/gi, '');\nhtml = html.replace(/<style[\\s\\S]*?<\\/style>/gi, '');\nhtml = html.replace(/<br\\s*\\/?\\s*>/gi, '\\n');\nhtml = html.replace(/<\\/p>/gi, '\\n');\nhtml = html.replace(/<p[^>]*>/gi, '');\nhtml = html.replace(/<[^>]+>/g, '');\nhtml = html.replace(/\\r/g, '');\nhtml = html.replace(/\\n{3,}/g, '\\n\\n');\nhtml = html.replace(/^[\\s\\n]+/, '');\nhtml = html.replace(/[\\s\\n]+$/, '');\nreturn html.trim();",
+   "nextPageUrl": "//a[contains(@class,'next-btn')]/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+   "moreKeys": {
+    "maxPage": 100
+   },
+   "validConfig": ""
+  },
+  "bookWorld": {
+   "最新上架": {
+    "actionID": "bookWorld",
+    "parserID": "DOM",
+    "responseFormatType": "html",
+    "host": "https://tuoverse.com",
+    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://tuoverse.com';\nif (p > 1) return {'url': host + '/latest/page/' + p + '/', 'httpHeaders': config.httpHeaders};\nreturn {'url': host + '/latest/', 'httpHeaders': config.httpHeaders};",
+    "list": "//article[contains(@class,'novel-card')]",
+    "bookName": "//*[contains(@class,'novel-title')]/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//*[contains(@class,'author-name')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "desc": "//*[contains(@class,'novel-description')]//text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//*[contains(@class,'novel-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "url": "//*[contains(@class,'novel-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "_sIndex": 0,
+    "moreKeys": {
+     "pageSize": 20
+    },
+    "validConfig": ""
+   },
+   "重生": {
+    "actionID": "bookWorld",
+    "parserID": "DOM",
+    "responseFormatType": "html",
+    "host": "https://tuoverse.com",
+    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://tuoverse.com';\nif (p > 1) return {'url': host + '/category/chong-sheng/page/' + p + '/', 'httpHeaders': config.httpHeaders};\nreturn {'url': host + '/category/chong-sheng/', 'httpHeaders': config.httpHeaders};",
+    "list": "//article[contains(@class,'novel-row')]",
+    "bookName": "//*[contains(@class,'novel-row-title')]/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//*[contains(@class,'novel-row-author')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "desc": "//*[contains(@class,'novel-row-desc')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//*[contains(@class,'novel-row-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "url": "//*[contains(@class,'novel-row-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "_sIndex": 1,
+    "moreKeys": {
+     "pageSize": 20
+    },
+    "validConfig": ""
+   },
+   "古言": {
+    "actionID": "bookWorld",
+    "parserID": "DOM",
+    "responseFormatType": "html",
+    "host": "https://tuoverse.com",
+    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://tuoverse.com';\nif (p > 1) return {'url': host + '/category/gu-yan/page/' + p + '/', 'httpHeaders': config.httpHeaders};\nreturn {'url': host + '/category/gu-yan/', 'httpHeaders': config.httpHeaders};",
+    "list": "//article[contains(@class,'novel-row')]",
+    "bookName": "//*[contains(@class,'novel-row-title')]/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//*[contains(@class,'novel-row-author')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "desc": "//*[contains(@class,'novel-row-desc')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//*[contains(@class,'novel-row-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "url": "//*[contains(@class,'novel-row-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "_sIndex": 2,
+    "moreKeys": {
+     "pageSize": 20
+    },
+    "validConfig": ""
+   },
+   "古代": {
+    "actionID": "bookWorld",
+    "parserID": "DOM",
+    "responseFormatType": "html",
+    "host": "https://tuoverse.com",
+    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://tuoverse.com';\nif (p > 1) return {'url': host + '/category/gu-dai/page/' + p + '/', 'httpHeaders': config.httpHeaders};\nreturn {'url': host + '/category/gu-dai/', 'httpHeaders': config.httpHeaders};",
+    "list": "//article[contains(@class,'novel-row')]",
+    "bookName": "//*[contains(@class,'novel-row-title')]/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//*[contains(@class,'novel-row-author')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "desc": "//*[contains(@class,'novel-row-desc')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//*[contains(@class,'novel-row-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "url": "//*[contains(@class,'novel-row-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "_sIndex": 3,
+    "moreKeys": {
+     "pageSize": 20
+    },
+    "validConfig": ""
+   },
+   "现代": {
+    "actionID": "bookWorld",
+    "parserID": "DOM",
+    "responseFormatType": "html",
+    "host": "https://tuoverse.com",
+    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://tuoverse.com';\nif (p > 1) return {'url': host + '/category/xian-dai/page/' + p + '/', 'httpHeaders': config.httpHeaders};\nreturn {'url': host + '/category/xian-dai/', 'httpHeaders': config.httpHeaders};",
+    "list": "//article[contains(@class,'novel-row')]",
+    "bookName": "//*[contains(@class,'novel-row-title')]/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//*[contains(@class,'novel-row-author')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "desc": "//*[contains(@class,'novel-row-desc')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//*[contains(@class,'novel-row-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "url": "//*[contains(@class,'novel-row-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "_sIndex": 4,
+    "moreKeys": {
+     "pageSize": 20
+    },
+    "validConfig": ""
+   },
+   "都市": {
+    "actionID": "bookWorld",
+    "parserID": "DOM",
+    "responseFormatType": "html",
+    "host": "https://tuoverse.com",
+    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://tuoverse.com';\nif (p > 1) return {'url': host + '/category/du-shi/page/' + p + '/', 'httpHeaders': config.httpHeaders};\nreturn {'url': host + '/category/du-shi/', 'httpHeaders': config.httpHeaders};",
+    "list": "//article[contains(@class,'novel-row')]",
+    "bookName": "//*[contains(@class,'novel-row-title')]/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//*[contains(@class,'novel-row-author')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "desc": "//*[contains(@class,'novel-row-desc')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//*[contains(@class,'novel-row-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "url": "//*[contains(@class,'novel-row-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "_sIndex": 5,
+    "moreKeys": {
+     "pageSize": 20
+    },
+    "validConfig": ""
+   },
+   "情有独钟": {
+    "actionID": "bookWorld",
+    "parserID": "DOM",
+    "responseFormatType": "html",
+    "host": "https://tuoverse.com",
+    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://tuoverse.com';\nif (p > 1) return {'url': host + '/category/qing-you-du-zhong/page/' + p + '/', 'httpHeaders': config.httpHeaders};\nreturn {'url': host + '/category/qing-you-du-zhong/', 'httpHeaders': config.httpHeaders};",
+    "list": "//article[contains(@class,'novel-row')]",
+    "bookName": "//*[contains(@class,'novel-row-title')]/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//*[contains(@class,'novel-row-author')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "desc": "//*[contains(@class,'novel-row-desc')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//*[contains(@class,'novel-row-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "url": "//*[contains(@class,'novel-row-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "_sIndex": 6,
+    "moreKeys": {
+     "pageSize": 20
+    },
+    "validConfig": ""
+   },
+   "阴差阳错": {
+    "actionID": "bookWorld",
+    "parserID": "DOM",
+    "responseFormatType": "html",
+    "host": "https://tuoverse.com",
+    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://tuoverse.com';\nif (p > 1) return {'url': host + '/category/yin-cha-yang-cuo/page/' + p + '/', 'httpHeaders': config.httpHeaders};\nreturn {'url': host + '/category/yin-cha-yang-cuo/', 'httpHeaders': config.httpHeaders};",
+    "list": "//article[contains(@class,'novel-row')]",
+    "bookName": "//*[contains(@class,'novel-row-title')]/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//*[contains(@class,'novel-row-author')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "desc": "//*[contains(@class,'novel-row-desc')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//*[contains(@class,'novel-row-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "url": "//*[contains(@class,'novel-row-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "_sIndex": 7,
+    "moreKeys": {
+     "pageSize": 20
+    },
+    "validConfig": ""
+   },
+   "豪门": {
+    "actionID": "bookWorld",
+    "parserID": "DOM",
+    "responseFormatType": "html",
+    "host": "https://tuoverse.com",
+    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://tuoverse.com';\nif (p > 1) return {'url': host + '/category/hao-men/page/' + p + '/', 'httpHeaders': config.httpHeaders};\nreturn {'url': host + '/category/hao-men/', 'httpHeaders': config.httpHeaders};",
+    "list": "//article[contains(@class,'novel-row')]",
+    "bookName": "//*[contains(@class,'novel-row-title')]/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//*[contains(@class,'novel-row-author')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "desc": "//*[contains(@class,'novel-row-desc')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//*[contains(@class,'novel-row-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "url": "//*[contains(@class,'novel-row-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "_sIndex": 8,
+    "moreKeys": {
+     "pageSize": 20
+    },
+    "validConfig": ""
+   },
+   "甜宠": {
+    "actionID": "bookWorld",
+    "parserID": "DOM",
+    "responseFormatType": "html",
+    "host": "https://tuoverse.com",
+    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://tuoverse.com';\nif (p > 1) return {'url': host + '/category/tian-chong/page/' + p + '/', 'httpHeaders': config.httpHeaders};\nreturn {'url': host + '/category/tian-chong/', 'httpHeaders': config.httpHeaders};",
+    "list": "//article[contains(@class,'novel-row')]",
+    "bookName": "//*[contains(@class,'novel-row-title')]/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//*[contains(@class,'novel-row-author')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "desc": "//*[contains(@class,'novel-row-desc')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//*[contains(@class,'novel-row-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "url": "//*[contains(@class,'novel-row-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "_sIndex": 9,
+    "moreKeys": {
+     "pageSize": 20
+    },
+    "validConfig": ""
+   },
+   "破镜重圆": {
+    "actionID": "bookWorld",
+    "parserID": "DOM",
+    "responseFormatType": "html",
+    "host": "https://tuoverse.com",
+    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://tuoverse.com';\nif (p > 1) return {'url': host + '/category/po-jing-chong-yuan/page/' + p + '/', 'httpHeaders': config.httpHeaders};\nreturn {'url': host + '/category/po-jing-chong-yuan/', 'httpHeaders': config.httpHeaders};",
+    "list": "//article[contains(@class,'novel-row')]",
+    "bookName": "//*[contains(@class,'novel-row-title')]/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//*[contains(@class,'novel-row-author')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "desc": "//*[contains(@class,'novel-row-desc')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//*[contains(@class,'novel-row-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "url": "//*[contains(@class,'novel-row-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "_sIndex": 10,
+    "moreKeys": {
+     "pageSize": 20
+    },
+    "validConfig": ""
+   },
+   "天作之合": {
+    "actionID": "bookWorld",
+    "parserID": "DOM",
+    "responseFormatType": "html",
+    "host": "https://tuoverse.com",
+    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://tuoverse.com';\nif (p > 1) return {'url': host + '/category/tian-zuo-zhi-he/page/' + p + '/', 'httpHeaders': config.httpHeaders};\nreturn {'url': host + '/category/tian-zuo-zhi-he/', 'httpHeaders': config.httpHeaders};",
+    "list": "//article[contains(@class,'novel-row')]",
+    "bookName": "//*[contains(@class,'novel-row-title')]/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//*[contains(@class,'novel-row-author')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "desc": "//*[contains(@class,'novel-row-desc')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//*[contains(@class,'novel-row-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "url": "//*[contains(@class,'novel-row-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "_sIndex": 11,
+    "moreKeys": {
+     "pageSize": 20
+    },
+    "validConfig": ""
+   },
+   "欢喜冤家": {
+    "actionID": "bookWorld",
+    "parserID": "DOM",
+    "responseFormatType": "html",
+    "host": "https://tuoverse.com",
+    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://tuoverse.com';\nif (p > 1) return {'url': host + '/category/huan-xi-yuan-jia/page/' + p + '/', 'httpHeaders': config.httpHeaders};\nreturn {'url': host + '/category/huan-xi-yuan-jia/', 'httpHeaders': config.httpHeaders};",
+    "list": "//article[contains(@class,'novel-row')]",
+    "bookName": "//*[contains(@class,'novel-row-title')]/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//*[contains(@class,'novel-row-author')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "desc": "//*[contains(@class,'novel-row-desc')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//*[contains(@class,'novel-row-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "url": "//*[contains(@class,'novel-row-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "_sIndex": 12,
+    "moreKeys": {
+     "pageSize": 20
+    },
+    "validConfig": ""
+   },
+   "先婚后爱": {
+    "actionID": "bookWorld",
+    "parserID": "DOM",
+    "responseFormatType": "html",
+    "host": "https://tuoverse.com",
+    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://tuoverse.com';\nif (p > 1) return {'url': host + '/category/xian-hun-hou-ai/page/' + p + '/', 'httpHeaders': config.httpHeaders};\nreturn {'url': host + '/category/xian-hun-hou-ai/', 'httpHeaders': config.httpHeaders};",
+    "list": "//article[contains(@class,'novel-row')]",
+    "bookName": "//*[contains(@class,'novel-row-title')]/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//*[contains(@class,'novel-row-author')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "desc": "//*[contains(@class,'novel-row-desc')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//*[contains(@class,'novel-row-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "url": "//*[contains(@class,'novel-row-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "_sIndex": 13,
+    "moreKeys": {
+     "pageSize": 20
+    },
+    "validConfig": ""
+   },
+   "青梅竹马": {
+    "actionID": "bookWorld",
+    "parserID": "DOM",
+    "responseFormatType": "html",
+    "host": "https://tuoverse.com",
+    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://tuoverse.com';\nif (p > 1) return {'url': host + '/category/qing-mei-zhu-ma/page/' + p + '/', 'httpHeaders': config.httpHeaders};\nreturn {'url': host + '/category/qing-mei-zhu-ma/', 'httpHeaders': config.httpHeaders};",
+    "list": "//article[contains(@class,'novel-row')]",
+    "bookName": "//*[contains(@class,'novel-row-title')]/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//*[contains(@class,'novel-row-author')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "desc": "//*[contains(@class,'novel-row-desc')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//*[contains(@class,'novel-row-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "url": "//*[contains(@class,'novel-row-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "_sIndex": 14,
+    "moreKeys": {
+     "pageSize": 20
+    },
+    "validConfig": ""
+   },
+   "相爱相杀": {
+    "actionID": "bookWorld",
+    "parserID": "DOM",
+    "responseFormatType": "html",
+    "host": "https://tuoverse.com",
+    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://tuoverse.com';\nif (p > 1) return {'url': host + '/category/xiang-ai-xiang-sha/page/' + p + '/', 'httpHeaders': config.httpHeaders};\nreturn {'url': host + '/category/xiang-ai-xiang-sha/', 'httpHeaders': config.httpHeaders};",
+    "list": "//article[contains(@class,'novel-row')]",
+    "bookName": "//*[contains(@class,'novel-row-title')]/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//*[contains(@class,'novel-row-author')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "desc": "//*[contains(@class,'novel-row-desc')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//*[contains(@class,'novel-row-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "url": "//*[contains(@class,'novel-row-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "_sIndex": 15,
+    "moreKeys": {
+     "pageSize": 20
+    },
+    "validConfig": ""
+   },
+   "虐恋情深": {
+    "actionID": "bookWorld",
+    "parserID": "DOM",
+    "responseFormatType": "html",
+    "host": "https://tuoverse.com",
+    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://tuoverse.com';\nif (p > 1) return {'url': host + '/category/nve-lian-qing-shen/page/' + p + '/', 'httpHeaders': config.httpHeaders};\nreturn {'url': host + '/category/nve-lian-qing-shen/', 'httpHeaders': config.httpHeaders};",
+    "list": "//article[contains(@class,'novel-row')]",
+    "bookName": "//*[contains(@class,'novel-row-title')]/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//*[contains(@class,'novel-row-author')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "desc": "//*[contains(@class,'novel-row-desc')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//*[contains(@class,'novel-row-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "url": "//*[contains(@class,'novel-row-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "_sIndex": 16,
+    "moreKeys": {
+     "pageSize": 20
+    },
+    "validConfig": ""
+   },
+   "近水楼台": {
+    "actionID": "bookWorld",
+    "parserID": "DOM",
+    "responseFormatType": "html",
+    "host": "https://tuoverse.com",
+    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://tuoverse.com';\nif (p > 1) return {'url': host + '/category/jin-shui-lou-tai/page/' + p + '/', 'httpHeaders': config.httpHeaders};\nreturn {'url': host + '/category/jin-shui-lou-tai/', 'httpHeaders': config.httpHeaders};",
+    "list": "//article[contains(@class,'novel-row')]",
+    "bookName": "//*[contains(@class,'novel-row-title')]/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//*[contains(@class,'novel-row-author')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "desc": "//*[contains(@class,'novel-row-desc')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//*[contains(@class,'novel-row-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "url": "//*[contains(@class,'novel-row-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "_sIndex": 17,
+    "moreKeys": {
+     "pageSize": 20
+    },
+    "validConfig": ""
+   },
+   "追妻火葬场": {
+    "actionID": "bookWorld",
+    "parserID": "DOM",
+    "responseFormatType": "html",
+    "host": "https://tuoverse.com",
+    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://tuoverse.com';\nif (p > 1) return {'url': host + '/category/zhui-qi-huo-zang-chang/page/' + p + '/', 'httpHeaders': config.httpHeaders};\nreturn {'url': host + '/category/zhui-qi-huo-zang-chang/', 'httpHeaders': config.httpHeaders};",
+    "list": "//article[contains(@class,'novel-row')]",
+    "bookName": "//*[contains(@class,'novel-row-title')]/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//*[contains(@class,'novel-row-author')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "desc": "//*[contains(@class,'novel-row-desc')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//*[contains(@class,'novel-row-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "url": "//*[contains(@class,'novel-row-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "_sIndex": 18,
+    "moreKeys": {
+     "pageSize": 20
+    },
+    "validConfig": ""
+   },
+   "强取豪夺": {
+    "actionID": "bookWorld",
+    "parserID": "DOM",
+    "responseFormatType": "html",
+    "host": "https://tuoverse.com",
+    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://tuoverse.com';\nif (p > 1) return {'url': host + '/category/qiang-qu-hao-duo/page/' + p + '/', 'httpHeaders': config.httpHeaders};\nreturn {'url': host + '/category/qiang-qu-hao-duo/', 'httpHeaders': config.httpHeaders};",
+    "list": "//article[contains(@class,'novel-row')]",
+    "bookName": "//*[contains(@class,'novel-row-title')]/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//*[contains(@class,'novel-row-author')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "desc": "//*[contains(@class,'novel-row-desc')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//*[contains(@class,'novel-row-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "url": "//*[contains(@class,'novel-row-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "_sIndex": 19,
+    "moreKeys": {
+     "pageSize": 20
+    },
+    "validConfig": ""
+   },
+   "前世今生": {
+    "actionID": "bookWorld",
+    "parserID": "DOM",
+    "responseFormatType": "html",
+    "host": "https://tuoverse.com",
+    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://tuoverse.com';\nif (p > 1) return {'url': host + '/category/qian-shi-jin-sheng/page/' + p + '/', 'httpHeaders': config.httpHeaders};\nreturn {'url': host + '/category/qian-shi-jin-sheng/', 'httpHeaders': config.httpHeaders};",
+    "list": "//article[contains(@class,'novel-row')]",
+    "bookName": "//*[contains(@class,'novel-row-title')]/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//*[contains(@class,'novel-row-author')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "desc": "//*[contains(@class,'novel-row-desc')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//*[contains(@class,'novel-row-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "url": "//*[contains(@class,'novel-row-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "_sIndex": 20,
+    "moreKeys": {
+     "pageSize": 20
+    },
+    "validConfig": ""
+   },
+   "暗恋": {
+    "actionID": "bookWorld",
+    "parserID": "DOM",
+    "responseFormatType": "html",
+    "host": "https://tuoverse.com",
+    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://tuoverse.com';\nif (p > 1) return {'url': host + '/category/an-lian/page/' + p + '/', 'httpHeaders': config.httpHeaders};\nreturn {'url': host + '/category/an-lian/', 'httpHeaders': config.httpHeaders};",
+    "list": "//article[contains(@class,'novel-row')]",
+    "bookName": "//*[contains(@class,'novel-row-title')]/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//*[contains(@class,'novel-row-author')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "desc": "//*[contains(@class,'novel-row-desc')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//*[contains(@class,'novel-row-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "url": "//*[contains(@class,'novel-row-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "_sIndex": 21,
+    "moreKeys": {
+     "pageSize": 20
+    },
+    "validConfig": ""
+   },
+   "因缘邂逅": {
+    "actionID": "bookWorld",
+    "parserID": "DOM",
+    "responseFormatType": "html",
+    "host": "https://tuoverse.com",
+    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://tuoverse.com';\nif (p > 1) return {'url': host + '/category/yin-yuan-xie-hou/page/' + p + '/', 'httpHeaders': config.httpHeaders};\nreturn {'url': host + '/category/yin-yuan-xie-hou/', 'httpHeaders': config.httpHeaders};",
+    "list": "//article[contains(@class,'novel-row')]",
+    "bookName": "//*[contains(@class,'novel-row-title')]/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//*[contains(@class,'novel-row-author')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "desc": "//*[contains(@class,'novel-row-desc')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//*[contains(@class,'novel-row-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "url": "//*[contains(@class,'novel-row-title')]/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "_sIndex": 22,
+    "moreKeys": {
+     "pageSize": 20
+    },
+    "validConfig": ""
+   },
+   "书荒·单本封神大女主": {
+    "actionID": "bookWorld",
+    "parserID": "DOM",
+    "responseFormatType": "html",
+    "host": "https://tuoverse.com",
+    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://tuoverse.com';\nif (p > 1) return {'url': host + '/collection/danben-fengshen-danvzhu/page/' + p + '/', 'httpHeaders': config.httpHeaders};\nreturn {'url': host + '/collection/danben-fengshen-danvzhu/', 'httpHeaders': config.httpHeaders};",
+    "list": "//article[contains(@class,'editorial-book-item')]",
+    "bookName": "//*[contains(@class,'editorial-work-titleblock')]/h2/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//*[contains(@class,'editorial-work-author')]/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "desc": "//*[contains(@class,'editorial-one-liner')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//*[contains(@class,'editorial-work-titleblock')]/h2/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "url": "//*[contains(@class,'editorial-work-titleblock')]/h2/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "_sIndex": 23,
+    "moreKeys": {
+     "pageSize": 20
+    },
+    "validConfig": ""
+   },
+   "书荒·穿越": {
+    "actionID": "bookWorld",
+    "parserID": "DOM",
+    "responseFormatType": "html",
+    "host": "https://tuoverse.com",
+    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://tuoverse.com';\nif (p > 1) return {'url': host + '/collection/danben-fengshen-chuanyue/page/' + p + '/', 'httpHeaders': config.httpHeaders};\nreturn {'url': host + '/collection/danben-fengshen-chuanyue/', 'httpHeaders': config.httpHeaders};",
+    "list": "//article[contains(@class,'editorial-book-item')]",
+    "bookName": "//*[contains(@class,'editorial-work-titleblock')]/h2/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//*[contains(@class,'editorial-work-author')]/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "desc": "//*[contains(@class,'editorial-one-liner')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//*[contains(@class,'editorial-work-titleblock')]/h2/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "url": "//*[contains(@class,'editorial-work-titleblock')]/h2/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "_sIndex": 24,
+    "moreKeys": {
+     "pageSize": 20
+    },
+    "validConfig": ""
+   },
+   "书荒·权谋古言": {
+    "actionID": "bookWorld",
+    "parserID": "DOM",
+    "responseFormatType": "html",
+    "host": "https://tuoverse.com",
+    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://tuoverse.com';\nif (p > 1) return {'url': host + '/collection/danben-fengshen-quanmou-guyan/page/' + p + '/', 'httpHeaders': config.httpHeaders};\nreturn {'url': host + '/collection/danben-fengshen-quanmou-guyan/', 'httpHeaders': config.httpHeaders};",
+    "list": "//article[contains(@class,'editorial-book-item')]",
+    "bookName": "//*[contains(@class,'editorial-work-titleblock')]/h2/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//*[contains(@class,'editorial-work-author')]/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "desc": "//*[contains(@class,'editorial-one-liner')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//*[contains(@class,'editorial-work-titleblock')]/h2/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "url": "//*[contains(@class,'editorial-work-titleblock')]/h2/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "_sIndex": 25,
+    "moreKeys": {
+     "pageSize": 20
+    },
+    "validConfig": ""
+   },
+   "书荒·女频无限": {
+    "actionID": "bookWorld",
+    "parserID": "DOM",
+    "responseFormatType": "html",
+    "host": "https://tuoverse.com",
+    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://tuoverse.com';\nif (p > 1) return {'url': host + '/collection/nvpin-wuxianliu-100/page/' + p + '/', 'httpHeaders': config.httpHeaders};\nreturn {'url': host + '/collection/nvpin-wuxianliu-100/', 'httpHeaders': config.httpHeaders};",
+    "list": "//article[contains(@class,'editorial-book-item')]",
+    "bookName": "//*[contains(@class,'editorial-work-titleblock')]/h2/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//*[contains(@class,'editorial-work-author')]/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "desc": "//*[contains(@class,'editorial-one-liner')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//*[contains(@class,'editorial-work-titleblock')]/h2/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "url": "//*[contains(@class,'editorial-work-titleblock')]/h2/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "_sIndex": 26,
+    "moreKeys": {
+     "pageSize": 20
+    },
+    "validConfig": ""
+   },
+   "书荒·末世求生": {
+    "actionID": "bookWorld",
+    "parserID": "DOM",
+    "responseFormatType": "html",
+    "host": "https://tuoverse.com",
+    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://tuoverse.com';\nif (p > 1) return {'url': host + '/collection/2025-moshi-wen/page/' + p + '/', 'httpHeaders': config.httpHeaders};\nreturn {'url': host + '/collection/2025-moshi-wen/', 'httpHeaders': config.httpHeaders};",
+    "list": "//article[contains(@class,'editorial-book-item')]",
+    "bookName": "//*[contains(@class,'editorial-work-titleblock')]/h2/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//*[contains(@class,'editorial-work-author')]/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "desc": "//*[contains(@class,'editorial-one-liner')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//*[contains(@class,'editorial-work-titleblock')]/h2/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "url": "//*[contains(@class,'editorial-work-titleblock')]/h2/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "_sIndex": 27,
+    "moreKeys": {
+     "pageSize": 20
+    },
+    "validConfig": ""
+   },
+   "书荒·野生古言": {
+    "actionID": "bookWorld",
+    "parserID": "DOM",
+    "responseFormatType": "html",
+    "host": "https://tuoverse.com",
+    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://tuoverse.com';\nif (p > 1) return {'url': host + '/collection/guyan-classic/page/' + p + '/', 'httpHeaders': config.httpHeaders};\nreturn {'url': host + '/collection/guyan-classic/', 'httpHeaders': config.httpHeaders};",
+    "list": "//article[contains(@class,'editorial-book-item')]",
+    "bookName": "//*[contains(@class,'editorial-work-titleblock')]/h2/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//*[contains(@class,'editorial-work-author')]/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "desc": "//*[contains(@class,'editorial-one-liner')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//*[contains(@class,'editorial-work-titleblock')]/h2/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "url": "//*[contains(@class,'editorial-work-titleblock')]/h2/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "_sIndex": 28,
+    "moreKeys": {
+     "pageSize": 20
+    },
+    "validConfig": ""
+   },
+   "书荒·老阿姨心头好": {
+    "actionID": "bookWorld",
+    "parserID": "DOM",
+    "responseFormatType": "html",
+    "host": "https://tuoverse.com",
+    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://tuoverse.com';\nif (p > 1) return {'url': host + '/collection/laoayi-100/page/' + p + '/', 'httpHeaders': config.httpHeaders};\nreturn {'url': host + '/collection/laoayi-100/', 'httpHeaders': config.httpHeaders};",
+    "list": "//article[contains(@class,'editorial-book-item')]",
+    "bookName": "//*[contains(@class,'editorial-work-titleblock')]/h2/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//*[contains(@class,'editorial-work-author')]/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "desc": "//*[contains(@class,'editorial-one-liner')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//*[contains(@class,'editorial-work-titleblock')]/h2/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "url": "//*[contains(@class,'editorial-work-titleblock')]/h2/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "_sIndex": 29,
+    "moreKeys": {
+     "pageSize": 20
+    },
+    "validConfig": ""
+   },
+   "书荒·2025古言合集": {
+    "actionID": "bookWorld",
+    "parserID": "DOM",
+    "responseFormatType": "html",
+    "host": "https://tuoverse.com",
+    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://tuoverse.com';\nif (p > 1) return {'url': host + '/collection/2025-gu-yan-he-ji/page/' + p + '/', 'httpHeaders': config.httpHeaders};\nreturn {'url': host + '/collection/2025-gu-yan-he-ji/', 'httpHeaders': config.httpHeaders};",
+    "list": "//article[contains(@class,'editorial-book-item')]",
+    "bookName": "//*[contains(@class,'editorial-work-titleblock')]/h2/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//*[contains(@class,'editorial-work-author')]/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "desc": "//*[contains(@class,'editorial-one-liner')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//*[contains(@class,'editorial-work-titleblock')]/h2/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "url": "//*[contains(@class,'editorial-work-titleblock')]/h2/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "_sIndex": 30,
+    "moreKeys": {
+     "pageSize": 20
+    },
+    "validConfig": ""
+   },
+   "书荒·2025糙汉文合集": {
+    "actionID": "bookWorld",
+    "parserID": "DOM",
+    "responseFormatType": "html",
+    "host": "https://tuoverse.com",
+    "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://tuoverse.com';\nif (p > 1) return {'url': host + '/collection/2025-cuhan-wen/page/' + p + '/', 'httpHeaders': config.httpHeaders};\nreturn {'url': host + '/collection/2025-cuhan-wen/', 'httpHeaders': config.httpHeaders};",
+    "list": "//article[contains(@class,'editorial-book-item')]",
+    "bookName": "//*[contains(@class,'editorial-work-titleblock')]/h2/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//*[contains(@class,'editorial-work-author')]/a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "desc": "//*[contains(@class,'editorial-one-liner')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//*[contains(@class,'editorial-work-titleblock')]/h2/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "url": "//*[contains(@class,'editorial-work-titleblock')]/h2/a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "_sIndex": 31,
+    "moreKeys": {
+     "pageSize": 20
+    },
+    "validConfig": ""
+   }
+  }
+ }
+}
