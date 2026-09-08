@@ -8,7 +8,7 @@
 ## 导入链接
 
 ### Legado（开源阅读）
-书源管理 → 右上角菜单 → 网络导入 → 粘贴链接（全量合集，346 源一次导入，含原始分组）：
+书源管理 → 右上角菜单 → 网络导入 → 粘贴链接（全量合集，一次导入全部源，含原始分组）：
 
 https://raw.githubusercontent.com/skipandgoon/shuyuan/main/legado/legado-all.json
 
