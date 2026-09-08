@@ -18,7 +18,7 @@
 ### legado/
 | 书源 | 站点 | 说明 |
 |---|---|---|
-| 🔝久久小说ijjxsxzw.json | ijjxsxzw.com | 排行榜+分类 19 入口，POST 搜索 |
+| 久久小说ijjxsxzw.json | ijjxsxzw.com | 排行榜+分类 19 入口，POST 搜索 |
 | 沱书·文存.json | tuoverse.com | 完本小说，书单+分类发现页 |
 | 爱去小说网.json | aiqu225.com | 言情/耽美等多分类 |
 
