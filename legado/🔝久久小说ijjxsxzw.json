@@ -1,0 +1,59 @@
+[
+  {
+    "bookSourceGroup": "置顶",
+    "bookSourceName": "🔝久久小说ijjxsxzw",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://www.ijjxsxzw.com/",
+    "customButton": false,
+    "customOrder": 6,
+    "enabled": true,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "eventListener": false,
+    "exploreUrl": "@js:\nlet all = [];\nlet res = [\n{'title': '最新上传', 'href': '/txt/toplist-p_{{page-1}}-c_1-n_0-l_10-t_3-p_1-s_0-q_0-r_0-m_0.html'},\n{'title': '女生最新', 'href': '/txt/toplist-p_{{page-1}}-c_1-n_0-l_10-t_6-p_1-s_0-q_0-r_1-m_0.html'},\n{'title': '男生最新', 'href': '/txt/toplist-p_{{page-1}}-c_2-n_0-l_10-t_6-p_1-s_0-q_0-r_1-m_0.html'},\n{'title': '耽美最新', 'href': '/txt/toplist-p_{{page-1}}-c_3-n_0-l_10-t_6-p_1-s_0-q_0-r_1-m_0.html'},\n{'title': '穿越小说', 'href': '/txt/chuanyue/index_{{page}}.html'},\n{'title': '无限流派', 'href': '/txt/chuanyue/index_{{page}}.html'},\n{'title': '重生小说', 'href': '/txt/chongshengxiaoshuo/index_{{page}}.html'},\n{'title': '历史架空', 'href': '/txt/lsjs/index_{{page}}.html'},\n{'title': '现代言情', 'href': '/txt/young/index_{{page}}.html'},\n{'title': '总裁豪门', 'href': '/txt/qinggan/index_{{page}}.html'},\n{'title': '仙侠幻想', 'href': '/txt/wuxia/index_{{page}}.html'},\n{'title': '同人衍生', 'href': '/txt/tongrenxiaoshuo/index_{{page}}.html'},\n{'title': '耽于纯美', 'href': '/txt/dmtr/index_{{page}}.html'},\n{'title': '玄幻魔法', 'href': '/txt/xuanhuan/index_{{page}}.html'},\n{'title': '都市异能', 'href': '/txt/dushi/index_{{page}}.html'},\n{'title': '历史军事', 'href': '/txt/tiexue/index_{{page}}.html'},\n{'title': '网游小说', 'href': '/txt/juben/index_{{page}}.html'},\n{'title': '惊悚悬疑', 'href': '/txt/kongbu/index_{{page}}.html'},\n{'title': '文学名著', 'href': '/txt/gdmz/index_{{page}}.html'}\n];\nres.forEach(x => {\n all.push({\n \"title\": x.title,\n \"url\": x.href,\n \"style\": {\n \"layout_flexGrow\": 1,\n \"layout_flexBasisPercent\": 0.25\n }\n });\n});\nresult = JSON.stringify(all);",
+    "header": "{\"User-Agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36\"}",
+    "lastUpdateTime": 1785588569837,
+    "loginUrl": "https://www.ijjxsxzw.com/e/member/login/",
+    "respondTime": 180000,
+    "ruleBookInfo": {
+      "coverUrl": "//div[@class=\"pic\"]/img/@src||tag.img@src",
+      "intro": "class.desc@html@js:result.replace(/<br\\s*\\/?>/ig,'\\n').replace(/<[^>]+>/g,'').replace(/&nbsp;/g,' ')",
+      "name": "tag.h4@tag.a@text",
+      "tocUrl": "//a[@class=\"download-btn\"][2]/@href||tag.a@href"
+    },
+    "ruleContent": {
+      "content": "id.view_content_txt@p@text"
+    },
+    "ruleExplore": {
+      "author": "class.meta@tag.a@text||class.mainGreen@tag.a@text",
+      "bookList": "class.book||class.listbg",
+      "bookUrl": "tag.h4@tag.a@href||class.title@tag.a@href",
+      "coverUrl": "tag.img@src||tag.a[0]@tag.img@src",
+      "intro": "class.desc@text||tag.div[0]@text",
+      "kind": "class.meta@tag.small[1]@text",
+      "name": "tag.h4@tag.a@text||class.title@text"
+    },
+    "ruleSearch": {
+      "author": "@text##.*?作者：(.*?)",
+      "bookList": "//div[@class=\"searchTopic\"]",
+      "bookUrl": "//a/@href",
+      "checkKeyWord": "系统",
+      "intro": "//following-sibling::div[@class=\"searchIntro\"][1]/text()",
+      "kind": "//following-sibling::div[@class=\"searchInfo\"][2]/a[2]/text()",
+      "name": "//a/text()"
+    },
+    "ruleToc": {
+      "chapterList": "//ul[@class=\"chapter-list\"]/li[position() > 1]",
+      "chapterName": "//a/text()",
+      "chapterUrl": "//a/@href"
+    },
+    "searchUrl": "<js> \n/*\n/e/search/index.php,{\n\"method\": \"POST\",\n\"body\": \"show=title,writer&keyboard={{key}}\"\n}\n\nresp = java.get(baseUrl + location);\njava.log(resp);\nbaseUrl + resp.header('location');\n*/\nlet head = {\"User-Agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36\"};\n\nlet resp = java.post(baseUrl + '/e/search/index.php', \"show=title,writer&keyboard=\" + key, head);\n\nlet location = resp.header('location');\nlet searchid = location.match(/searchid=(\\d+)/)[1]\nbaseUrl + `search/result-${searchid}-{{page - 1}}.html`;\n</js>",
+    "weight": 0,
+    "loginUi": "",
+    "loginCheckJs": "",
+    "concurrentRate": "",
+    "ruleReview": {},
+    "bookSourceComment": "",
+    "variableComment": ""
+  }
+]
