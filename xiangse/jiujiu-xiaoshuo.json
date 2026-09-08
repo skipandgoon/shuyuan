@@ -74,9 +74,9 @@
     "host": "https://www.ijjxsxzw.com",
     "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://www.ijjxsxzw.com';\nvar u = '/txt/toplist-p_' + String(p - 1) + '-c_1-n_0-l_10-t_3-p_1-s_0-q_0-r_0-m_0.html';\nreturn host + u;",
     "list": "//ul[contains(@class,'lines')]/li",
-    "bookName": ".//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "author": ".//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "detailUrl": ".//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "bookName": "//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
     "_sIndex": 0,
     "moreKeys": {
      "pageSize": 10
@@ -90,9 +90,9 @@
     "host": "https://www.ijjxsxzw.com",
     "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://www.ijjxsxzw.com';\nvar u = '/txt/toplist-p_' + String(p - 1) + '-c_1-n_0-l_10-t_6-p_1-s_0-q_0-r_1-m_0.html';\nreturn host + u;",
     "list": "//ul[contains(@class,'lines')]/li",
-    "bookName": ".//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "author": ".//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "detailUrl": ".//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "bookName": "//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
     "_sIndex": 1,
     "moreKeys": {
      "pageSize": 10
@@ -106,9 +106,9 @@
     "host": "https://www.ijjxsxzw.com",
     "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://www.ijjxsxzw.com';\nvar u = '/txt/toplist-p_' + String(p - 1) + '-c_2-n_0-l_10-t_6-p_1-s_0-q_0-r_1-m_0.html';\nreturn host + u;",
     "list": "//ul[contains(@class,'lines')]/li",
-    "bookName": ".//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "author": ".//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "detailUrl": ".//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "bookName": "//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
     "_sIndex": 2,
     "moreKeys": {
      "pageSize": 10
@@ -122,9 +122,9 @@
     "host": "https://www.ijjxsxzw.com",
     "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://www.ijjxsxzw.com';\nvar u = '/txt/toplist-p_' + String(p - 1) + '-c_3-n_0-l_10-t_6-p_1-s_0-q_0-r_1-m_0.html';\nreturn host + u;",
     "list": "//ul[contains(@class,'lines')]/li",
-    "bookName": ".//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "author": ".//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "detailUrl": ".//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "bookName": "//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
     "_sIndex": 3,
     "moreKeys": {
      "pageSize": 10
@@ -138,9 +138,9 @@
     "host": "https://www.ijjxsxzw.com",
     "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://www.ijjxsxzw.com';\nvar base = host + '/txt/chuanyue/';\nif (p > 1) return base.replace(/\\/$/, '') + '/index_' + p + '.html';\nreturn base;",
     "list": "//ul[contains(@class,'lines')]/li",
-    "bookName": ".//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "author": ".//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "detailUrl": ".//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "bookName": "//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
     "_sIndex": 4,
     "moreKeys": {
      "pageSize": 20
@@ -154,9 +154,9 @@
     "host": "https://www.ijjxsxzw.com",
     "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://www.ijjxsxzw.com';\nvar base = host + '/txt/chongshengxiaoshuo/';\nif (p > 1) return base.replace(/\\/$/, '') + '/index_' + p + '.html';\nreturn base;",
     "list": "//ul[contains(@class,'lines')]/li",
-    "bookName": ".//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "author": ".//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "detailUrl": ".//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "bookName": "//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
     "_sIndex": 5,
     "moreKeys": {
      "pageSize": 20
@@ -170,9 +170,9 @@
     "host": "https://www.ijjxsxzw.com",
     "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://www.ijjxsxzw.com';\nvar base = host + '/txt/lsjs/';\nif (p > 1) return base.replace(/\\/$/, '') + '/index_' + p + '.html';\nreturn base;",
     "list": "//ul[contains(@class,'lines')]/li",
-    "bookName": ".//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "author": ".//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "detailUrl": ".//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "bookName": "//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
     "_sIndex": 6,
     "moreKeys": {
      "pageSize": 20
@@ -186,9 +186,9 @@
     "host": "https://www.ijjxsxzw.com",
     "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://www.ijjxsxzw.com';\nvar base = host + '/txt/young/';\nif (p > 1) return base.replace(/\\/$/, '') + '/index_' + p + '.html';\nreturn base;",
     "list": "//ul[contains(@class,'lines')]/li",
-    "bookName": ".//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "author": ".//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "detailUrl": ".//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "bookName": "//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
     "_sIndex": 7,
     "moreKeys": {
      "pageSize": 20
@@ -202,9 +202,9 @@
     "host": "https://www.ijjxsxzw.com",
     "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://www.ijjxsxzw.com';\nvar base = host + '/txt/qinggan/';\nif (p > 1) return base.replace(/\\/$/, '') + '/index_' + p + '.html';\nreturn base;",
     "list": "//ul[contains(@class,'lines')]/li",
-    "bookName": ".//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "author": ".//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "detailUrl": ".//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "bookName": "//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
     "_sIndex": 8,
     "moreKeys": {
      "pageSize": 20
@@ -218,9 +218,9 @@
     "host": "https://www.ijjxsxzw.com",
     "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://www.ijjxsxzw.com';\nvar base = host + '/txt/wuxia/';\nif (p > 1) return base.replace(/\\/$/, '') + '/index_' + p + '.html';\nreturn base;",
     "list": "//ul[contains(@class,'lines')]/li",
-    "bookName": ".//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "author": ".//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "detailUrl": ".//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "bookName": "//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
     "_sIndex": 9,
     "moreKeys": {
      "pageSize": 20
@@ -234,9 +234,9 @@
     "host": "https://www.ijjxsxzw.com",
     "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://www.ijjxsxzw.com';\nvar base = host + '/txt/tongrenxiaoshuo/';\nif (p > 1) return base.replace(/\\/$/, '') + '/index_' + p + '.html';\nreturn base;",
     "list": "//ul[contains(@class,'lines')]/li",
-    "bookName": ".//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "author": ".//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "detailUrl": ".//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "bookName": "//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
     "_sIndex": 10,
     "moreKeys": {
      "pageSize": 20
@@ -250,9 +250,9 @@
     "host": "https://www.ijjxsxzw.com",
     "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://www.ijjxsxzw.com';\nvar base = host + '/txt/wuxianliu/';\nif (p > 1) return base.replace(/\\/$/, '') + '/index_' + p + '.html';\nreturn base;",
     "list": "//ul[contains(@class,'lines')]/li",
-    "bookName": ".//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "author": ".//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "detailUrl": ".//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "bookName": "//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
     "_sIndex": 11,
     "moreKeys": {
      "pageSize": 20
@@ -266,9 +266,9 @@
     "host": "https://www.ijjxsxzw.com",
     "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://www.ijjxsxzw.com';\nvar base = host + '/txt/dmtr/';\nif (p > 1) return base.replace(/\\/$/, '') + '/index_' + p + '.html';\nreturn base;",
     "list": "//ul[contains(@class,'lines')]/li",
-    "bookName": ".//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "author": ".//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "detailUrl": ".//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "bookName": "//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
     "_sIndex": 12,
     "moreKeys": {
      "pageSize": 20
@@ -282,9 +282,9 @@
     "host": "https://www.ijjxsxzw.com",
     "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://www.ijjxsxzw.com';\nvar base = host + '/txt/xuanhuan/';\nif (p > 1) return base.replace(/\\/$/, '') + '/index_' + p + '.html';\nreturn base;",
     "list": "//ul[contains(@class,'lines')]/li",
-    "bookName": ".//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "author": ".//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "detailUrl": ".//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "bookName": "//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
     "_sIndex": 13,
     "moreKeys": {
      "pageSize": 20
@@ -298,9 +298,9 @@
     "host": "https://www.ijjxsxzw.com",
     "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://www.ijjxsxzw.com';\nvar base = host + '/txt/dushi/';\nif (p > 1) return base.replace(/\\/$/, '') + '/index_' + p + '.html';\nreturn base;",
     "list": "//ul[contains(@class,'lines')]/li",
-    "bookName": ".//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "author": ".//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "detailUrl": ".//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "bookName": "//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
     "_sIndex": 14,
     "moreKeys": {
      "pageSize": 20
@@ -314,9 +314,9 @@
     "host": "https://www.ijjxsxzw.com",
     "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://www.ijjxsxzw.com';\nvar base = host + '/txt/tiexue/';\nif (p > 1) return base.replace(/\\/$/, '') + '/index_' + p + '.html';\nreturn base;",
     "list": "//ul[contains(@class,'lines')]/li",
-    "bookName": ".//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "author": ".//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "detailUrl": ".//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "bookName": "//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
     "_sIndex": 15,
     "moreKeys": {
      "pageSize": 20
@@ -330,9 +330,9 @@
     "host": "https://www.ijjxsxzw.com",
     "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://www.ijjxsxzw.com';\nvar base = host + '/txt/juben/';\nif (p > 1) return base.replace(/\\/$/, '') + '/index_' + p + '.html';\nreturn base;",
     "list": "//ul[contains(@class,'lines')]/li",
-    "bookName": ".//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "author": ".//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "detailUrl": ".//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "bookName": "//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
     "_sIndex": 16,
     "moreKeys": {
      "pageSize": 20
@@ -346,9 +346,9 @@
     "host": "https://www.ijjxsxzw.com",
     "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://www.ijjxsxzw.com';\nvar base = host + '/txt/kongbu/';\nif (p > 1) return base.replace(/\\/$/, '') + '/index_' + p + '.html';\nreturn base;",
     "list": "//ul[contains(@class,'lines')]/li",
-    "bookName": ".//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "author": ".//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "detailUrl": ".//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "bookName": "//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
     "_sIndex": 17,
     "moreKeys": {
      "pageSize": 20
@@ -362,9 +362,9 @@
     "host": "https://www.ijjxsxzw.com",
     "requestInfo": "@js:\nvar p = parseInt(params.pageIndex || 1, 10);\nif (!p || p < 1) p = 1;\nvar host = String(config.host || '') || 'https://www.ijjxsxzw.com';\nvar base = host + '/txt/gdmz/';\nif (p > 1) return base.replace(/\\/$/, '') + '/index_' + p + '.html';\nreturn base;",
     "list": "//ul[contains(@class,'lines')]/li",
-    "bookName": ".//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "author": ".//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
-    "detailUrl": ".//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
+    "bookName": "//a/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "author": "//span[contains(@class,'date')]/text()||@js:return String(result || '').replace(/\\s+/g, ' ').trim();",
+    "detailUrl": "//a/@href||@js:return String(result || '').trim().split(/\\s+/)[0] || '';",
     "_sIndex": 18,
     "moreKeys": {
      "pageSize": 20
