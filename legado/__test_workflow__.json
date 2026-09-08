@@ -1,0 +1,12 @@
+[
+  {
+    "bookSourceName": "__workflow_test_source__",
+    "bookSourceUrl": "https://example.invalid",
+    "bookSourceGroup": "测试",
+    "bookSourceType": 0,
+    "enable": true,
+    "ruleSearch": {
+      "bookList": ""
+    }
+  }
+]
