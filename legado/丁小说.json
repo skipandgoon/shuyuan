@@ -1,0 +1,54 @@
+[
+ {
+  "bookSourceComment": "",
+  "bookSourceGroup": "晋江",
+  "bookSourceName": "丁小说",
+  "bookSourceType": 0,
+  "bookSourceUrl": "http://api.xingliangglobal.com/",
+  "customButton": false,
+  "customOrder": 164,
+  "enabled": true,
+  "enabledCookieJar": true,
+  "enabledExplore": false,
+  "eventListener": false,
+  "exploreUrl": "@js:\nvar sort=[];\npush=(title,url,type,size)=>sort.push({\n    \"title\": title,\n    \"url\": url?url:\"\",\n    \"style\": {\n      \"layout_flexGrow\": type,\n      \"layout_flexBasisPercent\": size,\n    }\n  });\n\nbd=[\"必读榜\",\"潜力榜\",\"完本榜\",\n\"更新榜\",\"搜索榜\",\"评论榜\"];\npd=[[\"男频\",\"1\"],\n\t[\"女频\",\"2\"]].map([title,id]=>{\npush(title+'榜单', null, 1, 1);\n\t\tbd.map((title,index)=>{\t\t\t\n\t\t  \turl= `/module/rank?type=${index+1}&channel=${id}&page={{page}}`; \n\t\t\t\tpush(title, url, 1, 0.25);\t\t\t\t\t\t\t\t\t\t\n\t\t\t});\n\t});\n\nbook=[[\"男频\",\n[[\"玄幻\",\"lejRej\"],[\"都市\",\"mbk5ez\"],[\"武侠\",\"nel5aK\"],[\"仙侠\",\"vbmOeY\"],[\"军事\",\"penRe7\"],[\"历史\",\"xbojag\"],[\"游戏\",\"mep2bM\"],[\"科幻\",\"zbq2dp\"],[\"轻小说\",\"YerEdO\"]]],\n\t [\"女频\",\n[[\"现代言情\",\"9avmeG\"],[\"古代言情\",\"DdwRb1\"],[\"幻想言情\",\"7ax9by\"],[\"青春校园\",\"Pdy7aQ\"],[\"唯美纯爱\",\"kazYeJ\"],[\"同人衍生\",\"9aAOdv\"]]]].map([tit1,category]=>{\n\t \t\t[[\"连载\",\"0\"],[\"完结\",\"1\"]].map([tit2,id]=>{  \n\t    push(tit1+'•'+tit2, null, 1, 1);   \n     category.map([title,cid]=>{\t    \n\turl= `/novel?isComplete=${id}&sort=1&page={{page}}&categoryId=${cid}`;\t\n\t\t\t \tpush(title, url, 1, 0.25);\n        });\n      });\n  });\n\nJSON.stringify(sort)",
+  "header": "{\n    \"client-device\": \"4d9655dc356211b2d0a86a96e3e11a54\",\n    \"client-brand\": \"vivo\",\n    \"client-version\": \"1.1.0\",\n    \"client-channel\": \"android\",\n    \"client-name\": \"app.maoyankanshu.novel\",\n    \"alias-name\": \"dingdianapp\",\n    \"client-source\": \"android\",\n    \"Authorization\": \"bearereyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hcGkueGluZ2xpYW5nZ2xvYmFsLmNvbVwvYXV0aFwvdGhpcmQiLCJpYXQiOjE2OTkyNzUzOTQsImV4cCI6MTc5MjU4NzM5NCwibmJmIjoxNjk5Mjc1Mzk0LCJqdGkiOiJyYzhtYVByUUpLazlweFd6Iiwic3ViIjoxMjkyMjEsInBydiI6ImExY2IwMzcxODAyOTZjNmExOTM4ZWYzMGI0Mzc5NDY3MmRkMDE2YzUifQ.BqlcxKRH5oiBWQjSzTEHLpwUMD-dVhVe1ufcX_BZanw\",\n     \"Connection\": \"Keep-Alive\",\n    \"User-Agent\": \"okhttp/4.9.2\"\n}",
+  "lastUpdateTime": 1704977396661,
+  "respondTime": 33029,
+  "ruleBookInfo": {
+   "author": "authorName",
+   "coverUrl": "cover",
+   "init": "data",
+   "intro": "summary",
+   "kind": "categoryNames.*.className",
+   "lastChapter": "lastChapter.chapterName",
+   "name": "novelName",
+   "tocUrl": "/novel/{{$.novelId}}/chapters",
+   "wordCount": "wordNum"
+  },
+  "ruleContent": {
+   "content": "content"
+  },
+  "ruleExplore": {},
+  "ruleSearch": {
+   "author": "authorName",
+   "bookList": "data",
+   "bookUrl": "/novel/{{$.novelId}}?isSearch=1",
+   "checkKeyWord": "剑来",
+   "coverUrl": "cover",
+   "intro": "summary",
+   "kind": "categoryNames.[*].className",
+   "lastChapter": "",
+   "name": "novelName",
+   "wordCount": "wordNum"
+  },
+  "ruleToc": {
+   "chapterList": "data.list",
+   "chapterName": "chapterName",
+   "chapterUrl": "path\n@js:\nvar data=String(result),\ntype=\"AES/CBC/PKCS5Padding\",\nkey=\"4395daa50ad6baf7\",\niv=\"0123456789abcdef\",\ncipher=java.createSymmetricCrypto(type,key,iv),\nurl=cipher.decryptStr(data);\nurl;",
+   "updateTime": "{{$.updatedAt}} • {{$.wordNum}}字"
+  },
+  "searchUrl": "http://api.xingliangglobal.com/search?keyword={{key}}&page={{page}}",
+  "weight": 0
+ }
+]

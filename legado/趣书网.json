@@ -1,0 +1,64 @@
+[
+ {
+  "bookSourceComment": "",
+  "bookSourceGroup": "晋江",
+  "bookSourceName": "🌸趣书网",
+  "bookSourceType": 0,
+  "bookSourceUrl": "https://qubook.org/##@遇知",
+  "customButton": false,
+  "customOrder": 49,
+  "enabled": true,
+  "enabledCookieJar": false,
+  "enabledExplore": false,
+  "eventListener": false,
+  "exploreUrl": "[\n{\"title\":\"🔖纯爱耿美🔖\",\"url\":\"/bookbl/<,index_{{page}}.html>\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":1}},\n\n{\"title\":\"现代耿美\",\"url\":\"/e/search/result/<?,index.php?page={{page-1}}>&searchid=19\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"古代架空\",\"url\":\"/e/search/result/<?,index.php?page={{page-1}}>&searchid=17\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"穿越重生\",\"url\":\"/e/search/result/<?,index.php?page={{page-1}}>&searchid=15\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"玄幻网游\",\"url\":\"/e/search/result/<?,index.php?page={{page-1}}>&searchid=\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"BL同人\",\"url\":\"/e/search/result/<?,index.php?page={{page-1}}>&searchid=49\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"GL百合\",\"url\":\"/e/search/result/<?,index.php?page={{page-1}}>&searchid=9\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},\n\n\n{\"title\":\"🔖女生小说🔖\",\"url\":\"/booknv/<,index_{{page-1}}.html>\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":1}},\n\n{\"title\":\"都市言情\",\"url\":\"/e/search/result/<?,index.php?page={{page-1}}>&searchid=14\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"古代言情\",\"url\":\"/e/search/result/<?,index.php?page={{page-1}}>&searchid=16\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"穿越重生\",\"url\":\"/e/search/result/<?,index.php?page={{page-1}}>&searchid=15\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"玄幻仙侠\",\"url\":\"/e/search/result/<?,index.php?page={{page-1}}>&searchid=59\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"青春同人\",\"url\":\"/e/search/result/<?,index.php?page={{page-1}}>&searchid=11\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"网游科幻\",\"url\":\"/e/search/result/<?,index.php?page={{page-1}}>&searchid=67\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},\n\n\n{\"title\":\"🔖男生小说🔖\",\"url\":\"/bookna/<,index_{{page}}.html>\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":1}},\n\n{\"title\":\"玄幻奇幻\",\"url\":\"/e/search/result/<?,index.php?page={{page-1}}>&searchid=77\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"武侠仙侠\",\"url\":\"/e/search/result/<?,index.php?page={{page-1}}>&searchid=10\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"都市重生\",\"url\":\"/e/search/result/<?,index.php?page={{page-1}}>&searchid=24\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"历史军事\",\"url\":\"/e/search/result/<?,index.php?page={{page-1}}>&searchid=87\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"恐怖推理\",\"url\":\"/e/search/result/<?,index.php?page={{page-1}}>&searchid=\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"科幻网游\",\"url\":\"/e/search/result/<?,index.php?page={{page-1}}>&searchid=86\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},\n\n{\"title\":\"🔖热门榜单🔖\",\"url\":\"/images/rph.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":1}}\n]",
+  "header": "",
+  "lastUpdateTime": 1712906495693,
+  "respondTime": 7688,
+  "ruleBookInfo": {
+   "author": ".mlist li.1@textNodes",
+   "coverUrl": "",
+   "intro": ".conten@html##(?:简介|文案).([\\s\\S]+?)<br><br>##$1###",
+   "kind": "{{@@.listcd@textNodes##\\> |\\ > .*}}\n{{@@.mlist li.0@textNodes}}",
+   "lastChapter": "",
+   "name": "h1@text##\\(.*\\)",
+   "wordCount": ""
+  },
+  "ruleContent": {
+   "content": ".conten@html",
+   "nextContentUrl": "",
+   "replaceRegex": "",
+   "sourceRegex": ""
+  },
+  "ruleExplore": {
+   "author": "h1@text||a.1@text##.*\\(|\\)",
+   "bookList": ".man_first li||.morelist li",
+   "bookUrl": "h1 a.0@href||a.1@href||a@href",
+   "intro": "p@text",
+   "kind": "h3@text||a.0@text",
+   "name": "h1@text||a.1@text||a@text##\\(.*\\)|\\s*完结|\\+番外",
+   "wordCount": ""
+  },
+  "ruleSearch": {
+   "author": "a.1@text##.*\\(|\\)",
+   "bookList": ".morelist li",
+   "bookUrl": "a.1@href",
+   "checkKeyWord": "",
+   "intro": "",
+   "kind": "a.0@text",
+   "name": "a.1@text##\\(.*\\)|\\s|金推|完结|\\+*番外|\\[\\]"
+  },
+  "ruleToc": {
+   "chapterList": "@js:\npage=result.match(/<b>(\\d*)<\\/b>\\/<b>(\\d+)<\\/b>/)[2];\n//java.log(page)\nlist=[];\nlist.push({text:'第1页',href:baseUrl});\nif(page>=2){\nfor(var i=2;i<=page;i++){\nhref1=baseUrl.replace(/.html/,'')+'_'+i+'.html';\nlist.push({text:'第'+i+'页',href:href1});\n}\n}\nlist",
+   "chapterName": "text",
+   "chapterUrl": "href",
+   "isPay": "",
+   "isVip": "",
+   "nextTocUrl": "",
+   "preUpdateJs": ""
+  },
+  "searchUrl": "https://qubook.org/e/search/index.php,{\n  \"body\": \"show=title%2Cnewstext&keyboard={{key}}\",\n  \"method\": \"POST\"\n}",
+  "variableComment": "",
+  "weight": 0
+ }
+]

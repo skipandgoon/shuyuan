@@ -1,0 +1,62 @@
+[
+ {
+  "bookSourceComment": "聚合搜索，支持多来源（小说/漫画）统一搜索、详情、目录、内容。",
+  "bookSourceGroup": "聚合",
+  "bookSourceName": "📚 圣灵聚合",
+  "bookSourceType": 0,
+  "bookSourceUrl": "http://apiba.top",
+  "bookUrlPattern": "http://.*/detail\\.html.*",
+  "customButton": false,
+  "customOrder": 14,
+  "enabled": true,
+  "enabledCookieJar": true,
+  "enabledExplore": true,
+  "eventListener": false,
+  "exploreUrl": "@js:var awa = `{{source.key}}/discover.php`;\nvar response = java.ajax(awa);\nvar json = JSON.parse(response);\nvar categories = json.data || [];\nvar menu = [];\n\nfor (var i = 0; i < categories.length; i++) {\n    var cat = categories[i];\n    // 根据标题内容判断是否为标题\n    var isHeader = (cat.title.indexOf(\"☆\") !== -1) ||\n                   (cat.title.indexOf(\"❀\") !== -1) ||\n                   (cat.title.indexOf(\"°・\") !== -1) ||\n                   (cat.title.indexOf(\"🔖\") !== -1) ||\n                   (cat.title.endsWith(\"❀❀❀\"));\n    if (isHeader) {\n        menu.push({\n            title: cat.title,\n            url: \"\",\n            style: {\n                layout_flexGrow: 1,\n                layout_flexBasisPercent: 1.0,\n                textAlign: \"center\",\n                fontWeight: \"bold\"\n            }\n        });\n    } else {\n        var listUrl = awa + \"?source=\" + encodeURIComponent(cat.source)\n                    + \"&path=\" + encodeURIComponent(cat.path)\n                    + \"&page={{page}}\";\n        menu.push({\n            title: cat.title,\n            url: listUrl,\n            style: { layout_flexGrow: 1, layout_flexBasisPercent: 0.35 }\n        });\n    }\n}\nJSON.stringify(menu);",
+  "header": "{\"User-Agent\":\"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Mobile Safari/537.36\"}",
+  "lastUpdateTime": 1788539456155,
+  "loginUi": "[\n  {\n    \"name\": \"⚙️ 设置\",\n    \"type\": \"button\",\n    \"action\": \"control()\",\n    \"style\": {\n      \"layout_flexGrow\": 1,\n      \"layout_flexBasisPercent\": 1\n    }\n  }\n]",
+  "loginUrl": "<js>\nlet controlUrl = 'http://apiba.top/filter.php';\njava.startBrowserAwait(controlUrl, '聚合书源设置');\n'';\n</js>",
+  "respondTime": 186527,
+  "ruleBookInfo": {
+   "author": "$.author",
+   "coverUrl": "$.cover",
+   "intro": "$.description",
+   "kind": "$.category",
+   "lastChapter": "$.chapters[*]title",
+   "name": "$.title",
+   "tocUrl": "toc.php?source={{$.source}}&book_id={{$.book_id}}"
+  },
+  "ruleContent": {
+   "content": "@js:(function() {\n    var data;\n    try {\n        data = typeof result === 'string' ? JSON.parse(result) : result;\n    } catch(e) {\n        java.log(\"解析JSON失败: \" + e);\n        return \"\";\n    }\n\n    // 1. 检测是否为音频类型（听书/音乐）\n    if (data.type === 'audio' || data.type === 'music') {\n        var audioUrl = data.data && (data.data.audio_url || data.data.music_url);\n        if (audioUrl) {\n            return audioUrl;\n        } else {\n            java.log(\"音频类型但未找到音频链接\");\n            return \"\";\n        }\n    }\n\n    // 2. 原有逻辑：content 或 images\n    if (data.content) {\n        return data.content;\n    }\n\n    if (data.images && Array.isArray(data.images) && data.images.length) {\n        return data.images.map(function(img) {\n            var url = typeof img === 'string' ? img : img.url || img.src;\n            return '<img src=\"' + url + '\">';\n        }).join('\\n');\n    }\n\n    java.log(\"未找到content、images或音频链接\");\n    return \"\";\n})();",
+   "imageStyle": "FULL"
+  },
+  "ruleExplore": {
+   "author": "$.author",
+   "bookList": "$.data[*]",
+   "bookUrl": "$.detail_url##detail.html##detail.php",
+   "coverUrl": "$.cover",
+   "intro": "$.intro",
+   "kind": "{{$.category}},{{$.status}}",
+   "name": "$.title"
+  },
+  "ruleSearch": {
+   "author": "author",
+   "bookList": "@js:(function() {\n    var data;\n    try {\n        data = typeof src === 'string' ? JSON.parse(src) : src;\n    } catch(e) {\n        return [];\n    }\n\n    if (!data || !data.results || typeof data.results !== 'object') {\n        return [];\n    }\n\n    var resultList = [];\n    var results = data.results;\n    var keys = Object.keys(results);\n    for (var k = 0; k < keys.length; k++) {\n        var key = keys[k];\n        var source = results[key];\n        if (!source.data || !Array.isArray(source.data)) {\n            continue;\n        }\n        var sourceName = source.name || key;\n        var items = source.data;\n        for (var i = 0; i < items.length; i++) {\n            var item = items[i];\n            var newItem = {};\n            // 复制原对象所有自有属性\n            for (var prop in item) {\n                if (item.hasOwnProperty(prop)) {\n                    newItem[prop] = item[prop];\n                }\n            }\n            newItem.sourceName = sourceName;\n            newItem.url = \"detail.php?source=\" + key + \"&book_id=\" + item.book_id;\n            resultList.push(newItem);\n        }\n    }\n    return resultList;\n})();",
+   "bookUrl": "url",
+   "coverUrl": "cover",
+   "intro": "intro",
+   "kind": "category",
+   "lastChapter": "sourceName",
+   "name": "title"
+  },
+  "ruleToc": {
+   "chapterList": "<js>\n(function() {\n    let data;\n    try {\n        data = typeof src === 'string' ? JSON.parse(src) : src;\n    } catch(e) {\n        return [];\n    }\n\n    if (!data || !data.chapters || !Array.isArray(data.chapters)) {\n        return [];\n    }\n\n    const source = data.source;\n    const bookId = data.book_id;\n  \n    return data.chapters.map(chapter => ({\n        name: chapter.title,\n        url: `content.php?source=${source}&book_id=${bookId}&chapter_id=${chapter.chapter_id}`,\n        info: `${chapter.volume_name}｜${chapter.update_time}`\n    }));\n})();\n</js>",
+   "chapterName": "name",
+   "chapterUrl": "url",
+   "updateTime": "info"
+  },
+  "searchUrl": "http://apiba.top/search.php?key={{key}}&type=all",
+  "weight": 0
+ }
+]

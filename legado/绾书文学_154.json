@@ -1,0 +1,48 @@
+[
+ {
+  "bookSourceComment": "",
+  "bookSourceGroup": "Namo",
+  "bookSourceName": "🌟 绾书文学",
+  "bookSourceType": 0,
+  "bookSourceUrl": "https://api.wanshu.com/",
+  "bookUrlPattern": "",
+  "customButton": false,
+  "customOrder": 155,
+  "enabled": true,
+  "enabledCookieJar": false,
+  "enabledExplore": false,
+  "eventListener": false,
+  "exploreUrl": "月点击榜::/novel/libraryList?page={{page}}&pageSize=20&order=mouth_view_count\n总字数榜::/novel/libraryList?page={{page}}&pageSize=20&order=word_num\n最近更新::/novel/libraryList?page={{page}}&pageSize=20&order=update\n都市言情::/novel/libraryList?page={{page}}&pageSize=20&category_id=1\n时空穿越::/novel/libraryList?page={{page}}&pageSize=20&category_id=2\n总裁豪门::/novel/libraryList?page={{page}}&pageSize=20&category_id=3\n玄幻仙侠::/novel/libraryList?page={{page}}&pageSize=20&category_id=4\n浪漫青春::/novel/libraryList?page={{page}}&pageSize=20&category_id=5\n悬疑灵异::/novel/libraryList?page={{page}}&pageSize=20&category_id=6\n都市异能::/novel/libraryList?page={{page}}&pageSize=20&category_id=7",
+  "lastUpdateTime": 1689836332087,
+  "loginUrl": "https://account.wanshu.com/login",
+  "respondTime": 33818,
+  "ruleBookInfo": {
+   "intro": ""
+  },
+  "ruleContent": {
+   "content": "data.content",
+   "imageStyle": "0"
+  },
+  "ruleExplore": {},
+  "ruleSearch": {
+   "author": "author",
+   "bookList": "data",
+   "bookUrl": "/novel/chapterList?page=1&pageSize=19999&novel_id={{$.novel_id}}",
+   "coverUrl": "cover",
+   "intro": "description",
+   "kind": "complete_status&&category_name",
+   "lastChapter": "latest_chapter_update_time&&latest_chapter##\\h[\\d:]+\\d\\n##▪",
+   "name": "name",
+   "wordCount": "word_num"
+  },
+  "ruleToc": {
+   "chapterList": "data",
+   "chapterName": "name",
+   "chapterUrl": "/novel/chapterInfo?novel_chapter_id={{$.id}}",
+   "isVip": "¥{{$.is_free}}##¥true",
+   "updateTime": ""
+  },
+  "searchUrl": "/novel/search?pageSize=3&kw={{key}}",
+  "weight": 0
+ }
+]

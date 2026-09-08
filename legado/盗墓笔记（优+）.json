@@ -1,0 +1,37 @@
+[
+ {
+  "bookSourceGroup": "星辰",
+  "bookSourceName": "盗墓笔记（优+）",
+  "bookSourceType": 0,
+  "bookSourceUrl": "http://www.daomubiji.com",
+  "customButton": false,
+  "customOrder": 231,
+  "enabled": true,
+  "enabledCookieJar": false,
+  "enabledExplore": false,
+  "eventListener": false,
+  "exploreUrl": "盗墓笔记::http://www.daomubiji.com/",
+  "lastUpdateTime": 1759387475979,
+  "respondTime": 10931,
+  "ruleBookInfo": {
+   "intro": "class.focusbox-text@text"
+  },
+  "ruleContent": {
+   "content": "class.article-content@tag.p@text"
+  },
+  "ruleExplore": {},
+  "ruleSearch": {
+   "author": "text##(|)",
+   "bookList": "class.container@tag.li!0",
+   "bookUrl": "tag.a@href",
+   "name": "class.menu-item@tag.a.0@text"
+  },
+  "ruleToc": {
+   "chapterList": "class.excerpts-wrapper@tag.a",
+   "chapterName": "tag.a@text",
+   "chapterUrl": "tag.a@href"
+  },
+  "searchUrl": "-",
+  "weight": 0
+ }
+]

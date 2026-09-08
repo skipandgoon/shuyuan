@@ -1,0 +1,59 @@
+[
+ {
+  "bookSourceComment": "// Error: org.mozilla.javascript.EcmaError: TypeError: 无法读取 null 的属性 “1” (<Unknown source>#3) in <Unknown source> at line number 3\n\nBY:溪",
+  "bookSourceGroup": "壬二酸",
+  "bookSourceName": "🐦千千小说网",
+  "bookSourceType": 0,
+  "bookSourceUrl": "http://www.qqxs8.co",
+  "bookUrlPattern": "http://www.qqxs8.co/\\d+_/\\d+/",
+  "customButton": false,
+  "customOrder": 186,
+  "enabled": true,
+  "enabledCookieJar": true,
+  "enabledExplore": false,
+  "eventListener": false,
+  "exploreUrl": "玄幻魔法::/class/xuanhuan/{{page}}/\n武侠修真::/class/wuxia/{{page}}/\n都市言情::/class/dushi/{{page}}/\n历史军事::/class/lishi/{{page}}/\n科幻灵异::/class/kehuan/{{page}}/\n游戏竞技::/class/youxi/{{page}}/\n女生耽美::/class/nvsheng/{{page}}/\n其他类型::/class/qita/{{page}}/\n全本小说::/quanben/class/{{page}}/",
+  "lastUpdateTime": 1732186008770,
+  "respondTime": 180801,
+  "ruleBookInfo": {
+   "author": "[property=\"og:novel:author\"]@content",
+   "coverUrl": "[property=\"og:image\"]@content",
+   "intro": "[property=\"og:description\"]@content",
+   "kind": "[property=\"og:novel:category\"]@content&&\n[property=\"og:novel:status\"]@content&&\n[property=\"og:novel:update_time\"]@content",
+   "lastChapter": "{{@@[property$=chapter_name]@content}}\n@js:result\n.replace(\"••\",\"\")\n.replace(/^(\\d+).第/,'第')\n.replace(/^(正文|VIP章节|最新章节)?(\\s+|_)|[\\(\\{（｛【].*[求含理更谢乐发推票盟补加字Kk\\/].*/g,'')\n.replace(/^(\\d+)[、．]第.+章/,'第$1章')\n.replace(/^(\\d+)、\\d+、/,'第$1章 ')\n.replace(/^(\\d+)、\\d+/,'第$1章')\n.replace(/^(第.+章)\\s?\\d+/,'$1')\n.replace(/^(\\d+)、/,'第$1章 ')\n.replace(/^(第.+章)\\s?第.+章/,'$1')\n.replace(/第\\s(.+)\\s章/,'第$1章')\n.replace(/.*(chapter|Chapter)\\s?(\\d+)\\s?/,'$1 $2 ')\n.replace(/\\(.+\\)/,'')\n.replace(/\\[|。/,'')\n.replace(/第([零一二两三四五六七八九十百千]+)章/g,java.toNumChapter(result))\n##(章)([^\\s]+)(\\s·)##$1 $2$3",
+   "name": "[property=\"og:novel:book_name\"]@content"
+  },
+  "ruleContent": {
+   "content": "id.TextContent@p@html",
+   "nextContentUrl": "text.下一页@href",
+   "replaceRegex": "##最近转码严重，.*"
+  },
+  "ruleExplore": {
+   "bookList": "",
+   "bookUrl": "",
+   "coverUrl": "",
+   "intro": "",
+   "kind": "",
+   "lastChapter": "",
+   "name": ""
+  },
+  "ruleSearch": {
+   "author": ".book_other.0@span.0@text",
+   "bookList": "id.sitebox@dl",
+   "bookUrl": "a.0@href",
+   "checkKeyWord": "",
+   "coverUrl": "img@class.lazy@img@src",
+   "intro": ".book_des@text",
+   "kind": "{{@@.book_other.0@span.1:2@text}}\n{{@@.uptime@text}}",
+   "lastChapter": ".book_other.1@a@text",
+   "name": "h3@a@text"
+  },
+  "ruleToc": {
+   "chapterList": "id.chapterList@li@a",
+   "chapterName": "text",
+   "chapterUrl": "href"
+  },
+  "searchUrl": "{{url=source.getKey();\ncookie.removeCookie(url);\njava.ajax(url).match(/form.*action=\"(.+?)\"/)[1]}}?searchkey={{key}}",
+  "weight": 0
+ }
+]

@@ -1,0 +1,43 @@
+[
+ {
+  "bookSourceComment": "YX源仓库：http://yx.ccute.xyz/",
+  "bookSourceGroup": "壬二酸",
+  "bookSourceName": "全本同人",
+  "bookSourceType": 0,
+  "bookSourceUrl": "https://www.qbtr.cc##ʕ ᵔᴥᵔ ʔ喜静",
+  "customButton": false,
+  "customOrder": 188,
+  "enabled": true,
+  "enabledCookieJar": false,
+  "enabledExplore": false,
+  "eventListener": false,
+  "exploreUrl": "[{\"title\":\"分类\",\"url\":\"\",\"style\":{\"layout_flexBasisPercent\":1,\"layout_flexGrow\":1}},{\"title\":\"同人小说\",\"url\":\"/tongren/index<,_{{page}}>.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"常规小说\",\"url\":\"/changgui/index<,_{{page}}>.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"热门排行\",\"url\":\"/hot/index<,_{{page}}>.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\n{\"title\":\"标签\",\"url\":\"\",\"style\":{\"layout_flexBasisPercent\":1,\"layout_flexGrow\":1}},{\"title\":\"火影\",\"url\":\" /tag/{{page-1}}_huoying\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"系统\",\"url\":\" /tag/{{page-1}}_xitong\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"海贼\",\"url\":\" /tag/{{page-1}}_haizei\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"斗罗\",\"url\":\" /tag/{{page-1}}_douluo\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"综漫\",\"url\":\" /tag/{{page-1}}_zongman\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"漫威\",\"url\":\" /tag/{{page-1}}_manwei\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"型月\",\"url\":\" /tag/{{page-1}}_xingyue\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"聊天群\",\"url\":\" /tag/{{page-1}}_liaotianqun\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"洪荒\",\"url\":\" /tag/{{page-1}}_honghuang\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"柯南\",\"url\":\" /tag/{{page-1}}_kenan\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"娱乐\",\"url\":\" /tag/{{page-1}}_yule\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"后宫\",\"url\":\" /tag/{{page-1}}_hougong\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"盗墓\",\"url\":\" /tag/{{page-1}}_daomu\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"FATE\",\"url\":\" /tag/{{page-1}}_FATE\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}}]",
+  "lastUpdateTime": 1729766214506,
+  "respondTime": 44616,
+  "ruleBookInfo": {
+   "coverUrl": "",
+   "intro": "",
+   "kind": ""
+  },
+  "ruleContent": {
+   "content": ".read_chapterDetail@p@html"
+  },
+  "ruleExplore": {},
+  "ruleSearch": {
+   "author": ".booknews@textNodes",
+   "bookList": ".bk",
+   "bookUrl": "a@href",
+   "coverUrl": "{{$.coverUrl}}http://u3v.cn/5zBiW8",
+   "intro": "p@text##简介.",
+   "lastChapter": "",
+   "name": "a@text"
+  },
+  "ruleToc": {
+   "chapterList": ".clearfix li a",
+   "chapterName": "text",
+   "chapterUrl": "href"
+  },
+  "searchUrl": "https://www.qbtr.cc/e/search/index.php,{\n  \"body\": \"keyboard={{key}}&show=title&classid=0\",\n  \"charset\": \"GBK\",\n  \"method\": \"POST\",\n  \"webView\": true\n}",
+  "weight": 0
+ }
+]

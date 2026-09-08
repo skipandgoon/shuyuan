@@ -1,0 +1,72 @@
+[
+ {
+  "bookSourceComment": "// Error: org.mozilla.javascript.WrappedException: Wrapped java.net.UnknownHostException: Unable to resolve host \"www.74txts.com\": No address associated with hostname (<Unknown source>#3) in <Unknown source> at line number 3\n\n\nby:xsw8093\nhttps://www.74txt.com/",
+  "bookSourceGroup": "壬二酸",
+  "bookSourceName": "🍩骑士小说",
+  "bookSourceType": 0,
+  "bookSourceUrl": "https://www.74txts.com/",
+  "bookUrlPattern": "",
+  "customButton": false,
+  "customOrder": 172,
+  "enabled": true,
+  "enabledCookieJar": true,
+  "enabledExplore": false,
+  "eventListener": false,
+  "exploreUrl": "[\n\n{\"title\":\"书库\",\"url\":\"fenlei/{{page}}.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.2}},\n{\"title\":\"玄幻\",\"url\":\"fenlei/1_{{page}}.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.2}},\n{\"title\":\"武侠\",\"url\":\"fenlei/2_{{page}}.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.2}},\n{\"title\":\"都市\",\"url\":\"fenlei/3_{{page}}.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.2}},\n{\"title\":\"历史\",\"url\":\"fenlei/4_{{page}}.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.2}},\n{\"title\":\"科幻\",\"url\":\"fenlei/6_{{page}}.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.2}},\n{\"title\":\"游戏\",\"url\":\"fenlei/5_{{page}}.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.2}},\n{\"title\":\"女生\",\"url\":\"fenlei/7_{{page}}.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.2}},\n{\"title\":\"其它\",\"url\":\"fenlei/8_{{page}}.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.2}},\n{\"title\":\"全本\",\"url\":\"quanben/fenlei/{{page}}.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.2}}\n]",
+  "header": "{\n    \"User-Agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0\",\n    \"Cookie\":\"0\"\n}",
+  "lastUpdateTime": 1732962213551,
+  "loginUrl": "",
+  "respondTime": 180260,
+  "ruleBookInfo": {
+   "author": "@get:{a}",
+   "canReName": "",
+   "coverUrl": "@get:{c}",
+   "init": "@put:{n:\"[property$=book_name]@content\",\n\ta:\"[property$=author]@content\",\nk:\"[property~=category|status|update_time]@content\",\nl:\"[property$=latest_chapter_name]@content\",\ni:\"[property$=description]@content\",\nc:\"[property$=image]@content\",\nz:\".blue.0@text\",\nlt:\"[property$=update_time]@content\"\n}",
+   "intro": "☁️ 更新：\n{{@get:{lt}##\\s.*}}\n🔥 人气：\n{{@get:{z}##小说人气：}}\n👻  简介：\n{{@get:{i}##.*简介：}}##(^|[。！？……]+[”」）……】]?)##$1<br>",
+   "kind": "@get:{k}##\\s.*",
+   "lastChapter": "@get:{l}\n@js:result\n.replace(\"••\",\"\")\n.replace(/^(\\d+).第/,'第')\n.replace(/^(正文|VIP章节|最新章节)?(\\s+|_)|[\\(\\{（｛【].*[求更谢乐发推票盟补加字Kk\\/].*[\\)\\}）｝】]/g,'')\n.replace(/^(\\d+)[、．]第.+章/,'第$1章')\n.replace(/^(\\d+)、\\d+、/,'第$1章 ')\n.replace(/^(\\d+)、\\d+/,'第$1章')\n.replace(/^(\\d+)、/,'第$1章 ')\n.replace(/^(第.+章)\\s?第.+章/,'$1')\n.replace(/第\\s(.+)\\s章/,'第$1章')\n.replace(/.*(chapter|Chapter)\\s?(\\d+)\\s?/,'$1 $2 ')\n.replace(/\\(.+\\)/,'')\n.replace(/\\[|。/,'')\n.replace(/第([零一二三四五六七八九十百千]+)章/g,java.toNumChapter(result))\n##(章)([^\\s]+)(\\s·)##$1 $2$3",
+   "name": "@get:{n}",
+   "tocUrl": "",
+   "wordCount": "@get:{z}##.*\\|\\s"
+  },
+  "ruleContent": {
+   "content": "#booktxt p@html||#booktxt@p!0@textNodes##请关闭浏览器的阅读.*.避免出现内容无法显示或者段落错乱##",
+   "imageStyle": "",
+   "nextContentUrl": "text.下一页@href##$##,{'webView': true}",
+   "replaceRegex": "##第.*章.*|{{try{chapter.title}catch(e){\"\"} }}|\\(本章完\\)",
+   "sourceRegex": "",
+   "webJs": ""
+  },
+  "ruleExplore": {
+   "author": "a.-1@text",
+   "bookList": ".update li",
+   "bookUrl": "a.0@href",
+   "coverUrl": "",
+   "intro": "",
+   "kind": "span.0:-1@text",
+   "lastChapter": "a.1@text\n@js:result\n.replace(\"••\",\"\")\n.replace(/^(\\d+).第/,'第')\n.replace(/^(正文|VIP章节|最新章节)?(\\s+|_)|[\\(\\{（｛【].*[求更谢乐发推票盟补加字Kk\\/].*[\\)\\}）｝】]/g,'')\n.replace(/^(\\d+)[、．]第.+章/,'第$1章')\n.replace(/^(\\d+)、\\d+、/,'第$1章 ')\n.replace(/^(\\d+)、\\d+/,'第$1章')\n.replace(/^(\\d+)、/,'第$1章 ')\n.replace(/^(第.+章)\\s?第.+章/,'$1')\n.replace(/第\\s(.+)\\s章/,'第$1章')\n.replace(/.*(chapter|Chapter)\\s?(\\d+)\\s?/,'$1 $2 ')\n.replace(/\\(.+\\)/,'')\n.replace(/\\[|。/,'')\n.replace(/第([零一二三四五六七八九十百千]+)章/g,java.toNumChapter(result))\n##(章)([^\\s]+)(\\s·)##$1 $2$3",
+   "name": "a.0@text"
+  },
+  "ruleSearch": {
+   "author": "",
+   "bookList": ".content dl||class.col-xs-4 book-coverlist@class.row",
+   "bookUrl": "a.0@href||class.caption@a.0@href",
+   "coverUrl": "img@src||class.col-sm-5@style##background-image:url(|)",
+   "intro": "dd.0@text||class.fs-12 text-justify hidden-xs@text",
+   "kind": "span.-2@text",
+   "lastChapter": "",
+   "name": "dt@text||class.caption@a.0@text",
+   "wordCount": "span.-1@text"
+  },
+  "ruleToc": {
+   "chapterList": ".panel-chapterlist[-1]@dd@a",
+   "chapterName": "text\n@js:result\n.replace(\"••\",\"\")\n.replace(/^(\\d+).第/,'第')\n.replace(/^(正文|VIP章节|最新章节)?(\\s+|_)|[\\(\\{（｛【].*[求更谢乐发推票盟补加字Kk\\/].*[\\)\\}）｝】]/g,'')\n.replace(/^(\\d+)[、．]第.+章/,'第$1章')\n.replace(/^(\\d+)、\\d+、/,'第$1章 ')\n.replace(/^(\\d+)、\\d+/,'第$1章')\n.replace(/^(\\d+)、/,'第$1章 ')\n.replace(/^(第.+章)\\s?第.+章/,'$1')\n.replace(/第\\s(.+)\\s章/,'第$1章')\n.replace(/.*(chapter|Chapter)\\s?(\\d+)\\s?/,'$1 $2 ')\n.replace(/\\(.+\\)/,'')\n.replace(/\\[|。/,'')\n.replace(/第([零一二三四五六七八九十百千]+)章/g,java.toNumChapter(result))\n##(章)([^\\s]+)(\\s·)##$1 $2$3",
+   "chapterUrl": "href##$##,{'webView': true}",
+   "isVip": "",
+   "nextTocUrl": "option@value||text.下一页@href",
+   "updateTime": ""
+  },
+  "searchUrl": "@js:\nvar su=source.getKey()\nvar htmlData=java.get(su,{})\nvar htmlUrl=htmlData.headers('Location')\njava.log(htmlUrl[0])\nvar posturl=htmlUrl[0]?htmlUrl[0]:su\nposturl = posturl.slice(-1)=='/'?posturl.slice(0,-1):posturl\nvar html =htmlUrl[0]?htmlData.body():java.ajax(posturl)\nso = org.jsoup.Jsoup.parse(html).select('form[name=search]').attr('action');\n\ncookie.removeCookie(posturl)\nposturl+so+\"?searchkey={{key}}&key=articlename,\"+JSON.stringify({\r\n  \"body\": \"searchkey={{key}}&key='articlename'\",\r\n  \"method\": \"POST\"\r\n})",
+  "weight": 0
+ }
+]

@@ -1,0 +1,51 @@
+[
+ {
+  "bookSourceComment": "// Error: 搜索失效",
+  "bookSourceGroup": "关耳",
+  "bookSourceName": "🌸宝书网",
+  "bookSourceType": 0,
+  "bookSourceUrl": "http://www.baoshus.com",
+  "customButton": false,
+  "customOrder": 37,
+  "enabled": true,
+  "enabledCookieJar": false,
+  "enabledExplore": false,
+  "eventListener": false,
+  "lastUpdateTime": 1682084717704,
+  "respondTime": 182157,
+  "ruleBookInfo": {
+   "author": "class.book-author.0@text## · .*",
+   "canReName": "1",
+   "coverUrl": "tag.img.0@src",
+   "init": "",
+   "intro": "class.aui-book-intro@html",
+   "kind": "class.book-status.0@text",
+   "lastChapter": "class.last-chapter.0@text",
+   "name": "class.book-name.0@text",
+   "tocUrl": "class.aui-flex aui-book-chapter@tag.a@href"
+  },
+  "ruleContent": {
+   "content": "class.chapter-content@html"
+  },
+  "ruleExplore": {
+   "bookList": ""
+  },
+  "ruleSearch": {
+   "author": "class.book-module@text## · .*",
+   "bookList": "class.aui-book-list@tag.a",
+   "bookUrl": "tag.a.0@href",
+   "coverUrl": "tag.img@src",
+   "intro": "class.book-intro@html",
+   "kind": "class.book-module@text##.*? · ",
+   "name": "class.aui-book-img@tag.img@alt"
+  },
+  "ruleToc": {
+   "chapterList": "class.chapter-index-name@a",
+   "chapterName": "text",
+   "chapterUrl": "href",
+   "nextTocUrl": "select@option@value"
+  },
+  "searchUrl": "http://www.baoshus.com/search/{{key}}",
+  "weight": 0
+ }
+]

@@ -1,0 +1,50 @@
+[
+ {
+  "bookSourceComment": "",
+  "bookSourceGroup": "晋江",
+  "bookSourceName": "🍊 玩文学",
+  "bookSourceType": 0,
+  "bookSourceUrl": "http://www.wanwx.com",
+  "customButton": false,
+  "customOrder": 140,
+  "enabled": true,
+  "enabledCookieJar": true,
+  "enabledExplore": false,
+  "eventListener": false,
+  "lastUpdateTime": 1721822411244,
+  "respondTime": 71260,
+  "ruleBookInfo": {
+   "author": ".red:nth-child(1)@text",
+   "coverUrl": ".col-md-2 > img@src",
+   "intro": "#bookIntro@html",
+   "kind": ".red:nth-child(2)@text",
+   "lastChapter": "p:nth-child(7)@text##最新章节.",
+   "name": ".bookTitle@text",
+   "wordCount": ".blue:nth-child(3)@text##字数."
+  },
+  "ruleContent": {
+   "content": "#htmlContent > p@html",
+   "nextContentUrl": "@js:\nnext = java.getString(\"#linkNext@text\");\nif ( next == \"下一页\" ) {\n\tlet m = src.match(/__nextPage = \"([^\"]+)\"/);\n\tvar nextu = m ? m[1] : null\n}nextu;",
+   "replaceRegex": "##^\\d+"
+  },
+  "ruleExplore": {},
+  "ruleSearch": {
+   "author": ".red@text",
+   "bookList": ".col-md-10",
+   "bookUrl": ".bookTitle > a@href",
+   "checkKeyWord": "",
+   "coverUrl": "",
+   "intro": "#bookIntro@text",
+   "lastChapter": ".text-danger@text",
+   "name": ".bookTitle > a@text"
+  },
+  "ruleToc": {
+   "chapterList": "#list-chapterAll .col-md-3",
+   "chapterName": "a@text",
+   "chapterUrl": "a@href",
+   "formatJs": "function SectionToChinese(n){for(var r=\"\",h=\"\",c=0,e=!0;n>0;){var i=n%10;0===i?e||(e=!0,h=chnNumChar[i]+h):(e=!1,r=chnNumChar[i],r+=chnUnitChar[c],h=r+h),c++,n=Math.floor(n/10)}return 0===h.indexOf(\"\\u4e00\\u5341\")&&(h=h.slice(1)),h}function n2c(n){var r=0,h=\"\",c=\"\",e=!1;if(0===n)return chnNumChar[0];for(;n>0;){var i=n%1e4;e&&(c=chnNumChar[0]+c),h=SectionToChinese(i),0!==i&&(h+=chnUnitSection[r]),c=h+c,e=1e3>i&&i>0,n=Math.floor(n/1e4),r++}return c}var chnNumChar=[\"\\u96f6\",\"\\u4e00\",\"\\u4e8c\",\"\\u4e09\",\"\\u56db\",\"\\u4e94\",\"\\u516d\",\"\\u4e03\",\"\\u516b\",\"\\u4e5d\"],chnUnitSection=[\"\",\"\\u4e07\",\"\\u4ebf\"],chnUnitChar=[\"\",\"\\u5341\",\"\\u767e\",\"\\u5343\"];\n\nlet t = title.match(/(\\d+)/);\nt = t ? t[1] : null;\n\nif (t) {\n  let format = /第.+?章/;\n  \n  if (format.test(title)) {\n    title = title.replace(/.*第\\s*\\d+\\s*章\\s*(\\D*.*)/, \"$1\").replace(/\\d+\\s?/,\"\");\n    title = `第${n2c(t)}章 ${title}`;\n  } else {\n    title = title.replace(/.*\\d+[ .]+(\\D*.*)/, \"$1\");\n    title = `第${n2c(t)}章 ${title}`;\n  }\n} else {\n  title;\n}"
+  },
+  "searchUrl": "@js:// 获取源代码中的Token拼接到搜索地址\nvar html = java.ajax(source.key);\nvar token = html.match(/name=\"_token\" value=\"(.+?)\"/);  \ntoken = token ? token[1] : null;\njava.log(token);\n\nvar body = `_token=${token}&keyword=${key}&action=login`;\nvar option = { \n  \"charset\": \"utf-8\",\n  \"method\": \"POST\",\n  \"body\": body\n};\nsource.key + \"/search,\" + JSON.stringify(option);",
+  "weight": 0
+ }
+]

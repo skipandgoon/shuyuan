@@ -1,0 +1,50 @@
+[
+ {
+  "bookSourceComment": "",
+  "bookSourceGroup": "晋江",
+  "bookSourceName": "中文看",
+  "bookSourceType": 0,
+  "bookSourceUrl": "http://wap.zwkan.com",
+  "concurrentRate": "380",
+  "customButton": false,
+  "customOrder": 98,
+  "enabled": true,
+  "enabledCookieJar": false,
+  "enabledExplore": false,
+  "eventListener": false,
+  "lastUpdateTime": 1726056841143,
+  "respondTime": 127421,
+  "ruleBookInfo": {
+   "author": ".block@p.2@a@text",
+   "coverUrl": ".block@img@src",
+   "init": "",
+   "intro": ".intro_info@textNodes##简介：|最新章节推荐地址[\\s\\S]+",
+   "kind": ".block@p.5:3:4@text##.*?：",
+   "lastChapter": ".block@p.6@a@text",
+   "name": ".block@h2@text",
+   "wordCount": ""
+  },
+  "ruleContent": {
+   "content": "#nr1@html",
+   "nextContentUrl": ".pb_prev@html\n<js>\nif (!result[0].includes(\"下一章\")) {\na=src.match(/eval(.*)/)[1]\neval(a).match(/\"(.*)\"/)[1]\n}\n</js>",
+   "replaceRegex": "##\\s*本章未完，点下一页继续阅读。>>>\\s*"
+  },
+  "ruleExplore": {},
+  "ruleSearch": {
+   "author": ".s3@text",
+   "bookList": ".lis dl",
+   "bookUrl": ".s2@a@href",
+   "checkKeyWord": "",
+   "kind": ".s1@text",
+   "name": ".s2@text"
+  },
+  "ruleToc": {
+   "chapterList": ".intro:contains(正文)+.chapter li a",
+   "chapterName": "text",
+   "chapterUrl": "href",
+   "nextTocUrl": "option!0@value"
+  },
+  "searchUrl": "<js>\na=java.ajax(source.getKey()+\"/bookcase.html\")\nb=org.jsoup.Jsoup.parse(a).select(\"form\").select('[name=\"_token\"]').val()\njava.log(b)\n\nurl=`/search,{\n  \"body\": \"_token=${b}&kw=${key}\",\n  \"method\": \"POST\"\n}`\n</js>",
+  "weight": 0
+ }
+]

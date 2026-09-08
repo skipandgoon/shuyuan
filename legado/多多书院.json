@@ -1,0 +1,53 @@
+[
+ {
+  "bookSourceComment": "// Error: 搜索失效",
+  "bookSourceGroup": "关耳",
+  "bookSourceName": "🌸多多书院",
+  "bookSourceType": 0,
+  "bookSourceUrl": "http://www.txtduo.com",
+  "bookUrlPattern": "",
+  "customButton": false,
+  "customOrder": 58,
+  "enabled": true,
+  "enabledCookieJar": false,
+  "enabledExplore": false,
+  "eventListener": false,
+  "lastUpdateTime": 1682088639905,
+  "loginUrl": "",
+  "respondTime": 182188,
+  "ruleBookInfo": {
+   "author": "//*[@class=\"bookinfo\"]/p[1]/i/text()",
+   "coverUrl": "//*[@class=\"bookcover\"]/a/img/@src",
+   "init": "",
+   "intro": "class.uc_cont.1@text",
+   "kind": "//*[@class=\"bookinfo\"]/p[2]/a/text()",
+   "lastChapter": "//*[@class=\"uctitle\"]/span/a/text()",
+   "name": "//*[@class=\"bookcover\"]/a/img/@alt",
+   "tocUrl": "class.fl.3@tag.a@href"
+  },
+  "ruleContent": {
+   "content": "id.content@p@html",
+   "imageStyle": "0"
+  },
+  "ruleExplore": {
+   "bookList": ""
+  },
+  "ruleSearch": {
+   "author": "##作者：([^<]+)<##$1###",
+   "bookList": "id.alistbox",
+   "bookUrl": "h2@tag.a@href",
+   "coverUrl": "img@src",
+   "intro": "class.intro@text",
+   "kind": "",
+   "lastChapter": "class.sys@a@text",
+   "name": "h2@a@text"
+  },
+  "ruleToc": {
+   "chapterList": "id.list@tag.dd@tag.a",
+   "chapterName": "text",
+   "chapterUrl": "href"
+  },
+  "searchUrl": "http://www.txtduo.com/search.html,{\n'method': 'POST',\n'body': 'searchkey={{key}}&s=articlename'\n}",
+  "weight": 0
+ }
+]

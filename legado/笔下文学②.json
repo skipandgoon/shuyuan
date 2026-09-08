@@ -1,0 +1,55 @@
+[
+ {
+  "bookSourceComment": "// Error: 搜索失效",
+  "bookSourceGroup": "晋江",
+  "bookSourceName": "笔下文学②🥉",
+  "bookSourceType": 0,
+  "bookSourceUrl": "https://www.bbida.com#",
+  "customButton": false,
+  "customOrder": 102,
+  "enabled": true,
+  "enabledCookieJar": false,
+  "enabledExplore": false,
+  "eventListener": false,
+  "header": "{\n\t\"User-Agent\":\"Mozilla/5.0 (Linux; Android 10; MI 8 Build/QKQ1.190828.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/100.0.4896.127 Mobile Safari/537.36\"\n\t}",
+  "lastUpdateTime": 1719734426884,
+  "loginCheckJs": "cookie.removeCookie(source.getKey())\nresult",
+  "respondTime": 182882,
+  "ruleBookInfo": {
+   "author": "h2>a@text",
+   "coverUrl": ".cover>img@src",
+   "init": ".book",
+   "intro": ".bookintro>p.0@text",
+   "kind": ".bookdes>p.0@text##小说状态：",
+   "lastChapter": ".bookdes>p.2@a@text",
+   "name": "h1>a@text",
+   "tocUrl": "",
+   "wordCount": ".bookdes>p.3@text##最后更新："
+  },
+  "ruleContent": {
+   "content": "#booktxt p@html##一秒记住.*阅读！",
+   "nextContentUrl": ""
+  },
+  "ruleExplore": {
+   "bookList": ""
+  },
+  "ruleSearch": {
+   "author": "dd>a@text",
+   "bookList": ".content dl",
+   "bookUrl": "dt>a@href",
+   "coverUrl": ".cover>img@src",
+   "intro": "dd.0@text",
+   "kind": "dd>span.0@text",
+   "name": "dt>a@text",
+   "wordCount": "dd>span.1@text"
+  },
+  "ruleToc": {
+   "chapterList": ".all li a",
+   "chapterName": "text",
+   "chapterUrl": "href",
+   "nextTocUrl": ""
+  },
+  "searchUrl": "https://www.bbida.com/search/?searchkey={{key}}",
+  "weight": 0
+ }
+]

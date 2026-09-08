@@ -1,0 +1,56 @@
+[
+ {
+  "bookSourceComment": "",
+  "bookSourceGroup": "晋江",
+  "bookSourceName": "若晨文学",
+  "bookSourceType": 0,
+  "bookSourceUrl": "https://m.ruochenwenxue.com",
+  "customButton": false,
+  "customOrder": 45,
+  "enabled": true,
+  "enabledCookieJar": false,
+  "enabledExplore": false,
+  "eventListener": false,
+  "exploreUrl": "",
+  "lastUpdateTime": 1724405968601,
+  "respondTime": 62322,
+  "ruleBookInfo": {
+   "author": "##字</span>(.*?) 著##$1###",
+   "coverUrl": "",
+   "init": "",
+   "intro": "class.introa@html",
+   "kind": "",
+   "lastChapter": "class.c_row nw@a@text",
+   "name": "class.mbs@ownText##《|》",
+   "tocUrl": "text.目录@href##index/(\\d+)##https://www.ruochenwenxue.com/index/$1###",
+   "wordCount": "##(\\d+)字</span>##$1###"
+  },
+  "ruleContent": {
+   "content": "id.acontent@html",
+   "nextContentUrl": "",
+   "replaceRegex": ""
+  },
+  "ruleExplore": {
+   "bookList": ""
+  },
+  "ruleSearch": {
+   "author": "class.gray@text##\\s*\\|.*",
+   "bookList": "class.c_row",
+   "bookUrl": "tag.a.0@href",
+   "coverUrl": "tag.img@src",
+   "intro": "class.gray@html##.*<br>",
+   "kind": "",
+   "lastChapter": "",
+   "name": "h4@text"
+  },
+  "ruleToc": {
+   "chapterList": "class.index@dd@a",
+   "chapterName": "text",
+   "chapterUrl": "href",
+   "nextTocUrl": "",
+   "updateTime": ""
+  },
+  "searchUrl": "https://m.ruochenwenxue.com/modules/article/search.php,{\n\t\"method\":\"POST\",\n\t\"body\":\"searchtype=all&searchkey={{key}}\"\n\t}",
+  "weight": 0
+ }
+]

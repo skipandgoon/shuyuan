@@ -1,0 +1,45 @@
+[
+ {
+  "bookSourceComment": "// Error: 搜索失效\n\n备用地址\nhttps://www.haitangsoshu.com",
+  "bookSourceGroup": "关耳",
+  "bookSourceName": "🎈海棠搜书「PO文」",
+  "bookSourceType": 0,
+  "bookSourceUrl": "https://www.haitangsoushu.com",
+  "customButton": false,
+  "customOrder": 59,
+  "enabled": true,
+  "enabledCookieJar": false,
+  "enabledExplore": false,
+  "eventListener": false,
+  "lastUpdateTime": 1682082575124,
+  "respondTime": 182218,
+  "ruleBookInfo": {
+   "init": "",
+   "intro": "<js>\nlist=java.getElements(\"@@class.BGsectionThree-content@li\").toArray();\nintro=java.getElements('#intro').html();\nhref='';text='';\nfor(i in list){\nhref=href+list[i].select('a:eq(1)').attr('href')+'\\n';\ntext=text+'【'+i+'】'+list[i].html()+'\\n';\n}\njava.put('list',href);\nxu=(book.getVariable(\"custom\")==null||book.getVariable(\"custom\")==\"\")?\"0\":book.getVariable(\"custom\");\nlaiyuan='当前来源【'+xu+'】';\nresult='换源列表（点击设置书籍变量，输入序号，确认后刷新，可更改对应的源，默认为0）\\n'+text+'\\n'+laiyuan+'\\n--------------\\n'+intro\n</js>\n##更新 .*",
+   "tocUrl": "@js:\nlist=java.get('list').split('\\n');\nintro=String(book.intro);\ncustomIntro=intro.match(/来源【(\\d+)】/)[1];\nresult=list[customIntro]"
+  },
+  "ruleContent": {
+   "content": "@js:\nfunction d(a, b) {\n            b = java.md5Encode(b);\n            var d = b.substring(0, 16);\n            var e = b.substring(16);\n            return    java.aesBase64DecodeToString(a,e,\"AES/CBC/PKCS5Padding\",d)}\neval(result.match(/(d\\(\"[\\s\\S]+\"\\))\\)/)[1])",
+   "webJs": ""
+  },
+  "ruleExplore": {
+   "bookList": ""
+  },
+  "ruleSearch": {
+   "author": "tag.a.1@text",
+   "bookList": "@css:.SHsectionThree-middle p:not(.intro)",
+   "bookUrl": "tag.a.0@href",
+   "kind": "tag.a.-1@text",
+   "name": "tag.a.0@text##《|》"
+  },
+  "ruleToc": {
+   "chapterList": "class.BCsectionTwo-top-chapter@a",
+   "chapterName": "text",
+   "chapterUrl": "href",
+   "nextTocUrl": "text.下一页@href||text.下一頁@href",
+   "updateTime": ""
+  },
+  "searchUrl": "/s/{{key}}/{{page}}/",
+  "weight": 0
+ }
+]

@@ -1,0 +1,54 @@
+[
+ {
+  "bookSourceComment": "// Error: org.mozilla.javascript.EcmaError: SyntaxError: Unexpected token: < (<Unknown source>#3) in <Unknown source> at line number 3",
+  "bookSourceGroup": "壬二酸",
+  "bookSourceName": "读书阁",
+  "bookSourceType": 0,
+  "bookSourceUrl": "http://www.zmtt.net#",
+  "bookUrlPattern": "",
+  "customButton": false,
+  "customOrder": 181,
+  "enabled": true,
+  "enabledCookieJar": false,
+  "enabledExplore": false,
+  "eventListener": false,
+  "exploreUrl": "@js:\noption={\"method\":\"POST\",\"body\":{\"version\":\"2.0\"}}\nurl=\"http://\"+JSON.parse(java.ajax(\"http://www.zmtt.net/checkUpdate,\"+JSON.stringify(option))).data.url\n\nlist=[{\"title\":\"全部小说\",\"url\":\"rankList?type=全部&page={{page}}&state=0\",\"style\":{\"layout_flexGrow\":0.25}},{\"title\":\"都市小说\",\"url\":\"rankList?type=都市&page={{page}}&state=0\",\"style\":{\"layout_flexGrow\":0.25}},{\"title\":\"科幻小说\",\"url\":\"rankList?type=科幻&page={{page}}&state=0\",\"style\":{\"layout_flexGrow\":0.25}},{\"title\":\"女频小说\",\"url\":\"rankList?type=女频&page={{page}}&state=0\",\"style\":{\"layout_flexGrow\":0.25}},{\"title\":\"历史小说\",\"url\":\"rankList?type=历史&page={{page}}&state=0\",\"style\":{\"layout_flexGrow\":0.25}},{\"title\":\"网游小说\",\"url\":\"rankList?type=网游&page={{page}}&state=0\",\"style\":{\"layout_flexGrow\":0.25}},{\"title\":\"玄幻小说\",\"url\":\"rankList?type=玄幻&page={{page}}&state=0\",\"style\":{\"layout_flexGrow\":0.25}},{\"title\":\"其他小说\",\"url\":\"rankList?type=其他&page={{page}}&state=0\",\"style\":{\"layout_flexGrow\":0.25}},{\"title\":\"修真小说\",\"url\":\"rankList?type=修真&page={{page}}&state=0\",\"style\":{\"layout_flexGrow\":0.25}}]\n\nlist.forEach(x=>{\n\tx.url=url+x.url\n\t})\nJSON.stringify(list)",
+  "header": "",
+  "lastUpdateTime": 1732518609831,
+  "loginUrl": "",
+  "respondTime": 180735,
+  "ruleBookInfo": {
+   "author": "author",
+   "init": "data.book",
+   "intro": "intro",
+   "kind": "type&&update_state",
+   "lastChapter": "last_chapter_name&&updatetime\n<js>result.replace(/(.*)\\s/,'$1 • ')</js>\n<js>result.replace(/\\s\\d+:\\d+:\\d+/,'')</js>",
+   "name": "name",
+   "tocUrl": "/getCataLogs?bookid={{$._id}}&page=1&limit={{$.total_num}}",
+   "wordCount": "updatetime"
+  },
+  "ruleContent": {
+   "content": "data.chapterInfo.content<js>java.aesBase64DecodeToString(result,\"6CE93717FBEA3E4F\",\"AES/CBC/NoPadding\",\"6CE93717FBEA3E4F\")</js>##\\#\\#\\#\\$\\$\\$##<br>"
+  },
+  "ruleExplore": {
+   "bookList": ""
+  },
+  "ruleSearch": {
+   "author": "author",
+   "bookList": "$.data[*]",
+   "bookUrl": "/bookInfo?bookid={{$._id}}",
+   "coverUrl": "image_url",
+   "intro": "intro",
+   "kind": "type",
+   "lastChapter": "",
+   "name": "name@put:{bid:_id}"
+  },
+  "ruleToc": {
+   "chapterList": "data.list",
+   "chapterName": "name",
+   "chapterUrl": "/getContent?bookid=@get:{bid}&chapterid={{$._id}}"
+  },
+  "searchUrl": "@js:\noption={\"method\":\"POST\",\"body\":{\"version\":\"2.0\"}}\nurl=\"http://\"+JSON.parse(java.ajax(\"http://www.zmtt.net/checkUpdate,\"+JSON.stringify(option))).data.url\njava.log(url)\n//java.put(\"url\",url)\n\nopt={\"method\":\"POST\",\"body\":{\"keyword\":\"{{key}}\"}}\nurl+\"search,\"+JSON.stringify(opt)",
+  "weight": 0
+ }
+]

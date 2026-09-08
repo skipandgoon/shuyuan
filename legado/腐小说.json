@@ -1,0 +1,72 @@
+[
+ {
+  "bookSourceComment": "// Error: 搜索失效",
+  "bookSourceGroup": "晋江",
+  "bookSourceName": "🎈腐小说",
+  "bookSourceType": 0,
+  "bookSourceUrl": "http://www.jiqinw.com",
+  "bookUrlPattern": "",
+  "customButton": false,
+  "customOrder": 62,
+  "enabled": true,
+  "enabledCookieJar": false,
+  "enabledExplore": false,
+  "eventListener": false,
+  "exploreUrl": "现代耽美::/xiandai/list_4_{{page}}.html\n古代耽美::/gudai/list_5_{{page}}.html\n穿越重生::/chuanyue/list_6_{{page}}.html\n玄幻灵异::/qihuan/list_7_{{page}}.html\n网游竞技::/wangyou/list_8_{{page}}.html\n同人耽美::/tongren/list_9_{{page}}.html\nG L 百合::/baihe/list_10_{{page}}.html",
+  "header": "",
+  "lastUpdateTime": 1724796199848,
+  "loginUrl": "",
+  "respondTime": 187273,
+  "ruleBookInfo": {
+   "author": "##作者：([^<]+)<##$1###",
+   "coverUrl": "",
+   "init": "",
+   "intro": "",
+   "kind": "",
+   "lastChapter": "",
+   "name": "",
+   "tocUrl": "",
+   "wordCount": ""
+  },
+  "ruleContent": {
+   "content": "@css:h2+div+div@html||h1+div+div@html",
+   "imageStyle": "0",
+   "nextContentUrl": "",
+   "sourceRegex": "",
+   "webJs": ""
+  },
+  "ruleExplore": {
+   "author": "tag.a.0@text##.*作者：",
+   "bookList": "class.list_article@ul@li||class.list_article@ul@li",
+   "bookUrl": "tag.a.0@href||@href",
+   "coverUrl": "",
+   "intro": "class.desc.0@text",
+   "kind": "",
+   "lastChapter": "class.time.0@text",
+   "name": "tag.a.0@b@text||tag.a.0@strong@text",
+   "wordCount": ""
+  },
+  "ruleSearch": {
+   "author": "##作者：([^<]+)<##$1###",
+   "bookList": "class.list_article@ul@li",
+   "bookUrl": "tag.a.1@href",
+   "checkKeyWord": "",
+   "coverUrl": "",
+   "intro": "class.desc.0@text",
+   "kind": "tag.a.0@text",
+   "lastChapter": "class.time.0@text",
+   "name": "tag.a.1@text##\\作者：.*",
+   "wordCount": ""
+  },
+  "ruleToc": {
+   "chapterList": "//a[text()=\"下一页\"]/../following-sibling::li/a",
+   "chapterName": "text##(\\d+)##第$1页",
+   "chapterUrl": "href",
+   "isVip": "",
+   "nextTocUrl": "",
+   "updateTime": ""
+  },
+  "searchUrl": "http://www.jiqinw.com/plus/hsearch.php?q={{key}}",
+  "weight": 0
+ }
+]

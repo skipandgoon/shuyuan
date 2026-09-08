@@ -1,0 +1,49 @@
+[
+ {
+  "bookSourceComment": "// Error: 搜索失效",
+  "bookSourceGroup": "一程",
+  "bookSourceName": "⭐ 二千小说",
+  "bookSourceType": 0,
+  "bookSourceUrl": "https://www.sdhear.com",
+  "customButton": false,
+  "customOrder": 166,
+  "enabled": true,
+  "enabledCookieJar": true,
+  "enabledExplore": false,
+  "eventListener": false,
+  "lastUpdateTime": 1734271349032,
+  "respondTime": 183474,
+  "ruleBookInfo": {
+   "author": "",
+   "coverUrl": "",
+   "intro": "",
+   "kind": "",
+   "lastChapter": "",
+   "name": "",
+   "tocUrl": ""
+  },
+  "ruleContent": {
+   "content": "id.content@p@html",
+   "replaceRegex": "##起点中文.*|\\(未完待续.*\\)"
+  },
+  "ruleExplore": {},
+  "ruleSearch": {
+   "author": "$..author##\\<b.*\\\"\\>|\\<\\/b\\>",
+   "bookList": "$..search[*]",
+   "bookUrl": "$..book_list_url",
+   "checkKeyWord": "乡村",
+   "coverUrl": "$..cover",
+   "intro": "$..intro##(^|[。！？]+[”」）】]?)##$1<br>",
+   "kind": "$..cate_name&&$..status_str&&$..uptime##小说",
+   "lastChapter": "$..latest_chapter_name##正文卷.|正文.|VIP卷.|默认卷.|卷_|VIP章节.|免费章节.|章节目录.|最新章节.|[\\(（【].*?[求更票谢乐发订合补加架字修Kk].*?[】）\\)]",
+   "name": "$..book_name"
+  },
+  "ruleToc": {
+   "chapterList": ".book@dd@a",
+   "chapterName": "text##正文卷.|正文.|VIP卷.|默认卷.|卷_|VIP章节.|免费章节.|章节目录.|最新章节.|在百度搜索.*|[\\(（【].*?[求更票谢乐发订合补加架字修Kk].*?[】）\\)]",
+   "chapterUrl": "href"
+  },
+  "searchUrl": "/api/search?q={{key}}",
+  "weight": 0
+ }
+]

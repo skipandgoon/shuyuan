@@ -1,0 +1,38 @@
+[
+ {
+  "bookSourceGroup": "晋江",
+  "bookSourceName": "🎈福书网",
+  "bookSourceType": 0,
+  "bookSourceUrl": "https://m.fushutxt.cc/",
+  "customButton": false,
+  "customOrder": 71,
+  "enabled": true,
+  "enabledCookieJar": false,
+  "enabledExplore": false,
+  "eventListener": false,
+  "lastUpdateTime": 1724794379375,
+  "respondTime": 54901,
+  "ruleBookInfo": {
+   "intro": "id.text@html##<table[\\s\\S]+"
+  },
+  "ruleContent": {
+   "content": "id.text@html##<table[\\s\\S]+",
+   "replaceRegex": "##耽美小说\\s*.*"
+  },
+  "ruleExplore": {},
+  "ruleSearch": {
+   "author": "tag.span.-1@text",
+   "bookList": "h2",
+   "bookUrl": "tag.a.0@href",
+   "name": "tag.a.0@text"
+  },
+  "ruleToc": {
+   "chapterList": "option",
+   "chapterName": "text",
+   "chapterUrl": "value",
+   "formatJs": "\"第\"+(chapter.index+1)+\"部分\""
+  },
+  "searchUrl": "https://m.fushutxt.cc/e/search/index.php,{\n  \"body\": \"keyboard={{key}}&show=title&\",\n  \"method\": \"POST\"\n}",
+  "weight": 0
+ }
+]

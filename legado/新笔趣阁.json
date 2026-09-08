@@ -1,0 +1,50 @@
+[
+ {
+  "bookSourceComment": "// Error: org.mozilla.javascript.WrappedException: Wrapped java.net.UnknownHostException: Unable to resolve host \"www.biqueg.cc\": No address associated with hostname (<Unknown source>#3) in <Unknown source> at line number 3",
+  "bookSourceGroup": "晋江",
+  "bookSourceName": "新笔趣阁",
+  "bookSourceType": 0,
+  "bookSourceUrl": "https://www.biqueg.cc/",
+  "customButton": false,
+  "customOrder": 42,
+  "enabled": true,
+  "enabledCookieJar": false,
+  "enabledExplore": false,
+  "eventListener": false,
+  "lastUpdateTime": 1726058897887,
+  "respondTime": 180422,
+  "ruleBookInfo": {
+   "author": "i@a@text",
+   "coverUrl": "",
+   "intro": "class.intro@text##\\s{1,}##<br>",
+   "kind": "p@span.0@text&&p@span.2@text",
+   "lastChapter": "class.flex to100@a@text",
+   "name": "h1@text",
+   "tocUrl": "",
+   "wordCount": "p@span.1@text"
+  },
+  "ruleContent": {
+   "content": "id.article@html",
+   "nextContentUrl": "text.下一页@href"
+  },
+  "ruleExplore": {},
+  "ruleSearch": {
+   "author": "p.0@textNodes||p.0@span.hot@text",
+   "bookList": "class.flex@li",
+   "bookUrl": "a.0@href",
+   "coverUrl": "",
+   "intro": "class.searchresult_p@html",
+   "kind": "a.0@span@text",
+   "lastChapter": "p.-1@a@text",
+   "name": "h3@text",
+   "wordCount": "p.0@class.s_gray@text"
+  },
+  "ruleToc": {
+   "chapterList": "id.ul_all_chapters@li@a",
+   "chapterName": "text",
+   "chapterUrl": "href"
+  },
+  "searchUrl": "/search/,{\n'charset': 'UTF-8\"',\n'method': 'POST',\n'body': 'searchkey={{key}}&searchtype=all&Submit='\n}\n<js>\nurl = source.getVariable()!=\"\"?source.getVariable():source.key;\nresponse = java.get(url,{\"User-Agent\": \"Mobile\"})\nif(/^30/.test(response.statusCode())){\n\t source.setVariable(response.header(\"Location\"));\n\t url = source.getVariable()\n\t}\n\nString(url).replace(/\\/$/,'')+result\n</js>",
+  "weight": 0
+ }
+]

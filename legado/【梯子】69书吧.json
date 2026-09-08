@@ -1,0 +1,52 @@
+[
+ {
+  "bookSourceComment": "// Error: 搜索失效",
+  "bookSourceGroup": "起点",
+  "bookSourceName": "🇨🇳【梯子】69书吧",
+  "bookSourceType": 0,
+  "bookSourceUrl": "https://69shuba.cx/index.html",
+  "customButton": false,
+  "customOrder": 32,
+  "enabled": true,
+  "enabledCookieJar": true,
+  "enabledExplore": false,
+  "eventListener": false,
+  "header": "{\"User-Agent\":\"Mozilla/5.0 (Linux; Android 12; HarmonyOS; OCE-AN50; HMSCore 6.14.0.302) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.196 HuaweiBrowser/15.0.6.301 Mobile Safari/537.36\"}",
+  "lastUpdateTime": 1727523853879,
+  "loginCheckJs": "",
+  "respondTime": 182420,
+  "ruleBookInfo": {
+   "author": "p.0@text",
+   "coverUrl": "img@arc",
+   "init": "<js>\nif (result.match(/Just a moment/)) {\n\tcookie.removeCookie(baseUrl);\n\tjava.startBrowserAwait(baseUrl,\"验证\");\n\tresult=java.ajax(baseUrl);\n}\nresult;\n</js>",
+   "intro": ".content@text",
+   "kind": "p.1@text##分类：",
+   "lastChapter": "p.3@text##更新：",
+   "name": "h1@text",
+   "tocUrl": "text.完整目录@href",
+   "wordCount": "p.2@text##(\\|.*)$"
+  },
+  "ruleContent": {
+   "content": ".txtnav@html",
+   "replaceRegex": "##第.*?章.*|.*\\d+ 作者：.*"
+  },
+  "ruleExplore": {},
+  "ruleSearch": {
+   "author": ".labelbox@label.0@text",
+   "bookList": ".newbox@li",
+   "bookUrl": "a@href",
+   "checkKeyWord": "我的",
+   "coverUrl": "img@arc",
+   "intro": ".ellipsis_2@text",
+   "kind": ".labelbox@label.1:2@text",
+   "name": "a@text##点击.*"
+  },
+  "ruleToc": {
+   "chapterList": "-ul!0:1:2@li",
+   "chapterName": "a@text",
+   "chapterUrl": "a@href"
+  },
+  "searchUrl": "https://69shuba.cx/modules/article/search.php,{\n \"body\": \"searchkey={{key}}\",\n \"charset\": \"gbk\", \n \"method\": \"POST\"\n}",
+  "weight": 0
+ }
+]

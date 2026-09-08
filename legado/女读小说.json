@@ -1,0 +1,63 @@
+[
+ {
+  "bookSourceComment": "// Error: org.mozilla.javascript.EcmaError: TypeError: 无法读取 null 的属性 “1” (<Unknown Source>#2) in <Unknown Source> at line number 2\n\nhttps://m.xiqisw.com",
+  "bookSourceGroup": "一程",
+  "bookSourceName": "💐 女读小说",
+  "bookSourceType": 0,
+  "bookSourceUrl": "https://m.nvdushu.cc",
+  "customButton": false,
+  "customOrder": 137,
+  "enabled": true,
+  "enabledCookieJar": true,
+  "enabledExplore": false,
+  "eventListener": false,
+  "exploreUrl": "[{\"title\":\"男古代·完结\",\"url\":\"\",\"style\":{\"layout_flexBasisPercent\":1,\"layout_flexGrow\":1}},{\"title\":\"言情小说\",\"url\":\"/category/0_1_{{page}}_1_2_0_2.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"穿越小说\",\"url\":\"/category/0_1_{{page}}_1_2_0_3.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"灵异悬疑\",\"url\":\"/category/0_1_{{page}}_1_2_0_4.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"历史军事\",\"url\":\"/category/0_1_{{page}}_1_2_0_5.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"都市小说\",\"url\":\"/category/0_1_{{page}}_1_2_0_6.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"恐怖小说\",\"url\":\"/category/0_1_{{page}}_1_2_0_7.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"武侠仙侠\",\"url\":\"/category/0_1_{{page}}_1_2_0_8.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"玄幻奇幻\",\"url\":\"/category/0_1_{{page}}_1_2_0_9.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"东方玄幻\",\"url\":\"/category/0_1_{{page}}_1_2_0_10.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"\",\"url\":\"\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"游戏异界\",\"url\":\"/category/0_1_{{page}}_1_2_0_11.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"\",\"url\":\"\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"男现代·完结\",\"url\":\"\",\"style\":{\"layout_flexBasisPercent\":1,\"layout_flexGrow\":1}},{\"title\":\"言情小说\",\"url\":\"/category/0_1_{{page}}_2_2_0_2.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"穿越小说\",\"url\":\"/category/0_1_{{page}}_2_2_0_3.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"灵异悬疑\",\"url\":\"/category/0_1_{{page}}_2_2_0_4.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"历史军事\",\"url\":\"/category/0_1_{{page}}_2_2_0_5.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"都市小说\",\"url\":\"/category/0_1_{{page}}_2_2_0_6.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"恐怖小说\",\"url\":\"/category/0_1_{{page}}_2_2_0_7.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"武侠仙侠\",\"url\":\"/category/0_1_{{page}}_2_2_0_8.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"玄幻奇幻\",\"url\":\"/category/0_1_{{page}}_2_2_0_9.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"东方玄幻\",\"url\":\"/category/0_1_{{page}}_2_2_0_10.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"\",\"url\":\"\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"游戏异界\",\"url\":\"/category/0_1_{{page}}_2_2_0_11.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"\",\"url\":\"\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"女古代·完结\",\"url\":\"\",\"style\":{\"layout_flexBasisPercent\":1,\"layout_flexGrow\":1}},{\"title\":\"言情小说\",\"url\":\"/category/0_2_{{page}}_1_2_0_2.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"穿越小说\",\"url\":\"/category/0_2_{{page}}_1_2_0_3.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"灵异悬疑\",\"url\":\"/category/0_2_{{page}}_1_2_0_4.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"历史军事\",\"url\":\"/category/0_2_{{page}}_1_2_0_5.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"都市小说\",\"url\":\"/category/0_2_{{page}}_1_2_0_6.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"恐怖小说\",\"url\":\"/category/0_2_{{page}}_1_2_0_7.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"武侠仙侠\",\"url\":\"/category/0_2_{{page}}_1_2_0_8.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"玄幻奇幻\",\"url\":\"/category/0_2_{{page}}_1_2_0_9.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"东方玄幻\",\"url\":\"/category/0_2_{{page}}_1_2_0_10.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"\",\"url\":\"\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"游戏异界\",\"url\":\"/category/0_2_{{page}}_1_2_0_11.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"\",\"url\":\"\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"女现代·完结\",\"url\":\"\",\"style\":{\"layout_flexBasisPercent\":1,\"layout_flexGrow\":1}},{\"title\":\"言情小说\",\"url\":\"/category/0_2_{{page}}_2_2_0_2.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"穿越小说\",\"url\":\"/category/0_2_{{page}}_2_2_0_3.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"灵异悬疑\",\"url\":\"/category/0_2_{{page}}_2_2_0_4.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"历史军事\",\"url\":\"/category/0_2_{{page}}_2_2_0_5.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"都市小说\",\"url\":\"/category/0_2_{{page}}_2_2_0_6.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"恐怖小说\",\"url\":\"/category/0_2_{{page}}_2_2_0_7.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"武侠仙侠\",\"url\":\"/category/0_2_{{page}}_2_2_0_8.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"玄幻奇幻\",\"url\":\"/category/0_2_{{page}}_2_2_0_9.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"东方玄幻\",\"url\":\"/category/0_2_{{page}}_2_2_0_10.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"\",\"url\":\"\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"游戏异界\",\"url\":\"/category/0_2_{{page}}_2_2_0_11.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"\",\"url\":\"\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}}]",
+  "header": "",
+  "lastUpdateTime": 1722145599658,
+  "respondTime": 201844,
+  "ruleBookInfo": {
+   "author": ".author@a@text",
+   "coverUrl": ".BGsectionOne-top-left@img@data-lazy##\\?.*",
+   "intro": ".sectionTwo-content@p@text##(^|[。！？]+[”」）】]?)##$1<br>",
+   "kind": ".channel@span@text&&.isover@a@text",
+   "lastChapter": ".row[1]@text##正文卷.|正文.|VIP卷.|默认卷.|卷_|VIP章节.|免费章节.|章节目录.|最新章节.|[\\(（【].*?[求更票谢乐发订合补加架字修Kk].*?[】）\\)]",
+   "name": ".title@text",
+   "tocUrl": ".weui-btn_plain-primary@href"
+  },
+  "ruleContent": {
+   "content": "<js>\nresult=java.ajax(\"http://\"+result.match(/\\(\"\\/\\/(.*?)\"/)[1])\n</js>\n@js:\nif(result.match(/replace/)){\ns=result.match(/replace.*?\\{(.*?)\\}/)[1].replace(/\\\\/g,'\\\\\\\\')\nnum=s.split(',').length\nfor(var i=0;i<num;i++){\n\tm=s.match(/\"(.*?)\":\"(.*?)\"/)\n\ts=s.replace(/.*?,/,'')\n\tresult=result.replace(new RegExp(m[2],'g'),m[1])\n\t}\n\t}else{\nresult\nif(result.match(/txt_call/)){\n\tresult=\"因网站问题没有正文\"\n\t}\n\t\t}\nresult.replace(/(\\\\)+n/g,'<\\/br>').replace(/.*?:\"/,'').replace(/\",\".*/,'').replace(/\"\\}.*/,'').replace(/\\\\/g,'')",
+   "imageStyle": "",
+   "nextContentUrl": "",
+   "replaceRegex": "##.*小说网.*"
+  },
+  "ruleExplore": {
+   "author": "a.2@text",
+   "bookList": ".CGsectionTwo-right-content-unit",
+   "bookUrl": "a.0@href",
+   "coverUrl": "a.0@href<js>java.ajax('https://m.nvdushu.cc'+result)</js>.BGsectionOne-top-left@img@data-lazy##\\?.*",
+   "intro": "p.2@text",
+   "kind": ".tag@text&&p.3@textNodes##最近更新\\s|\\s..:..\\s##,",
+   "name": "a.0@text",
+   "wordCount": ""
+  },
+  "ruleSearch": {
+   "author": "a.1@text",
+   "bookList": ".search-card",
+   "bookUrl": "a.0@href",
+   "coverUrl": "a.0@href<js>java.ajax('https://m.nvdushu.cc'+result)</js>.BGsectionOne-top-left@img@data-lazy##\\?.*",
+   "intro": ".sc-content@text",
+   "kind": ".sc-time@span.1@text##\\(|\\)|\\s.*",
+   "lastChapter": ".sc-time@span.0@text",
+   "name": "a.0@text"
+  },
+  "ruleToc": {
+   "chapterList": ".chapter-list@li@a",
+   "chapterName": "text##\\=>.*<=|.nvdushu.com.|.女读小说网.|正文卷.|正文.|VIP卷.|默认卷.|卷_|VIP章节.|免费章节.|章节目录.|最新章节.|[\\(（【].*?[求更票谢乐发订合补加架字修Kk].*?[】）\\)]",
+   "chapterUrl": "href",
+   "nextTocUrl": "@js:\nif(!baseUrl.match(/_/)){\nnum=result.match(/i\\s*<=\\s*(\\d+)/)[1]\nfor(var i=2,txt=[];i<=num;i++){\n\ttxt.push(baseUrl.replace(/\\.html/,'_'+i+'\\.html'))\n\t}\ntxt.join(\"\\r\\n\")\n}",
+   "updateTime": ""
+  },
+  "searchUrl": "/search/,{\n\t\"method\":\"post\",\n\t\"body\":\"keyword={{key}}&submit=\"\n\t}",
+  "weight": 0
+ }
+]

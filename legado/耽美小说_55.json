@@ -1,0 +1,41 @@
+[
+ {
+  "bookSourceComment": "",
+  "bookSourceGroup": "晋江",
+  "bookSourceName": "耽美小说",
+  "bookSourceType": 0,
+  "bookSourceUrl": "http://m.blxsw.foreverx.cn",
+  "customButton": false,
+  "customOrder": 56,
+  "enabled": true,
+  "enabledCookieJar": true,
+  "enabledExplore": false,
+  "eventListener": false,
+  "lastUpdateTime": 1726058885827,
+  "respondTime": 19301,
+  "ruleBookInfo": {
+   "intro": "id.text@html\n##<br>[\\s\\S]+"
+  },
+  "ruleContent": {
+   "content": "##(<td  id=\"text\"[\\s\\S]+?)<.*?style=\"font-size:##$1###"
+  },
+  "ruleExplore": {},
+  "ruleSearch": {
+   "author": "span.1@text",
+   "bookList": "<js>result.replace(/(<h2[\\s\\S]+?<\\/table>)/g,'<div class=\"list\">$1</div>')</js>\nclass.list",
+   "bookUrl": "h2@tag.a@href",
+   "intro": "td.0@html",
+   "kind": "class.fl@text",
+   "name": "h2@tag.a@text",
+   "wordCount": ""
+  },
+  "ruleToc": {
+   "chapterList": "select@option",
+   "chapterName": "text",
+   "chapterUrl": "value",
+   "formatJs": "\"第\"+String(chapter.index+1)+\"部分\""
+  },
+  "searchUrl": "https://m.blxsw.cc/e/search/index.php,{\n\t\"method\":\"POST\",\n\t\"body\":\"show=title&keyboard={{key}}&Submit22=搜索\"\n\t}",
+  "weight": 0
+ }
+]

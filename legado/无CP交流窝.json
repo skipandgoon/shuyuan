@@ -1,0 +1,41 @@
+[
+ {
+  "bookSourceComment": "// Error: 搜索失效\n\n\"error:Unabletoresolvehost\"www.wu-cp.com\":Noaddressassociatedwithhostname\n\"",
+  "bookSourceGroup": "晋江",
+  "bookSourceName": "🍊 无CP交流窝",
+  "bookSourceType": 0,
+  "bookSourceUrl": "http://www.wu-cp.com",
+  "customButton": false,
+  "customOrder": 143,
+  "enabled": true,
+  "enabledCookieJar": true,
+  "enabledExplore": false,
+  "eventListener": false,
+  "lastUpdateTime": 1699815451979,
+  "respondTime": 184780,
+  "ruleBookInfo": {
+   "coverUrl": "class.book-cover@src",
+   "intro": "class.note@text",
+   "tocUrl": "class.index@href"
+  },
+  "ruleContent": {
+   "content": "class.page-body@text"
+  },
+  "ruleExplore": {},
+  "ruleSearch": {
+   "author": "class.author@text",
+   "bookList": "tag.tbody@tag.tr",
+   "bookUrl": "class.name@href",
+   "lastChapter": "class.chapter@text",
+   "name": "class.name@text",
+   "wordCount": "tag.td.-2@tag.div@text"
+  },
+  "ruleToc": {
+   "chapterList": "tag.ul.5@tag.li",
+   "chapterName": "tag.a@text",
+   "chapterUrl": "tag.a@href"
+  },
+  "searchUrl": "http://www.wu-cp.com/modules/article/search.php?searchkey={{key}}&searchtype=all,{\"charset\":\"gbk\"}",
+  "weight": 0
+ }
+]

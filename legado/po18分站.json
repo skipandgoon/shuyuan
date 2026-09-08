@@ -1,0 +1,40 @@
+[
+ {
+  "bookSourceComment": "// Error: org.mozilla.javascript.EcmaError: SyntaxError: Unexpected token: < (<Unknown source>#5) in <Unknown source> at line number 5",
+  "bookSourceGroup": "晋江",
+  "bookSourceName": "po18分站",
+  "bookSourceType": 0,
+  "bookSourceUrl": "http://m.zjlskls.com/",
+  "customButton": false,
+  "customOrder": 57,
+  "enabled": true,
+  "enabledCookieJar": true,
+  "enabledExplore": false,
+  "eventListener": false,
+  "lastUpdateTime": 1724408510539,
+  "respondTime": 181402,
+  "ruleBookInfo": {
+   "author": "",
+   "intro": "#intro@html"
+  },
+  "ruleContent": {
+   "content": "#content@html"
+  },
+  "ruleExplore": {},
+  "ruleSearch": {
+   "author": ".author@a@text",
+   "bookList": "class.bookbox",
+   "bookUrl": ".bookname@a@href##^##http://www.zjlskls.com",
+   "kind": ".cat@text##.*?：",
+   "lastChapter": ".update@a@text",
+   "name": ".bookname@text"
+  },
+  "ruleToc": {
+   "chapterList": ".listmain@dd@a",
+   "chapterName": "text",
+   "chapterUrl": "href"
+  },
+  "searchUrl": "<js>\nurl  = \"http://m.zjlskls.com/pinyin.html\"\nbody = \"s=\"+key+\"&act=hztopy\"\nurl = url+\",\"+JSON.stringify({\"method\":\"POST\",\"body\":String(body)});\ndata = JSON.parse(java.ajax(url)).data;\nurl = \"http://m.zjlskls.com/sdfgsdyugfsdugf.html?ie=gbk&s=5256649918672294880&q=\"+data;\n</js>",
+  "weight": 0
+ }
+]

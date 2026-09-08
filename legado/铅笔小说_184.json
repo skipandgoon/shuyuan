@@ -1,0 +1,49 @@
+[
+ {
+  "bookSourceComment": "// Error: org.mozilla.javascript.EcmaError: TypeError: 无法读取 null 的属性 “1” (<Unknown source>#3) in <Unknown source> at line number 3\n\n// 11月6修:\n// 搜索地址经常改变，采用正则表达式\n// 通过ajax请求加载了url页面的内容，然后使用正则表达式 search.*action=\"(.+?)\" 去匹配页面\n// 中的搜索框form标签的action地址\n// search.*：匹配包含search关键字的内容，.*表示任意字符。\n// action=\"(.+?)\"：查找action属性并捕获它的URL。(.+?)表示匹配非空的最短内容。\n// match(...)[1]：这个方法返回匹配的第一个分组，也就是action属性的URL\n// 正文替换净化规则",
+  "bookSourceGroup": "壬二酸",
+  "bookSourceName": "铅笔小说",
+  "bookSourceType": 0,
+  "bookSourceUrl": "http://www.jundu8.com/",
+  "customButton": false,
+  "customOrder": 185,
+  "enabled": true,
+  "enabledCookieJar": true,
+  "enabledExplore": false,
+  "eventListener": false,
+  "lastUpdateTime": 1732519094404,
+  "respondTime": 180979,
+  "ruleBookInfo": {
+   "author": "id.info@p.0@a@text",
+   "coverUrl": "id.fmimg@img@data-original",
+   "intro": "id.intro@text",
+   "lastChapter": "id.info@class.hidden-xs.1@text",
+   "name": "id.info@h1@text",
+   "tocUrl": "text.章节目录@href",
+   "wordCount": "id.info@p.2@text##字数："
+  },
+  "ruleContent": {
+   "content": "id.content@html",
+   "nextContentUrl": "text.下一页@href",
+   "replaceRegex": "##本章未完，点击下一页继续阅读。|.*\\(免登录\\)"
+  },
+  "ruleExplore": {},
+  "ruleSearch": {
+   "author": ".btm@a@text",
+   "bookList": "id.hotcontent@class.item",
+   "bookUrl": "class.item@a@href",
+   "coverUrl": ".item .image@img@data-original",
+   "intro": "dl dd@text",
+   "lastChapter": "",
+   "name": "dl@dt@a@text",
+   "wordCount": ".btm@class.orange@text"
+  },
+  "ruleToc": {
+   "chapterList": "id.content_1@a",
+   "chapterName": "@text",
+   "chapterUrl": "@href##$##,{'webView': true}"
+  },
+  "searchUrl": "{{url=source.getKey();\ncookie.removeCookie(url)\njava.ajax(url).match(/search.*action=\"(.+?)\"/)[1]}}?searchkey={{key}}",
+  "weight": 0
+ }
+]

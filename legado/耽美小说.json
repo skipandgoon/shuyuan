@@ -1,0 +1,38 @@
+[
+ {
+  "bookSourceComment": "// Error: org.mozilla.javascript.WrappedException: Wrapped java.lang.IndexOutOfBoundsException: Index: 0, Size: 0 (<Unknown Source>#1) in <Unknown Source> at line number 1",
+  "bookSourceGroup": "关耳",
+  "bookSourceName": "🌸耽美小说",
+  "bookSourceType": 3,
+  "bookSourceUrl": "https://www.dmxs.org",
+  "bookUrlPattern": "",
+  "customButton": false,
+  "customOrder": 33,
+  "enabled": true,
+  "enabledCookieJar": true,
+  "enabledExplore": false,
+  "eventListener": false,
+  "exploreUrl": "百合::https://www.dmxs.org/GLBH/index<,_{{page}}>.html",
+  "lastUpdateTime": 1682082723145,
+  "respondTime": 183612,
+  "ruleBookInfo": {
+   "downloadUrls": "text.txt下载@href\n<js>\nresult = String(result.get(0));\nu = \"https://www.dmxs.org\"+result;\nhtml = java.ajax(u);\n</js>\nid.dowloadnUrl@href##dm\\.\\.##/e/DownSys\n<js>\njava.get(\"https://www.dmxs.org\"+result.get(0),{}).header(\"Location\")\n</js>",
+   "intro": "class.infos@p@html",
+   "kind": "class.tags@a@text",
+   "name": ""
+  },
+  "ruleContent": {},
+  "ruleExplore": {},
+  "ruleSearch": {
+   "author": ".autor@text",
+   "bookList": "class.bk",
+   "bookUrl": "tag.a.0@href",
+   "intro": "p@html",
+   "kind": "tag.label!0@text",
+   "name": "h3@text"
+  },
+  "ruleToc": {},
+  "searchUrl": "/e/search/indexsearch.php,{\n  \"body\": \"classid=0&show=title&keyboard={{key}}\",\n  \"method\": \"POST\",\n  \"charset\":\"gbk\"\n}",
+  "weight": 0
+ }
+]

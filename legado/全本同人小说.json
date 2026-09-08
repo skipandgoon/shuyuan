@@ -1,0 +1,57 @@
+[
+ {
+  "bookSourceComment": "2024.5.29\nby墨殇",
+  "bookSourceGroup": "晋江",
+  "bookSourceName": "📃全本同人小说",
+  "bookSourceType": 0,
+  "bookSourceUrl": "http://qbtr.cc/",
+  "bookUrlPattern": "http://qbtr.cc/tongren/\\d+.html",
+  "customButton": false,
+  "customOrder": 73,
+  "enabled": true,
+  "enabledCookieJar": false,
+  "enabledExplore": false,
+  "eventListener": false,
+  "exploreUrl": "同人首页::/index<,_{{page}}>.html\n同人小说::/tongren/index<,_{{page}}>.html\n常规小说::/changgui/index<,_{{page}}>.html\n热门排行::/hot/index<,_{{page}}>.html",
+  "header": "",
+  "lastUpdateTime": 1716967167594,
+  "respondTime": 51827,
+  "ruleBookInfo": {
+   "author": "span.0@text",
+   "coverUrl": "img@src",
+   "intro": "p@text",
+   "name": ".infos@text",
+   "wordCount": "span.1@text"
+  },
+  "ruleContent": {
+   "content": ".read_chapterDetail@html",
+   "nextContentUrl": "text.下一章@href"
+  },
+  "ruleExplore": {
+   "author": ".booknews@ownText",
+   "bookList": ".bk",
+   "bookUrl": "a@href",
+   "coverUrl": "@js:'https://s21.ax1x.com/2024/05/29/pk3AYzd.png'",
+   "intro": "p@text",
+   "kind": ".size@text&&.date@text",
+   "name": ".infos@text##\\(.*"
+  },
+  "ruleSearch": {
+   "author": ".booknews@ownText",
+   "bookList": ".bk",
+   "bookUrl": "a@href",
+   "coverUrl": "",
+   "intro": "p@text",
+   "kind": ".date@text",
+   "name": "a.0@text",
+   "wordCount": ""
+  },
+  "ruleToc": {
+   "chapterList": ".clearfix li a",
+   "chapterName": "text",
+   "chapterUrl": "href"
+  },
+  "searchUrl": "{{url=source.getKey();\ncookie.removeCookie(url)}}\n/e/search/index.php,{\n  \"body\": \"keyboard={{key}}&show=title&classid=0\",\n  \"charset\": \"GB2312\",\n  \"method\": \"POST\"\n}",
+  "weight": 0
+ }
+]

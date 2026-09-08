@@ -1,0 +1,45 @@
+[
+ {
+  "bookSourceComment": "",
+  "bookSourceGroup": "晋江",
+  "bookSourceName": "随心看吧",
+  "bookSourceType": 0,
+  "bookSourceUrl": "https://m.suixkan.com#关耳",
+  "customButton": false,
+  "customOrder": 130,
+  "enabled": true,
+  "enabledCookieJar": true,
+  "enabledExplore": false,
+  "eventListener": false,
+  "lastUpdateTime": 1724347475749,
+  "respondTime": 11598,
+  "ruleBookInfo": {
+   "kind": "",
+   "tocUrl": "class.sumchapter@a@href"
+  },
+  "ruleContent": {
+   "content": "class.con@html",
+   "nextContentUrl": "",
+   "replaceRegex": "##\\s*.*?本章.*?完.*\\s*"
+  },
+  "ruleExplore": {},
+  "ruleSearch": {
+   "author": ".v-author@text",
+   "bookList": "class.v-list-item\n@js:\nlist=result.toArray();\nlist1=[];\nfor(i in list){\nif(list[i].text().indexOf(java.get('key'))>-1){\nlist1.push(list[i])\n}\n}\nlist1.map(x=>x)",
+   "bookUrl": "##=\"newWebView\\('([^']+)'##$1###",
+   "coverUrl": "",
+   "intro": ".v-intro@text",
+   "kind": "tag.div.-1@text",
+   "lastChapter": "<js>\nurl=String(result).match(/=\"newWebView\\('([^']+)'/)[1];url='https://m.suixkan.com'+url\njava.ajax(url)</js>\nclass.chapter-entrance@text",
+   "name": ".v-title@text",
+   "wordCount": ".v-words@text"
+  },
+  "ruleToc": {
+   "chapterList": "class.catalog_ls@li@a",
+   "chapterName": "text",
+   "chapterUrl": "href"
+  },
+  "searchUrl": "https://m.suixkan.com/s/1.html?keyword={{key}}\n@js:java.put('key',key);result",
+  "weight": 0
+ }
+]

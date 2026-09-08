@@ -1,0 +1,50 @@
+[
+ {
+  "bookSourceComment": "// Error: 搜索失效",
+  "bookSourceGroup": "一程",
+  "bookSourceName": "💠 笔趣阁34",
+  "bookSourceType": 0,
+  "bookSourceUrl": "https://www.biquge34.net",
+  "customButton": false,
+  "customOrder": 206,
+  "enabled": true,
+  "enabledCookieJar": true,
+  "enabledExplore": false,
+  "eventListener": false,
+  "lastUpdateTime": 1713617204658,
+  "respondTime": 183320,
+  "ruleBookInfo": {
+   "author": ".bookTitle@a@text",
+   "coverUrl": "id.bookIntro@img@src",
+   "intro": "id.bookIntro@text##(^|[。！？]+[”」）】]?)##$1<br>",
+   "kind": ".breadcrumb@a.1@text&&.booktag@span.1@text&&.col-md-10@p.2@text##小说|.*时间.|\\s..:.*",
+   "lastChapter": ".col-md-10@p.1@a@text##正文卷.|正文.|VIP卷.|默认卷.|卷_|VIP章节.|免费章节.|章节目录.|最新章节.|[\\(（【].*?[求更票谢乐发订合补加架字修Kk].*?[】）\\)]",
+   "name": ".breadcrumb@li.2@text"
+  },
+  "ruleContent": {
+   "content": "id.htmlContent@textNodes",
+   "nextContentUrl": "id.linkNext@href",
+   "replaceRegex": "##笔趣阁.*|.*免费阅读！|第(.*)章.*|\\&... |\\-->>|看最新章节内容.*|星文阅读app.*|网站内容更新慢.*"
+  },
+  "ruleExplore": {},
+  "ruleSearch": {
+   "author": "td.3@text",
+   "bookList": "tbody@tr!0",
+   "bookUrl": "a.0@href",
+   "checkKeyWord": "",
+   "coverUrl": "a.0@href##.+\\D((\\d+)\\d{3})\\D##/files/article/image/$2/$1/$1s.jpg###",
+   "kind": "td.0:4@text##\\s..:.*",
+   "lastChapter": "td.2@text##正文卷.|正文.|VIP卷.|默认卷.|卷_|VIP章节.|免费章节.|章节目录.|最新章节.|[\\(（【].*?[求更票谢乐发订合补加架字修Kk].*?[】）\\)]",
+   "name": "td.1@text",
+   "wordCount": ""
+  },
+  "ruleToc": {
+   "chapterList": ".panel-chapterlist@dd@a",
+   "chapterName": "text##正文卷.|正文.|VIP卷.|默认卷.|卷_|VIP章节.|免费章节.|章节目录.|最新章节.|[\\(（【].*?[求更票谢乐发订合补加架字修Kk].*?[】）\\)]",
+   "chapterUrl": "href",
+   "nextTocUrl": "option@value"
+  },
+  "searchUrl": "{{cookie.removeCookie(source.getKey())}}\n/modules/article/search.php?searchkey={{key}}&page={{page}},{\"charset\": \"gbk\",\"method\": \"get\"}",
+  "weight": 0
+ }
+]

@@ -1,0 +1,55 @@
+[
+ {
+  "bookSourceComment": "",
+  "bookSourceGroup": "一程",
+  "bookSourceName": "🎉 圣武书库",
+  "bookSourceType": 0,
+  "bookSourceUrl": "https://www.swskw.com",
+  "customButton": false,
+  "customOrder": 199,
+  "enabled": true,
+  "enabledCookieJar": true,
+  "enabledExplore": false,
+  "eventListener": false,
+  "exploreUrl": "奇幻玄幻::/catalog/xuanhuan_{{page}}.html\n科幻游戏::/catalog/game_{{page}}.html\n武侠仙侠::/catalog/xianxia_{{page}}.html\n女生言情::/catalog/yanqing_{{page}}.html\n都市娱乐::/catalog/dushi_{{page}}.html\n历史军事::/catalog/lishi_{{page}}.html\n悬疑灵异::/catalog/kongbu_{{page}}.html\n耽美纯爱::/catalog/chunai_{{page}}.html\n轻の小说::/catalog/light_{{page}}.html",
+  "header": "{\n\t\"User-Agent\": \"Mozilla/5.0 (Linux; Android 14; V2304A; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/123.0.6312.118 Mobile Safari/537.36\",\n\t\"Referer\": \"https://www.swskw.com/\"\n}",
+  "lastUpdateTime": 1735479403615,
+  "respondTime": 30969,
+  "ruleBookInfo": {
+   "author": ".media@a.2@text",
+   "coverUrl": ".book-img-middel@img@src",
+   "intro": ".book-detail@text##(^|[。！？]+[”」）】]?)##$1<br>",
+   "kind": ".col-md-4@text##.*：",
+   "lastChapter": ".col-md-8[1]@a@text##正文卷.|正文.|VIP卷.|默认卷.|卷_|VIP章节.|免费章节.|章节目录.|最新章节.|[\\(（【].*?[求更票谢乐发订合补加架字修Kk].*?[】）\\)]",
+   "name": "h1@a@text",
+   "wordCount": ""
+  },
+  "ruleContent": {
+   "content": "id.cont-body@html",
+   "nextContentUrl": ".text-center@a.2@href"
+  },
+  "ruleExplore": {
+   "author": "span@text",
+   "bookList": ".media",
+   "bookUrl": "a.1@href",
+   "coverUrl": "img@src",
+   "intro": ".media-info@text",
+   "name": "a.1@text"
+  },
+  "ruleSearch": {
+   "author": "td.1@text",
+   "bookList": "tbody@tr",
+   "bookUrl": "a.0@href",
+   "checkKeyWord": "",
+   "coverUrl": "a.0@href##/(\\d+)##/uploads/cover/$1s.jpg###",
+   "name": "a.0@text##.*《|》"
+  },
+  "ruleToc": {
+   "chapterList": "id.all-chapter@a",
+   "chapterName": "text##正文卷.|正文.|VIP卷.|默认卷.|卷_|VIP章节.|免费章节.|章节目录.|最新章节.|[\\(（【].*?[求更票谢乐发订合补加架字修Kk].*?[】）\\)]",
+   "chapterUrl": "href"
+  },
+  "searchUrl": "/plus/search.php?q={{key}}",
+  "weight": 0
+ }
+]

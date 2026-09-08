@@ -1,0 +1,62 @@
+[
+ {
+  "bookSourceComment": "",
+  "bookSourceGroup": "晋江",
+  "bookSourceName": "🌸辣妹小说",
+  "bookSourceType": 0,
+  "bookSourceUrl": "https://m.lamei2.com/",
+  "customButton": false,
+  "customOrder": 134,
+  "enabled": true,
+  "enabledCookieJar": true,
+  "enabledExplore": false,
+  "eventListener": false,
+  "exploreUrl": "",
+  "lastUpdateTime": 1727878392612,
+  "loginUrl": "",
+  "respondTime": 19255,
+  "ruleBookInfo": {
+   "author": ".xx a.1@text",
+   "coverUrl": ".xsfm img@src",
+   "init": "",
+   "intro": ".jianjie@html##(^|[。！？]+[”」）】]?)##$1<br>",
+   "kind": ".xx a.0@text",
+   "lastChapter": ".xx a.2@text",
+   "name": ".xx li.0@text",
+   "tocUrl": ".gengduo a@href"
+  },
+  "ruleContent": {
+   "content": "#nr@html",
+   "nextContentUrl": "text.下一页@href"
+  },
+  "ruleExplore": {
+   "author": "a.2@text",
+   "bookList": ".list ul",
+   "bookUrl": "a.1@href",
+   "coverUrl": "img@src",
+   "intro": "span.2@text",
+   "kind": "i@text",
+   "name": "a.1@text",
+   "wordCount": ""
+  },
+  "ruleSearch": {
+   "author": "a.2@text",
+   "bookList": ".xbk li",
+   "bookUrl": "a.1@href",
+   "coverUrl": "a.1@href##.+\\D((\\d+)\\d{3})\\D##http://img.lamei2.com/image/$2/$1/$1s.jpg###",
+   "intro": "",
+   "kind": "a.0@text##\\[|\\]",
+   "lastChapter": "",
+   "name": "a.1@text",
+   "wordCount": ""
+  },
+  "ruleToc": {
+   "chapterList": ".lb li a",
+   "chapterName": "text##本页章节列表结束！",
+   "chapterUrl": "href",
+   "nextTocUrl": ".showpage a@href"
+  },
+  "searchUrl": "s.php,{\n  \"charset\": \"gbk\",\n  \"method\": \"POST\",\n  \"body\": \"type=articlename&s={{key}}\"\n}",
+  "weight": 0
+ }
+]

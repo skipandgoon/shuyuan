@@ -1,0 +1,40 @@
+[
+ {
+  "bookSourceComment": "",
+  "bookSourceGroup": "壬二酸",
+  "bookSourceName": "天意文学",
+  "bookSourceType": 0,
+  "bookSourceUrl": "https://m.tywx.com",
+  "customButton": false,
+  "customOrder": 179,
+  "enabled": true,
+  "enabledCookieJar": false,
+  "enabledExplore": false,
+  "eventListener": false,
+  "lastUpdateTime": 1732518572860,
+  "respondTime": 18135,
+  "ruleBookInfo": {
+   "author": "id.add_info@p.0@text",
+   "intro": "⌚{{@@id.add_info@p.5@text}}\n{{'\\n'+'​'}}\n简介📕：\n{{@@id.add_intro@text}}",
+   "lastChapter": "class.chapter.0@text",
+   "name": "id.add_info@h1@text"
+  },
+  "ruleContent": {
+   "content": "id.nr1@p@text##你正在阅读 《.*》 章节：.*"
+  },
+  "ruleExplore": {},
+  "ruleSearch": {
+   "author": "a@text##(.*)：##$1###",
+   "bookList": "div.s_list:nth-of-type(n+3)",
+   "bookUrl": "a@href##$##,{'webView': true}",
+   "name": "a@text##《(.*)》##$1###"
+  },
+  "ruleToc": {
+   "chapterList": "id.add_chapter_list_link@li@a",
+   "chapterName": "text",
+   "chapterUrl": "href##$##,{'webView': true}"
+  },
+  "searchUrl": "https://bqg123.net/search?form=biqusoso&keyword={{key}},{'webView':true}",
+  "weight": 0
+ }
+]

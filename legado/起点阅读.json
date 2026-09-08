@@ -1,0 +1,58 @@
+[
+ {
+  "bookSourceGroup": "置顶",
+  "bookSourceName": "起点🔸阅读",
+  "bookSourceType": 0,
+  "bookSourceUrl": "https://m.qidian.com",
+  "customButton": false,
+  "customOrder": 1,
+  "enabled": true,
+  "enabledCookieJar": false,
+  "enabledExplore": true,
+  "eventListener": false,
+  "exploreUrl": "[{\"title\": \"古 代 言 情\", \"url\": \"/category/catid80?page={{page}}\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"仙 侠 奇 缘\", \"url\": \"/category/catid81?page={{page}}\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"现 代 言 情\", \"url\": \"/category/catid82?page={{page}}\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"浪 漫 青 春\", \"url\": \"/category/catid83?page={{page}}\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"玄 幻 言 情\", \"url\": \"/category/catid84?page={{page}}\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"悬 疑 推 理\", \"url\": \"/category/catid85?page={{page}}\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"科 幻 空 间\", \"url\": \"/category/catid86?page={{page}}\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"轻  小  说\", \"url\": \"/category/catid87?page={{page}}\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"游 戏 竞 技\", \"url\": \"/category/catid88?page={{page}}\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}]",
+  "lastUpdateTime": 1785591178744,
+  "loginUrl": "https://www.qidian.com",
+  "respondTime": 71151,
+  "ruleBookInfo": {
+   "author": "class.detail__header@class.detail__header-detail__author-link@ownText",
+   "coverUrl": "https://bookcover.yuewen.com/qdbimg/349573/{{baseUrl.match(/(\\d+)/)[1]}}",
+   "intro": "🏷 简介：{{@@@css:p.detail__summary__content@text}}",
+   "kind": "id.monthTicket@text&&id.recTicket@text##张",
+   "lastChapter": "class.detail__chapters-latest@tag.a@text##最新章节",
+   "name": "class.detail__header@tag.h2@ownText",
+   "wordCount": ".count@em.0@text##$##字"
+  },
+  "ruleContent": {
+   "content": "<js>\nvar body=\"\";\nif(chapter.isVip()){\nbody=JSON.parse(result).data\n}else{\nvar cid=baseUrl.match(/\\d+\\/(\\d+)/)[1]\nbody=org.jsoup.Jsoup.parse(String(result)).select('main#c-'+cid).html();\n}\nbody\n</js>",
+   "imageStyle": "full"
+  },
+  "ruleExplore": {
+   "author": "p[class^=_bookTip]@text",
+   "bookList": "class.y-list__item",
+   "bookUrl": "tag.a@href",
+   "coverUrl": "tag.img@data-src||tag.img@src",
+   "intro": "p[class^=_bookSubTitle]@text",
+   "kind": "div[class^=_tags]@tag.p@textNodes",
+   "name": "tag.h2@text"
+  },
+  "ruleSearch": {
+   "author": "@css:p[class^=_searchBookAuthor]@text",
+   "bookList": "@css:div.y-list__content>div.y-list__item",
+   "bookUrl": "##href=\"//m.qidian.com/chapter/(\\d+)/0/\"##https://m.qidian.com/book/$1/###",
+   "coverUrl": "##href=\"//m.qidian.com/chapter/(\\d+)/0/\"##https://bookcover.yuewen.com/qdbimg/349573/$1/180###",
+   "intro": "@css:p[class^=_searchBookDesc]@text",
+   "kind": "tag.div[-1]@tag.p@textNodes",
+   "name": "tag.h2@text"
+  },
+  "ruleToc": {
+   "chapterList": "<js>\n var bookId=baseUrl.match(/(\\d+)/)[1]\n result=java.ajax(\"https://wxapp.qidian.com/api/book/categoryV2?bookId=\"+bookId+\"&_csrfToken=\")\n var charts=[];\nJSON.parse(result).data.vs.map(i=>{\ni.cs.map(o=>{\nvar chart={\"id\":o.id,\"title\":o.cN,\"v\":o.sS==0,\"t\":o.uT+ \" \" + o.cnt +\"字\"}\nif(chart.v){\nchart.url=\"http://qd.yyhydb-123546.top/api/content/qd?bid=\"+bookId+\"&cid=\"+o.id+\"&deviceId=\"+java.androidId()\n}else{\nchart.url=\"https://m.qidian.com/chapter/\"+bookId+\"/\"+o.id+\"/\"\n}\ncharts.push(chart);\n})\n})\n charts;\n</js>",
+   "chapterName": "title",
+   "chapterUrl": "url",
+   "isVip": "v",
+   "updateTime": "t"
+  },
+  "searchUrl": "https://m.qidian.com/soushu/{{key}}.html?pageNum={{page}}",
+  "weight": 0
+ }
+]

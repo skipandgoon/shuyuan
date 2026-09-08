@@ -1,61 +1,48 @@
 [
-  {
-    "bookSourceComment": "by狼崽儿 2026.6.14\n本人的技术力有限，只能实现将下载的文件当做文本阅读。\n推荐优先使用下载链接预览文本内容，在线阅读可能超时。\n如需下载，推荐点击正文链接直接访问或在外部浏览器打开下载原文件。\n❗️❗️注意，早期上传的小说因为无在线阅读页面所以可能会出现乱码现象，这种情况只能下载原小说文件查看。\n以下是备用站。\nwww.aqxsw222.com\nwww.272txt.com\nwww.727txt.com\nwww.27txt.La\nwww.527txt.com",
-    "bookSourceGroup": "置顶",
-    "bookSourceName": "爱去小说网🌟",
-    "bookSourceType": 0,
-    "bookSourceUrl": "https://www.aiqu225.com",
-    "customButton": false,
-    "customOrder": 9,
-    "enabled": true,
-    "enabledCookieJar": true,
-    "enabledExplore": true,
-    "eventListener": false,
-    "exploreUrl": "@js:\nJSON.stringify([{\"title\": \"耽美\", \"url\": \"\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 1}}, {\"title\": \"全部\", \"url\": \"/txt-xx/15/list15_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"现代耽美\", \"url\": \"/txt-xx/dmxs/xddm/list117_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"古代架空\", \"url\": \"/txt-xx/dmxs/gdjk/list118_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"穿越重生\", \"url\": \"/txt-xx/dmxs/cycs/list119_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"玄幻科幻\", \"url\": \"/txt-xx/dmxs/xhkh/list120_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"BL同人\", \"url\": \"/txt-xx/dmxs/bltr/list121_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"GL百合\", \"url\": \"/txt-xx/dmxs/glbh/list122_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"女生\", \"url\": \"\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 1}}, {\"title\": \"都市言情\", \"url\": \"/txt-xx/nsxs/dsyq/list110_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"古代言情\", \"url\": \"/txt-xx/nsxs/gdyq/list111_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"穿越重生\", \"url\": \"/txt-xx/nsxs/cycs/list112_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"玄幻仙侠\", \"url\": \"/txt-xx/nsxs/xhxx/list113_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"青春同人\", \"url\": \"/txt-xx/nsxs/qctr/list114_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"网游科幻\", \"url\": \"/txt-xx/nsxs/wykh/list115_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"男生\", \"url\": \"\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 1}}, {\"title\": \"玄幻奇幻\", \"url\": \"/txt-xx/nsbook/xhqh/list124_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"武侠仙侠\", \"url\": \"/txt-xx/nsbook/wxxx/list125_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"都市重生\", \"url\": \"/txt-xx/nsbook/dscs/list126_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"历史军事\", \"url\": \"/txt-xx/nsbook/lsjs/list127_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"恐怖推理\", \"url\": \"/txt-xx/nsbook/kbtl/list128_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"科幻网游\", \"url\": \"/txt-xx/nsbook/khwy/list129_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"二次元\", \"url\": \"/txt-xx/nsbook/ecy/list130_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"其他\", \"url\": \"\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 1}}, {\"title\": \"军事历史\", \"url\": \"/txt-xx/25/list25_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"名人传记\", \"url\": \"/txt-xx/22/list22_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"中外名著\", \"url\": \"/txt-xx/28/list28_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"当代文学\", \"url\": \"/txt-xx/27/list27_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"其他小说\", \"url\": \"/txt-xx/30/list30_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"推理悬疑\", \"url\": \"/txt-xx/16/list16_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"浪漫爱情\", \"url\": \"/txt-xx/19/list19_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}]);",
-    "lastUpdateTime": 1781443454882,
-    "respondTime": 7378,
-    "ruleBookInfo": {
-      "author": "@css:a[href*=searchzuozhe] font[color*=008800]@text##作者：|作者名称：",
-      "downloadUrls": "",
-      "intro": "@css:p:has(strong font:contains(小说简介)) + p@html@js:result.replace(/<br\\s*\\/?>/ig,'\\n').replace(/<[^>]+>/g,'').replace(/&nbsp;/g,' ')",
-      "kind": "",
-      "name": "title@text##[《》]|txt下载.*",
-      "tocUrl": "a[href*=softdownfree]@href"
-    },
-    "ruleContent": {
-      "content": "@js:var s=result;var a=s.indexOf('文案');if(a>-1)s=s.substring(a);var b=s.indexOf('下载本书');if(b>-1)s=s.substring(0,b);s.replace(/《[^》]+》作者[\\s\\S]*?移到底部/g,'').replace(/\\u3000\\u3000/g,'\\n')",
-      "nextContentUrl": "@css:a.page-link:contains(下一页)@href",
-      "replaceRegex": ""
-    },
-    "ruleExplore": {
-      "author": "",
-      "bookList": "@css:div.book-item",
-      "bookUrl": "a@href",
-      "intro": "",
-      "kind": "",
-      "name": "div.book-title a@title"
-    },
-    "ruleSearch": {
-      "author": "span.search-card-author a@text",
-      "bookList": "@css:div.search-card",
-      "bookUrl": "div.search-card-title a.searchtitle@href",
-      "checkKeyWord": "反派龙傲天揣了我的崽GB",
-      "kind": "span.search-card-category a@text",
-      "name": "div.search-card-title a.searchtitle@text##[《》]"
-    },
-    "ruleToc": {
-      "chapterList": "@css:a[href*=downbook]",
-      "chapterName": "text",
-      "chapterUrl": "href"
-    },
-    "searchUrl": "/search.asp?word={{key}}&page={{page}},{\n    \"charset\": \"gbk\"\n}",
-    "weight": 0,
-    "loginUrl": "",
-    "loginUi": "",
-    "loginCheckJs": "",
-    "concurrentRate": "",
-    "header": "",
-    "ruleReview": "",
-    "variableComment": ""
-  }
+ {
+  "bookSourceComment": "by狼崽儿 2026.6.14\n本人的技术力有限，只能实现将下载的文件当做文本阅读。\n推荐优先使用下载链接预览文本内容，在线阅读可能超时。\n如需下载，推荐点击正文链接直接访问或在外部浏览器打开下载原文件。\n❗️❗️注意，早期上传的小说因为无在线阅读页面所以可能会出现乱码现象，这种情况只能下载原小说文件查看。\n以下是备用站。\nwww.aqxsw222.com\nwww.272txt.com\nwww.727txt.com\nwww.27txt.La\nwww.527txt.com",
+  "bookSourceGroup": "置顶",
+  "bookSourceName": "爱去小说网🌟",
+  "bookSourceType": 0,
+  "bookSourceUrl": "https://www.aiqu225.com",
+  "customButton": false,
+  "customOrder": 9,
+  "enabled": true,
+  "enabledCookieJar": true,
+  "enabledExplore": true,
+  "eventListener": false,
+  "exploreUrl": "@js:\nJSON.stringify([{\"title\": \"耽美\", \"url\": \"\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 1}}, {\"title\": \"全部\", \"url\": \"/txt-xx/15/list15_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"现代耽美\", \"url\": \"/txt-xx/dmxs/xddm/list117_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"古代架空\", \"url\": \"/txt-xx/dmxs/gdjk/list118_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"穿越重生\", \"url\": \"/txt-xx/dmxs/cycs/list119_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"玄幻科幻\", \"url\": \"/txt-xx/dmxs/xhkh/list120_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"BL同人\", \"url\": \"/txt-xx/dmxs/bltr/list121_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"女生\", \"url\": \"\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 1}}, {\"title\": \"都市言情\", \"url\": \"/txt-xx/nsxs/dsyq/list110_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"古代言情\", \"url\": \"/txt-xx/nsxs/gdyq/list111_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"穿越重生\", \"url\": \"/txt-xx/nsxs/cycs/list112_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"玄幻仙侠\", \"url\": \"/txt-xx/nsxs/xhxx/list113_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"青春同人\", \"url\": \"/txt-xx/nsxs/qctr/list114_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"网游科幻\", \"url\": \"/txt-xx/nsxs/wykh/list115_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"男生\", \"url\": \"\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 1}}, {\"title\": \"玄幻奇幻\", \"url\": \"/txt-xx/nsbook/xhqh/list124_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"武侠仙侠\", \"url\": \"/txt-xx/nsbook/wxxx/list125_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"都市重生\", \"url\": \"/txt-xx/nsbook/dscs/list126_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"历史军事\", \"url\": \"/txt-xx/nsbook/lsjs/list127_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}},  {\"title\": \"科幻网游\", \"url\": \"/txt-xx/nsbook/khwy/list129_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"二次元\", \"url\": \"/txt-xx/nsbook/ecy/list130_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}]);",
+  "lastUpdateTime": 1788538057203,
+  "respondTime": 179446,
+  "ruleBookInfo": {
+   "author": "@css:a[href*=searchzuozhe] font[color*=008800]@text##作者：|作者名称：",
+   "intro": "@css:p:has(strong font:contains(小说简介)) + p@html@js:result.replace(/<br\\s*\\/?>/ig,'\\n').replace(/<[^>]+>/g,'').replace(/&nbsp;/g,' ')",
+   "name": "title@text##[《》]|txt下载.*",
+   "tocUrl": "a[href*=softdownfree]@href"
+  },
+  "ruleContent": {
+   "content": "@js:var s=result;var a=s.indexOf('文案');if(a>-1)s=s.substring(a);var b=s.indexOf('下载本书');if(b>-1)s=s.substring(0,b);s.replace(/《[^》]+》作者[\\s\\S]*?移到底部/g,'').replace(/\\u3000\\u3000/g,'\\n')",
+   "nextContentUrl": "@css:a.page-link:contains(下一页)@href"
+  },
+  "ruleExplore": {
+   "bookList": "@css:div.book-item",
+   "bookUrl": "a@href",
+   "name": "div.book-title a@title"
+  },
+  "ruleSearch": {
+   "author": "span.search-card-author a@text",
+   "bookList": "@css:div.search-card",
+   "bookUrl": "div.search-card-title a.searchtitle@href",
+   "checkKeyWord": "反派龙傲天揣了我的崽GB",
+   "kind": "span.search-card-category a@text",
+   "name": "div.search-card-title a.searchtitle@text##[《》]"
+  },
+  "ruleToc": {
+   "chapterList": "@css:a[href*=downbook]",
+   "chapterName": "text",
+   "chapterUrl": "href"
+  },
+  "searchUrl": "/search.asp?word={{key}}&page={{page}},{\n    \"charset\": \"gbk\"\n}",
+  "weight": 0
+ }
 ]

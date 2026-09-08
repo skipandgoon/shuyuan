@@ -1,71 +1,51 @@
 [
-  {
-    "bookSourceUrl": "https://tuoverse.com",
-    "bookSourceName": "沱书·文存",
-    "bookSourceGroup": "完本",
-    "bookSourceType": 0,
-    "enabledExplore": true,
-    "enabledCookieJar": false,
-    "header": "{\"User-Agent\": \"Mozilla/5.0 (Linux; Android 11) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.120 Mobile Safari/537.36\", \"Referer\": \"https://tuoverse.com/\"}",
-    "searchUrl": "https://tuoverse.com/search-index.json",
-    "ruleSearch": {
-      "bookList": "<js>var d=JSON.parse(result);var kw=String(key).trim();var out=d.novels.filter(function(n){return n.t.indexOf(kw)>-1||n.a.indexOf(kw)>-1});JSON.stringify(out);</js>\n$[*]",
-      "name": "$.t",
-      "author": "$.a##^作者##",
-      "intro": "$.d",
-      "bookUrl": "https://tuoverse.com/novel/{{$.id}}/",
-      "kind": "",
-      "wordCount": "",
-      "lastChapter": "",
-      "coverUrl": ""
-    },
-    "ruleBookInfo": {
-      "name": ".detail-title@text",
-      "author": ".detail-author a@text",
-      "intro": ".novel-description .description-content@text",
-      "kind": ".detail-tags a@text",
-      "init": "",
-      "lastChapter": "",
-      "updateTime": "",
-      "coverUrl": "",
-      "wordCount": "",
-      "tocUrl": "",
-      "canReName": "",
-      "downloadUrls": ""
-    },
-    "ruleToc": {
-      "chapterList": ".page-list__grid a.page-list__cell",
-      "chapterName": ".page-list__num@text##^(\\d+)$##第$1页",
-      "chapterUrl": "@href",
-      "formatJs": "",
-      "nextTocUrl": ""
-    },
-    "ruleContent": {
-      "content": "#chapterText p@textNodes",
-      "nextContentUrl": "a.next-btn@href",
-      "replaceRegex": "",
-      "imageStyle": "",
-      "imageDecode": "",
-      "webJs": "",
-      "title": ""
-    },
-    "exploreUrl": "@js:\nJSON.stringify([{\"title\": \"书荒广场\", \"url\": \"\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 1}}, {\"title\": \"单本封神\", \"url\": \"\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 1}}, {\"title\": \"大女主\", \"url\": \"https://tuoverse.com/collection/danben-fengshen-danvzhu{{page>1?'/page/'+page+'/':''}}\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.333}}, {\"title\": \"穿越\", \"url\": \"https://tuoverse.com/collection/danben-fengshen-chuanyue{{page>1?'/page/'+page+'/':''}}\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.333}}, {\"title\": \"权谋古言\", \"url\": \"https://tuoverse.com/collection/danben-fengshen-quanmou-guyan{{page>1?'/page/'+page+'/':''}}\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.333}}, {\"title\": \"女频无限\", \"url\": \"https://tuoverse.com/collection/nvpin-wuxianliu-100{{page>1?'/page/'+page+'/':''}}\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.333}}, {\"title\": \"末世求生\", \"url\": \"https://tuoverse.com/collection/2025-moshi-wen{{page>1?'/page/'+page+'/':''}}\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.333}}, {\"title\": \"野生古言\", \"url\": \"https://tuoverse.com/collection/guyan-classic{{page>1?'/page/'+page+'/':''}}\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.333}}, {\"title\": \"老阿姨心头好\", \"url\": \"https://tuoverse.com/collection/laoayi-100{{page>1?'/page/'+page+'/':''}}\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.333}}, {\"title\": \"2025古言合集\", \"url\": \"https://tuoverse.com/collection/2025-gu-yan-he-ji{{page>1?'/page/'+page+'/':''}}\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.333}}, {\"title\": \"2025糙汉文合集\", \"url\": \"https://tuoverse.com/collection/2025-cuhan-wen{{page>1?'/page/'+page+'/':''}}\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.333}}, {\"title\": \"小说分类\", \"url\": \"\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 1}}, {\"title\": \"最新\", \"url\": \"https://tuoverse.com/latest/\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"现代\", \"url\": \"https://tuoverse.com/category/xian-dai/\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"都市\", \"url\": \"https://tuoverse.com/category/du-shi/\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"古言\", \"url\": \"https://tuoverse.com/category/gu-yan/\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"玄幻\", \"url\": \"https://tuoverse.com/category/xuan-huan/\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"修真\", \"url\": \"https://tuoverse.com/category/xiu-zhen/\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"仙侠\", \"url\": \"https://tuoverse.com/category/xian-xia/\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"科幻\", \"url\": \"https://tuoverse.com/category/ke-huan/\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"星际\", \"url\": \"https://tuoverse.com/category/xing-ji/\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"灵异\", \"url\": \"https://tuoverse.com/category/ling-yi/\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"穿越\", \"url\": \"https://tuoverse.com/category/chuan-yue/\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"重生\", \"url\": \"https://tuoverse.com/category/chong-sheng/\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"快穿\", \"url\": \"https://tuoverse.com/category/kuai-chuan/\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"娱乐圈\", \"url\": \"https://tuoverse.com/category/yu-le-quan/\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"豪门\", \"url\": \"https://tuoverse.com/category/hao-men/\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"ABO\", \"url\": \"https://tuoverse.com/category/abo/\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"甜宠\", \"url\": \"https://tuoverse.com/category/tian-chong/\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"强强\", \"url\": \"https://tuoverse.com/category/qiang-qiang/\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}]);",
-    "ruleExplore": {
-      "bookList": "article.novel-row, article.novel-card, li.editorial-preview-item, article.editorial-book-item",
-      "name": ".novel-row-title a@text||.novel-title a@text||.editorial-preview-title@text||.editorial-work-titleblock h2 a@text",
-      "author": ".novel-row-author@text||.author-name@text||.editorial-preview-author@text||.editorial-work-author a@text",
-      "intro": ".novel-row-desc@text||.novel-description@text||.editorial-one-liner@text",
-      "bookUrl": ".novel-row-title a@href||.novel-title a@href||.editorial-preview-title@href||.editorial-work-titleblock h2 a@href",
-      "kind": "",
-      "coverUrl": ""
-    },
-    "enabled": true,
-    "loginUrl": "",
-    "loginUi": "",
-    "loginCheckJs": "",
-    "concurrentRate": "",
-    "ruleReview": {},
-    "bookSourceComment": "沱书·文存 完本中文小说站。注意：站内目录为页码制，章节列表显示\"第N页\"。搜索走全站索引(约8MB)，搜索较慢属正常。",
-    "variableComment": ""
-  }
+ {
+  "bookSourceComment": "// Error: org.mozilla.javascript.EcmaError: ReferenceError: “key” 未定义。 (<Unknown Source>#1) in <Unknown Source> at line number 1\n\n沱书·文存 完本中文小说站。注意：站内目录为页码制，章节列表显示\"第N页\"。搜索走全站索引(约8MB)，搜索较慢属正常。",
+  "bookSourceGroup": "置顶",
+  "bookSourceName": "📚沱书·文存",
+  "bookSourceType": 0,
+  "bookSourceUrl": "https://tuoverse.com",
+  "customButton": false,
+  "customOrder": 10,
+  "enabled": true,
+  "enabledCookieJar": false,
+  "enabledExplore": true,
+  "eventListener": false,
+  "exploreUrl": "@js:\nJSON.stringify([{\"title\": \"一、书荒广场\", \"url\": \"\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 1}}, {\"title\": \"（一）单本封神\", \"url\": \"\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 1}}, {\"title\": \"大女主\", \"url\": \"https://tuoverse.com/collection/danben-fengshen-danvzhu{{page>1?'/page/'+page+'/':''}}\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"穿越\", \"url\": \"https://tuoverse.com/collection/danben-fengshen-chuanyue{{page>1?'/page/'+page+'/':''}}\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"权谋古言\", \"url\": \"https://tuoverse.com/collection/danben-fengshen-quanmou-guyan{{page>1?'/page/'+page+'/':''}}\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"（二）其他书单\", \"url\": \"\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 1}}, {\"title\": \"女频无限\", \"url\": \"https://tuoverse.com/collection/nvpin-wuxianliu-100{{page>1?'/page/'+page+'/':''}}\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.333}}, {\"title\": \"末世求生\", \"url\": \"https://tuoverse.com/collection/2025-moshi-wen{{page>1?'/page/'+page+'/':''}}\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.333}}, {\"title\": \"老阿姨心头好\", \"url\": \"https://tuoverse.com/collection/laoayi-100{{page>1?'/page/'+page+'/':''}}\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.333}}, {\"title\": \"野生古言\", \"url\": \"https://tuoverse.com/collection/guyan-classic{{page>1?'/page/'+page+'/':''}}\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.333}}, {\"title\": \"2025糙汉文合集\", \"url\": \"https://tuoverse.com/collection/2025-cuhan-wen{{page>1?'/page/'+page+'/':''}}\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.333}}, {\"title\": \"2025古言合集\", \"url\": \"https://tuoverse.com/collection/2025-gu-yan-he-ji{{page>1?'/page/'+page+'/':''}}\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.333}}, {\"title\": \"二、小说分类\", \"url\": \"\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 1}}, {\"title\": \"最新\", \"url\": \"https://tuoverse.com/latest/\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"现代\", \"url\": \"https://tuoverse.com/category/xian-dai/\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"都市\", \"url\": \"https://tuoverse.com/category/du-shi/\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"古言\", \"url\": \"https://tuoverse.com/category/gu-yan/\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"玄幻\", \"url\": \"https://tuoverse.com/category/xuan-huan/\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"修真\", \"url\": \"https://tuoverse.com/category/xiu-zhen/\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"仙侠\", \"url\": \"https://tuoverse.com/category/xian-xia/\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"科幻\", \"url\": \"https://tuoverse.com/category/ke-huan/\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"星际\", \"url\": \"https://tuoverse.com/category/xing-ji/\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"灵异\", \"url\": \"https://tuoverse.com/category/ling-yi/\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"穿越\", \"url\": \"https://tuoverse.com/category/chuan-yue/\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"重生\", \"url\": \"https://tuoverse.com/category/chong-sheng/\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"快穿\", \"url\": \"https://tuoverse.com/category/kuai-chuan/\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"娱乐圈\", \"url\": \"https://tuoverse.com/category/yu-le-quan/\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"豪门\", \"url\": \"https://tuoverse.com/category/hao-men/\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"ABO\", \"url\": \"https://tuoverse.com/category/abo/\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"甜宠\", \"url\": \"https://tuoverse.com/category/tian-chong/\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"强强\", \"url\": \"https://tuoverse.com/category/qiang-qiang/\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}]);",
+  "header": "{\"User-Agent\": \"Mozilla/5.0 (Linux; Android 11) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.120 Mobile Safari/537.36\", \"Referer\": \"https://tuoverse.com/\"}",
+  "lastUpdateTime": 1788537460393,
+  "loginUrl": "https://tuoverse.com/",
+  "respondTime": 186818,
+  "ruleBookInfo": {
+   "author": ".detail-author a@text",
+   "intro": ".novel-description .description-content@text",
+   "kind": ".detail-tags a@text",
+   "name": ".detail-title@text"
+  },
+  "ruleContent": {
+   "content": "#chapterText p@textNodes",
+   "nextContentUrl": "a.next-btn@href"
+  },
+  "ruleExplore": {
+   "author": ".novel-row-author@text||.author-name@text||.editorial-preview-author@text||.editorial-work-author a@text",
+   "bookList": "article.novel-row, article.novel-card, li.editorial-preview-item, article.editorial-book-item",
+   "bookUrl": ".novel-row-title a@href||.novel-title a@href||.editorial-preview-title@href||.editorial-work-titleblock h2 a@href",
+   "intro": ".novel-row-desc@text||.novel-description@text||.editorial-one-liner@text",
+   "name": ".novel-row-title a@text||.novel-title a@text||.editorial-preview-title@text||.editorial-work-titleblock h2 a@text"
+  },
+  "ruleSearch": {
+   "author": "$.a##^作者##",
+   "bookList": "<js>var d=JSON.parse(result);var kw=String(key).trim();var out=d.novels.filter(function(n){return n.t.indexOf(kw)>-1||n.a.indexOf(kw)>-1});JSON.stringify(out);</js>\n$[*]",
+   "bookUrl": "https://tuoverse.com/novel/{{$.id}}/",
+   "intro": "$.d",
+   "name": "$.t"
+  },
+  "ruleToc": {
+   "chapterList": ".page-list__grid a.page-list__cell",
+   "chapterName": ".page-list__num@text##^(\\d+)$##第$1页",
+   "chapterUrl": "@href"
+  },
+  "searchUrl": "https://tuoverse.com/search-index.json",
+  "weight": 0
+ }
 ]

@@ -1,0 +1,52 @@
+[
+ {
+  "bookSourceComment": "",
+  "bookSourceGroup": "晋江",
+  "bookSourceName": "丁丁小说🥉",
+  "bookSourceType": 0,
+  "bookSourceUrl": "http://api.xingliangglobal.com#🎃",
+  "customButton": false,
+  "customOrder": 110,
+  "enabled": true,
+  "enabledCookieJar": false,
+  "enabledExplore": false,
+  "eventListener": false,
+  "exploreUrl": "@js:\nsort=[];\npush=(title,url,type1,type2)=>sort.push({\n\t\ttitle: title,\n\t\turl: url,\n\t\tstyle: {\n\t\t\t\tlayout_flexGrow: type1,\n\t\t\t\tlayout_flexBasisPercent: type2\n\t\t\t}\n\t});\n\t\n\tbd=[\"必读榜\",\"潜力榜\",\"完本榜\",\"更新榜\",\"搜索榜\",\"评论榜\"];\n\t[[\"男频\",\"1\"],[\"女频\",\"2\"]].map([title,id]=>{\npush(title+'榜单', null, 1, 1);\n\t\tbd.map((title,index)=>{\t\t\t\n\t\t  \turl= `/module/rank?type=${index+1}&channel=${id}&page={{page}}`; \n\t\t\t\tpush(title, url, 1, 0.25);\t\t\t\t\t\t\t\t\t\t\n\t\t\t});\n\t});\n\n\n  fl=\t[[\"男频\",\"1\"],[\"女频\",\"2\"]].map([title,id]=>{\nurl= `http://api.xingliangglobal.com/novel/category?channel=${id}`;\nreturn\t \tdata=JSON.parse(java.ajax(url)).data.categories;\n\t\t\t\t});\n\t [[\"男频\",fl[0]],[\"女频\",fl[1]]].map([tit1,category]=>{\n\t \t\t[[\"连载\",\"0\"],[\"完结\",\"1\"]].map([tit2,id]=>{  \n\t    push(tit1+'🍁'+tit2, null, 1, 1);\n\t    \n     category.map(($)=>{\n\t   \t\n\t    title=$.categoryName;\n     \tcid=$.categoryId;\n\turl= `/novel?isComplete=${id}&sort=1&page={{page}}&categoryId=${cid}`;\n  \t\n\t\t\t \tpush(title, url, 1, 0.25);\n        });\n      });\n  });\nJSON.stringify(sort);",
+  "header": "@js: \nJSON.stringify({\n\"client-device\": \"429497b3cc84a9f1333c793cc6e9110a\",\n\"client-brand\":\"XIAOMI\",\n\"client-version\": \"1.1.0\",\n\"client-channel\": \"android\",\n\"client-name\": \"app.maoyankanshu.novel\",\n\"alias-name\":\"dingdianapp\",\n\"client-source\": \"android\",\n\"Authorization\": \"bearereyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hcGkueGluZ2xpYW5nZ2xvYmFsLmNvbVwvYXV0aFwvdGhpcmQiLCJpYXQiOjE2OTg3NTQ2MzQsImV4cCI6MTc5MjA2NjYzNCwibmJmIjoxNjk4NzU0NjM0LCJqdGkiOiI3cmlob25tZ2Z4cmh1aTBhIiwic3ViIjoxMTg2MzMsInBydiI6ImExY2IwMzcxODAyOTZjNmExOTM4ZWYzMGI0Mzc5NDY3MmRkMDE2YzUifQ.Mzy9LFJpa98p8gV0TKXyErSEaWMX4C9SFcRylAqvW9E\",\n\"Connection\": \"Keep-Alive\",\n\"User-Agent\": \"okhttp/4.9.2\"\n});",
+  "lastUpdateTime": 1719718627973,
+  "respondTime": 22170,
+  "ruleBookInfo": {
+   "author": "$.authorName",
+   "coverUrl": "$.cover",
+   "init": "$.data",
+   "intro": "$.summary",
+   "kind": "{{$..className}}\n{{java.getString('$.status')=='1'?'完结':'连载';}}\n{{$.lastUpdatedAt}}",
+   "lastChapter": "$.lastChapter.chapterName",
+   "name": "$.novelName",
+   "tocUrl": "/novel/{{$.novelId}}/chapters",
+   "wordCount": "$.wordNum"
+  },
+  "ruleContent": {
+   "content": "$.content"
+  },
+  "ruleExplore": {},
+  "ruleSearch": {
+   "author": "$.authorName",
+   "bookList": "$.data",
+   "bookUrl": "/novel/{{$.novelId}}?isSearch=0",
+   "coverUrl": "$.cover",
+   "intro": "$.summary",
+   "kind": "{{$..className}}\n{{r=java.getString('$.averageScore');\nr!=0.0?r+'分':\"\";}}\n{{r=java.getString('$.status');\nif(r!=\"\") r=='1'?'完结':'连载';}}\n{{$.createdAt}}",
+   "name": "$.novelName",
+   "wordCount": "$.wordNum"
+  },
+  "ruleToc": {
+   "chapterList": "$.data.list",
+   "chapterName": "$.chapterName",
+   "chapterUrl": "$.path\n<js>\nurl=java.aesBase64DecodeToString(result,\"4395daa50ad6baf7\",\"AES/CBC/PKCS5Padding\",\"0123456789abcdef\");\n</js>",
+   "updateTime": "{{$.updatedAt}} · {{$.wordNum}}字"
+  },
+  "searchUrl": "/search?page={{page}}&keyword={{key}}",
+  "weight": 0
+ }
+]

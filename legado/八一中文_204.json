@@ -1,0 +1,60 @@
+[
+ {
+  "bookSourceComment": "// Error: 搜索失效",
+  "bookSourceGroup": "一程",
+  "bookSourceName": "💠 八一中文",
+  "bookSourceType": 0,
+  "bookSourceUrl": "http://www.zwduxs.com",
+  "bookUrlPattern": "http?://www\\.zwduxs\\.com(/html)?/\\d+_\\d+/?",
+  "customButton": false,
+  "customOrder": 205,
+  "enabled": true,
+  "enabledCookieJar": true,
+  "enabledExplore": false,
+  "eventListener": false,
+  "exploreUrl": "玄幻::/xuanhuanxiaoshuo/1_{{page}}.html\n修真::/xiuzhenxiaoshuo/2_{{page}}.html\n都市::/dushixiaoshuo/3_{{page}}.html\n穿越::/chuanyuexiaoshuo/4_{{page}}.html\n网游::/wangyouxiaoshuo/5_{{page}}.html\n科幻::/kehuanxiaoshuo/6_{{page}}.html\n完本::/wanben/1_{{page}}",
+  "lastUpdateTime": 1734417606801,
+  "loginUrl": "",
+  "respondTime": 191657,
+  "ruleBookInfo": {
+   "author": "id.info@p.0@text",
+   "coverUrl": "id.fmimg@img@src",
+   "init": "",
+   "intro": "id.intro@p@text##(^|[。！？]+[”」）】]?)##$1<br>",
+   "kind": ".con_top@a.-1@text&&id.info@p.2@text##小说|.*：|\\s..:.*",
+   "lastChapter": "id.list@a.-1@text##正文卷.|正文.|VIP卷.|默认卷.|卷_|VIP章节.|免费章节.|章节目录.|最新章节.|[\\(（【].*?[求更票谢乐发订合补加架字修Kk].*?[】）\\)]",
+   "name": "id.info@h1@text##\\（.*|\\(.*|免费阅读|全文.*阅读|最新章节|笔趣阁|小说"
+  },
+  "ruleContent": {
+   "content": "id.content@html",
+   "nextContentUrl": "",
+   "replaceRegex": "##\\s*您可以在百.*最新章节！\\s*|\\s*[\\(（]本章完[\\)）]\\s*"
+  },
+  "ruleExplore": {
+   "author": ".s5@text",
+   "bookList": ".l@li",
+   "bookUrl": "a.0@href",
+   "coverUrl": "a.0@href##.+\\D((\\d+)\\d{3})\\D##/files/article/image/$2/$1/$1s.jpg###",
+   "kind": ".s3@textNodes##\\(|\\)",
+   "lastChapter": "a.1@text",
+   "name": "a.0@text##\\（.*|\\(.*|免费阅读|全文.*阅读|最新章节|笔趣阁|小说"
+  },
+  "ruleSearch": {
+   "author": "td.2@text",
+   "bookList": "id.nr",
+   "bookUrl": "a.0@href",
+   "coverUrl": "a.0@href<js>\nvar id = result.match(/(\\d+)\\/?$/)[1];\nvar iid = parseInt(id/1000);\n'/files/article/image/'+iid+'/'+id+'/'+id+'s.jpg';\n</js>",
+   "kind": "td.5:4@text",
+   "lastChapter": "a.1@text##正文卷.|正文.|VIP卷.|默认卷.|卷_|VIP章节.|免费章节.|章节目录.|最新章节.|[\\(（【].*?[求更票谢乐发订合补加架字修Kk].*?[】）\\)]",
+   "name": "a.0@text##\\（.*|\\(.*|免费阅读|全文.*阅读|最新章节|笔趣阁|小说",
+   "wordCount": "td.3@text"
+  },
+  "ruleToc": {
+   "chapterList": "id.list@dd@a",
+   "chapterName": "text##正文卷.|正文.|VIP卷.|默认卷.|卷_|VIP章节.|免费章节.|章节目录.|最新章节.|[\\(（【].*?[求更票谢乐发订合补加架字修Kk].*?[】）\\)]",
+   "chapterUrl": "href"
+  },
+  "searchUrl": "/modules/article/search.php,{\n  \"method\": \"post\",\n  \"body\": \"searchkey={{key}}&searchtype=articlename\"\n}",
+  "weight": 0
+ }
+]

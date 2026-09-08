@@ -1,0 +1,51 @@
+[
+ {
+  "bookSourceComment": "//搜索字数6-20个字符之间",
+  "bookSourceGroup": "一程",
+  "bookSourceName": "💠 手机看书",
+  "bookSourceType": 0,
+  "bookSourceUrl": "https://www.sjks88.com",
+  "customButton": false,
+  "customOrder": 213,
+  "enabled": true,
+  "enabledCookieJar": true,
+  "enabledExplore": false,
+  "eventListener": false,
+  "exploreUrl": "最新::/latest/<,index_{{page}}.html>\n排行::/ranking/<,index_{{page}}.html>\n鬼话::/Direct1/<,index_{{page}}.html>\n情感::/Direct2/<,index_{{page}}.html>\n玄幻::/xuanhuan/<,index_{{page}}.html>\n奇幻::/Direct3/<,index_{{page}}.html>\n商道::/Direct4/<,index_{{page}}.html>\n军事::/Direct5/<,index_{{page}}.html>\n历史::/Direct6/<,index_{{page}}.html>\n传记::/zhuanji/<,index_{{page}}.html>\n言情::/Direct7/<,index_{{page}}.html>\n都市::/ds/<,index_{{page}}.html>\n耽美::/danmei/<,index_{{page}}.html>\n同人::/erciyuan/<,index_{{page}}.html>\n武侠::/wuxia/<,index_{{page}}.html>\n修真::/xiuzhen/<,index_{{page}}.html>\n官场::/guanchang/<,index_{{page}}.html>\n网游::/wangyou/<,index_{{page}}.html>\n科幻::/kehuan/<,index_{{page}}.html>\n穿越::/chuanyue/<,index_{{page}}.html>\n悬疑::/Suspense/<,index_{{page}}.html>\n纪实::/jishi/<,index_{{page}}.html>\n精品::/xiaoshuo/<,index_{{page}}.html>\n乡土::/xt/<,index_{{page}}.html>",
+  "lastUpdateTime": 1734430832079,
+  "respondTime": 11030,
+  "ruleBookInfo": {
+   "author": ".autor2[0]@text",
+   "intro": ".desc@html",
+   "kind": ".autor2[2:1]@text##.*：",
+   "name": ".box-artic@h1@text##（.*|\\(.*"
+  },
+  "ruleContent": {
+   "content": ".content@html"
+  },
+  "ruleExplore": {
+   "author": "span.0@text##\\_.*",
+   "bookList": ".list@li",
+   "bookUrl": "a@href",
+   "coverUrl": "",
+   "intro": "p@text",
+   "kind": ".pubdate@text",
+   "name": "b@text##（.*|\\(.*"
+  },
+  "ruleSearch": {
+   "bookList": ".box@ul@li",
+   "bookUrl": "a.0@href",
+   "checkKeyWord": "洪荒：",
+   "intro": "p@text",
+   "kind": "a.1@text&&span@textNodes",
+   "name": "a.0@text##（.*|\\(.*"
+  },
+  "ruleToc": {
+   "chapterList": ".list@li@a",
+   "chapterName": "text",
+   "chapterUrl": "href"
+  },
+  "searchUrl": "/e/search/index.php,{\n  \"charset\": \"gb2312\",\n  \"method\": \"post\",\n  \"body\": \"keyboard={{key}}&show=title&classid=0\"\n}",
+  "weight": 0
+ }
+]

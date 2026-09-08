@@ -1,0 +1,50 @@
+[
+ {
+  "bookSourceComment": "// Error: 搜索失效",
+  "bookSourceGroup": "关耳",
+  "bookSourceName": "🌸101言情",
+  "bookSourceType": 0,
+  "bookSourceUrl": "http://www.txt101.com",
+  "bookUrlPattern": "",
+  "customButton": false,
+  "customOrder": 39,
+  "enabled": true,
+  "enabledCookieJar": false,
+  "enabledExplore": false,
+  "eventListener": false,
+  "exploreUrl": "",
+  "lastUpdateTime": 1682084853871,
+  "loginUrl": "",
+  "respondTime": 182276,
+  "ruleBookInfo": {
+   "coverUrl": "class.picborder@src",
+   "init": "<js>\nif(result.match(/text=new Array\\(\".*?\"\\)/)){\ncon=\"\"\neval(result.match(/text=new Array\\(\".*?\"\\)/)[0]);\nfor(var i=0;i<text.length;i++){con +=text[i];}con=String(java.base64Decode(con));\nresult=con\n}else{\n\tresult=result\n\t}\n</js>",
+   "intro": "id.CrbsSum@textNodes",
+   "lastChapter": "font@a@text",
+   "tocUrl": "font@a@href##(.*?)/(\\d+)/(\\d+).html##https://m.txt101.com/id/$2/"
+  },
+  "ruleContent": {
+   "content": "<js>\nif(result.match(/text=new Array\\(\".*?\"\\)/)){\ncon=\"\"\neval(result.match(/text=new Array\\(\".*?\"\\)/)[0]);\nfor(var i=0;i<text.length;i++){con +=text[i];}con=String(java.base64Decode(con));\nresult=con\n}else{\n\tresult=result\n\t}\n</js>\nid.content@textNodes"
+  },
+  "ruleExplore": {
+   "bookList": ""
+  },
+  "ruleSearch": {
+   "author": "class.author@text||tag.td.4@text",
+   "bookList": "<js>\nif(result.match(/text=new Array\\(\".*?\"\\)/)){\ncon=\"\"\neval(result.match(/text=new Array\\(\".*?\"\\)/)[0]);\nfor(var i=0;i<text.length;i++){con +=text[i];}con=String(java.base64Decode(con));\nresult=con\n}else{\n\tresult=result\n\t}\n</js>\nclass.bookbox||class.sf-grid@tr",
+   "bookUrl": "a@href",
+   "coverUrl": "tag.a.0@href##/id/(\\d+).html##/img/$1.jpg",
+   "kind": "class.update@textNodes&&tag.td.0@text&&tag.td.7@text##\\[|]",
+   "lastChapter": "class.cat@a@text||tag.td.2@a@text",
+   "name": "h4@a@text||tag.td.1@a@text##.*完整版.*|.*最新章节.*|小说"
+  },
+  "ruleToc": {
+   "chapterList": "<js>\nif(result.match(/text=new Array\\(\".*?\"\\)/)){\ncon=\"\"\neval(result.match(/text=new Array\\(\".*?\"\\)/)[0]);\nfor(var i=0;i<text.length;i++){con +=text[i];}con=String(java.base64Decode(con));\nresult=con\n}else{\n\tresult=result\n\t}\n</js>\nclass.chapter@a",
+   "chapterName": "text",
+   "chapterUrl": "href##^##https://www.txt101.com",
+   "isVolume": ""
+  },
+  "searchUrl": "http://www.txt101.com/book/search.aspx?key={{key}}",
+  "weight": 0
+ }
+]

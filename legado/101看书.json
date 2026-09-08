@@ -1,0 +1,54 @@
+[
+ {
+  "bookSourceComment": "// Error: 搜索失效",
+  "bookSourceGroup": "壬二酸",
+  "bookSourceName": "101看书",
+  "bookSourceType": 0,
+  "bookSourceUrl": "https://101kan.com/##细雨尘寰",
+  "customButton": false,
+  "customOrder": 192,
+  "enabled": true,
+  "enabledCookieJar": false,
+  "enabledExplore": false,
+  "eventListener": false,
+  "header": "{\"User-Agent\": \"Mozilla/5.0 (Linux; Android 10) Mobile Safari/537.36\"}",
+  "lastUpdateTime": 1733917606486,
+  "respondTime": 184139,
+  "ruleBookInfo": {
+   "author": "[property=\"og:novel:author\"]@content",
+   "coverUrl": "[property=\"og:image\"]@content",
+   "init": "<js>java.t2s(result)</js>",
+   "intro": "[property=\"og:description\"]@content",
+   "kind": "{{@@[property=\"og:novel:category\"]@content}}\n{{@@[property=\"og:novel:status\"]@content}}\n{{@@[property=\"og:novel:update_time\"]@content##\\s.*}}",
+   "lastChapter": "{{@@[property=\"og:novel:latest_chapter_name\"]@content}}·{{@@[property=\"og:novel:update_time\"]@content##\\s.*}}",
+   "name": "[property=\"og:novel:book_name\"]@content",
+   "tocUrl": ".more-btn@href##\\/book\\/(\\d+)\\/index##/ajax_novels/chapterlist/$1",
+   "wordCount": ".booknav2@p.2@text##字.*##字"
+  },
+  "ruleContent": {
+   "content": "#txtcontent@html@js:java.t2s(result)",
+   "replaceRegex": "##{{chapter.title}}|\\(本章完\\)"
+  },
+  "ruleExplore": {},
+  "ruleSearch": {
+   "author": ".labelbox@label.0@text",
+   "bookList": "<js>java.t2s(result)</js>\n#article_list_content@li",
+   "bookUrl": "a.0@href",
+   "checkKeyWord": "我的",
+   "coverUrl": "a.0@img@data-src",
+   "intro": ".ellipsis_2@html",
+   "kind": ".labelbox@label.1:2@text",
+   "lastChapter": ".zxzj@a@text",
+   "name": ".newnav@h3@a.-1@text"
+  },
+  "ruleToc": {
+   "chapterList": "ul@li",
+   "chapterName": "a@text@js:java.t2s(result)",
+   "chapterUrl": "a@href",
+   "isPay": "",
+   "nextTocUrl": ""
+  },
+  "searchUrl": "https://101kan.com/search/{{key}}/{{page}}.html",
+  "weight": 0
+ }
+]

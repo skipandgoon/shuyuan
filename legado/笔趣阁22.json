@@ -1,0 +1,47 @@
+[
+ {
+  "bookSourceComment": "// Error: 搜索失效",
+  "bookSourceGroup": "壬二酸",
+  "bookSourceName": "笔趣阁22",
+  "bookSourceType": 0,
+  "bookSourceUrl": "https://www.22biqu.com/",
+  "customButton": false,
+  "customOrder": 183,
+  "enabled": true,
+  "enabledCookieJar": true,
+  "enabledExplore": false,
+  "eventListener": false,
+  "lastUpdateTime": 1731306948595,
+  "respondTime": 183681,
+  "ruleBookInfo": {
+   "author": "[property$=author]@content",
+   "coverUrl": ".detail-box .imgbox img@src",
+   "intro": "[property$=description]@content",
+   "kind": "[property$=category]@content",
+   "lastChapter": "[property$=lastest_chapter_name]@content",
+   "name": "[property$=book_name]@content"
+  },
+  "ruleContent": {
+   "content": ".reader-main .content@html",
+   "nextContentUrl": "text.下一页@href",
+   "replaceRegex": "##ps：.*|.*本章完.*"
+  },
+  "ruleExplore": {},
+  "ruleSearch": {
+   "author": ".s4@text",
+   "bookList": ".txt-list li!0",
+   "bookUrl": ".s2@a@href",
+   "kind": ".s1@text",
+   "lastChapter": ".s3@a@text",
+   "name": ".s2@a@text"
+  },
+  "ruleToc": {
+   "chapterList": ".section-list.1@li@a",
+   "chapterName": "text",
+   "chapterUrl": "href",
+   "nextTocUrl": "text.下一页@href"
+  },
+  "searchUrl": "{{cookie.removeCookie(source.getKey())}}\nhttps://www.22biqu.com/ss/,{\n\"charset\": \"UTF-8\", \n\"method\": \"POST\", \n\"body\": \"searchkey={{key}}&submit=搜索\"\n}",
+  "weight": 0
+ }
+]

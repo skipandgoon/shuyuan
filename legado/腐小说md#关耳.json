@@ -1,0 +1,71 @@
+[
+ {
+  "bookSourceComment": "// Error: 搜索失效\n\n㊫正文\n//a[text()=\"下一页\"]/../../../preceding-sibling::div[3]@html\n迷迭小修&补充发现列表",
+  "bookSourceGroup": "晋江",
+  "bookSourceName": "🍊 腐小说md#关耳",
+  "bookSourceType": 0,
+  "bookSourceUrl": "http://www.jiqinw.com#md-guaner",
+  "bookUrlPattern": "",
+  "customButton": false,
+  "customOrder": 132,
+  "enabled": true,
+  "enabledCookieJar": true,
+  "enabledExplore": false,
+  "eventListener": false,
+  "exploreUrl": "[{\"title\":\"✾　　　　　　✾  榜    单  ✾　　　　　　✾\",\"url\":\"\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"现代排行\",\"url\":\"/paihang/xd.html\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"古代排行\",\"url\":\"/paihang/gd.html\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"穿越排行\",\"url\":\"/paihang/cy.html\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"玄幻排行\",\"url\":\"/paihang/xh.html\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"网游排行\",\"url\":\"/paihang/wy.html\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"同人排行\",\"url\":\"/paihang/tr.html\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"百合排行\",\"url\":\"/paihang/gl.html\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\" 总 排 行 \",\"url\":\"/paihang/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"　　　　\",\"url\":\"\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\" 2018 \",\"url\":\"/paihang/2018y.html\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\" 2019 \",\"url\":\"/paihang/2019y.html\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\" 2020 \",\"url\":\"/paihang/2020y.html\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"✾　　　　　　✾  分    类  ✾　　　　　　✾\",\"url\":\"\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"现代耽美\",\"url\":\"/xiandai/list_4_{{page}}.html\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"古代耽美\",\"url\":\"/gudai/list_5_{{page}}.html\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"穿越重生\",\"url\":\"/chuanyue/list_6_{{page}}.html\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"玄幻灵异\",\"url\":\"/qihuan/list_7_{{page}}.html\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"网游竞技\",\"url\":\"/wangyou/list_8_{{page}}.html\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"同人耽美\",\"url\":\"/tongren/list_9_{{page}}.html\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\" G L 百合\",\"url\":\"/baihe/list_10_{{page}}.html\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"　　　　\",\"url\":\"\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"　　　　\",\"url\":\"\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"✾　　　　　　✾ 最热标签 ✾　　　　　　✾\",\"url\":\"\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"双性\",\"url\":\"/tags.php?/双性/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"综漫\",\"url\":\"/tags.php?/综漫/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"短篇\",\"url\":\"/tags.php?/短篇/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"生子\",\"url\":\"/tags.php?/生子/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"重口\",\"url\":\"/tags.php?/重口/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\" SM \",\"url\":\"/tags.php?/SM/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"甜文\",\"url\":\"/tags.php?/甜文/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"调教\",\"url\":\"/tags.php?/调教/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"总攻\",\"url\":\"/tags.php?/总攻/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"快穿\",\"url\":\"/tags.php?/快穿/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"强制\",\"url\":\"/tags.php?/强制/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"强强\",\"url\":\"/tags.php?/强强/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"总受\",\"url\":\"/tags.php?/总受/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"甜宠\",\"url\":\"/tags.php?/甜宠/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"ABO\",\"url\":\"/tags.php?/ABO/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"重生\",\"url\":\"/tags.php?/重生/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"星际\",\"url\":\"/tags.php?/星际/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"爽文\",\"url\":\"/tags.php?/爽文/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"穿书\",\"url\":\"/tags.php?/穿书/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"互攻\",\"url\":\"/tags.php?/互攻/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"直播\",\"url\":\"/tags.php?/直播/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"美食\",\"url\":\"/tags.php?/美食/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"系统\",\"url\":\"/tags.php?/系统/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"打脸\",\"url\":\"/tags.php?/打脸/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"狗血\",\"url\":\"/tags.php?/狗血/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"父子\",\"url\":\"/tags.php?/父子/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"萌宠\",\"url\":\"/tags.php?/萌宠/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"温馨\",\"url\":\"/tags.php?/温馨/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"末世\",\"url\":\"/tags.php?/末世/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"科幻\",\"url\":\"/tags.php?/科幻/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\" HE \",\"url\":\"/tags.php?/HE/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"无CP\",\"url\":\"/tags.php?/无CP/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\" NP \",\"url\":\"/tags.php?/NP/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\" 3 P \",\"url\":\"/tags.php?/3P/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"主攻\",\"url\":\"/tags.php?/主攻/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"年下\",\"url\":\"/tags.php?/年下/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"男男\",\"url\":\"/tags.php?/男男/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"人兽\",\"url\":\"/tags.php?/人兽/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"产乳\",\"url\":\"/tags.php?/产乳/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"人鱼\",\"url\":\"/tags.php?/人鱼/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"校园\",\"url\":\"/tags.php?/校园/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"齐神\",\"url\":\"/tags.php?/齐神/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"柯南\",\"url\":\"/tags.php?/柯南/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"　　\",\"url\":\"\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"　　\",\"url\":\"\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"娱乐圈\",\"url\":\"/tags.php?/娱乐圈/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"种田文\",\"url\":\"/tags.php?/种田文/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"美人受\",\"url\":\"/tags.php?/美人受/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"少年漫\",\"url\":\"/tags.php?/少年漫/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"仙侠修真\",\"url\":\"/tags.php?/仙侠修真/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"悬疑推理\",\"url\":\"/tags.php?/悬疑推理/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"情有独钟\",\"url\":\"/tags.php?/情有独钟/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"虐恋情深\",\"url\":\"/tags.php?/虐恋情深/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"灵异神怪\",\"url\":\"/tags.php?/灵异神怪/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"游戏网游\",\"url\":\"/tags.php?/游戏网游/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"宫廷侯爵\",\"url\":\"/tags.php?/宫廷侯爵/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"幻想空间\",\"url\":\"/tags.php?/幻想空间/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"豪门世家\",\"url\":\"/tags.php?/豪门世家/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"天作之合\",\"url\":\"/tags.php?/天作之合/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"破镜重圆\",\"url\":\"/tags.php?/破镜重圆/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"穿越时空\",\"url\":\"/tags.php?/穿越时空/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"都市情缘\",\"url\":\"/tags.php?/都市情缘/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"现代架空\",\"url\":\"/tags.php?/现代架空/{{page}}/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"　　　　\",\"url\":\"\",\"style\":{\"layout_flexGrow\":1}}]",
+  "header": "",
+  "lastUpdateTime": 1680677189860,
+  "loginUrl": "",
+  "respondTime": 187447,
+  "ruleBookInfo": {
+   "author": "##作者：([^<]+)<##$1###",
+   "coverUrl": "",
+   "init": "",
+   "intro": "",
+   "kind": "",
+   "lastChapter": "",
+   "name": "",
+   "tocUrl": "",
+   "wordCount": ""
+  },
+  "ruleContent": {
+   "content": "//a[text()=\"1\"]/../../../preceding-sibling::div[3]@html",
+   "imageStyle": "0",
+   "nextContentUrl": "",
+   "sourceRegex": "",
+   "webJs": ""
+  },
+  "ruleExplore": {
+   "author": "tag.a.0@text##.*作者：",
+   "bookList": "class.list_article@ul@li||class.list_article@ul@li",
+   "bookUrl": "tag.a.0@href",
+   "coverUrl": "@js:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1566992610688&di=df0ff5ed9b03b65e479ddbea6594b1f0&imgtype=0&src=http%3A%2F%2Fpic9.nipic.com%2F20100826%2F2457331_152132536376_2.jpg'",
+   "intro": "class.desc.0@text",
+   "kind": "",
+   "lastChapter": "class.time.0@text",
+   "name": "tag.a.0@b@text||tag.a.0@strong@text",
+   "wordCount": ""
+  },
+  "ruleSearch": {
+   "author": "##作者：([^<]+)<##$1###",
+   "bookList": "class.list_article@ul@li",
+   "bookUrl": "tag.a.1@href",
+   "coverUrl": "",
+   "intro": "class.desc.0@text",
+   "kind": "tag.a.0@text",
+   "lastChapter": "class.time.0@text",
+   "name": "tag.a.1@text##\\作者：.*",
+   "wordCount": ""
+  },
+  "ruleToc": {
+   "chapterList": "//a[text()=\"下一页\"]/../following-sibling::li/a",
+   "chapterName": "text##(\\d+)##第$1页",
+   "chapterUrl": "href",
+   "isVip": "",
+   "nextTocUrl": "",
+   "updateTime": ""
+  },
+  "searchUrl": "http://www.jiqinw.com/plus/hsearch.php?q={{key}}",
+  "weight": 0
+ }
+]

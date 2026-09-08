@@ -1,0 +1,56 @@
+[
+ {
+  "bookSourceComment": "",
+  "bookSourceGroup": "关耳",
+  "bookSourceName": "🌸四零二零",
+  "bookSourceType": 0,
+  "bookSourceUrl": "https://www.iwurexs.com",
+  "bookUrlPattern": "",
+  "customButton": false,
+  "customOrder": 51,
+  "enabled": true,
+  "enabledCookieJar": false,
+  "enabledExplore": false,
+  "eventListener": false,
+  "exploreUrl": "",
+  "lastUpdateTime": 1682086559455,
+  "loginUrl": "",
+  "respondTime": 6376,
+  "ruleBookInfo": {
+   "author": "class.block_txt2@tag.p.2@text##作者：",
+   "coverUrl": "img@src",
+   "init": "",
+   "kind": "class.block_txt2@tag.p.2@a@text",
+   "lastChapter": "class.block_txt2@tag.p.6@a@text",
+   "name": "class.block_txt2@h2@a@text",
+   "tocUrl": "class.block_txt2@tag.a.0@href##-(\\d+).html##http://www.wrltxt.com/read/$1/###"
+  },
+  "ruleContent": {
+   "content": "id.content@textNodes##请记住本书.*",
+   "imageStyle": "0"
+  },
+  "ruleExplore": {
+   "author": "",
+   "bookList": "",
+   "bookUrl": "",
+   "intro": "",
+   "lastChapter": "",
+   "name": ""
+  },
+  "ruleSearch": {
+   "author": "tag.td.3@text",
+   "bookList": "tbody@tr!0",
+   "bookUrl": "tag.a.0@href",
+   "kind": "",
+   "lastChapter": "tag.td.2@text",
+   "name": "tag.td.1@text"
+  },
+  "ruleToc": {
+   "chapterList": "//div[5]/div/div[3]/div[2]/ul/li",
+   "chapterName": "tag.a@text",
+   "chapterUrl": "tag.a@href"
+  },
+  "searchUrl": "/so.html?q={{key}}",
+  "weight": 0
+ }
+]

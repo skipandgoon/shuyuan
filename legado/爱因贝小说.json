@@ -1,0 +1,52 @@
+[
+ {
+  "bookSourceComment": "// Error: 搜索失效",
+  "bookSourceGroup": "晋江",
+  "bookSourceName": "爱因贝小说",
+  "bookSourceType": 0,
+  "bookSourceUrl": "http://www.aiyinbei.com/",
+  "bookUrlPattern": "http://www.aiyinbei.com/book/\\w+.html",
+  "customButton": false,
+  "customOrder": 31,
+  "enabled": true,
+  "enabledCookieJar": true,
+  "enabledExplore": false,
+  "eventListener": false,
+  "exploreUrl": "",
+  "header": "{\"User-Agent\": \"Mozilla/5.0 (Linux; Android 9) Mobile Safari/537.36\"}",
+  "lastUpdateTime": 1721474627416,
+  "respondTime": 184265,
+  "ruleBookInfo": {
+   "author": "text.作者@span@text",
+   "coverUrl": ".left mip-img@src",
+   "intro": "p.hidden-xs@all",
+   "kind": "text.分类@span@text&&\ntext.更新@span@text##.*：",
+   "lastChapter": "text.最新章节.0@a@text",
+   "name": "h1@text"
+  },
+  "ruleContent": {
+   "content": ".book-detail-content>p@textNodes",
+   "nextContentUrl": "text.下一页@href",
+   "replaceRegex": "##Ｘ更新最快|[♯|➷|▉(].*[com]"
+  },
+  "ruleExplore": {},
+  "ruleSearch": {
+   "author": "a.-1@text",
+   "bookList": ".mipui-xs-item-list",
+   "bookUrl": "a.1@href",
+   "checkKeyWord": "剑来",
+   "coverUrl": "mip-img@src",
+   "intro": ".description@ownText##最新章节：",
+   "kind": "span.-1@text##\\s+##,",
+   "lastChapter": "a.2@text",
+   "name": "h4 a@text"
+  },
+  "ruleToc": {
+   "chapterList": ".bookAll-item-list li a",
+   "chapterName": "text",
+   "chapterUrl": "href"
+  },
+  "searchUrl": "@js:\nvar url=source.key,\nhtml=java.ajax(url);\ntoken=org.jsoup.Jsoup.parse(html)\n.select('input[name=_token]')\n.attr('value');\nbody=`_token=${token}&keyword=`+key;\nvar so=url+\"search,\"\nvar post={\n  \"body\": String(body),\n  \"method\": \"POST\"\n};\nso+JSON.stringify(post)",
+  "weight": 0
+ }
+]

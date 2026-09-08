@@ -1,0 +1,53 @@
+[
+ {
+  "bookSourceComment": "『预处理测试搜索有盾』搜索5s盾,详情预处理,搜索抄的游客大佬的",
+  "bookSourceGroup": "晋江",
+  "bookSourceName": "笔趣阁七",
+  "bookSourceType": 0,
+  "bookSourceUrl": "https://www.biquge7.xyz",
+  "bookUrlPattern": "https://www.biquge7.xyz/\\d+",
+  "customButton": false,
+  "customOrder": 127,
+  "enabled": true,
+  "enabledCookieJar": true,
+  "enabledExplore": false,
+  "eventListener": false,
+  "exploreUrl": "玄幻奇幻::/xh/<,{{page}}>\n修真武侠::/xz/<,{{page}}>\n都市言情::/ds/<,{{page}}>\n穿越历史::/cy/<,{{page}}>\n网游竞技::/wy/<,{{page}}>\n科幻灵异::/kh/<,{{page}}>\n完结小说::/wj/<,{{page}}>\n排行榜::/ph/<,{{page}}>",
+  "lastUpdateTime": 1726071563671,
+  "respondTime": 13717,
+  "ruleBookInfo": {
+   "author": "@get:{a}",
+   "coverUrl": "@get:{c}",
+   "init": "@put:{n:\"[property$=book_name]@content\",\na:\"[property$=author]@content\",\nk:\"[property~=category|status|update_time]@content\",\nl:\"[property$=latest_chapter_name]@content\",\ni:\"[property$=description]@content\",\nc:\"[property$=image]@content\"}",
+   "intro": "@get:{i}",
+   "kind": "@get:{k}",
+   "lastChapter": "@get:{l}",
+   "name": "@get:{n}",
+   "tocUrl": "",
+   "wordCount": ""
+  },
+  "ruleContent": {
+   "content": ".text@html",
+   "nextContentUrl": "text.下一章@href",
+   "title": ""
+  },
+  "ruleExplore": {
+   "name": ""
+  },
+  "ruleSearch": {
+   "author": "span.0@text",
+   "bookList": ".tui_1_item",
+   "bookUrl": "a.1@href",
+   "coverUrl": "img@src",
+   "intro": "p@text",
+   "name": "tag.a.1@text"
+  },
+  "ruleToc": {
+   "chapterList": ".list li a",
+   "chapterName": "text",
+   "chapterUrl": "href"
+  },
+  "searchUrl": "@js:\njava.put(\"url\",String(source.bookSourceUrl+\"/search?keyword=\"+key+\",\"+JSON.stringify({\n\t\t\"headers\":{\n  \"User-Agent\": \"Mozilla/5.0 (Linux; U; Android 10; zh-cn; MI CC 11)  AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/100.0.4896.127 Mobile Safari/537.36 XiaoMi/MiuiBrowser/18.1.8 swan-mibrowser\"\n}})))",
+  "weight": 0
+ }
+]

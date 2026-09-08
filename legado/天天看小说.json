@@ -1,0 +1,57 @@
+[
+ {
+  "bookSourceComment": "// Error: org.mozilla.javascript.EcmaError: TypeError: 无法读取 null 的属性 “1” (<Unknown Source>#1) in <Unknown Source> at line number 1",
+  "bookSourceGroup": "起点",
+  "bookSourceName": "🇨🇩天天看小说",
+  "bookSourceType": 0,
+  "bookSourceUrl": "https://cn.ttkan.co",
+  "customButton": false,
+  "customOrder": 148,
+  "enabled": true,
+  "enabledCookieJar": true,
+  "enabledExplore": false,
+  "eventListener": false,
+  "exploreUrl": "[{\"title\":\"🏷️分类\",\"url\":\"\",\"style\":{\"layout_flexBasisPercent\":1}},{\"title\":\"玄幻\",\"url\":\"/api/nq/amp_novel_list?type=xuanhuan&filter=*&page={{page}}&limit=18&language=cn\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"都市\",\"url\":\"/api/nq/amp_novel_list?type=dushi&filter=*&page={{page}}&limit=18&language=cn\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"仙侠\",\"url\":\"/api/nq/amp_novel_list?type=xianxia&filter=*&page={{page}}&limit=18&language=cn\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"言情\",\"url\":\"/api/nq/amp_novel_list?type=gudaiyanqing&filter=*&page={{page}}&limit=18&language=cn\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"穿越\",\"url\":\"/api/nq/amp_novel_list?type=chuanyuechongsheng&filter=*&page={{page}}&limit=18&language=cn\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"游戏\",\"url\":\"/api/nq/amp_novel_list?type=youxi&filter=*&page={{page}}&limit=18&language=cn\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"科幻\",\"url\":\"/api/nq/amp_novel_list?type=kehuan&filter=*&page={{page}}&limit=18&language=cn\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"悬疑\",\"url\":\"/api/nq/amp_novel_list?type=xuanyi&filter=*&page={{page}}&limit=18&language=cn\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"灵异\",\"url\":\"/api/nq/amp_novel_list?type=lingyi&filter=*&page={{page}}&limit=18&language=cn\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"历史\",\"url\":\"/api/nq/amp_novel_list?type=lishi&filter=*&page={{page}}&limit=18&language=cn\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"青春\",\"url\":\"/api/nq/amp_novel_list?type=qingchun&filter=*&page={{page}}&limit=18&language=cn\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"军事\",\"url\":\"/api/nq/amp_novel_list?type=junshi&filter=*&page={{page}}&limit=18&language=cn\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"竞技\",\"url\":\"/api/nq/amp_novel_list?type=jingji&filter=*&page={{page}}&limit=18&language=cn\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"现言\",\"url\":\"/api/nq/amp_novel_list?type=yanqing&filter=*&page={{page}}&limit=18&language=cn\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"其他\",\"url\":\"/api/nq/amp_novel_list?type=qita&filter=*&page={{page}}&limit=18&language=cn\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}}]",
+  "header": "{\n\t\"User-Agent\":\"Mozilla/5.0 (Linux; Android 14; PJH110 Build/SP1A.210812.016) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.6533.103 Mobile Safari/537.36\",\n\t\"Referer\":\"{{https://cn.ttkan.co}}\"\n\t}",
+  "lastUpdateTime": 1727523263131,
+  "respondTime": 180830,
+  "ruleBookInfo": {
+   "author": "@css:[data-hid=og:novel:author]@content",
+   "coverUrl": ".pure-u-xl-1-6@amp-img@src",
+   "intro": ".description@html",
+   "kind": "@css:[data-hid=og:novel:category]@content&&[data-hid=og:novel:status]@content&&[data-hid=og:novel:update_time]@content",
+   "lastChapter": "@css:[data-hid=og:novel:latest_chapter_name]@content",
+   "name": "@css:[data-hid=og:novel:book_name]@content",
+   "tocUrl": "#button_show_all_chatper@on\n@js:\nresult=result.match(/srcUrl: '([^']+)'/)[1];\njava.put('novelid',result.match(/novel_id=(.*)/)[1]);\nresult;"
+  },
+  "ruleContent": {
+   "content": ".content@p@html"
+  },
+  "ruleExplore": {
+   "author": "$.author",
+   "bookList": "$.items[*]",
+   "bookUrl": "/novel/chapters/{{$.novel_id}}",
+   "coverUrl": "https://static.ttkan.co/cover/{{$.topic_img}}?w=120&h=160&q=100",
+   "intro": "$.description",
+   "kind": "",
+   "lastChapter": "",
+   "name": "$.name"
+  },
+  "ruleSearch": {
+   "author": "ul@li.1@text##.*：",
+   "bookList": ".pure-u-1-1",
+   "bookUrl": "a.0@href",
+   "checkKeyWord": "我的",
+   "coverUrl": "amp-img@src",
+   "intro": "ul@li.2@text##.*：",
+   "name": "h3@text"
+  },
+  "ruleToc": {
+   "chapterList": "$.items[*]",
+   "chapterName": "$.chapter_name",
+   "chapterUrl": "$.chapter_id\n@js:\nid=result;\nnovelid=java.get('novelid');\n\"https://cn.ttkan.co/novel/pagea/\"+novelid+\"_\"+id+\".html\";"
+  },
+  "searchUrl": "https://cn.ttkan.co/novel/search?q={{key}}",
+  "weight": 0
+ }
+]

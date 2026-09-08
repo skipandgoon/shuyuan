@@ -1,0 +1,44 @@
+[
+ {
+  "bookSourceComment": "",
+  "bookSourceGroup": "晋江",
+  "bookSourceName": "🌸缺小说",
+  "bookSourceType": 0,
+  "bookSourceUrl": "http://www.quexs.org/",
+  "customButton": false,
+  "customOrder": 50,
+  "enabled": true,
+  "enabledCookieJar": true,
+  "enabledExplore": false,
+  "eventListener": false,
+  "lastUpdateTime": 1727874275197,
+  "respondTime": 63460,
+  "ruleBookInfo": {
+   "intro": "#bookIntro@html"
+  },
+  "ruleContent": {
+   "content": "#htmlContent@p!-1@html##$##❎",
+   "imageStyle": "",
+   "nextContentUrl": "<js>\nif(/xyy.png/.test(src)){\nresult = src.match(/\\d+,\\d+,'(.*?_.*?)\\|__u[^\\|]+/)[1]+\".html\"\n}\n</js>",
+   "replaceRegex": "##.*向你推荐他的其他作品[\\s\\S]+|「如章节.*?」|.*看最新章节.*|\\s*❎\\s*|.*?》.*?域名.*",
+   "webJs": ""
+  },
+  "ruleExplore": {},
+  "ruleSearch": {
+   "author": ".booktag@text",
+   "bookList": "class.col-md-10",
+   "bookUrl": "a.0@href",
+   "intro": "#bookIntro@text",
+   "lastChapter": ".text-danger@text",
+   "name": "h4@text"
+  },
+  "ruleToc": {
+   "chapterList": "class.panel-chapterlist.-1@dd@a",
+   "chapterName": "text",
+   "chapterUrl": "href",
+   "preUpdateJs": ""
+  },
+  "searchUrl": "/search,{\"method\":\"POST\",\"body\":\"keyword={{key}}\"}",
+  "weight": 0
+ }
+]
