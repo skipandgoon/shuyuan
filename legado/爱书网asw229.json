@@ -1,0 +1,68 @@
+[
+ {
+  "bookSourceComment": "",
+  "bookSourceGroup": "置顶",
+  "bookSourceName": "爱书网asw229",
+  "bookSourceType": 0,
+  "bookSourceUrl": "https://www.asw229.com/",
+  "bookUrlPattern": "https://www\\.asw229\\.com/file\\.php\\?hash=",
+  "concurrentRate": "",
+  "customOrder": 0,
+  "enabled": true,
+  "enabledCookieJar": true,
+  "enabledExplore": true,
+  "eventListener": false,
+  "exploreUrl": "最新上传::/index.php?page={{page}}&&24小时热榜::/index.php?sort=day&page={{page}}&&周热门::/index.php?sort=week&page={{page}}&&月热门::/index.php?sort=month&page={{page}}&&下载排行::/index.php?sort=hits&page={{page}}&&男生频道::/searchns.php?kw=%5B%E7%94%B7%E7%94%9F%5D&page={{page}}&&耽美站最新::https://www.asw228.com/index.php?page={{page}}",
+  "header": "{\"User-Agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36\"}",
+  "lastUpdateTime": 1791897962518,
+  "loginCheckJs": "",
+  "loginUi": "",
+  "loginUrl": "",
+  "respondTime": 180000,
+  "ruleBookInfo": {
+   "author": "@js:var s=String(result||'').replace(/\\.txt$/i,'').trim();var m=s.match(/(?:作者|by)[：:]?\\s*([^\\s\\.《》()（）\\[\\]【】,，;；|]{1,12})(?:\\s|$)/i);return m?m[1]:'';",
+   "coverUrl": "",
+   "init": "",
+   "intro": "@js:var t=String(result||'').replace(/[\\s\\u3000]+/g,' ').trim();return t?('文件信息：'+t):'';",
+   "kind": "@js:var s=String(result||''), k=[];var add=function(x){if(x&&k.indexOf(x)<0){k.push(x);}};var m=s.match(/^[\\[【(（]([^\\]】)）]{1,8})[\\]】)）]/);if(m&&!/^\\d+$/.test(m[1])){add(m[1]);}if(/完结|全本/.test(s)){add('完结');}add('txt');return k.join(' ');",
+   "lastChapter": "",
+   "name": "@js:var s=String(result||'').replace(/\\.txt$/i,'').trim();s=s.replace(/^[\\[【(（][^\\]】)）]{1,8}[\\]】)）]\\s*/,'');s=s.replace(/^(完结|全本|已完结|完结全本)\\s*/,'');s=s.replace(/\\s*(?:作者|by)[：:]?.*$/i,'').trim();s=s.replace(/^[《【](.*?)[》】]$/,'$1').trim();return s;",
+   "tocUrl": "",
+   "wordCount": ""
+  },
+  "ruleContent": {
+   "content": "@js:var u=String(baseUrl).replace(/,{[\\s\\S]*$/,'');var score=function(t){var h=String(t||'').substring(0,1500);var bad=(h.match(/[\\uFFFD锟]|Â|Ã|å|æ|ç|è|é/g)||[]).length;var cjk=(h.match(/[\\u4e00-\\u9fa5]/g)||[]).length;return cjk-bad*8;};var s=String(result||''),bs=score(s);if(bs<200){var cs=['utf-8','gb18030'];for(var i=0;i<cs.length;i++){try{var t=java.ajax(u+',{\"charset\":\"'+cs[i]+'\"}');var sc=score(t);if(sc>bs){s=t;bs=sc;}}catch(e){}}}s=s.replace(/\\r/g,'').replace(/[\\u3000 ]+/g,'').replace(/\\n{3,}/g,'\\n\\n');return s.trim();",
+   "nextContentUrl": ""
+  },
+  "ruleExplore": {
+   "author": "@js:var s=String(result||'').replace(/\\.txt$/i,'').trim();var m=s.match(/(?:作者|by)[：:]?\\s*([^\\s\\.《》()（）\\[\\]【】,，;；|]{1,12})(?:\\s|$)/i);return m?m[1]:'';",
+   "bookList": "class.file-card",
+   "bookUrl": "class.file-card-link@href",
+   "coverUrl": "",
+   "intro": "class.detail-item@text@js:var t=String(result||'').replace(/[\\s\\u3000]+/g,' ').trim();return t;",
+   "kind": "@js:var s=String(result||''), k=[];var add=function(x){if(x&&k.indexOf(x)<0){k.push(x);}};var m=s.match(/^[\\[【(（]([^\\]】)）]{1,8})[\\]】)）]/);if(m&&!/^\\d+$/.test(m[1])){add(m[1]);}if(/完结|全本/.test(s)){add('完结');}add('txt');return k.join(' ');",
+   "lastChapter": "",
+   "name": "@js:var s=String(result||'').replace(/\\.txt$/i,'').trim();s=s.replace(/^[\\[【(（][^\\]】)）]{1,8}[\\]】)）]\\s*/,'');s=s.replace(/^(完结|全本|已完结|完结全本)\\s*/,'');s=s.replace(/\\s*(?:作者|by)[：:]?.*$/i,'').trim();s=s.replace(/^[《【](.*?)[》】]$/,'$1').trim();return s;"
+  },
+  "ruleReview": {},
+  "ruleSearch": {
+   "author": "@js:var s=String(result||'').replace(/\\.txt$/i,'').trim();var m=s.match(/(?:作者|by)[：:]?\\s*([^\\s\\.《》()（）\\[\\]【】,，;；|]{1,12})(?:\\s|$)/i);return m?m[1]:'';",
+   "bookList": "class.file-card",
+   "bookUrl": "class.file-card-link@href",
+   "checkKeyWord": "",
+   "coverUrl": "",
+   "intro": "class.detail-item@text@js:var t=String(result||'').replace(/[\\s\\u3000]+/g,' ').trim();return t;",
+   "kind": "@js:var s=String(result||''), k=[];var add=function(x){if(x&&k.indexOf(x)<0){k.push(x);}};var m=s.match(/^[\\[【(（]([^\\]】)）]{1,8})[\\]】)）]/);if(m&&!/^\\d+$/.test(m[1])){add(m[1]);}if(/完结|全本/.test(s)){add('完结');}add('txt');return k.join(' ');",
+   "lastChapter": "",
+   "name": "@js:var s=String(result||'').replace(/\\.txt$/i,'').trim();s=s.replace(/^[\\[【(（][^\\]】)）]{1,8}[\\]】)）]\\s*/,'');s=s.replace(/^(完结|全本|已完结|完结全本)\\s*/,'');s=s.replace(/\\s*(?:作者|by)[：:]?.*$/i,'').trim();s=s.replace(/^[《【](.*?)[》】]$/,'$1').trim();return s;"
+  },
+  "ruleToc": {
+   "chapterList": "class.btn-group@tag.a.0",
+   "chapterName": "@js:return '全文';",
+   "chapterUrl": "@js:var m=String(baseUrl).match(/[?&]hash=([0-9a-fA-F]+)/);return m?('https://www.asw229.com/down.php/'+m[1]+'.txt'):result;",
+   "nextTocUrl": ""
+  },
+  "searchUrl": "https://www.asw229.com/search.php?kw={{key}}",
+  "variableComment": ""
+ }
+]
