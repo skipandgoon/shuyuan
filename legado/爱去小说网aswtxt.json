@@ -13,7 +13,7 @@
     "enabledExplore": true,
     "eventListener": false,
     "exploreUrl": "@js:\nJSON.stringify([{\"title\": \"最新\", \"url\": \"\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 1}}, {\"title\": \"最新入库\", \"url\": \"/txt-xx/new/index_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"全部\", \"url\": \"/txt-xx/15/list15_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"耽美\", \"url\": \"\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 1}}, {\"title\": \"现代耽美\", \"url\": \"/txt-xx/dmxs/xddm/list117_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"古代架空\", \"url\": \"/txt-xx/dmxs/gdjk/list118_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"穿越重生\", \"url\": \"/txt-xx/dmxs/cycs/list119_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"玄幻科幻\", \"url\": \"/txt-xx/dmxs/xhkh/list120_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"BL同人\", \"url\": \"/txt-xx/dmxs/bltr/list121_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"女生\", \"url\": \"\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 1}}, {\"title\": \"都市言情\", \"url\": \"/txt-xx/nsxs/dsyq/list110_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"古代言情\", \"url\": \"/txt-xx/nsxs/gdyq/list111_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"穿越重生\", \"url\": \"/txt-xx/nsxs/cycs/list112_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"玄幻仙侠\", \"url\": \"/txt-xx/nsxs/xhxx/list113_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"青春同人\", \"url\": \"/txt-xx/nsxs/qctr/list114_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"网游科幻\", \"url\": \"/txt-xx/nsxs/wykh/list115_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"男生\", \"url\": \"\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 1}}, {\"title\": \"玄幻奇幻\", \"url\": \"/txt-xx/nsbook/xhqh/list124_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"武侠仙侠\", \"url\": \"/txt-xx/nsbook/wxxx/list125_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"都市重生\", \"url\": \"/txt-xx/nsbook/dscs/list126_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"历史军事\", \"url\": \"/txt-xx/nsbook/lsjs/list127_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"科幻网游\", \"url\": \"/txt-xx/nsbook/khwy/list129_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"二次元\", \"url\": \"/txt-xx/nsbook/ecy/list130_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}]);",
-    "header": "{\"User-Agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36\"}",
+    "header": "{\"User-Agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36\", \"Accept-Language\": \"zh-CN,zh;q=0.9\"}",
     "lastUpdateTime": 1791951908090,
     "loginCheckJs": "",
     "loginUi": "",
@@ -44,11 +44,11 @@
       "name": "div.search-card-title a.searchtitle@text##[《》]"
     },
     "ruleToc": {
-      "chapterList": "@css:a:contains(第一下载地址)||@css:a[href*=downbook]",
-      "chapterName": "text##^[\\s\\S]+$##全文",
+      "chapterList": "@css:a[href^=\"https\"][href$=\".txt\"]||@css:a[href$=\".txt\"]||@css:a[href$=\".zip\"]",
+      "chapterName": "text",
       "chapterUrl": "href"
     },
-    "searchUrl": "/search.asp?word={{key}}&page={{page}},{\n    \"charset\": \"gbk\"\n}",
+    "searchUrl": "/search.asp?word={{key}}&page={{page}},{\"charset\":\"gbk\"}",
     "variableComment": "",
     "weight": 0
   }
