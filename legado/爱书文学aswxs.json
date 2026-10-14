@@ -1,0 +1,55 @@
+[
+  {
+    "bookSourceComment": "",
+    "bookSourceGroup": "置顶",
+    "bookSourceName": "爱书文学aswxs",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://www.aswxs.com/",
+    "bookUrlPattern": "https://www\\.aswxs\\.com/bestbook/\\d+/",
+    "concurrentRate": "",
+    "customOrder": 6,
+    "enabled": true,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "eventListener": false,
+    "exploreUrl": "@js:\nlet all = [];\nlet res = [\n{'title': '最近更新', 'href': '/fenlei/lastupdate/0/0/0/{{page}}.html'},\n{'title': '最新入库', 'href': '/fenlei/postdate/0/0/0/{{page}}.html'},\n{'title': '日排行', 'href': '/fenlei/dayvisit/0/0/0/{{page}}.html'},\n{'title': '周排行', 'href': '/fenlei/weekvisit/0/0/0/{{page}}.html'},\n{'title': '月排行', 'href': '/fenlei/monthvisit/0/0/0/{{page}}.html'},\n{'title': '总排行', 'href': '/fenlei/allvisit/0/0/0/{{page}}.html'},\n{'title': '玄幻修真', 'href': '/fenlei/lastupdate/1/0/0/{{page}}.html'},\n{'title': '重生穿越', 'href': '/fenlei/lastupdate/2/0/0/{{page}}.html'},\n{'title': '都市小说', 'href': '/fenlei/lastupdate/3/0/0/{{page}}.html'},\n{'title': '军史小说', 'href': '/fenlei/lastupdate/4/0/0/{{page}}.html'},\n{'title': '网游小说', 'href': '/fenlei/lastupdate/5/0/0/{{page}}.html'},\n{'title': '科幻小说', 'href': '/fenlei/lastupdate/6/0/0/{{page}}.html'},\n{'title': '灵异小说', 'href': '/fenlei/lastupdate/7/0/0/{{page}}.html'},\n{'title': '其他小说', 'href': '/fenlei/lastupdate/9/0/0/{{page}}.html'}\n];\nres.forEach(x => {\n all.push({\n \"title\": x.title,\n \"url\": x.href,\n \"style\": {\n \"layout_flexGrow\": 1,\n \"layout_flexBasisPercent\": 0.25\n }\n });\n});\nresult = JSON.stringify(all);",
+    "header": "{\"User-Agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36\"}",
+    "lastUpdateTime": 1791937473000,
+    "loginCheckJs": "",
+    "loginUi": "",
+    "loginUrl": "",
+    "respondTime": 180000,
+    "ruleBookInfo": {
+      "author": "//div[contains(@class,'bookdes')]/p[contains(.,'作者')]/text()##作者：",
+      "coverUrl": "//div[@class='book']/a[@class='cover']/img/@src",
+      "intro": "//div[@class='bookintro']/p/text()##简介：",
+      "kind": "//ol[contains(@class,'breadcrumb')]/li[2]/a/text()",
+      "lastChapter": "//div[contains(@class,'bookdes')]/p[contains(.,'最新章节')]/a/text()",
+      "name": "//div[@class='booktitle']/h1/text()",
+      "tocUrl": ""
+    },
+    "ruleContent": {
+      "content": "#booktxt@html\n@js:\nvar s = String(result||'');\nvar out = '';\nvar re = /bb\\('([A-Za-z0-9+/=]+)'\\)/g;\nvar m;\nwhile ((m = re.exec(s)) !== null) { out += String(java.base64Decode(m[1])); }\nif (out === '') { out = s; }\nout = out.replace(/<p[^>]*>\\s*(请勿开启浏览器阅读模式|相邻推荐)[\\s\\S]*$/, '');\nout = out.replace(/<a[^>]*href=\"\\/ibqg\\/[\\s\\S]*$/, '');\nout;",
+      "nextContentUrl": "//a[@id='next_url' and contains(@href,'.html')]/@href"
+    },
+    "ruleExplore": {
+      "author": "tag.span.1@text",
+      "bookList": "class.update@tag.li",
+      "bookUrl": "tag.a.0@href",
+      "kind": "tag.span.0@text",
+      "lastChapter": "tag.a.1@text",
+      "name": "tag.a.0@text"
+    },
+    "ruleReview": {},
+    "ruleSearch": {},
+    "ruleToc": {
+      "chapterList": "//div[@class='chapterlist mt10']/div[@class='all']/ul/li",
+      "chapterName": "//a/text()",
+      "chapterUrl": "//a/@href",
+      "nextTocUrl": "@js:\nvar list = [];\nvar u = String(baseUrl);\nif (!/ml\\d+\\.html$/.test(u)) {\n  try {\n    var book = u.replace(/ml\\d+\\.html$/, '');\n    var h = String(java.ajax(book + 'ml1.html'));\n    var re = /<option[^>]*value=\"([^\"]+)\"/g;\n    var m;\n    while ((m = re.exec(h)) !== null) {\n      if (m[1].indexOf('.html') > -1) { list.push(m[1]); }\n    }\n  } catch (e) {}\n}\nlist;"
+    },
+    "searchUrl": "",
+    "variableComment": "",
+    "weight": 0
+  }
+]
