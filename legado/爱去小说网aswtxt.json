@@ -1,0 +1,56 @@
+[
+  {
+    "bookSourceComment": "",
+    "bookSourceGroup": "置顶",
+    "bookSourceName": "爱去小说网aswtxt",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://www.aswtxt.com/",
+    "bookUrlPattern": "https://www\\.aswtxt\\.com/txt-xx/",
+    "concurrentRate": "",
+    "customOrder": 10,
+    "enabled": true,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "eventListener": false,
+    "exploreUrl": "@js:\nJSON.stringify([{\"title\": \"最新\", \"url\": \"\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 1}}, {\"title\": \"最新入库\", \"url\": \"/txt-xx/new/index_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"全部\", \"url\": \"/txt-xx/15/list15_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"耽美\", \"url\": \"\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 1}}, {\"title\": \"现代耽美\", \"url\": \"/txt-xx/dmxs/xddm/list117_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"古代架空\", \"url\": \"/txt-xx/dmxs/gdjk/list118_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"穿越重生\", \"url\": \"/txt-xx/dmxs/cycs/list119_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"玄幻科幻\", \"url\": \"/txt-xx/dmxs/xhkh/list120_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"BL同人\", \"url\": \"/txt-xx/dmxs/bltr/list121_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"女生\", \"url\": \"\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 1}}, {\"title\": \"都市言情\", \"url\": \"/txt-xx/nsxs/dsyq/list110_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"古代言情\", \"url\": \"/txt-xx/nsxs/gdyq/list111_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"穿越重生\", \"url\": \"/txt-xx/nsxs/cycs/list112_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"玄幻仙侠\", \"url\": \"/txt-xx/nsxs/xhxx/list113_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"青春同人\", \"url\": \"/txt-xx/nsxs/qctr/list114_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"网游科幻\", \"url\": \"/txt-xx/nsxs/wykh/list115_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"男生\", \"url\": \"\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 1}}, {\"title\": \"玄幻奇幻\", \"url\": \"/txt-xx/nsbook/xhqh/list124_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"武侠仙侠\", \"url\": \"/txt-xx/nsbook/wxxx/list125_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"都市重生\", \"url\": \"/txt-xx/nsbook/dscs/list126_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"历史军事\", \"url\": \"/txt-xx/nsbook/lsjs/list127_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"科幻网游\", \"url\": \"/txt-xx/nsbook/khwy/list129_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"二次元\", \"url\": \"/txt-xx/nsbook/ecy/list130_{{page}}.htm\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}]);",
+    "header": "{\"User-Agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36\"}",
+    "lastUpdateTime": 1791951908090,
+    "loginCheckJs": "",
+    "loginUi": "",
+    "loginUrl": "",
+    "respondTime": 180000,
+    "ruleBookInfo": {
+      "author": "@css:a[href*=searchzuozhe] font[color*=008800]@text##作者：|作者名称：",
+      "intro": "@js:\nvar s = String(result || '').replace(/\\r/g, '');\nvar out = '';\nvar i = s.indexOf('小说简介');\nif (i < 0) i = s.indexOf('内容简介');\nif (i > -1) {\n  s = s.substring(i);\n  var p = s.indexOf('</p>');\n  if (p > -1) s = s.substring(p + 4);\n  var ends = ['<div align=\"center\"', '<div class=\"pageMainArea\"', '<script'];\n  for (var n = 0; n < ends.length; n++) {\n    var j = s.indexOf(ends[n]);\n    if (j > -1) s = s.substring(0, j);\n  }\n  out = s.replace(/<br\\s*\\/?>/ig, '\\n').replace(/<[^>]+>/g, '').replace(/&nbsp;/g, ' ').replace(/&raquo;/g, '').replace(/^[\\s\\n]+/, '').replace(/[\\s\\n]+$/, '');\n}\nout;",
+      "name": "title@text##[《》]|txt下载.*",
+      "tocUrl": "a[href*=softdownfree]@href"
+    },
+    "ruleContent": {
+      "content": "@js:\nvar s = String(result || '');\nvar out;\nif (s.substr(0, 2) == 'PK' && s.charCodeAt(2) == 3) {\n  out = '【压缩包】本站在该书上架较早，只提供 ZIP 压缩包（无在线阅读页），阅读器无法解压。\\n请复制本章链接用浏览器下载后，用「本地导入」阅读：\\n' + String(baseUrl);\n} else {\n  if (s.indexOf('\\uFFFD') > -1) {\n    try { s = String(java.ajax(String(baseUrl) + ',{\"charset\":\"gb18030\"}')); } catch (e) { }\n  }\n  if (s.indexOf('\\uFFFD') > -1) {\n    try { s = String(java.ajax(String(baseUrl) + ',{\"charset\":\"utf-8\"}')); } catch (e) { }\n  }\n  var c = s.indexOf('class=\"content-box\"');\n  if (c > -1) {\n    s = s.substring(s.indexOf('>', c) + 1);\n  }\n  var b = s.indexOf('下载本书');\n  if (b > -1) s = s.substring(0, b);\n  s = s.replace(/推荐一个小说下载必备网址[^<\\r\\n]*/g, '');\n  s = s.replace(/每天更新，喜欢的去看看。[^<\\r\\n]*/g, '');\n  out = s.replace(/\\uFEFF/g, '').replace(/\\u3000\\u3000/g, '\\n');\n}\nout;",
+      "nextContentUrl": "@css:a.page-link:contains(下一页)@href"
+    },
+    "ruleExplore": {
+      "bookList": "@css:div.book-item",
+      "bookUrl": "div.book-title a[title]@href",
+      "name": "div.book-title a[title]@title##[《》]"
+    },
+    "ruleReview": {},
+    "ruleSearch": {
+      "author": "span.search-card-author a@text##作者：|作者名称：",
+      "bookList": "@css:div.search-card",
+      "bookUrl": "div.search-card-title a.searchtitle@href",
+      "checkKeyWord": "斗破",
+      "intro": "div.search-card-content@text",
+      "kind": "span.search-card-category a@text",
+      "name": "div.search-card-title a.searchtitle@text##[《》]"
+    },
+    "ruleToc": {
+      "chapterList": "@css:a[href*=downbook]",
+      "chapterName": "text",
+      "chapterUrl": "href"
+    },
+    "searchUrl": "/search.asp?word={{key}}&page={{page}},{\n    \"charset\": \"gbk\"\n}",
+    "variableComment": "",
+    "weight": 0
+  }
+]
