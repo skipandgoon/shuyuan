@@ -6,7 +6,7 @@
     "bookSourceType": 0,
     "bookSourceUrl": "https://www.aswtxt.com/",
     "bookUrlPattern": "https://www\\.aswtxt\\.com/txt-xx/",
-    "concurrentRate": "",
+    "concurrentRate": "1500",
     "customOrder": 10,
     "enabled": true,
     "enabledCookieJar": true,
@@ -23,11 +23,11 @@
       "author": "@css:a[href*=searchzuozhe] font[color*=008800]@text##作者：|作者名称：",
       "intro": "@js:\nvar s = String(result || '').replace(/\\r/g, '');\nvar out = '';\nvar i = s.indexOf('小说简介');\nif (i < 0) i = s.indexOf('内容简介');\nif (i > -1) {\n  s = s.substring(i);\n  var p = s.indexOf('</p>');\n  if (p > -1) s = s.substring(p + 4);\n  var ends = ['<div align=\"center\"', '<div class=\"pageMainArea\"', '<script'];\n  for (var n = 0; n < ends.length; n++) {\n    var j = s.indexOf(ends[n]);\n    if (j > -1) s = s.substring(0, j);\n  }\n  out = s.replace(/<br\\s*\\/?>/ig, '\\n').replace(/<[^>]+>/g, '').replace(/&nbsp;/g, ' ').replace(/&raquo;/g, '').replace(/^[\\s\\n]+/, '').replace(/[\\s\\n]+$/, '');\n}\nout;",
       "name": "title@text##[《》]|txt下载.*",
-      "tocUrl": "a[href*=softdownfree]@href"
+      "tocUrl": "@js:\nvar u='';\nvar m=String(baseUrl||'').match(/txt-(\\d+)\\.htm/i);\nif(m){u='/txt-xx/softdownfree.asp?softid='+m[1]+'&ckm=mianfei';}\nif(!u){var h=String(result||''),r=/href=\"([^\"]*softdownfree[^\"]*)\"/i.exec(h);if(r){u=r[1];}}\nresult=u;\nreturn u;"
     },
     "ruleContent": {
-      "content": "@js:\nvar s = String(result || '');\nvar out;\nif (s.substr(0, 2) == 'PK' && s.charCodeAt(2) == 3) {\n  out = '【压缩包】本站在该书上架较早，只提供 ZIP 压缩包（无在线阅读页），阅读器无法解压。\\n请复制本章链接用浏览器下载后，用「本地导入」阅读：\\n' + String(baseUrl);\n} else {\n  if (s.indexOf('\\uFFFD') > -1) {\n    try { s = String(java.ajax(String(baseUrl) + ',{\"charset\":\"gb18030\"}')); } catch (e) { }\n  }\n  if (s.indexOf('\\uFFFD') > -1) {\n    try { s = String(java.ajax(String(baseUrl) + ',{\"charset\":\"utf-8\"}')); } catch (e) { }\n  }\n  var c = s.indexOf('class=\"content-box\"');\n  if (c > -1) {\n    s = s.substring(s.indexOf('>', c) + 1);\n  }\n  var b = s.indexOf('下载本书');\n  if (b > -1) s = s.substring(0, b);\n  s = s.replace(/推荐一个小说下载必备网址[^<\\r\\n]*/g, '');\n  s = s.replace(/每天更新，喜欢的去看看。[^<\\r\\n]*/g, '');\n  out = s.replace(/\\uFEFF/g, '').replace(/\\u3000\\u3000/g, '\\n');\n}\nout;",
-      "nextContentUrl": "@css:a.page-link:contains(下一页)@href"
+      "content": "@js:\nvar s = String(result || '');\nfunction grab(html) {\n  var c = html.indexOf('class=\"content-box\"');\n  if (c > -1) { html = html.substring(html.indexOf('>', c) + 1); }\n  var b = html.indexOf('下载本书');\n  if (b > -1) { html = html.substring(0, b); }\n  html = html.replace(/<br\\s*\\/?>/ig, '\\n')\n             .replace(/<[^>]+>/g, '')\n             .replace(/&nbsp;/g, ' ')\n             .replace(/&raquo;/g, '')\n             .replace(/&amp;/g, '&')\n             .replace(/\\ufeff/g, '');\n  return html.replace(/^[\\s\\n]+/, '').replace(/[\\s\\n]+$/, '');\n}\nvar out;\nif (s.substr(0, 2) == 'PK' && s.charCodeAt(2) == 3) {\n  out = '【压缩包】本站在该书上架较早，只提供 ZIP 压缩包（无在线阅读页），阅读器无法解压。\\n请复制本章链接用浏览器下载后，用「本地导入」阅读：\\n' + String(baseUrl);\n} else {\n  out = grab(s);\n  if (out.replace(/\\s/g, '').length < 60) {\n    var cs = ['gb18030', 'utf-8'];\n    for (var i = 0; i < cs.length; i++) {\n      try {\n        var t = grab(String(java.ajax(String(baseUrl) + ',{\"charset\":\"' + cs[i] + '\"}'))); \n        if (t.length > out.length) { out = t; }\n      } catch (e) { }\n    }\n  }\n  out = out.replace(/推荐一个小说下载必备网址[^\\n]*/g, '')\n           .replace(/每天更新，喜欢的去看看。[^\\n]*/g, '')\n           .replace(/\\r/g, '')\n           .replace(/\\u3000\\u3000/g, '\\n')\n           .replace(/\\n{3,}/g, '\\n\\n')\n           .replace(/^[\\s\\n]+/, '')\n           .replace(/[\\s\\n]+$/, '');\n}\nresult = out;\nreturn out;",
+      "nextContentUrl": ""
     },
     "ruleExplore": {
       "bookList": "@css:div.book-item",
@@ -39,14 +39,13 @@
       "author": "span.search-card-author a@text##作者：|作者名称：",
       "bookList": "@css:div.search-card",
       "bookUrl": "div.search-card-title a.searchtitle@href",
-      "checkKeyWord": "斗破",
       "intro": "div.search-card-content@text",
       "kind": "span.search-card-category a@text",
       "name": "div.search-card-title a.searchtitle@text##[《》]"
     },
     "ruleToc": {
-      "chapterList": "@css:a[href*=downbook]",
-      "chapterName": "text",
+      "chapterList": "@css:a[href$=\".txt\"]:not(:contains(在线阅读))||@css:a[href*=downbook]:not(:contains(在线阅读))||@css:a[href*=downbook]",
+      "chapterName": "@js:result='全文';\nreturn '全文';",
       "chapterUrl": "href"
     },
     "searchUrl": "/search.asp?word={{key}}&page={{page}},{\n    \"charset\": \"gbk\"\n}",
