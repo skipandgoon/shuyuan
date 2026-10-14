@@ -35,29 +35,29 @@
       "nextContentUrl": ""
     },
     "ruleExplore": {
-      "author": "@js:\nvar s=String(result||'').replace(/\\.txt$/i,'').trim();\nvar m=s.match(/(?:作者|by)[：:]?\\s*([^\\s\\.《》()（）\\[\\]【】,，;；|]{1,12})(?:\\s|$)/i);\nvar out=m?m[1]:'';\nresult = out;\nout;\n",
+      "author": "",
       "bookList": "@css:div.file-card",
-      "bookUrl": "a@href",
+      "bookUrl": "a.file-card-link@href",
       "coverUrl": "",
-      "intro": "@css:span.detail-item@text",
-      "kind": "@js:\nvar s=String(result||''), k=[];\nvar add=function(x){if(x&&k.indexOf(x)<0){k.push(x);}};\nvar m=s.match(/^[\\[【(（]([^\\]】)）]{1,8})[\\]】)）]/);\nif(m&&!/^\\d+$/.test(m[1])){add(m[1]);}\nif(/完结|全本/.test(s)){add('完结');}\nadd('txt');\nvar joined=k.join(' ');\nresult = joined;\njoined;\n",
+      "intro": "div.file-details@text",
+      "kind": "span.file-format@text",
       "lastChapter": "",
-      "name": "@js:\nvar s=String(result||'').replace(/\\.txt$/i,'').trim();\ns=s.replace(/^[\\[【(（][^\\]】)）]{1,8}[\\]】)）]\\s*/,'');\ns=s.replace(/^(完结|全本|已完结|完结全本)\\s*/,'');\ns=s.replace(/\\s*(?:作者|by)[：:]?.*$/i,'').trim();\ns=s.replace(/^[《【](.*?)[》】]$/,'$1').trim();\nresult = s;\ns;\n"
+      "name": "div.file-name@text##\\.txt$"
     },
     "ruleReview": {},
     "ruleSearch": {
-      "author": "@js:\nvar s=String(result||'').replace(/\\.txt$/i,'').trim();\nvar m=s.match(/(?:作者|by)[：:]?\\s*([^\\s\\.《》()（）\\[\\]【】,，;；|]{1,12})(?:\\s|$)/i);\nvar out=m?m[1]:'';\nresult = out;\nout;\n",
+      "author": "",
       "bookList": "@css:div.file-card",
-      "bookUrl": "a@href",
+      "bookUrl": "a.file-card-link@href",
       "checkKeyWord": "",
       "coverUrl": "",
-      "intro": "@css:span.detail-item@text",
-      "kind": "@js:\nvar s=String(result||''), k=[];\nvar add=function(x){if(x&&k.indexOf(x)<0){k.push(x);}};\nvar m=s.match(/^[\\[【(（]([^\\]】)）]{1,8})[\\]】)）]/);\nif(m&&!/^\\d+$/.test(m[1])){add(m[1]);}\nif(/完结|全本/.test(s)){add('完结');}\nadd('txt');\nvar joined=k.join(' ');\nresult = joined;\njoined;\n",
+      "intro": "div.file-details@text",
+      "kind": "span.file-format@text",
       "lastChapter": "",
-      "name": "@js:\nvar s=String(result||'').replace(/\\.txt$/i,'').trim();\ns=s.replace(/^[\\[【(（][^\\]】)）]{1,8}[\\]】)）]\\s*/,'');\ns=s.replace(/^(完结|全本|已完结|完结全本)\\s*/,'');\ns=s.replace(/\\s*(?:作者|by)[：:]?.*$/i,'').trim();\ns=s.replace(/^[《【](.*?)[》】]$/,'$1').trim();\nresult = s;\ns;\n"
+      "name": "div.file-name@text##\\.txt$"
     },
     "ruleToc": {
-      "chapterList": "@css:a[href*=down.php]",
+      "chapterList": "@css:a[href^=\"https\"][href*=down.php]||@css:a[href*=down.php]",
       "chapterName": "text",
       "chapterUrl": "href",
       "nextTocUrl": ""
