@@ -20,13 +20,13 @@
   "loginUrl": "",
   "respondTime": 180000,
   "ruleBookInfo": {
-   "author": "@js:var s=String(result||'').replace(/\\.txt$/i,'').trim();var m=s.match(/(?:作者|by)[：:]?\\s*([^\\s\\.《》()（）\\[\\]【】,，;；|]{1,12})(?:\\s|$)/i);return m?m[1]:'';",
+   "author": "@js:\nvar s=String(result||'');\nif(s.indexOf('<')>=0){var m=s.match(/<title>([\\s\\S]*?)<\\/title>/i);s=m?m[1]:s;}\ns=s.replace(/下载-[\\s\\S]*$/,'').replace(/\\.txt$/i,'');\nvar a=s.match(/(?:作者|by)[：:]?\\s*([^《》【】\\[\\]()（）,，;；|\\s]{1,16})/i);\nreturn a?a[1].trim():'';",
    "coverUrl": "",
    "init": "",
-   "intro": "@js:var t=String(result||'').replace(/[\\s\\u3000]+/g,' ').trim();return t?('文件信息：'+t):'';",
-   "kind": "@js:var s=String(result||''), k=[];var add=function(x){if(x&&k.indexOf(x)<0){k.push(x);}};var m=s.match(/^[\\[【(（]([^\\]】)）]{1,8})[\\]】)）]/);if(m&&!/^\\d+$/.test(m[1])){add(m[1]);}if(/完结|全本/.test(s)){add('完结');}add('txt');return k.join(' ');",
+   "intro": "@js:\nvar s=String(result||''),out=[];\nif(s.indexOf('<')>=0){\n  var re=/<div[^>]*class=\"[^\"]*info-item[^\"]*\"[^>]*>([\\s\\S]*?)<\\/div>/g,m;\n  while((m=re.exec(s))){var t=m[1].replace(/<[^>]+>/g,'').replace(/\\s+/g,' ').trim();if(t&&!/上传者IP/.test(t)){out.push(t);}}\n}\nreturn out.join(' | ');",
+   "kind": "@js:\nvar s=String(result||''),k=[];\nif(s.indexOf('<')>=0){var m=s.match(/<title>([\\s\\S]*?)<\\/title>/i);s=m?m[1]:s;}\nvar t=s.match(/^\\[([^\\]\\[]{1,10})\\]/);if(t){k.push(t[1]);}\nif(/完结|全本/.test(s)){k.push('完结');}\nif(/\\.txt/i.test(s)||s.indexOf('<')>=0){k.push('txt');}\nreturn k.join(' ');",
    "lastChapter": "",
-   "name": "@js:var s=String(result||'').replace(/\\.txt$/i,'').trim();s=s.replace(/^[\\[【(（][^\\]】)）]{1,8}[\\]】)）]\\s*/,'');s=s.replace(/^(完结|全本|已完结|完结全本)\\s*/,'');s=s.replace(/\\s*(?:作者|by)[：:]?.*$/i,'').trim();s=s.replace(/^[《【](.*?)[》】]$/,'$1').trim();return s;",
+   "name": "@js:\nvar s=String(result||'');\nif(s.indexOf('<')>=0){var m=s.match(/<title>([\\s\\S]*?)<\\/title>/i);s=m?m[1]:s;}\ns=s.replace(/下载-[\\s\\S]*$/,'').replace(/\\.txt$/i,'').trim();\nvar g=s.match(/《([^》]{1,80})》/);\nif(g){return g[1].trim();}\ns=s.replace(/^[\\[【(（][^\\]】)）]{1,10}[\\]】)）]\\s*/,'').replace(/^(完结|全本|已完结|完结全本)\\s*/,'').trim();\ns=s.replace(/\\s*(?:作者|by)[：:]?[\\s\\S]*$/i,'').trim();\nreturn s;",
    "tocUrl": "",
    "wordCount": ""
   },
