@@ -20,41 +20,41 @@
     "loginUrl": "",
     "respondTime": 180000,
     "ruleBookInfo": {
-      "author": "@js:\nvar s=String(result||'');\nif(s.indexOf('<')>=0){var m=s.match(/<title>([\\s\\S]*?)<\\/title>/i);s=m?m[1]:s;}\ns=s.replace(/下载-[\\s\\S]*$/,'').replace(/\\.txt$/i,'');\nvar a=s.match(/(?:作者|by)[：:]?\\s*([^《》【】\\[\\]()（）,，;；|\\s]{1,16})/i);\nreturn a?a[1].trim():'';",
+      "author": "@js:\nvar s=String(result||'');\nif(s.indexOf('<')>=0){var m=s.match(/<title>([\\s\\S]*?)<\\/title>/i);s=m?m[1]:s;}\ns=s.replace(/下载-[\\s\\S]*$/,'').replace(/\\.txt$/i,'');\nvar a=s.match(/(?:作者|by)[：:]?\\s*([^《》【】\\[\\]()（）,，;；|\\s]{1,16})/i);\nvar out=a?a[1].trim():'';\nresult = out;\nout;\n",
       "coverUrl": "",
       "init": "",
-      "intro": "@js:\nvar s=String(result||''),out=[];\nif(s.indexOf('<')>=0){\n  var re=/<div[^>]*class=\"[^\"]*info-item[^\"]*\"[^>]*>([\\s\\S]*?)<\\/div>/g,m;\n  while((m=re.exec(s))){var t=m[1].replace(/<[^>]+>/g,'').replace(/\\s+/g,' ').trim();if(t&&!/上传者IP/.test(t)){out.push(t);}}\n}\nreturn out.join(' | ');",
-      "kind": "@js:\nvar s=String(result||''),k=[];\nif(s.indexOf('<')>=0){var m=s.match(/<title>([\\s\\S]*?)<\\/title>/i);s=m?m[1]:s;}\nvar t=s.match(/^\\[([^\\]\\[]{1,10})\\]/);if(t){k.push(t[1]);}\nif(/完结|全本/.test(s)){k.push('完结');}\nif(/\\.txt/i.test(s)||s.indexOf('<')>=0){k.push('txt');}\nreturn k.join(' ');",
+      "intro": "@js:\nvar s=String(result||''),out=[];\nif(s.indexOf('<')>=0){\n  var re=/<div[^>]*class=\"[^\"]*info-item[^\"]*\"[^>]*>([\\s\\S]*?)<\\/div>/g,m;\n  while((m=re.exec(s))){var t=m[1].replace(/<[^>]+>/g,'').replace(/\\s+/g,' ').trim();if(t&&!/上传者IP/.test(t)){out.push(t);}}\n}\nvar joined=out.join(' | ');\nresult = joined;\njoined;\n",
+      "kind": "@js:\nvar s=String(result||''),k=[];\nif(s.indexOf('<')>=0){var m=s.match(/<title>([\\s\\S]*?)<\\/title>/i);s=m?m[1]:s;}\nvar t=s.match(/^\\[([^\\]\\[]{1,10})\\]/);if(t){k.push(t[1]);}\nif(/完结|全本/.test(s)){k.push('完结');}\nif(/\\.txt/i.test(s)||s.indexOf('<')>=0){k.push('txt');}\nvar joined=k.join(' ');\nresult = joined;\njoined;\n",
       "lastChapter": "",
-      "name": "@js:\nvar s=String(result||'');\nif(s.indexOf('<')>=0){var m=s.match(/<title>([\\s\\S]*?)<\\/title>/i);s=m?m[1]:s;}\ns=s.replace(/下载-[\\s\\S]*$/,'').replace(/\\.txt$/i,'').trim();\nvar g=s.match(/《([^》]{1,80})》/);\nif(g){return g[1].trim();}\ns=s.replace(/^[\\[【(（][^\\]】)）]{1,10}[\\]】)）]\\s*/,'').replace(/^(完结|全本|已完结|完结全本)\\s*/,'').trim();\ns=s.replace(/\\s*(?:作者|by)[：:]?[\\s\\S]*$/i,'').trim();\nreturn s;",
+      "name": "@js:\nvar s=String(result||'');\nif(s.indexOf('<')>=0){var m=s.match(/<title>([\\s\\S]*?)<\\/title>/i);s=m?m[1]:s;}\ns=s.replace(/下载-[\\s\\S]*$/,'').replace(/\\.txt$/i,'').trim();\nvar g=s.match(/《([^》]{1,80})》/);\nvar out;\nif(g){out=g[1].trim();}else{\n  s=s.replace(/^[\\[【(（][^\\]】)）]{1,10}[\\]】)）]\\s*/,'').replace(/^(完结|全本|已完结|完结全本)\\s*/,'').trim();\n  s=s.replace(/\\s*(?:作者|by)[：:]?[\\s\\S]*$/i,'').trim();\n  out=s;\n}\nresult = out;\nout;\n",
       "tocUrl": "",
       "wordCount": ""
     },
     "ruleContent": {
-      "content": "@js:var u=String(baseUrl).replace(/,{[\\s\\S]*$/,'');var score=function(t){var h=String(t||'').substring(0,1500);var bad=(h.match(/[\\uFFFD锟]|Â|Ã|å|æ|ç|è|é/g)||[]).length;var cjk=(h.match(/[\\u4e00-\\u9fa5]/g)||[]).length;return cjk-bad*8;};var s=String(result||''),bs=score(s);if(bs<200){var cs=['utf-8','gb18030'];for(var i=0;i<cs.length;i++){try{var t=java.ajax(u+',{\"charset\":\"'+cs[i]+'\"}');var sc=score(t);if(sc>bs){s=t;bs=sc;}}catch(e){}}}s=s.replace(/\\r/g,'').replace(/[\\u3000 ]+/g,'').replace(/\\n{3,}/g,'\\n\\n');return s.trim();",
+      "content": "@js:\nvar u=String(baseUrl).replace(/,{[\\s\\S]*$/,'');\nvar score=function(t){var h=String(t||'').substring(0,1500);\n  var bad=(h.match(/[\\uFFFD锟]|Â|Ã|å|æ|ç|è|é/g)||[]).length;\n  var cjk=(h.match(/[\\u4e00-\\u9fa5]/g)||[]).length;\n  return cjk-bad*8;};\nvar s=String(result||''),bs=score(s);\nif(bs<200){\n  var cs=['utf-8','gb18030'];\n  for(var i=0;i<cs.length;i++){\n    try{var t=java.ajax(u+',{\"charset\":\"'+cs[i]+'\"}');var sc=score(t);if(sc>bs){s=t;bs=sc;}}catch(e){}\n  }\n}\ns=s.replace(/\\r/g,'').replace(/[\\u3000 ]+/g,'').replace(/\\n{3,}/g,'\\n\\n');\nvar out=s.trim();\nresult = out;\nout;\n",
       "nextContentUrl": ""
     },
     "ruleExplore": {
-      "author": "@js:var s=String(result||'').replace(/\\.txt$/i,'').trim();var m=s.match(/(?:作者|by)[：:]?\\s*([^\\s\\.《》()（）\\[\\]【】,，;；|]{1,12})(?:\\s|$)/i);return m?m[1]:'';",
+      "author": "@js:\nvar s=String(result||'').replace(/\\.txt$/i,'').trim();\nvar m=s.match(/(?:作者|by)[：:]?\\s*([^\\s\\.《》()（）\\[\\]【】,，;；|]{1,12})(?:\\s|$)/i);\nvar out=m?m[1]:'';\nresult = out;\nout;\n",
       "bookList": "@css:div.file-card",
       "bookUrl": "a@href",
       "coverUrl": "",
       "intro": "@css:span.detail-item@text",
-      "kind": "@js:var s=String(result||''), k=[];var add=function(x){if(x&&k.indexOf(x)<0){k.push(x);}};var m=s.match(/^[\\[【(（]([^\\]】)）]{1,8})[\\]】)）]/);if(m&&!/^\\d+$/.test(m[1])){add(m[1]);}if(/完结|全本/.test(s)){add('完结');}add('txt');return k.join(' ');",
+      "kind": "@js:\nvar s=String(result||''), k=[];\nvar add=function(x){if(x&&k.indexOf(x)<0){k.push(x);}};\nvar m=s.match(/^[\\[【(（]([^\\]】)）]{1,8})[\\]】)）]/);\nif(m&&!/^\\d+$/.test(m[1])){add(m[1]);}\nif(/完结|全本/.test(s)){add('完结');}\nadd('txt');\nvar joined=k.join(' ');\nresult = joined;\njoined;\n",
       "lastChapter": "",
-      "name": "@js:var s=String(result||'').replace(/\\.txt$/i,'').trim();s=s.replace(/^[\\[【(（][^\\]】)）]{1,8}[\\]】)）]\\s*/,'');s=s.replace(/^(完结|全本|已完结|完结全本)\\s*/,'');s=s.replace(/\\s*(?:作者|by)[：:]?.*$/i,'').trim();s=s.replace(/^[《【](.*?)[》】]$/,'$1').trim();return s;"
+      "name": "@js:\nvar s=String(result||'').replace(/\\.txt$/i,'').trim();\ns=s.replace(/^[\\[【(（][^\\]】)）]{1,8}[\\]】)）]\\s*/,'');\ns=s.replace(/^(完结|全本|已完结|完结全本)\\s*/,'');\ns=s.replace(/\\s*(?:作者|by)[：:]?.*$/i,'').trim();\ns=s.replace(/^[《【](.*?)[》】]$/,'$1').trim();\nresult = s;\ns;\n"
     },
     "ruleReview": {},
     "ruleSearch": {
-      "author": "@js:var s=String(result||'').replace(/\\.txt$/i,'').trim();var m=s.match(/(?:作者|by)[：:]?\\s*([^\\s\\.《》()（）\\[\\]【】,，;；|]{1,12})(?:\\s|$)/i);return m?m[1]:'';",
+      "author": "@js:\nvar s=String(result||'').replace(/\\.txt$/i,'').trim();\nvar m=s.match(/(?:作者|by)[：:]?\\s*([^\\s\\.《》()（）\\[\\]【】,，;；|]{1,12})(?:\\s|$)/i);\nvar out=m?m[1]:'';\nresult = out;\nout;\n",
       "bookList": "@css:div.file-card",
       "bookUrl": "a@href",
       "checkKeyWord": "",
       "coverUrl": "",
       "intro": "@css:span.detail-item@text",
-      "kind": "@js:var s=String(result||''), k=[];var add=function(x){if(x&&k.indexOf(x)<0){k.push(x);}};var m=s.match(/^[\\[【(（]([^\\]】)）]{1,8})[\\]】)）]/);if(m&&!/^\\d+$/.test(m[1])){add(m[1]);}if(/完结|全本/.test(s)){add('完结');}add('txt');return k.join(' ');",
+      "kind": "@js:\nvar s=String(result||''), k=[];\nvar add=function(x){if(x&&k.indexOf(x)<0){k.push(x);}};\nvar m=s.match(/^[\\[【(（]([^\\]】)）]{1,8})[\\]】)）]/);\nif(m&&!/^\\d+$/.test(m[1])){add(m[1]);}\nif(/完结|全本/.test(s)){add('完结');}\nadd('txt');\nvar joined=k.join(' ');\nresult = joined;\njoined;\n",
       "lastChapter": "",
-      "name": "@js:var s=String(result||'').replace(/\\.txt$/i,'').trim();s=s.replace(/^[\\[【(（][^\\]】)）]{1,8}[\\]】)）]\\s*/,'');s=s.replace(/^(完结|全本|已完结|完结全本)\\s*/,'');s=s.replace(/\\s*(?:作者|by)[：:]?.*$/i,'').trim();s=s.replace(/^[《【](.*?)[》】]$/,'$1').trim();return s;"
+      "name": "@js:\nvar s=String(result||'').replace(/\\.txt$/i,'').trim();\ns=s.replace(/^[\\[【(（][^\\]】)）]{1,8}[\\]】)）]\\s*/,'');\ns=s.replace(/^(完结|全本|已完结|完结全本)\\s*/,'');\ns=s.replace(/\\s*(?:作者|by)[：:]?.*$/i,'').trim();\ns=s.replace(/^[《【](.*?)[》】]$/,'$1').trim();\nresult = s;\ns;\n"
     },
     "ruleToc": {
       "chapterList": "@css:a[href*=down.php]",
