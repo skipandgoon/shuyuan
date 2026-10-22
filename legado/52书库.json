@@ -1,0 +1,51 @@
+[
+  {
+    "bookSourceName": "52书库",
+    "bookSourceUrl": "https://www.52shuku.net",
+    "bookSourceGroup": "自制",
+    "bookSourceComment": "基于源仓库现成源(yc)增补发现(explore)六分类与完整简介:详情页简介被站点截断,改为抓第一页文案(在第1章标题处截断,剔除站点广告尾巴);搜索/详情/目录/正文沿用原规则,本地实测新书559字/老书411字简介(2026-10-22)",
+    "bookSourceType": 0,
+    "enabled": true,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "header": "{\"User-Agent\":\"Mozilla/5.0 (Linux; Android 13) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36\"}",
+    "respondTime": 15000,
+    "searchUrl": "https://www.52shuku.net/so/search.php?q={{key}}",
+    "ruleSearch": {
+      "bookList": "class.excerpt||class.post||article.post||article",
+      "name": "h2 a@text||h3 a@text||h4 a@text",
+      "author": "@js:var t=''+result;var m=t.match(/作者[：:]\\s*([^<\\s\\n]+)/);if(!m){m=t.match(/_([^_【<\\s]+)【/);}m?m[1].replace(/^\\s+|\\s+$/g,''):'';",
+      "intro": "class.note@text||class.excerpt-content@text||p@text",
+      "bookUrl": "h2 a@href||h3 a@href||h4 a@href||a@href",
+      "coverUrl": "img@src"
+    },
+    "ruleBookInfo": {
+      "name": "h1.article-title@text",
+      "author": "@js:var t=''+result;var m=t.match(/_(.+?)【/);m?m[1]:'';",
+      "intro": "@js:\nvar html = '' + result;\nvar intro = '';\nvar m = html.match(/<li class=\"mulu\"><a href=\"([^\"]+)\"/);\nif (m) {\n  var page = '' + java.ajax(m[1]);\n  var cm = page.match(/<article[^>]*article-content[^>]*>([\\s\\S]*?)<\\/article>/);\n  if (cm) {\n    var t = cm[1].replace(/<br\\s*\\/?>/gi, '\\n').replace(/<[^>]+>/g, '').replace(/&nbsp;/g, ' ').replace(/　/g, ' ').replace(/[ \\t]+\\n/g, '\\n').replace(/\\n{2,}/g, '\\n').replace(/^\\s+|\\s+$/g, '');\n    if (t.indexOf('作者') >= 0) {\n      var cut = t.length;\n      var marks = ['Tips', '传送门', '如果觉得', '哦豁', '上一页'];\n      for (var k = 0; k < marks.length; k++) {\n        var ix = t.indexOf(marks[k]);\n        if (ix > 0 && ix < cut) { cut = ix; }\n      }\n      var chs = ['第1章', '第一章', '第01章', '第001章', '楔子', '序章', 'Chapter 1'];\n      for (var j = 0; j < chs.length; j++) {\n        var cx = t.indexOf(chs[j]);\n        if (cx > 50 && cx < cut) { cut = cx; }\n      }\n      intro = t.substring(0, cut);\n      if (cut >= t.length && intro.length > 1000) {\n        var dot = intro.lastIndexOf('。', 1000);\n        if (dot > 200) { intro = intro.substring(0, dot + 1); }\n      }\n      intro = intro.replace(/\\s+$/g, '').replace(/[=\\-*_~—\\s]+$/g, '');\n    }\n  }\n}\nif (!intro) {\n  var ps = html.match(/<p>([\\s\\S]*?)<\\/p>/g);\n  if (ps && ps.length > 1) {\n    intro = ps[1].replace(/<[^>]+>/g, '').replace(/&nbsp;/g, ' ').replace(/^\\s+|\\s+$/g, '');\n  }\n}\nintro",
+      "kind": "@js:var t=''+result;var m=t.match(/\\[([^\\]]+)\\]\\s*《/);m?m[1]:'';",
+      "lastChapter": "class.list.0@tag.li.-1@tag.a@text",
+      "coverUrl": ""
+    },
+    "ruleToc": {
+      "chapterList": "class.list.clearfix.0@tag.li@tag.a||class.list.0@tag.li@tag.a||class.mulu@tag.a",
+      "chapterName": "text",
+      "chapterUrl": "href"
+    },
+    "ruleContent": {
+      "content": "id.text@html||id.text@text||class.book_con@html||class.book_con@text||class.book_con.fix@html||article.article-content@html||article.article-content@text",
+      "nextContentUrl": "@js:var m=(''+result).match(/<a[^>]*href=\"([^\"]+)\"[^>]*>下一页<\\/a>/);if(m){var u=m[1];if(u.indexOf('http')!==0){if(u.indexOf('/')===0){u='https://www.52shuku.net'+u;}else{u='https://www.52shuku.net/'+u;}}u}else{'';}"
+    },
+    "weight": 0,
+    "lastUpdateTime": "1791125877715",
+    "exploreUrl": "[{\"title\": \"现代耽美\", \"url\": \"<js>var u='https://www.52shuku.net/xiandaidushi/';if(page>1){u=u+'index_'+page+'.html';}u</js>\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"穿越耽美\", \"url\": \"<js>var u='https://www.52shuku.net/chongsheng/';if(page>1){u=u+'index_'+page+'.html';}u</js>\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"古架耽美\", \"url\": \"<js>var u='https://www.52shuku.net/jiakong/';if(page>1){u=u+'index_'+page+'.html';}u</js>\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"GL百合\", \"url\": \"<js>var u='https://www.52shuku.net/gl/';if(page>1){u=u+'index_'+page+'.html';}u</js>\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"综漫同人\", \"url\": \"<js>var u='https://www.52shuku.net/bl/';if(page>1){u=u+'index_'+page+'.html';}u</js>\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}, {\"title\": \"言情小说\", \"url\": \"<js>var u='https://www.52shuku.net/yanqing/';if(page>1){u=u+'index_'+page+'.html';}u</js>\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.25}}]",
+    "ruleExplore": {
+      "bookList": "class.excerpt||class.post||article.post||article",
+      "name": "h2 a@text||h3 a@text||h4 a@text",
+      "author": "@js:var t=''+result;var m=t.match(/作者[：:]\\s*([^<\\s\\n]+)/);if(!m){m=t.match(/_([^_【<\\s]+)【/);}m?m[1].replace(/^\\s+|\\s+$/g,''):'';",
+      "intro": "class.note@text||class.excerpt-content@text||p@text",
+      "bookUrl": "h2 a@href||h3 a@href||h4 a@href||a@href",
+      "coverUrl": "img@src"
+    }
+  }
+]
