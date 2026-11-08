@@ -4,7 +4,7 @@
   "bookSourceGroup": "晋江",
   "bookSourceName": "po18分站",
   "bookSourceType": 0,
-  "bookSourceUrl": "http://m.zjlskls.com/",
+  "bookSourceUrl": "http://www.zjlskls.com/",
   "customButton": false,
   "customOrder": 57,
   "enabled": true,
@@ -34,7 +34,7 @@
    "chapterName": "text",
    "chapterUrl": "href"
   },
-  "searchUrl": "<js>\nurl  = \"http://m.zjlskls.com/pinyin.html\"\nbody = \"s=\"+key+\"&act=hztopy\"\nurl = url+\",\"+JSON.stringify({\"method\":\"POST\",\"body\":String(body)});\ndata = JSON.parse(java.ajax(url)).data;\nurl = \"http://m.zjlskls.com/sdfgsdyugfsdugf.html?ie=gbk&s=5256649918672294880&q=\"+data;\n</js>",
+  "searchUrl": "<js>\nurl  = \"http://www.zjlskls.com/pinyin.html\"\nbody = \"s=\"+key+\"&act=hztopy\"\nurl = url+\",\"+JSON.stringify({\"method\":\"POST\",\"body\":String(body)});\ndata = JSON.parse(java.ajax(url)).data;\nurl = \"http://www.zjlskls.com/sdfgsdyugfsdugf.html?ie=gbk&s=5256649918672294880&q=\"+data;\n</js>",
   "weight": 0
  }
 ]

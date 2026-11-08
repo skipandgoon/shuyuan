@@ -4,7 +4,7 @@
   "bookSourceGroup": "关耳",
   "bookSourceName": "🌸101言情",
   "bookSourceType": 0,
-  "bookSourceUrl": "http://www.txt101.com",
+  "bookSourceUrl": "http://www.txtxs101.com",
   "bookUrlPattern": "",
   "customButton": false,
   "customOrder": 39,
@@ -41,10 +41,10 @@
   "ruleToc": {
    "chapterList": "<js>\nif(result.match(/text=new Array\\(\".*?\"\\)/)){\ncon=\"\"\neval(result.match(/text=new Array\\(\".*?\"\\)/)[0]);\nfor(var i=0;i<text.length;i++){con +=text[i];}con=String(java.base64Decode(con));\nresult=con\n}else{\n\tresult=result\n\t}\n</js>\nclass.chapter@a",
    "chapterName": "text",
-   "chapterUrl": "href##^##https://www.txt101.com",
+   "chapterUrl": "href##^##https://www.txtxs101.com",
    "isVolume": ""
   },
-  "searchUrl": "http://www.txt101.com/book/search.aspx?key={{key}}",
+  "searchUrl": "http://www.txtxs101.com/book/search.aspx?key={{key}}",
   "weight": 0
  }
 ]
