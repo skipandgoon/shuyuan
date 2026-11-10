@@ -28,9 +28,9 @@
    "tocUrl": ""
   },
   "ruleContent": {
-   "content": "id.booktxt@html@js:\nvar html = String(result);\nvar re = /document\\.writeln\\(\\qsbs\\.bb\\('([^']+)'\\)\\)/g;\nvar m, parts = [];\nwhile ((m = re.exec(html)) !== null) {\n  try { parts.push(String(java.base64Decode(m[1]))); } catch (e) { }\n}\nvar body = parts.length > 0 ? parts.join('') : html;\nbody.replace(/<br\\s*\\/?\\s*>/ig, '\\n').replace(/<\\/p>/ig, '\\n')\n  .replace(/<[^>]+>/g, '').replace(/&nbsp;/g, ' ')\n  .replace(/本章未完，点击下一页继续阅读/g, '')\n  .replace(/\\n{3,}/g, '\\n\\n').trim()\n",
+   "content": "<js>var raw=String(java.ajax(baseUrl));var cnt=raw.split('qsbs.bb(').length-1;var out=[];if(cnt>0){  var re=/document\\.writeln\\(qsbs\\.bb\\('([^']+)'\\)\\)/g;  var m;  while((m=re.exec(raw))!==null){    try{var d=String(java.base64Decode(m[1]));    if(d.indexOf('<p')>=0 && d.indexOf('var ')<0){out.push(d)}}catch(e){}  }}var body=out.length>0?out.join(''):raw;if(out.length<1){var mm=body.match(/<div[^>]*id=\"booktxt\"[^>]*>([\\s\\S]*?)<\\/div>/);if(mm){body=mm[1]}}body.replace(/<br\\s*\\/?\\s*>/ig,'\\n').replace(/<\\/p>/ig,'\\n').replace(/<[^>]+>/g,'').replace(/&nbsp;/g,' ').replace(/\\r/g,'').replace(/本章未完，点击下一页继续阅读/g,'').replace(/\\n{3,}/g,'\\n\\n').trim()</js>",
    "replaceRegex": "",
-   "nextContentUrl": "class.bottem1@tag.a.-1@href@js:var h = String(result);if (/_[0-9]+\\.html$/.test(h)) { h } else { '' }"
+   "nextContentUrl": "class.bottem1@tag.a.-1@href@js:var h=String(result);if(/_[0-9]+\\.html$/.test(h)){h}else{''}"
   },
   "ruleExplore": {
    "bookList": "//li[span[contains(@class,'s2')]]",
