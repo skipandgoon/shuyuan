@@ -12,7 +12,7 @@
   "enabledCookieJar": true,
   "enabledExplore": true,
   "eventListener": false,
-  "exploreUrl": "总榜::/rank/allvisit/\n月榜::/rank/monthvisit/\n周榜::/rank/weekvisit/\n收藏::/rank/goodnum/\n玄幻::/class/xuanhuan/{{page}}/\n修真::/class/xiuzhen/{{page}}/\n都市::/class/dushi/{{page}}/\n穿越::/class/chuanyue/{{page}}/\n网游::/class/wangyou/{{page}}/\n科幻::/class/kehuan/{{page}}/\n其他::/class/qita/{{page}}/\n全本::/quanben/class/{{page}}/",
+  "exploreUrl": "总榜::/rank/allvisit/\n月榜::/rank/monthvisit/\n周榜::/rank/weekvisit/\n收藏::/rank/goodnum/\n玄幻::/class/xuanhuan/{{page}}/\n修真::/class/xiuzhen/{{page}}/\n都市::/class/dushi/{{page}}/\n穿越::/class/chuanyue/{{page}}/\n重生::/class/chongsheng/{{page}}/\n言情::/class/yanqing/{{page}}/",
   "header": "{\"User-Agent\":\"Mozilla/5.0 (Linux; Android 13; SM-G991B) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/120.0.0.0 Mobile Safari/537.36\",\"Accept-Language\":\"zh-CN,zh;q=0.9\",\"Referer\":\"http://www.ibookben.cc/\"}",
   "lastUpdateTime": 1734161795259,
   "respondTime": 187709,
@@ -32,7 +32,17 @@
    "replaceRegex": "",
    "nextContentUrl": "class.bottem1@tag.a.-1@href@js:var h = String(result);if (/_[0-9]+\\.html$/.test(h)) { h } else { '' }"
   },
-  "ruleExplore": {},
+  "ruleExplore": {
+   "bookList": "class.item",
+   "name": "a.1@text",
+   "bookUrl": "a.1@href",
+   "author": "a.2@text",
+   "coverUrl": "img@data-original",
+   "intro": "dd@text",
+   "wordCount": "em.0@text",
+   "kind": "",
+   "lastChapter": ""
+  },
   "ruleSearch": {
    "bookList": "//div[contains(@class,'item')]",
    "name": "a.1@text",
