@@ -7,7 +7,7 @@
   "bookSourceUrl": "https://www.bqg24.com",
   "bookUrlPattern": "",
   "customButton": false,
-  "customOrder": 104,
+  "customOrder": 80,
   "enabled": true,
   "enabledCookieJar": false,
   "enabledExplore": true,
@@ -15,7 +15,7 @@
   "exploreUrl": "玄幻::/fenlei/1_1/\n重生::/fenlei/2_1/\n都市::/fenlei/3_1/\n军史::/fenlei/4_1/\n网游::/fenlei/5_1/\n科幻::/fenlei/6_1/\n灵异::/fenlei/7_1/\n言情::/fenlei/8_1/",
   "lastUpdateTime": 1692661070604,
   "loginUrl": "",
-  "respondTime": 182094,
+  "respondTime": 182783,
   "ruleBookInfo": {
    "init": "",
    "name": "id.info@tag.h1@text",
