@@ -1,1 +1,59 @@
-[{"bookSourceComment": "// Error: 搜索失效", "bookSourceGroup": "一程", "bookSourceName": "🎉 小书本网", "bookSourceType": 0, "bookSourceUrl": "http://www.ibookben.cc", "bookUrlPattern": "http://www.ibookben.cc/txt/\\d+.html", "customButton": false, "customOrder": 161, "enabled": true, "enabledCookieJar": true, "enabledExplore": false, "eventListener": false, "exploreUrl": "总榜::/rank/allvisit/\n月榜::/rank/monthvisit/\n周榜::/rank/weekvisit/\n收藏::/rank/goodnum/\n玄幻::/class/xuanhuan/{{page}}/\n修真::/class/xiuzhen/{{page}}/\n都市::/class/dushi/{{page}}/\n穿越::/class/chuanyue/{{page}}/\n网游::/class/wangyou/{{page}}/\n科幻::/class/kehuan/{{page}}/\n其他::/class/qita/{{page}}/\n全本::/quanben/class/{{page}}/", "header": "{\"User-Agent\": \"Mozilla/5.0 (Linux; Android 9) Mobile Safari/537.36\"}", "lastUpdateTime": 1734161795259, "respondTime": 187709, "ruleBookInfo": {"author": "id.info@a.0@text", "coverUrl": "id.fmimg@img@data-original", "downloadUrls": ".readbtn@a.2@href", "init": "", "intro": "id.intro@text##(^|[。！？]+[”」）】]?)##$1<br>@js:result.replace(/简介./g,\"\")", "kind": ".wppc@p@text##.*：|小说|\\s..:.*", "lastChapter": "id.info@a.1@text##正文卷.|正文.|VIP卷.|默认卷.|卷_|VIP章节.|免费章节.|章节目录.|最新章节.|[\\(（【].*?[求更票谢乐发订合补加架字修Kk].*?[】）\\)]", "name": "id.info@h1@text", "wordCount": "id.info@p.4@text##.*节\\s\\|\\s|\\s\\|\\s(全|连).*"}, "ruleContent": {"content": "id.booktxt@html", "nextContentUrl": "id.next_url@href"}, "ruleExplore": {}, "ruleSearch": {"author": "a.2@text||.btm@ownText", "bookList": ".item", "bookUrl": "a.1@href", "checkKeyWord": "", "coverUrl": "img@data-original", "intro": "dd@text", "kind": "em.1@text", "name": "a.1@text", "wordCount": "em.0@text"}, "ruleToc": {"chapterList": "id.list@dl@a", "chapterName": "text##正文卷.|正文.|VIP卷.|默认卷.|卷_|VIP章节.|免费章节.|章节目录.|最新章节.|[\\(（【].*?[求更票谢乐发订合补加架字修Kk].*?[】）\\)]", "chapterUrl": "href"}, "searchUrl": "{{url=source.getKey();\ncookie.removeCookie(url)\njava.ajax(url).match(/search.*action=\"(.+?)\"/)[1]}}?searchkey={{key}}", "weight": 0}]
+[
+ {
+  "bookSourceComment": "",
+  "bookSourceGroup": "一程,已修复",
+  "bookSourceName": "🎉 小书本网",
+  "bookSourceType": 0,
+  "bookSourceUrl": "http://www.ibookben.cc",
+  "bookUrlPattern": "http://www.ibookben.cc/txt/\\d+.html",
+  "customButton": false,
+  "customOrder": 161,
+  "enabled": true,
+  "enabledCookieJar": true,
+  "enabledExplore": true,
+  "eventListener": false,
+  "exploreUrl": "总榜::/rank/allvisit/\n月榜::/rank/monthvisit/\n周榜::/rank/weekvisit/\n收藏::/rank/goodnum/\n玄幻::/class/xuanhuan/{{page}}/\n修真::/class/xiuzhen/{{page}}/\n都市::/class/dushi/{{page}}/\n穿越::/class/chuanyue/{{page}}/\n网游::/class/wangyou/{{page}}/\n科幻::/class/kehuan/{{page}}/\n其他::/class/qita/{{page}}/\n全本::/quanben/class/{{page}}/",
+  "header": "{\"User-Agent\":\"Mozilla/5.0 (Linux; Android 13; SM-G991B) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/120.0.0.0 Mobile Safari/537.36\",\"Accept-Language\":\"zh-CN,zh;q=0.9\",\"Referer\":\"http://www.ibookben.cc/\"}",
+  "lastUpdateTime": 1734161795259,
+  "respondTime": 187709,
+  "ruleBookInfo": {
+   "init": "",
+   "name": "id.info@tag.h1@text",
+   "author": "id.info@tag.p.0@tag.a@text",
+   "kind": "class.wppc@tag.p.sort@text##类别：&&class.wppc@tag.p.1@text##状态：",
+   "coverUrl": "id.fmimg@tag.img@data-original",
+   "intro": "id.intro@text",
+   "lastChapter": "//*[@id='info']//p[contains(.,'最新章节')]/a/text()",
+   "wordCount": "//*[@id='info']//p[contains(.,'万字')]/text()##.*?(\\d+万字).*##$1",
+   "tocUrl": ""
+  },
+  "ruleContent": {
+   "content": "id.booktxt@html@js:String(result).replace(/<\\/p>/ig,'\\n').replace(/<\\/div>/ig,'\\n').replace(/<br\\s*\\/?\\s*>/ig,'\\n').replace(/<[^>]+>/g,'').replace(/&nbsp;/g,' ').replace(/\\n{3,}/g,'\\n\\n').trim()",
+   "replaceRegex": "",
+   "nextContentUrl": "class.bottem1@tag.a.-1@href@js:var h = String(result);if (/_[0-9]+\\.html$/.test(h)) { h } else { '' }"
+  },
+  "ruleExplore": {},
+  "ruleSearch": {
+   "bookList": "//div[contains(@class,'item')]",
+   "name": "a.1@text",
+   "bookUrl": "a.1@href",
+   "author": "a.2@text",
+   "coverUrl": "img@data-original",
+   "intro": "dd@text",
+   "kind": "",
+   "lastChapter": "",
+   "wordCount": "em.0@text",
+   "checkKeyWord": ""
+  },
+  "ruleToc": {
+   "chapterList": "<js>\nvar html = String(result);\nvar base = String(baseUrl).replace(/\\/txt\\/(\\d+)\\.html.*$/, '/read/$1/');\nvar re = /<a[^>]+href=\"(\\/read\\/(\\d+)\\/(\\d+)\\.html)\"[^>]*>([\\s\\S]*?)<\\/a>/g;\nvar m, seen = {}, arr = [];\nwhile ((m = re.exec(html)) !== null) {\n  var id = parseInt(m[3], 10);\n  if (seen[id]) { continue; }\n  seen[id] = 1;\n  var nm = m[4].replace(/<[^>]+>/g, '').replace(/\\s+/g, ' ').trim();\n  if (nm.length < 1) { continue; }\n  if (nm === '马上阅读') { nm = '第1章'; }\n  arr.push({i: id, name: nm, url: base + m[3] + '.html'});\n}\narr.sort(function (a, b) { return a.i - b.i; });\nvar out = [];\nfor (var k = 0; k < arr.length; k++) { out.push({name: arr[k].name, url: arr[k].url}); }\nJSON.stringify(out)\n</js>\n$[*]",
+   "chapterName": "$.name",
+   "chapterUrl": "$.url",
+   "isVolume": "",
+   "updateTime": "",
+   "nextTocUrl": ""
+  },
+  "searchUrl": "@js:\nvar k = String(key);\ntry { var d = decodeURIComponent(k); if (d.length > 0) { k = d; } } catch (e) {}\n'http://www.ibookben.cc/searchba.html?searchkey=' + encodeURIComponent(k)\n",
+  "weight": 0
+ }
+]

@@ -1,1 +1,63 @@
-[{"bookSourceComment": "// Error: 搜索失效", "bookSourceGroup": "一程", "bookSourceName": "💠 暑期小说", "bookSourceType": 0, "bookSourceUrl": "http://m.shuqixs.cc", "customButton": false, "customOrder": 143, "enabled": true, "enabledCookieJar": true, "enabledExplore": false, "eventListener": false, "lastUpdateTime": 1696130829852, "respondTime": 180987, "ruleBookInfo": {"author": ".fix@p.0@text", "coverUrl": ".imgbox@img@src", "intro": ".m-desc@textNodes##(^|[。！？]+[”」）】]?)##$1<br>", "kind": ".fix@p.1:2:4@text##.*：|\\s..:.*", "lastChapter": ".fix@p.5@a@text##正文卷.|正文.|VIP卷.|默认卷.|卷_|VIP章节.|免费章节.|章节目录.|最新章节.|[\\(（【].*?[求更票谢乐发订合补加架字修Kk].*?[】）\\)]", "name": ".top@h1@text"}, "ruleContent": {"content": ".content@html", "nextContentUrl": ".m-bottom-opt@a.-2@href", "replaceRegex": "##.*\\(第\\d/\\d页\\)|\\s*.*点击下一页.*\\s*"}, "ruleExplore": {}, "ruleSearch": {"author": ".s4@text", "bookList": ".txt-list-row5@li!0", "bookUrl": "a.0@href", "coverUrl": "a.0@href##.+\\D((\\d+)\\d{3})\\D##http://www.shuqixs.cc/files/article/image/$2/$1/$1s.jpg###", "kind": ".s1,.s5@text##\\[|\\]", "lastChapter": ".s3@text##正文卷.|正文.|VIP卷.|默认卷.|卷_|VIP章节.|免费章节.|章节目录.|最新章节.|[\\(（【].*?[求更票谢乐发订合补加架字修Kk].*?[】）\\)]", "name": ".s2@text"}, "ruleToc": {"chapterList": ".section-list@li@a", "chapterName": "text##正文卷.|正文.|VIP卷.|默认卷.|卷_|VIP章节.|免费章节.|章节目录.|最新章节.|[\\(（【].*?[求更票谢乐发订合补加架字修Kk].*?[】）\\)]", "chapterUrl": "href", "nextTocUrl": "option@value"}, "searchUrl": "/ar.php?keyWord={{key}}", "weight": 0}]
+[
+ {
+  "bookSourceComment": "",
+  "bookSourceGroup": "一程,已修复",
+  "bookSourceName": "💠 暑期小说",
+  "bookSourceType": 0,
+  "bookSourceUrl": "http://m.shuqixs.cc",
+  "customButton": false,
+  "customOrder": 143,
+  "enabled": true,
+  "enabledCookieJar": true,
+  "enabledExplore": true,
+  "eventListener": false,
+  "lastUpdateTime": 1696130829852,
+  "respondTime": 180987,
+  "ruleBookInfo": {
+   "author": "class.fix@tag.p.0@text##.*：",
+   "coverUrl": "class.imgbox@tag.img@src",
+   "intro": "class.m-desc@text##^简介[:：]",
+   "kind": "class.fix@tag.p.1@text##.*：&&class.fix@tag.p.2@text##.*：",
+   "lastChapter": "class.fix@tag.p.5@tag.a@text",
+   "name": "class.top@tag.h1@text",
+   "tocUrl": ""
+  },
+  "ruleContent": {
+   "content": "//*[@id='content']@html@js:String(result).replace(/<br\\s*\\/?>/ig,'\\n').replace(/<\\/p>/ig,'\\n').replace(/<[^>]+>/g,'').replace(/&nbsp;/g,' ').replace(/^[\\s\\S]*?\\(\\第\\d+\\/\\d+页\\)/,'').trim()",
+   "nextContentUrl": "class.m-bottom-opt@tag.a.-1@href@js:String(result).indexOf('_')>=0?String(result):''",
+   "replaceRegex": ""
+  },
+  "ruleExplore": {
+   "bookList": "class.txt-list-row3@tag.li",
+   "name": "class.s2@tag.a@text",
+   "author": "class.s5@text",
+   "bookUrl": "class.s2@tag.a@href",
+   "kind": "class.s1@text##[\\[\\]]",
+   "lastChapter": "",
+   "coverUrl": "",
+   "intro": "",
+   "wordCount": ""
+  },
+  "ruleSearch": {
+   "bookList": "class.txt-list-row5@tag.li!0",
+   "name": "class.s2@tag.a@text",
+   "author": "class.s4@text",
+   "bookUrl": "class.s2@tag.a@href",
+   "kind": "class.s1@text##[\\[\\]]",
+   "lastChapter": "class.s3@tag.a@text",
+   "coverUrl": "",
+   "intro": "",
+   "wordCount": "",
+   "checkKeyWord": ""
+  },
+  "ruleToc": {
+   "chapterList": "//div[contains(@class,'section-box')][2]//ul[contains(@class,'section-list')]//a",
+   "chapterName": "text",
+   "chapterUrl": "href",
+   "nextTocUrl": "//div[contains(@class,'listpage')]//span[contains(@class,'right')]/a/@href"
+  },
+  "searchUrl": "http://m.shuqixs.cc/ar.php?keyWord={{key}}",
+  "weight": 0,
+  "exploreUrl": "玄幻奇幻::/ksl/1/{{page}}.html\n武侠仙侠::/ksl/2/{{page}}.html\n都市言情::/ksl/3/{{page}}.html\n历史军事::/ksl/4/{{page}}.html\n网游竞技::/ksl/5/{{page}}.html\n科幻灵异::/ksl/6/{{page}}.html\n女生频道::/ksl/7/{{page}}.html\n完本小说::/wanbenxiaoshuo/\n完结排行::/ph/"
+ }
+]

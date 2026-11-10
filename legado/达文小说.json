@@ -1,1 +1,72 @@
-[{"bookSourceComment": "// Error: 搜索失效", "bookSourceGroup": "一程", "bookSourceName": "💠 达文小说", "bookSourceType": 0, "bookSourceUrl": "http://www.dawensk.com", "customButton": false, "customOrder": 206, "enabled": true, "enabledCookieJar": true, "enabledExplore": false, "eventListener": false, "exploreUrl": "日点击榜::/good/dayvisit_{{page}}.html\n周点击榜::/good/weekvisit_{{page}}.html\n月点击榜::/good/monthvisit_{{page}}.html\n总点击榜::/good/allvisit_{{page}}.html\n总收藏榜::/good/goodnum_{{page}}.html\n字数排行::/good/size_{{page}}.html\n日推荐榜::/good/dayvote_{{page}}.html\n周推荐榜::/good/weekvote_{{page}}.html\n月推荐榜::/good/monthvote_{{page}}.html\n总推荐榜::/good/allvote_{{page}}.html\n最新入库::/good/postdate_{{page}}.html\n最近更新::/good/lastupdate_{{page}}.html\n玄幻魔法::/xiaoshuo/1_{{page}}.html\n武侠修真::/xiaoshuo/2_{{page}}.html\n都市言情::/xiaoshuo/3_{{page}}.html\n历史军事::/xiaoshuo/4_{{page}}.html\n网游动漫::/xiaoshuo/5_{{page}}.html\n科幻小说::/xiaoshuo/6_{{page}}.html\n恐怖灵异::/xiaoshuo/7_{{page}}.html\n其他类型::/xiaoshuo/8_{{page}}.html\n完结小说::/quanben/{{page}}.html", "lastUpdateTime": 1734421397854, "respondTime": 200231, "ruleBookInfo": {"author": ".c02@.zz@text", "coverUrl": ".f1_L@img@src", "init": "", "intro": "id.book_desc@text##(^|[。！？]+[”」）】]?)##$1<br>@js:result.replace(/阅读.*最新章节.*/g,'')", "kind": ".inf02@p.0:4@text&&.zj_con@.time@text##.*：|\\s..:.*", "lastChapter": ".zj_con@.zj@text##正文卷.|正文.|VIP卷.|默认卷.|卷_|VIP章节.|免费章节.|章节目录.|最新章节.|[\\(（【].*?[求更票谢乐发订合补加架字修Kk].*?[】）\\)]", "name": ".c01@a@text", "tocUrl": "a.mulu@href##$##,{'webView': true}", "wordCount": ".inf02@p.1@text##.*："}, "ruleContent": {"content": "dd@p!-1@html", "replaceRegex": ""}, "ruleExplore": {"author": ".zz@text", "bookList": "ol@ul!0", "bookUrl": "a.1@href", "coverUrl": "", "intro": "", "kind": ".lb,.rq@text", "lastChapter": ".gx@text##正文卷.|正文.|VIP卷.|默认卷.|卷_|VIP章节.|免费章节.|章节目录.|最新章节.|[\\(（【].*?[求更票谢乐发订合补加架字修Kk].*?[】）\\)]", "name": ".sm@text"}, "ruleSearch": {"author": "a.2@text", "bookList": ".result@li", "bookUrl": "a.1@href", "coverUrl": "img@data-original", "kind": "span.1:2:4@text##.*：|\\s..:.*", "lastChapter": "a.4@text##正文卷.|正文.|VIP卷.|默认卷.|卷_|VIP章节.|免费章节.|章节目录.|最新章节.|[\\(（【].*?[求更票谢乐发订合补加架字修Kk].*?[】）\\)]", "name": "a.1@text", "wordCount": "span.3@text##.*："}, "ruleToc": {"chapterList": "id.chapter@a", "chapterName": "text##正文卷.|正文.|VIP卷.|默认卷.|卷_|VIP章节.|免费章节.|章节目录.|最新章节.|[\\(（【].*?[求更票谢乐发订合补加架字修Kk].*?[】）\\)]", "chapterUrl": "href##$##,{'webView': true}"}, "searchUrl": "/search.php,{\n  'method': 'POST',\n  'body': 'key={{key}}'\n}", "weight": 0}]
+[
+ {
+  "bookSourceComment": "",
+  "bookSourceGroup": "一程,已修复",
+  "bookSourceName": "💠 达文小说",
+  "bookSourceType": 0,
+  "bookSourceUrl": "http://www.dawenks.com",
+  "customOrder": 206,
+  "enabled": true,
+  "enabledCookieJar": true,
+  "enabledExplore": true,
+  "eventListener": false,
+  "exploreUrl": "日点击榜::/good/dayvisit_1.html\n周点击榜::/good/weekvisit_1.html\n月点击榜::/good/monthvisit_1.html\n总点击榜::/good/allvisit_1.html\n总收藏榜::/good/goodnum_1.html\n字数排行::/good/size_1.html\n日推荐榜::/good/dayvote_1.html\n周推荐榜::/good/weekvote_1.html\n月推荐榜::/good/monthvote_1.html\n总推荐榜::/good/allvote_1.html\n最新入库::/good/postdate_1.html\n最近更新::/good/lastupdate_1.html\n玄幻魔法::/xiaoshuo/1_{{page}}.html\n武侠修真::/xiaoshuo/2_{{page}}.html\n都市言情::/xiaoshuo/3_{{page}}.html\n历史军事::/xiaoshuo/4_{{page}}.html\n网游动漫::/xiaoshuo/5_{{page}}.html\n科幻星际::/xiaoshuo/6_{{page}}.html\n恐怖灵异::/xiaoshuo/7_{{page}}.html\n其他类型::/xiaoshuo/8_{{page}}.html\n全本小说::/quanben/{{page}}.html",
+  "header": "{\"User-Agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36\",\"Accept-Language\":\"zh-CN,zh;q=0.9\"}",
+  "lastUpdateTime": 1794288920414,
+  "respondTime": 600,
+  "searchUrl": "http://www.dawenks.com/search.php?key={{key}}",
+  "weight": 0,
+  "concurrentRate": "",
+  "loginCheckJs": "",
+  "loginUrl": "",
+  "loginUi": [],
+  "variableComment": "",
+  "ruleReview": {},
+  "ruleExplore": {
+   "bookList": "//div[contains(@class,'whole')]/ol/li!0",
+   "name": "class.sm@tag.h3@tag.a@text",
+   "author": "class.zz@text",
+   "bookUrl": "class.sm@tag.h3@tag.a@href",
+   "coverUrl": "",
+   "intro": "",
+   "kind": "class.lb@tag.a@text",
+   "lastChapter": "class.gx@tag.a@text",
+   "wordCount": ""
+  },
+  "ruleSearch": {
+   "bookList": "//div[contains(@class,'result')]/ul/li",
+   "name": "class.book_inf@tag.h3@tag.a@text",
+   "author": "class.book_inf@class.tags@tag.span.0@tag.a@text",
+   "bookUrl": "class.book_inf@tag.h3@tag.a@href",
+   "coverUrl": "class.book_cov@tag.img@data-original",
+   "intro": "class.book_inf@tag.p.int@text",
+   "kind": "class.book_inf@class.tags@tag.span.1@tag.a@text&&class.book_inf@class.tags@tag.span.2@text##状态：",
+   "lastChapter": "class.book_inf@tag.p.1@tag.a@text",
+   "wordCount": "class.book_inf@class.tags@tag.span.3@text##总字数：",
+   "checkKeyWord": ""
+  },
+  "ruleBookInfo": {
+   "init": "",
+   "name": "class.c01@tag.h3@tag.a@text",
+   "author": "class.c02@class.zz@text##作者：",
+   "intro": "id.book_desc@html@js:\nString(result).replace(/<br\\s*\\/?>/ig, '\\n').replace(/<[^>]+>/g, '').replace(/&nbsp;/g, ' ').replace(/\\r/g, '').replace(/阅读[\\s\\S]*?最新章节[\\s\\S]*$/, '').trim()",
+   "kind": "//meta[@property='og:novel:category']/@content&&//meta[@property='og:novel:status']/@content",
+   "coverUrl": "//meta[@property='og:image']/@content",
+   "lastChapter": "//meta[@property='og:novel:latest_chapter_name']/@content",
+   "wordCount": "class.inf02@tag.p.1@text##作品字数：",
+   "tocUrl": "//div[@class='c04']/a[@class='mulu']/@href##^##http://www.dawenks.com"
+  },
+  "ruleToc": {
+   "chapterList": "<js>\nvar html = String(result);\nif (html == null) { html = ''; }\nif (html.length < 500) { try { html = String(java.ajax(baseUrl)); } catch (e) { html = ''; } }\nvar base = String(baseUrl);\nif (base.charAt(base.length - 1) !== '/') { base = base.replace(/[^\\/]*$/, ''); }\nvar re = /<a[^>]+href=\"(\\d+)\\.html\"[^>]*>([\\s\\S]*?)<\\/a>/g;\nvar m; var arr = [];\nwhile ((m = re.exec(html)) !== null) {\n  var nm = m[2].replace(/<[^>]+>/g, '').replace(/\\s+/g, ' ').trim();\n  if (nm.length > 0) { arr.push({i: parseInt(m[1], 10), name: nm, url: base + m[1] + '.html'}); }\n}\narr.sort(function (a, b) { return a.i - b.i; });\nvar out = [];\nfor (var k = 0; k < arr.length; k++) { out.push({name: arr[k].name, url: arr[k].url}); }\nJSON.stringify(out)\n</js>\n$[*]",
+   "chapterName": "$.name",
+   "chapterUrl": "$.url",
+   "isVolume": "",
+   "updateTime": "",
+   "nextTocUrl": ""
+  },
+  "ruleContent": {
+   "content": "//*[@id='txt']//p//text()@js:\nvar t = String(result);\nt.replace(/\\s*[\\u3000\\s]+/g, '\\n').replace(/\\n{3,}/g, '\\n\\n').trim()",
+   "replaceRegex": ""
+  }
+ }
+]

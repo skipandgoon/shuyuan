@@ -1,60 +1,69 @@
 [
  {
-  "bookSourceComment": "// Error: 搜索失效",
-  "bookSourceGroup": "破冰",
+  "bookSourceComment": "仅发现",
+  "bookSourceGroup": "破冰,已修复",
   "bookSourceName": "笔趣阁⑤",
   "bookSourceType": 0,
-  "bookSourceUrl": "http://www.bqg24.com/",
+  "bookSourceUrl": "https://www.bqg24.com",
   "bookUrlPattern": "",
   "customButton": false,
   "customOrder": 104,
   "enabled": true,
   "enabledCookieJar": false,
-  "enabledExplore": false,
+  "enabledExplore": true,
   "eventListener": false,
-  "exploreUrl": "",
+  "exploreUrl": "玄幻::/fenlei/1_1/\n重生::/fenlei/2_1/\n都市::/fenlei/3_1/\n军史::/fenlei/4_1/\n网游::/fenlei/5_1/\n科幻::/fenlei/6_1/\n灵异::/fenlei/7_1/\n言情::/fenlei/8_1/",
   "lastUpdateTime": 1692661070604,
   "loginUrl": "",
   "respondTime": 182094,
   "ruleBookInfo": {
-   "author": "[property=og:novel:author]@content",
-   "coverUrl": "[property=og:image]@content",
    "init": "",
-   "intro": "[property=og:description]@content",
-   "kind": "[property=og:novel:update_time]@content&&\n[property=og:novel:category]@content&&\n[property=og:novel:status]@content",
-   "lastChapter": "[property=og:novel:latest_chapter_name]@content##免费章节 |正文卷 |正文 |VIP章节 |卷1",
-   "name": "[property=og:novel:book_name]@content##|\\（.*|\\(.*|免费阅读|全文.*阅读|最新章节|小说|笔趣阁|免费.*",
-   "wordCount": ""
+   "name": "id.info@tag.h1@text",
+   "author": "id.info@tag.p.0@tag.a@text",
+   "kind": "id.info@tag.p.2@text##状态：&&id.info@tag.p.3@text##.*\\|",
+   "coverUrl": "",
+   "intro": "",
+   "lastChapter": "id.info@tag.p.4@tag.a@text",
+   "wordCount": "",
+   "tocUrl": ""
   },
   "ruleContent": {
-   "content": "id.htmlContent@html##一秒记住.*无弹窗免费阅读！|笔趣阁.*最新章节！"
+   "content": "id.booktxt@html@js:\nvar html = String(result);\nvar re = /document\\.writeln\\(\\qsbs\\.bb\\('([^']+)'\\)\\)/g;\nvar m, parts = [];\nwhile ((m = re.exec(html)) !== null) {\n  try { parts.push(String(java.base64Decode(m[1]))); } catch (e) { }\n}\nvar body = parts.length > 0 ? parts.join('') : html;\nbody.replace(/<br\\s*\\/?\\s*>/ig, '\\n').replace(/<\\/p>/ig, '\\n')\n  .replace(/<[^>]+>/g, '').replace(/&nbsp;/g, ' ')\n  .replace(/本章未完，点击下一页继续阅读/g, '')\n  .replace(/\\n{3,}/g, '\\n\\n').trim()\n",
+   "replaceRegex": "",
+   "nextContentUrl": "class.bottem1@tag.a.-1@href@js:var h = String(result);if (/_[0-9]+\\.html$/.test(h)) { h } else { '' }"
   },
   "ruleExplore": {
-   "author": "",
-   "bookList": "",
-   "bookUrl": "",
+   "bookList": "//li[span[contains(@class,'s2')]]",
+   "name": "class.s2@tag.a@text",
+   "bookUrl": "class.s2@tag.a@href",
+   "author": "class.s5@text",
+   "kind": "class.s1@text",
    "coverUrl": "",
-   "kind": "",
+   "intro": "",
    "lastChapter": "",
-   "name": ""
+   "wordCount": ""
   },
   "ruleSearch": {
-   "author": "tag.td.2@text",
-   "bookList": "class.grid@tag.tr",
-   "bookUrl": "tag.td.0@tag.a@href",
+   "bookList": "",
+   "name": "",
+   "author": "",
+   "bookUrl": "",
    "coverUrl": "",
-   "kind": "tag.td.4@text",
-   "lastChapter": "tag.td.1@tag.a@text##免费章节 |正文卷 |正文 |VIP章节 |卷1",
-   "name": "tag.td.0@tag.a@text##\\（+.*",
-   "wordCount": "tag.td.3@text"
+   "intro": "",
+   "kind": "",
+   "lastChapter": "",
+   "wordCount": "",
+   "checkKeyWord": ""
   },
   "ruleToc": {
-   "chapterList": "class.mulu_list@tag.li@a",
-   "chapterName": "text",
-   "chapterUrl": "href",
-   "nextTocUrl": "option@value"
+   "chapterList": "<js>\nvar html = String(result);\nvar re = /<a[^>]+href=\"(\\/article\\/(\\d+)\\/(\\d+)\\.html)\"[^>]*>([\\s\\S]*?)<\\/a>/g;\nvar m, seen = {}, arr = [];\nwhile ((m = re.exec(html)) !== null) {\n  var id = parseInt(m[3], 10);\n  if (seen[id]) { continue; }\n  seen[id] = 1;\n  var nm = m[4].replace(/<[^>]+>/g, '').replace(/\\s+/g, ' ').trim();\n  if (nm.length < 1) { continue; }\n  if (nm === '开始阅读') { nm = '第1章'; }\n  arr.push({i: id, name: nm, url: 'https://www.bqg24.com/article/' + m[2] + '/' + m[3] + '.html'});\n}\narr.sort(function (a, b) { return a.i - b.i; });\nvar out = [];\nfor (var k = 0; k < arr.length; k++) { out.push({name: arr[k].name, url: arr[k].url}); }\nJSON.stringify(out)\n</js>\n$[*]",
+   "chapterName": "$.name",
+   "chapterUrl": "$.url",
+   "isVolume": "",
+   "updateTime": "",
+   "nextTocUrl": ""
   },
-  "searchUrl": "http://www.bqg24.com/modules/article/search.php?searchkey={{key}}&submit=%CB%D1%CB%F7&page={{page}},{\n  \"charset\": \"gbk\"\n}",
+  "searchUrl": "",
   "weight": 0
  }
 ]

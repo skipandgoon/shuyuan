@@ -1,47 +1,66 @@
 [
  {
-  "bookSourceComment": "// Error: 搜索失效",
-  "bookSourceGroup": "破冰",
+  "bookSourceComment": "仅发现",
+  "bookSourceGroup": "破冰,已修复",
   "bookSourceName": "顶点小说①",
   "bookSourceType": 0,
-  "bookSourceUrl": "https://www.znxdxs.com/",
+  "bookSourceUrl": "https://www.gdpsw.com",
   "customButton": false,
   "customOrder": 100,
   "enabled": true,
   "enabledCookieJar": false,
-  "enabledExplore": false,
+  "enabledExplore": true,
   "eventListener": false,
   "lastUpdateTime": 1687588257466,
   "respondTime": 182539,
   "ruleBookInfo": {
-   "author": "[property=og:novel:author]@content",
-   "coverUrl": "[property=og:image]@content",
-   "intro": "[property=og:description]@content",
-   "kind": "[property=og:novel:update_time]@content&&\n[property=og:novel:category]@content&&\n[property=og:novel:status]@content",
-   "lastChapter": "[property=og:novel:latest_chapter_name]@content##免费章节 |正文卷 |正文 |VIP章节 ",
-   "name": "[property=og:novel:book_name]@content##|\\（.*|\\(.*|免费阅读|全文.*阅读|最新章节|小说|笔趣阁|免费.*"
+   "init": "",
+   "name": "//meta[@property='og:novel:book_name']/@content",
+   "author": "//meta[@property='og:novel:author']/@content",
+   "kind": "//meta[@property='og:novel:category']/@content&&//meta[@property='og:novel:status']/@content",
+   "coverUrl": "//meta[@property='og:image']/@content",
+   "intro": "//meta[@property='og:description']/@content",
+   "lastChapter": "//meta[@property='og:novel:latest_chapter_name']/@content",
+   "wordCount": "",
+   "tocUrl": ""
   },
   "ruleContent": {
-   "content": "id.htmlContent@p@html##推荐下.*更新快！|推荐一个.*com ！|广个告.*离线朗读！|广个告.*更新快！|.*咪.*咪.*阅.*读.*"
+   "content": "id.htmlContent@html@js:String(result).replace(/<br\\s*\\/?\\s*>/ig,'\\n').replace(/<\\/p>/ig,'\\n').replace(/<[^>]+>/g,'').replace(/&nbsp;/g,' ').replace(/\\n{3,}/g,'\\n\\n').trim()",
+   "replaceRegex": ""
   },
-  "ruleExplore": {},
+  "ruleExplore": {
+   "bookList": "//tr[td]",
+   "name": "td.0@a.1@text",
+   "bookUrl": "td.0@a.1@href",
+   "author": "td.2@text",
+   "lastChapter": "td.1@a@text",
+   "wordCount": "td.3@text",
+   "kind": "td.5@text",
+   "coverUrl": "",
+   "intro": ""
+  },
   "ruleSearch": {
-   "author": "$.author",
-   "bookList": "$..search[*]",
-   "bookUrl": "{{$.book_list_url}}",
-   "checkKeyWord": "",
-   "coverUrl": "{{$.cover}}",
-   "intro": "$.intro",
-   "kind": "{{$.uptime}}\n{{$.cate_name}}\n{{$.status_str}}",
-   "lastChapter": "$.latest_chapter_name",
-   "name": "$.book_name"
+   "bookList": "",
+   "name": "",
+   "author": "",
+   "bookUrl": "",
+   "coverUrl": "",
+   "intro": "",
+   "kind": "",
+   "lastChapter": "",
+   "wordCount": "",
+   "checkKeyWord": ""
   },
   "ruleToc": {
-   "chapterList": "id.at@tag.td@a",
+   "chapterList": "//*[@id='at']//a",
    "chapterName": "text",
-   "chapterUrl": "href"
+   "chapterUrl": "href",
+   "isVolume": "",
+   "updateTime": "",
+   "nextTocUrl": ""
   },
-  "searchUrl": "/api/search?q={{key}}",
-  "weight": 0
+  "searchUrl": "",
+  "weight": 0,
+  "exploreUrl": "玄幻奇幻::/class_1/\n武侠仙侠::/class_2/\n都市言情::/class_3/\n历史军事::/class_4/\n科幻推理::/class_5/\n网游动漫::/class_6/\n女频频道::/class_7/\n其他小说::/class_8/\n全本小说::/quanben/\n周点击榜::/top/weekvisit/"
  }
 ]
