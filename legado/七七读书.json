@@ -1,13 +1,13 @@
 [
  {
-  "bookSourceComment": "",
-  "bookSourceGroup": "晋江",
+  "bookSourceComment": "// Error: 搜索失效",
+  "bookSourceGroup": "晋江,待修复,搜索失效",
   "bookSourceName": "七七读书",
   "bookSourceType": 0,
   "bookSourceUrl": "http://www.77dushu.com",
   "bookUrlPattern": "",
   "customButton": false,
-  "customOrder": 44,
+  "customOrder": 36,
   "enabled": true,
   "enabledCookieJar": false,
   "enabledExplore": false,
@@ -15,7 +15,7 @@
   "exploreUrl": "",
   "lastUpdateTime": 1726058869558,
   "loginUrl": "",
-  "respondTime": 7207,
+  "respondTime": 198955,
   "ruleBookInfo": {
    "coverUrl": "tag.img.1@src",
    "init": "",
@@ -24,7 +24,7 @@
    "name": "tag.h1@text##搜索关键词.*"
   },
   "ruleContent": {
-   "content": "id.ChapterContents@html##(txt下载地址：|更新速度最快赶|全集txt下载)[\\s\\S]+"
+   "content": "id.ChapterContents@html##(txt下载地址：|更新速度最快赶|全集txt下载)[\\s\\S]+|最新网址：[^<]*"
   },
   "ruleExplore": {
    "bookList": ""

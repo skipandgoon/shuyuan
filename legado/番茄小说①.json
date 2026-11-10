@@ -1,18 +1,18 @@
 [
  {
   "bookSourceComment": "// Error: 搜索失效",
-  "bookSourceGroup": "破冰",
+  "bookSourceGroup": "待修复,破冰,搜索失效",
   "bookSourceName": "番茄小说①",
   "bookSourceType": 0,
   "bookSourceUrl": "https://www.fanqianxs.com/",
   "customButton": false,
-  "customOrder": 88,
+  "customOrder": 69,
   "enabled": true,
   "enabledCookieJar": false,
   "enabledExplore": false,
   "eventListener": false,
   "lastUpdateTime": 1687595441807,
-  "respondTime": 181313,
+  "respondTime": 180708,
   "ruleBookInfo": {
    "author": "[property=og:novel:author]@content",
    "coverUrl": "[property=og:image]@content",
@@ -22,7 +22,7 @@
    "name": "[property=og:novel:book_name]@content##|\\（.*|\\(.*|免费阅读|全文.*阅读|最新章节|小说|笔趣阁|免费.*"
   },
   "ruleContent": {
-   "content": "id.htmlContent@p@html##推荐下.*更新快！|推荐一个.*com ！|广个告.*离线朗读！|广个告.*更新快！|.*咪.*咪.*阅.*读.*"
+   "content": "id.htmlContent@p@html##推荐下.*更新快！|推荐一个.*com ！|广个告.*离线朗读！|广个告.*更新快！|.*咪.*咪.*阅.*读.*|最新网址：[^<]*"
   },
   "ruleExplore": {},
   "ruleSearch": {
