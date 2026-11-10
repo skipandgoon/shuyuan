@@ -26,8 +26,8 @@
    "wordCount": ""
   },
   "ruleContent": {
-   "content": "<js>var raw=String(java.ajax(baseUrl));var i=raw.indexOf('id=\"nr1\"');if(i>0){i=raw.indexOf('>',i)+1}var j=i>0?raw.indexOf('</div>',i):-1;if(j<0){j=i>0?i+30000:raw.length}var seg=i>=0?raw.substring(i,j):raw;seg.replace(/<script[\\s\\S]*?<\\/script>/ig,'').replace(/<style[\\s\\S]*?<\\/style>/ig,'').replace(/<br\\s*\\/?>/ig,'\\n').replace(/<\\/p>/ig,'\\n').replace(/<[^>]+>/g,'').replace(/&nbsp;/g,' ').replace(/最新网址：[^\\n]*/g,'').replace(/一秒记住【[^】]*】[，,]?/g,'').replace(/[^\\n]*为您提供精彩小说阅读[^\\n]*/g,'').replace(/\\n{3,}/g,'\\n\\n').trim()</js>",
-   "nextContentUrl": ""
+   "content": "<js>var raw=String(java.ajax(baseUrl));var i=raw.indexOf('id=\"nr1\"');if(i>0){i=raw.indexOf('>',i)+1}var j=i>0?raw.indexOf('</div>',i):-1;if(j<0){j=i>0?i+30000:raw.length}var seg=i>=0?raw.substring(i,j):raw;seg.replace(/<script[\\s\\S]*?<\\/script>/ig,'').replace(/<style[\\s\\S]*?<\\/style>/ig,'').replace(/<br\\s*\\/?>/ig,'\\n').replace(/<\\/p>/ig,'\\n').replace(/<[^>]+>/g,'').replace(/&nbsp;/g,' ').replace(/[（(]本章未完[^）)]*[）)]/g,'').replace(/本章未完，点击下一页继续阅读/g,'').replace(/最新网址：[^\\n]*/g,'').replace(/一秒记住【[^】]*】[，,]?/g,'').replace(/[^\\n]*为您提供精彩小说阅读[^\\n]*/g,'').replace(/\\n{3,}/g,'\\n\\n').trim()</js>",
+   "nextContentUrl": "id.pt_next@href@js:var h=String(result);if(/_[\\d]+\\.html$/.test(h)){h}else{''}"
   },
   "ruleExplore": {
    "author": "@text##^.*/",
