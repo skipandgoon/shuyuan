@@ -43,6 +43,7 @@
   },
   "searchUrl": "",
   "weight": 0,
-  "exploreUrl": "玄幻::/xuanhuan/\n武侠::/wuxia/\n都市::/dushi/\n历史::/lishi/\n科幻::/kehuan/\n网游::/wangyou/\n言情::/yanqing/"
+  "exploreUrl": "玄幻::https://m.fanqianxs.com/xuanhuan/?page={{page}}\n武侠::https://m.fanqianxs.com/wuxia/?page={{page}}\n都市::https://m.fanqianxs.com/dushi/?page={{page}}\n历史::https://m.fanqianxs.com/lishi/?page={{page}}\n科幻::https://m.fanqianxs.com/kehuan/?page={{page}}\n网游::https://m.fanqianxs.com/wangyou/?page={{page}}\n言情::https://m.fanqianxs.com/yanqing/?page={{page}}",
+  "header": "User-Agent: Mozilla/5.0 (Linux; Android 13; SM-G991B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36"
  }
 ]
