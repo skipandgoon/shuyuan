@@ -58,6 +58,7 @@
   },
   "searchUrl": "http://m.shuqixs.cc/ar.php?keyWord={{key}}",
   "weight": 0,
-  "exploreUrl": "玄幻奇幻::/ksl/1/{{page}}.html\n武侠仙侠::/ksl/2/{{page}}.html\n都市言情::/ksl/3/{{page}}.html\n历史军事::/ksl/4/{{page}}.html\n网游竞技::/ksl/5/{{page}}.html\n科幻灵异::/ksl/6/{{page}}.html\n女生频道::/ksl/7/{{page}}.html\n完本小说::/wanbenxiaoshuo/\n完结排行::/ph/"
+  "exploreUrl": "玄幻奇幻::/ksl/1/{{page}}.html\n武侠仙侠::/ksl/2/{{page}}.html\n都市言情::/ksl/3/{{page}}.html\n历史军事::/ksl/4/{{page}}.html\n网游竞技::/ksl/5/{{page}}.html\n科幻灵异::/ksl/6/{{page}}.html\n女生频道::/ksl/7/{{page}}.html\n完本小说::/wanbenxiaoshuo/\n完结排行::/ph/",
+  "header": "User-Agent: Mozilla/5.0 (Linux; Android 13; SM-G991B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36"
  }
 ]
