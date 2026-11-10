@@ -10,9 +10,9 @@
   "customOrder": 36,
   "enabled": true,
   "enabledCookieJar": false,
-  "enabledExplore": false,
+  "enabledExplore": true,
   "eventListener": false,
-  "exploreUrl": "",
+  "exploreUrl": "玄幻::/store/1_{{page}}.html\n仙侠::/store/2_{{page}}.html\n都市::/store/3_{{page}}.html\n言情::/store/9_{{page}}.html\n穿越::/store/4_{{page}}.html\n科幻::/store/7_{{page}}.html\n恐怖::/store/6_{{page}}.html\n网游::/store/8_{{page}}.html",
   "lastUpdateTime": 1726058869558,
   "loginUrl": "",
   "respondTime": 198955,
@@ -27,7 +27,15 @@
    "content": "id.ChapterContents@html##(txt下载地址：|更新速度最快赶|全集txt下载)[\\s\\S]+|最新网址：[^<]*"
   },
   "ruleExplore": {
-   "bookList": ""
+   "bookList": "class.shu_box",
+   "name": "class.shu_xinxi@h4@a@text",
+   "bookUrl": "class.shu_xinxi@h4@a@href",
+   "author": "class.shu_xinxi@h4@small@text",
+   "intro": "class.intro@text",
+   "coverUrl": "class.shu_img@a@img@src",
+   "kind": "",
+   "lastChapter": "",
+   "wordCount": ""
   },
   "ruleSearch": {},
   "ruleToc": {

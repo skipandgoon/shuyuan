@@ -9,7 +9,7 @@
   "customOrder": 69,
   "enabled": true,
   "enabledCookieJar": false,
-  "enabledExplore": false,
+  "enabledExplore": true,
   "eventListener": false,
   "lastUpdateTime": 1687595441807,
   "respondTime": 180708,
@@ -24,7 +24,17 @@
   "ruleContent": {
    "content": "id.htmlContent@p@html##推荐下.*更新快！|推荐一个.*com ！|广个告.*离线朗读！|广个告.*更新快！|.*咪.*咪.*阅.*读.*|最新网址：[^<]*"
   },
-  "ruleExplore": {},
+  "ruleExplore": {
+   "bookList": "//article",
+   "name": "h2@text",
+   "bookUrl": "div.image@a@href",
+   "author": "p.0@text##作者：",
+   "intro": "class.intro@text##简介：",
+   "coverUrl": "div.image@a@img@src",
+   "kind": "",
+   "lastChapter": "",
+   "wordCount": ""
+  },
   "ruleSearch": {},
   "ruleToc": {
    "chapterList": "id.list@tag.dd@a",
@@ -32,6 +42,7 @@
    "chapterUrl": "href"
   },
   "searchUrl": "",
-  "weight": 0
+  "weight": 0,
+  "exploreUrl": "玄幻::/xuanhuan/\n武侠::/wuxia/\n都市::/dushi/\n历史::/lishi/\n科幻::/kehuan/\n网游::/wangyou/\n言情::/yanqing/"
  }
 ]
