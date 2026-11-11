@@ -11,7 +11,7 @@
   "enabledCookieJar": false,
   "enabledExplore": true,
   "eventListener": false,
-  "exploreUrl": "玄幻::https://m.quledu.com/sort-1-{{page}}/\n现代言情::https://m.quledu.com/sort-2-{{page}}/\n都市言情::https://m.quledu.com/sort-3-{{page}}/\n玄幻魔法::https://m.quledu.com/sort-4-{{page}}/\n仙侠武侠::https://m.quledu.com/sort-5-{{page}}/\n同人网游::https://m.quledu.com/sort-6-{{page}}/\n科幻悬疑::https://m.quledu.com/sort-7-{{page}}/\n周榜::https://m.quledu.com/top-weekvisit/\n全本::https://m.quledu.com/quanben/",
+  "exploreUrl": "玄幻::https://m.quledu.com/sort-1/\n现代言情::https://m.quledu.com/sort-2/\n都市言情::https://m.quledu.com/sort-3/\n玄幻魔法::https://m.quledu.com/sort-4/\n仙侠武侠::https://m.quledu.com/sort-5/\n同人网游::https://m.quledu.com/sort-6/\n科幻悬疑::https://m.quledu.com/sort-7/\n其他::https://m.quledu.com/sort-8/\n全本::https://m.quledu.com/quanben/\n周榜::https://m.quledu.com/top-weekvisit/",
   "header": "User-Agent: Mozilla/5.0 (Linux; Android 13; SM-G991B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
   "lastUpdateTime": 1687595429701,
   "respondTime": 181998,
