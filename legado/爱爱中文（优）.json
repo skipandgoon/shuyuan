@@ -16,12 +16,12 @@
   "exploreUrl": "最近更新::https://www.i25zw.com/lastupdate/{{page}}/\n最新入库::https://www.i25zw.com/postdate/{{page}}/\n月点击::https://www.i25zw.com/monthvisit/{{page}}/\n总点击::https://www.i25zw.com/goodnum/{{page}}/\n新书榜::https://www.i25zw.com/goodnew/{{page}}/",
   "ruleSearch": {},
   "ruleExplore": {
-   "bookList": "//div[contains(@class,'list')]//dd | //div[contains(@class,'list')]//li",
-   "name": "//a/text()",
-   "bookUrl": "//a/@href",
-   "author": "",
-   "intro": "",
-   "coverUrl": "//img/@src",
+   "bookList": "//div[@id='alistbox']/div[contains(@class,'info')]",
+   "name": "//div[contains(@class,'title')]//h2//a/text()",
+   "bookUrl": "//div[contains(@class,'title')]//h2//a/@href",
+   "author": "//div[contains(@class,'title')]/span/text()##作者：",
+   "intro": "//div[contains(@class,'intro')]/text()",
+   "coverUrl": "",
    "kind": "",
    "lastChapter": "",
    "wordCount": ""
