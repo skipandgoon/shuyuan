@@ -11,7 +11,7 @@
   "enabledCookieJar": true,
   "enabledExplore": true,
   "eventListener": false,
-  "exploreUrl": "总点击::https://m.wowenku.com/top.php?type=allvisit&page={{page}}\n最新入库::https://m.wowenku.com/top.php?type=postdate&page={{page}}\n推荐榜::https://m.wowenku.com/top.php?type=allvote&page={{page}}\n完结::https://m.wowenku.com/full.php?page={{page}}\n分类::https://m.wowenku.com/sort.php",
+  "exploreUrl": "电击文库::https://m.wowenku.com/sort.php?sortid=1&page={{page}}\n富士见文库::https://m.wowenku.com/sort.php?sortid=2&page={{page}}\n角川文库::https://m.wowenku.com/sort.php?sortid=3&page={{page}}\nMFJ文库::https://m.wowenku.com/sort.php?sortid=4&page={{page}}\nFami通文库::https://m.wowenku.com/sort.php?sortid=5&page={{page}}\nGA文库::https://m.wowenku.com/sort.php?sortid=6&page={{page}}\nHJ文库::https://m.wowenku.com/sort.php?sortid=7&page={{page}}\n一迅社::https://m.wowenku.com/sort.php?sortid=8&page={{page}}\n集英社文库::https://m.wowenku.com/sort.php?sortid=9&page={{page}}\n少女文库::https://m.wowenku.com/sort.php?sortid=10&page={{page}}\nsf文库::https://m.wowenku.com/sort.php?sortid=11&page={{page}}\n讲谈社::https://m.wowenku.com/sort.php?sortid=12&page={{page}}\n其他文库::https://m.wowenku.com/sort.php?sortid=13&page={{page}}\n小学馆::https://m.wowenku.com/sort.php?sortid=14&page={{page}}\n总点击::https://m.wowenku.com/top.php?type=allvisit&page={{page}}\n最新入库::https://m.wowenku.com/top.php?type=postdate&page={{page}}\n总推荐::https://m.wowenku.com/top.php?type=allvote&page={{page}}\n完结::https://m.wowenku.com/full.php?page={{page}}",
   "header": "{\"User-Agent\": \"Mozilla/5.0 (Linux; Android 9) Mobile Safari/537.36\"}",
   "lastUpdateTime": 1759350055603,
   "loginUi": "[\n{\n        name: \"用户名\",\n        type: \"text\"\n    },\n    {\n        name: \"密码\",\n        type: \"password\"\n    },\n    {\n        name: \"         注册          \",\n        type: \"button\",\n        action: \"register()\"\n    },\n    {\n        name: \"         登录          \",\n        type: \"button\",\n        action: \"login()\"\n    }\n]",
@@ -33,13 +33,13 @@
    "nextContentUrl": ""
   },
   "ruleExplore": {
-   "bookList": "//div[contains(@class,'list')]//li[a[contains(@href,'info.php')]]",
-   "name": "//a[contains(@href,'info.php')]/text()",
-   "bookUrl": "//a[contains(@href,'info.php')]/@href",
-   "author": "",
+   "bookList": "//div[contains(@class,'content_link')] | //div[@class='tt']",
+   "name": "//p[@class='p2']/a/text() || //div[@class='right']/p[1]/a/text()",
+   "bookUrl": "//p[@class='p2']/a/@href || //div[@class='right']/p[1]/a/@href || //div[@class='left']/a/@href",
+   "author": "//p[@class='p3']/a/text()",
+   "kind": "//p[@class='p1']/a/text()",
    "intro": "",
    "coverUrl": "//img/@src",
-   "kind": "",
    "lastChapter": "",
    "wordCount": ""
   },
