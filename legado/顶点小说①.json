@@ -11,56 +11,56 @@
   "enabledCookieJar": false,
   "enabledExplore": true,
   "eventListener": false,
+  "exploreUrl": "玄幻奇幻::/class_1/\n武侠仙侠::/class_2/\n都市言情::/class_3/\n历史军事::/class_4/\n科幻推理::/class_5/\n网游动漫::/class_6/\n女频频道::/class_7/\n其他小说::/class_8/\n全本小说::/quanben/\n周点击榜::/top/weekvisit/",
   "lastUpdateTime": 1687588257466,
   "respondTime": 183140,
   "ruleBookInfo": {
-   "init": "",
-   "name": "//meta[@property='og:novel:book_name']/@content",
    "author": "//meta[@property='og:novel:author']/@content",
-   "kind": "//meta[@property='og:novel:category']/@content&&//meta[@property='og:novel:status']/@content",
    "coverUrl": "//meta[@property='og:image']/@content",
+   "init": "",
    "intro": "//meta[@property='og:description']/@content",
+   "kind": "//meta[@property='og:novel:category']/@content&&//meta[@property='og:novel:status']/@content",
    "lastChapter": "//meta[@property='og:novel:latest_chapter_name']/@content",
-   "wordCount": "",
-   "tocUrl": ""
+   "name": "//meta[@property='og:novel:book_name']/@content",
+   "tocUrl": "",
+   "wordCount": ""
   },
   "ruleContent": {
    "content": "id.htmlContent@html@js:String(result).replace(/<br\\s*\\/?\\s*>/ig,'\\n').replace(/<\\/p>/ig,'\\n').replace(/<[^>]+>/g,'').replace(/&nbsp;/g,' ').replace(/\\n{3,}/g,'\\n\\n').trim()",
    "replaceRegex": ""
   },
   "ruleExplore": {
-   "bookList": "//tr[td]",
-   "name": "td.0@a.1@text",
-   "bookUrl": "td.0@a.1@href",
    "author": "td.2@text",
-   "lastChapter": "td.1@a@text",
-   "wordCount": "td.3@text",
-   "kind": "td.5@text",
+   "bookList": "//tr[td]",
+   "bookUrl": "td.0@a.1@href",
    "coverUrl": "",
-   "intro": ""
+   "intro": "",
+   "kind": "td.5@text",
+   "lastChapter": "td.1@a@text",
+   "name": "td.0@a.1@text",
+   "wordCount": "td.3@text"
   },
   "ruleSearch": {
-   "bookList": "",
-   "name": "",
    "author": "",
+   "bookList": "",
    "bookUrl": "",
+   "checkKeyWord": "",
    "coverUrl": "",
    "intro": "",
    "kind": "",
    "lastChapter": "",
-   "wordCount": "",
-   "checkKeyWord": ""
+   "name": "",
+   "wordCount": ""
   },
   "ruleToc": {
-   "chapterList": "//*[@id='at']//a",
+   "chapterList": "<js>\nvar all = [];\nvar m = baseUrl.match(/\\/xiaoshuo\\/(\\d+)\\/(\\d+)\\/(\\d+)?\\/?$/);\nif (m) {\n  var base = 'https://m.gdpsw.com/xiaoshuo/' + m[1] + '/' + m[2] + '/';\n  for (var p = 1; p <= 200; p++) {\n    var u = (p === 1) ? base : base + p + '/';\n    var h = '';\n    try { h = String(java.ajax(u)); } catch (e) { break; }\n    if (h.indexOf('class=\"chapter\"') < 0) { break; }\n    var as = org.jsoup.Jsoup.parse(h).select('ul.chapter li a');\n    if (as.size() === 0) { break; }\n    for (var i = 0; i < as.size(); i++) { all.push(as.get(i)); }\n  }\n}\nvar out = new Packages.org.jsoup.select.Elements();\nfor (var j = all.length - 1; j >= 0; j--) { out.add(all[j]); }\nout;\n</js>",
    "chapterName": "text",
    "chapterUrl": "href",
    "isVolume": "",
-   "updateTime": "",
-   "nextTocUrl": ""
+   "nextTocUrl": "",
+   "updateTime": ""
   },
   "searchUrl": "",
-  "weight": 0,
-  "exploreUrl": "玄幻奇幻::/class_1/\n武侠仙侠::/class_2/\n都市言情::/class_3/\n历史军事::/class_4/\n科幻推理::/class_5/\n网游动漫::/class_6/\n女频频道::/class_7/\n其他小说::/class_8/\n全本小说::/quanben/\n周点击榜::/top/weekvisit/"
+  "weight": 0
  }
 ]
