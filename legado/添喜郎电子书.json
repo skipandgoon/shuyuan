@@ -58,7 +58,7 @@
    "formatJs": ""
   },
   "ruleContent": {
-   "content": "<js>\nvar t = String(java.ajax(baseUrl));\nif (t.indexOf('<!DOCTYPE') >= 0 || t.indexOf('<html') >= 0) {\n  if (t.indexOf('此下载不存在') >= 0) { result = '【下载不存在】站点未收录该书 TXT'; }\n  else if (t.indexOf('登录') >= 0) { result = '【需要登录】请在书源设置里粘贴 Cookie'; }\n  else { result = '【下载失败】站点返回提示页'; }\n} else { result = t.replace(String.fromCharCode(65279), ''); }\n</js>",
+   "content": "<js>\nvar u = String(baseUrl);\nvar msg = '本书为整本TXT下载，站点不提供分章阅读。点确定用浏览器下载。';\ntry { java.confirm(msg, '需要下载', '确定', '取消', \"java.startBrowser('\" + u + \"')\", \"java.longToast('已取消')\"); } catch (e) { java.log(String(e)); }\nresult = '【整本TXT，需要下载】 直链：' + u;\n</js>",
    "nextContentUrl": ""
   }
  }
