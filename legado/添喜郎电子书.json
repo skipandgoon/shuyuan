@@ -1,0 +1,65 @@
+[
+ {
+  "bookSourceName": "添喜郎电子书",
+  "bookSourceUrl": "https://m.txl1.com",
+  "bookSourceGroup": "",
+  "bookSourceType": 0,
+  "bookSourceComment": "正文为整本TXT，需登录：书源设置里粘贴 Cookie（浏览器登录后复制 document.cookie）",
+  "enabled": true,
+  "enabledExplore": true,
+  "enabledCookieJar": true,
+  "customButton": false,
+  "customOrder": 0,
+  "eventListener": false,
+  "header": "User-Agent: Mozilla/5.0 (Linux; Android 13; SM-G991B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
+  "loginUrl": "function saveCookie(){\n  var m = source.getLoginInfoMap();\n  var ck = String((m && m.get('Cookie')) || java.get('Cookie') || '').trim();\n  if (ck.length < 10) { java.longToast('请先粘贴浏览器里的 Cookie'); return; }\n  source.putLoginHeader(JSON.stringify({'Cookie': ck}));\n  java.longToast('Cookie 已保存，可直接阅读');\n}\nfunction login(){ saveCookie(); }",
+  "loginUi": "[{\"name\": \"Cookie\", \"type\": \"text\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.7}}, {\"name\": \"保存 Cookie\", \"type\": \"button\", \"action\": \"saveCookie()\", \"style\": {\"layout_flexGrow\": 1, \"layout_flexBasisPercent\": 0.3}}]",
+  "loginCheckJs": "",
+  "searchUrl": "https://m.txl1.com/e/search/,{\"method\":\"POST\",\"body\":\"keyboard={{key}}&show=title&tempid=1\",\"charset\":\"utf-8\"}",
+  "exploreUrl": "新书::https://m.txl1.com/new/\n推荐::https://m.txl1.com/tuijian/\n日榜::https://m.txl1.com/dpaihangbang/\n周榜::https://m.txl1.com/wpaihangbang/\n言情::https://m.txl1.com/yanqing/\n耽美::https://m.txl1.com/danmei/\n玄幻::https://m.txl1.com/xuanhuan/\n武侠::https://m.txl1.com/wuxia/\n网游::https://m.txl1.com/wangyou/\n科幻::https://m.txl1.com/kehuan/\n恐怖::https://m.txl1.com/kongbu/\n历史::https://m.txl1.com/lishi/",
+  "ruleSearch": {
+   "bookList": "//div[contains(@class,'collection-book-row')]",
+   "name": "class.collection-book-title@text",
+   "bookUrl": "class.collection-book-title@href",
+   "author": "class.book-author@tag.a@text",
+   "kind": "class.collection-book-category@tag.a@text",
+   "coverUrl": "class.pic@tag.a@tag.img@src",
+   "intro": "class.simple@text",
+   "lastChapter": "",
+   "wordCount": ""
+  },
+  "ruleExplore": {
+   "bookList": "//div[contains(@class,'collection-book-row')]",
+   "name": "class.collection-book-title@text",
+   "bookUrl": "class.collection-book-title@href",
+   "author": "class.book-author@tag.a@text",
+   "kind": "class.collection-book-category@tag.a@text",
+   "coverUrl": "class.pic@tag.a@tag.img@src",
+   "intro": "class.simple@text",
+   "lastChapter": "",
+   "wordCount": ""
+  },
+  "ruleBookInfo": {
+   "name": "//div[@class='cataloginfo']//h3/text()",
+   "author": "//div[@class='infotype']/p[1]/a/text()",
+   "kind": "//div[@class='infotype']/p[2]/text()##分类：",
+   "lastChapter": "",
+   "intro": "//div[@class='intro']/p/text()",
+   "coverUrl": "//div[@class='infohead']//img/@src",
+   "tocUrl": "",
+   "wordCount": "//div[@class='infotype']/p[5]/text()##大小：",
+   "canReName": ""
+  },
+  "ruleToc": {
+   "chapterList": "//*[@id='btnlist']",
+   "chapterName": "<js>result = '全书 TXT'</js>",
+   "chapterUrl": "<js>var m = baseUrl.match(/\\/b\\/(\\d+)\\.html/); var bid = m ? m[1] : ''; result = 'https://m.txl1.com/e/DownSys/GetDown/?classid=1&id=' + bid + '&pathid=0&line=original';</js>",
+   "nextTocUrl": "",
+   "formatJs": ""
+  },
+  "ruleContent": {
+   "content": "<js>\nvar m = baseUrl.match(/id=(\\d+)/);\nvar bid = m ? m[1] : '';\nvar u = 'https://m.txl1.com/e/DownSys/GetDown/?classid=1&id=' + bid + '&pathid=0&line=original';\nresult = String(java.ajax(u));\n</js>",
+   "nextContentUrl": ""
+  }
+ }
+]
