@@ -1,1 +1,56 @@
-[{"bookSourceComment": "// Error: 搜索失效", "bookSourceGroup": "破冰", "bookSourceName": "大文学①", "bookSourceType": 0, "bookSourceUrl": "https://www.dawenxue.net/", "bookUrlPattern": "https://www.dawenxue.net/\\d+/", "customButton": false, "customOrder": 116, "enabled": true, "enabledCookieJar": false, "enabledExplore": false, "eventListener": false, "lastUpdateTime": 1687753018505, "respondTime": 181666, "ruleBookInfo": {"author": "[property=og:novel:author]@content", "coverUrl": "[property=og:image]@content", "intro": "[property=og:description]@content", "kind": "[property=og:novel:update_time]@content&&\n[property=og:novel:category]@content&&\n[property=og:novel:status]@content", "lastChapter": "[property=og:novel:latest_chapter_name]@content##免费章节 |正文卷 |正文 |VIP章节 ", "name": "[property=og:novel:book_name]@content##|\\（.*|\\(.*|免费阅读|全文.*阅读|最新章节|小说|笔趣阁|免费.*"}, "ruleContent": {"content": "id.htmlContent@p@html", "replaceRegex": "##br>|推荐下.*更新快！|推荐一个.*com ！|广个告.*离线朗读！|广个告.*更新快！"}, "ruleExplore": {}, "ruleSearch": {"author": "$.author", "bookList": "$..search[*]", "bookUrl": "{{$.book_list_url}}", "checkKeyWord": "", "coverUrl": "{{$.cover}}", "intro": "$.intro", "kind": "{{$.uptime}}\n{{$.cate_name}}\n{{$.status_str}}", "lastChapter": "$.latest_chapter_name", "name": "$.book_name"}, "ruleToc": {"chapterList": "id.list@tag.dd@a", "chapterName": "text", "chapterUrl": "href"}, "searchUrl": "/api/search?q={{key}}", "weight": 0}]
+[
+ {
+  "bookSourceComment": "仅发现",
+  "bookSourceGroup": "已修复",
+  "bookSourceName": "大文学①",
+  "bookSourceType": 0,
+  "bookSourceUrl": "https://m.dawenxue.net",
+  "bookUrlPattern": "https://www.dawenxue.net/\\d+/",
+  "customButton": false,
+  "customOrder": 0,
+  "enabled": true,
+  "enabledCookieJar": false,
+  "enabledExplore": true,
+  "eventListener": false,
+  "exploreUrl": "玄幻::https://m.dawenxue.net/fenlei1/\n仙侠::https://m.dawenxue.net/fenlei2/\n都市::https://m.dawenxue.net/fenlei3/\n历史::https://m.dawenxue.net/fenlei4/\n科幻::https://m.dawenxue.net/fenlei5/\n武侠::https://m.dawenxue.net/fenlei6/\n网游::https://m.dawenxue.net/fenlei7/\n言情::https://m.dawenxue.net/fenlei8/\n其他::https://m.dawenxue.net/fenlei9/",
+  "header": "User-Agent: Mozilla/5.0 (Linux; Android 13; SM-G991B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
+  "lastUpdateTime": 1687753018505,
+  "respondTime": 181666,
+  "ruleBookInfo": {
+   "author": "class.info@tag.p.0@text##作者：",
+   "canReName": "",
+   "coverUrl": "class.image@img@src",
+   "intro": "class.introbar@text##简介：",
+   "kind": "class.info@tag.p.1@tag.a@text",
+   "lastChapter": "class.newest@tag.a@text",
+   "name": "class.info@tag.h2@text",
+   "tocUrl": "",
+   "wordCount": ""
+  },
+  "ruleContent": {
+   "content": "//*[@id='text']//text()",
+   "nextContentUrl": ""
+  },
+  "ruleExplore": {
+   "bookList": "#list@tag.article",
+   "name": "h2.title@text",
+   "bookUrl": "div.image@a@href",
+   "author": "p.0@text##作者：",
+   "intro": "p.intro@text##简介：",
+   "coverUrl": "div.image@a@img@src",
+   "kind": "",
+   "lastChapter": "",
+   "wordCount": ""
+  },
+  "ruleSearch": {},
+  "ruleToc": {
+   "chapterList": "//ul[@class='chapter']/li/a",
+   "chapterName": "text",
+   "chapterUrl": "href",
+   "formatJs": "",
+   "nextTocUrl": ""
+  },
+  "searchUrl": "",
+  "weight": 0
+ }
+]
