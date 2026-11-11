@@ -53,12 +53,12 @@
   "ruleToc": {
    "chapterList": "//*[@id='btnlist']",
    "chapterName": "<js>result = '全书 TXT'</js>",
-   "chapterUrl": "<js>var m = baseUrl.match(/\\/b\\/(\\d+)\\.html/); var bid = m ? m[1] : ''; result = 'https://m.txl1.com/e/DownSys/GetDown/?classid=1&id=' + bid + '&pathid=0&line=original';</js>",
+   "chapterUrl": "<js>\nvar m = baseUrl.match(/\\/b\\/(\\d+)\\.html/);\nvar bid = m ? m[1] : (String(baseUrl).match(/[?&]id=(\\d+)/) ? String(baseUrl).match(/[?&]id=(\\d+)/)[1] : '');\nresult = 'https://m.txl1.com/e/DownSys/GetDown/?classid=1&id=' + bid + '&pathid=0&line=original';\n</js>",
    "nextTocUrl": "",
    "formatJs": ""
   },
   "ruleContent": {
-   "content": "<js>\nvar m = baseUrl.match(/id=(\\d+)/);\nvar bid = m ? m[1] : '';\nvar u = 'https://m.txl1.com/e/DownSys/GetDown/?classid=1&id=' + bid + '&pathid=0&line=original';\nresult = String(java.ajax(u));\n</js>",
+   "content": "<js>\nvar m = String(baseUrl).match(/[?&]id=(\\d+)/);\nvar bid = m ? m[1] : '';\nvar u = 'https://m.txl1.com/e/DownSys/GetDown/?classid=1&id=' + bid + '&pathid=0&line=original';\nvar t = String(java.ajax(u));\nif (t.indexOf('<!DOCTYPE') >= 0 || t.indexOf('<html') >= 0) {\n  if (t.indexOf('此下载不存在') >= 0) { result = '【下载不存在】该书没有 TXT 文件'; }\n  else if (t.indexOf('登录') >= 0) { result = '【需要登录】请在书源设置里粘贴 Cookie'; }\n  else { result = '【下载失败】站点返回提示页'; }\n} else { result = t.replace(String.fromCharCode(65279), ''); }\n</js>",
    "nextContentUrl": ""
   }
  }
