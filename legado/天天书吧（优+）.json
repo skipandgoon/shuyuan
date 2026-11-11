@@ -1,1 +1,52 @@
-[{"bookSourceComment": "// Error: 搜索失效", "bookSourceGroup": "星辰", "bookSourceName": "天天书吧（优+）", "bookSourceType": 0, "bookSourceUrl": "https://m.ttshu8.com", "bookUrlPattern": "https?://m.ttshu8.com/\\w+/\\d+", "customButton": false, "customOrder": 221, "enabled": true, "enabledCookieJar": true, "enabledExplore": false, "eventListener": false, "exploreUrl": "全部分类::/type/<,{{page}}/>\n玄幻魔法::/sort/1/<,{{page}}/>\n武侠修真::/sort/2/<,{{page}}/>\n都市言情::/sort/3/<,{{page}}/>\n历史军事::/sort/4/<,{{page}}/>\n侦探推理::/sort/5/<,{{page}}/>\n网游动漫::/sort/6/<,{{page}}/>\n科幻小说::/sort/7/<,{{page}}/>\n恐怖灵异::/sort/8/<,{{page}}/>\n散文诗词::/sort/9/<,{{page}}/>\n其他类型::/sort/10/<,{{page}}/>", "header": "{\"referer\": \"{{source.getKey()}}\",\n\"x-requested-with\": \"mark.via\",\n\"accept-language\": \"zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7\",\n\"user-agent\": \"Mozilla/5.0 (Linux; Android 10; PACM00 Build/QP1A.190711.020) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.5359.79 Mobile Safari/537.36\"}", "lastUpdateTime": 1766359663679, "respondTime": 234556, "ruleBookInfo": {"author": ".author@text", "coverUrl": ".detail img@src", "downloadUrls": "text.TXT下载@href", "intro": ".intro p.0@text", "kind": ".detail a.1@text&&.detail span.0@text&&.detail p.-1@text", "lastChapter": ".detail a.-1@text", "name": ".name@text", "tocUrl": ".now a@href", "wordCount": ".detail span.1@text"}, "ruleContent": {"content": ".content@html", "nextContentUrl": "text.下一@href", "replaceRegex": "##喜欢.+收藏.*更新速度最快。"}, "ruleExplore": {}, "ruleSearch": {"author": "a.2@text", "bookList": ".list li", "bookUrl": "a.0@href", "checkKeyWord": "剑来", "coverUrl": "img@src", "intro": "p.-2@text", "kind": "span@text", "lastChapter": "a.-1@text", "name": "a.1@text"}, "ruleToc": {"chapterList": ".read li a", "chapterName": "text", "chapterUrl": "href", "nextTocUrl": "option@value||text.下一页@href"}, "searchUrl": "/search.html,{\n  \"body\": \"searchkey={{key}}\",\n  \"method\": \"POST\"\n}", "weight": 0}]
+[
+ {
+  "bookSourceName": "天天书吧（优+）",
+  "bookSourceUrl": "https://m.ttshu8.com",
+  "bookSourceGroup": "已修复",
+  "bookSourceType": 0,
+  "bookSourceComment": "仅发现",
+  "enabled": true,
+  "enabledExplore": true,
+  "enabledCookieJar": false,
+  "customButton": false,
+  "customOrder": 0,
+  "eventListener": false,
+  "header": "User-Agent: Mozilla/5.0 (Linux; Android 13; SM-G991B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
+  "searchUrl": "",
+  "exploreUrl": "玄幻魔法::https://m.ttshu8.com/sort/1/{{page}}/\n武侠修真::https://m.ttshu8.com/sort/2/{{page}}/\n都市言情::https://m.ttshu8.com/sort/3/{{page}}/\n历史军事::https://m.ttshu8.com/sort/4/{{page}}/\n侦探推理::https://m.ttshu8.com/sort/5/{{page}}/\n网游动漫::https://m.ttshu8.com/sort/6/{{page}}/\n科幻小说::https://m.ttshu8.com/sort/7/{{page}}/\n恐怖灵异::https://m.ttshu8.com/sort/8/{{page}}/\n散文诗词::https://m.ttshu8.com/sort/9/{{page}}/\n其他类型::https://m.ttshu8.com/sort/10/{{page}}/\n完本::https://m.ttshu8.com/quanben/{{page}}/\n总榜::https://m.ttshu8.com/top.html",
+  "ruleSearch": {},
+  "ruleExplore": {
+   "bookList": "class.list@tag.li",
+   "name": "class.bookname@tag.a@text",
+   "bookUrl": "class.bookname@tag.a@href##/book/(\\d+)/##/info/$1.html",
+   "author": "class.data@tag.a.0@text",
+   "kind": "class.data@tag.span.0@text",
+   "intro": "class.intro@text",
+   "coverUrl": "img@src",
+   "lastChapter": "",
+   "wordCount": ""
+  },
+  "ruleBookInfo": {
+   "name": "meta[property=og:novel:book_name]@content",
+   "author": "meta[property=og:novel:author]@content",
+   "kind": "meta[property=og:novel:category]@content",
+   "lastChapter": "class.new@tag.a@text",
+   "intro": "meta[property=og:description]@content",
+   "coverUrl": "meta[property=og:image]@content",
+   "tocUrl": "@js:result = baseUrl.replace('/info/', '/book/').replace('.html', '/')",
+   "wordCount": "",
+   "canReName": ""
+  },
+  "ruleToc": {
+   "chapterList": "//ul[@class='read']/li/a",
+   "chapterName": "text",
+   "chapterUrl": "href",
+   "nextTocUrl": "//div[@class='caption']//a[contains(text(),'下一页')]/@href",
+   "formatJs": ""
+  },
+  "ruleContent": {
+   "content": "//div[@class='content']//text()",
+   "nextContentUrl": ""
+  }
+ }
+]
