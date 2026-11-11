@@ -1,1 +1,60 @@
-[{"bookSourceComment": "// Error: 搜索失效", "bookSourceGroup": "晋江", "bookSourceName": "无双小说🥉", "bookSourceType": 0, "bookSourceUrl": "http://www.buxia.org#", "bookUrlPattern": "http://www.buxia.org/xiaoshuo/\\d+/", "customButton": false, "customOrder": 110, "enabled": true, "enabledCookieJar": true, "enabledExplore": false, "eventListener": false, "exploreUrl": "全部小说::/all/{{page}}.html\n玄幻魔法::/mulu/1/{{page}}.html\n武侠修真::/mulu/2/{{page}}.html\n都市言情::/mulu/3/{{page}}.html\n历史军事::/mulu/4/{{page}}.html\n网游动漫::/mulu/5/{{page}}.html\n科幻星际::/mulu/6/{{page}}.html\n恐怖灵异::/mulu/7/{{page}}.html\n其他类型::/mulu/8/{{page}}.html\n小说排行::/top/\n全本小说::/end/{{page}}.html", "header": "{\"User-Agent\": \"Mozilla/5.0 (Linux; Android 9) Mobile Safari/537.36\"}", "lastUpdateTime": 1716234595631, "respondTime": 190712, "ruleBookInfo": {"author": "@get:{a}", "coverUrl": "@get:{c}", "init": "@put:{n:\"[property$=book_name]@content\",\na:\"[property$=author]@content\",\nk:\"[property~=category|status|update_time]@content\",\nl:\"[property~=las?test_chapter_name]@content\",\ni:\".bookintromore@text\",\nc:\"[property$=image]@content\"}", "intro": "@get:{i}", "kind": "@get:{k}", "lastChapter": "@get:{l}", "name": "@get:{n}"}, "ruleContent": {"content": "@js:\ntxt=java.getElement(\"#txt\")\nvar b=\"\",p=txt.select(\"p\");\nfor(i=0;i<p.length-1;i++){\n\tb+=txt.select(`p[data-id=${i}]`)\n\tb+=\"\\n\"\n\t}\nb", "nextContentUrl": "text.下一页@href", "replaceRegex": "##{{try{title}catch(e){\"\"} }}.*第\\d+.*页\\)|\\s*.本章未完.*\\s*|\\s*.*请关注无双小说网.*\\s*", "webJs": ""}, "ruleExplore": {}, "ruleSearch": {"author": ".author a@text", "bookList": ".bookbox", "bookUrl": "a.1@href", "checkKeyWord": "剑来", "coverUrl": "img@data-original", "intro": ".update@textNodes", "kind": ".author.1@text##.*：", "lastChapter": ".cat a@text", "name": "h4@text"}, "ruleToc": {"chapterList": ".fulllistall dd a", "chapterName": "text", "chapterUrl": "href"}, "searchUrl": "/modules/article/search.php,{\n  \"body\": \"searchkey={{key}}&action=login\",\n  \"method\": \"POST\"\n}", "weight": 0}]
+[
+ {
+  "bookSourceName": "无双小说",
+  "bookSourceUrl": "http://www.buxia.la",
+  "bookSourceGroup": "已修复",
+  "bookSourceType": 0,
+  "bookSourceComment": "",
+  "enabled": true,
+  "enabledExplore": true,
+  "enabledCookieJar": false,
+  "customButton": false,
+  "customOrder": 0,
+  "eventListener": false,
+  "header": "User-Agent: Mozilla/5.0 (Linux; Android 13; SM-G991B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
+  "searchUrl": "http://www.buxia.la/search/?searchkey={{key}}",
+  "exploreUrl": "玄幻魔法::http://www.buxia.la/mulu/1/{{page}}.html\n武侠修真::http://www.buxia.la/mulu/2/{{page}}.html\n都市言情::http://www.buxia.la/mulu/3/{{page}}.html\n历史军事::http://www.buxia.la/mulu/4/{{page}}.html\n网游动漫::http://www.buxia.la/mulu/5/{{page}}.html\n科幻星际::http://www.buxia.la/mulu/6/{{page}}.html\n恐怖灵异::http://www.buxia.la/mulu/7/{{page}}.html\n其他类型::http://www.buxia.la/mulu/8/{{page}}.html",
+  "ruleSearch": {
+   "bookList": "//div[@class='bookbox']",
+   "name": "//h4[@class='bookname']/a/text()",
+   "author": "//div[@class='author'][1]/a/text()",
+   "kind": "//div[@class='author'][2]/text()##分类：",
+   "intro": "//div[@class='update']/text()##简介：",
+   "lastChapter": "//div[@class='cat']/a/text()",
+   "bookUrl": "//h4[@class='bookname']/a/@href",
+   "coverUrl": "//span[@class='num']//img/@src"
+  },
+  "ruleExplore": {
+   "bookList": "//div[@class='bookbox']",
+   "name": "//h4[@class='bookname']/a/text()",
+   "author": "//div[@class='author'][1]/a/text()",
+   "kind": "//div[@class='author'][2]/text()##分类：",
+   "intro": "//div[@class='update']/text()##简介：",
+   "lastChapter": "//div[@class='cat']/a/text()",
+   "bookUrl": "//h4[@class='bookname']/a/@href",
+   "coverUrl": "//span[@class='num']//img/@src"
+  },
+  "ruleBookInfo": {
+   "name": "//meta[@property='og:novel:book_name']/@content",
+   "author": "//meta[@property='og:novel:author']/@content",
+   "kind": "//meta[@property='og:novel:category']/@content",
+   "lastChapter": "//meta[@property='og:novel:latest_chapter_name']/@content",
+   "intro": "//meta[@property='og:description']/@content",
+   "coverUrl": "//meta[@property='og:image']/@content",
+   "tocUrl": "",
+   "wordCount": "",
+   "canReName": ""
+  },
+  "ruleToc": {
+   "chapterList": "//dd/a",
+   "chapterName": "text",
+   "chapterUrl": "href",
+   "nextTocUrl": "",
+   "formatJs": ""
+  },
+  "ruleContent": {
+   "content": "//*[@id='txt']//text()",
+   "nextContentUrl": ""
+  }
+ }
+]
