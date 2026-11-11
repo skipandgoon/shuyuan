@@ -1,1 +1,52 @@
-[{"bookSourceComment": "// Error: 搜索失效\n\n/*\n\t24.7.2明月照大江修复\n*/", "bookSourceGroup": "星辰", "bookSourceName": "图书迷子（优）", "bookSourceType": 0, "bookSourceUrl": "https://www.tushumi.cc", "bookUrlPattern": "https://www.tushumi.org/info-\\d+.html", "concurrentRate": "500", "customButton": false, "customOrder": 265, "enabled": true, "enabledCookieJar": true, "enabledExplore": false, "eventListener": false, "exploreUrl": "[\n  {\n    \"title\":\"玄幻魔法\",\n    \"url\":\"/leibie1_{{page}}.html\",\n    \"style\":{\n      \"layout_flexGrow\":1,\n      \"layout_flexBasisPercent\":0.4\n    }\n  },\n  {\n    \"title\":\"武侠修真\",\n    \"url\":\"/leibie2_{{page}}.html\",\n    \"style\":{\n      \"layout_flexGrow\":1,\n      \"layout_flexBasisPercent\":0.4\n    }\n  },\n  {\n    \"title\":\"都市言情\",\n    \"url\":\"/leibie3_{{page}}.html\",\n    \"style\":{\n      \"layout_flexGrow\":1,\n      \"layout_flexBasisPercent\":0.4\n    }\n  },\n  {\n    \"title\":\"历史军事\",\n    \"url\":\"/leibie4_{{page}}.html\",\n    \"style\":{\n      \"layout_flexGrow\":1,\n      \"layout_flexBasisPercent\":0.4\n    }\n  },\n  {\n    \"title\":\"侦探推理\",\n    \"url\":\"/leibie5_{{page}}.html\",\n    \"style\":{\n      \"layout_flexGrow\":1,\n      \"layout_flexBasisPercent\":0.4\n    }\n  },\n  {\n    \"title\":\"网游动漫\",\n    \"url\":\"/leibie6_{{page}}.html\",\n    \"style\":{\n      \"layout_flexGrow\":1,\n      \"layout_flexBasisPercent\":0.4\n    }\n  },\n  {\n    \"title\":\"科幻小说\",\n    \"url\":\"/leibie7_{{page}}.html\",\n    \"style\":{\n      \"layout_flexGrow\":1,\n      \"layout_flexBasisPercent\":0.4\n    }\n  },\n  {\n    \"title\":\"恐怖灵异\",\n    \"url\":\"/leibie8_{{page}}.html\",\n    \"style\":{\n      \"layout_flexGrow\":1,\n      \"layout_flexBasisPercent\":0.4\n    }\n  },\n  {\n    \"title\":\"散文诗词\",\n    \"url\":\"/leibie9_{{page}}.html\",\n    \"style\":{\n      \"layout_flexGrow\":1,\n      \"layout_flexBasisPercent\":0.4\n    }\n  },\n  {\n    \"title\":\"其他类型\",\n    \"url\":\"/leibie10_{{page}}.html\",\n    \"style\":{\n      \"layout_flexGrow\":1,\n      \"layout_flexBasisPercent\":0.4\n    }\n  }\n]", "lastUpdateTime": 1766340218068, "respondTime": 198323, "ruleBookInfo": {"author": "#info > p:nth-child(2) > a@text", "coverUrl": "#fmimg > img@src", "intro": "@get:{intro}\n##^##　　", "kind": "#info > p:nth-child(3)@text&&\n#info > p:nth-child(5)@text\n##类 别：|{{book.name}}|\\(|\\)|更新时间：|..:..", "lastChapter": "#info > p:nth-child(6) > a@text", "name": "#info > a > h1@text##\\(([^)]+?)\\)##（$1）"}, "ruleContent": {"content": "#content@html", "replaceRegex": "##\\n?.*投推荐票.*"}, "ruleExplore": {}, "ruleSearch": {"author": "div.info > div.title > span@text##作者：", "bookList": "#alistbox", "bookUrl": "div.info > div.title > h2 > a@href", "coverUrl": "div.pic > a > img@src", "intro": "@put:{intro:\"div.info > div.intro@text\"}@get:{intro}", "lastChapter": "div.info > div.sys > li > a@text", "name": "div.info > div.title > h2 > a@text\n##\\(([^)]+?)\\)##（$1）"}, "ruleToc": {"chapterList": "#list > dl > dt:nth-of-type(2) ~ dd", "chapterName": "a@text", "chapterUrl": "a@href"}, "searchUrl": "{{String(java.connect(`${java.connect(source.getKey()).raw().request().url()}search.html,{\n  \"body\": \"searchkey=${key}&searchtype=all&Submit=\",\n  \"charset\": \"UTF-8\",\n  \"method\": \"POST\"\n}`).raw().request().url()).replace(/1(?=\\.html)/, `${page}`)}}", "weight": 0}]
+[
+ {
+  "bookSourceName": "图书迷子（优）",
+  "bookSourceUrl": "https://www.tushumi.cc",
+  "bookSourceGroup": "已修复",
+  "bookSourceType": 0,
+  "bookSourceComment": "仅发现",
+  "enabled": true,
+  "enabledExplore": true,
+  "enabledCookieJar": false,
+  "customButton": false,
+  "customOrder": 0,
+  "eventListener": false,
+  "header": "User-Agent: Mozilla/5.0 (Linux; Android 13; SM-G991B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
+  "searchUrl": "",
+  "exploreUrl": "玄幻魔法::https://www.tushumi.cc/leibie1_{{page}}.html\n武侠修真::https://www.tushumi.cc/leibie2_{{page}}.html\n都市言情::https://www.tushumi.cc/leibie3_{{page}}.html\n历史军事::https://www.tushumi.cc/leibie4_{{page}}.html\n侦探推理::https://www.tushumi.cc/leibie5_{{page}}.html\n网游动漫::https://www.tushumi.cc/leibie6_{{page}}.html\n科幻小说::https://www.tushumi.cc/leibie7_{{page}}.html\n恐怖灵异::https://www.tushumi.cc/leibie8_{{page}}.html\n散文诗词::https://www.tushumi.cc/leibie9_{{page}}.html\n其他类型::https://www.tushumi.cc/leibie10_{{page}}.html\n最近更新::https://www.tushumi.cc/lastupdate/{{page}}/\n最新入库::https://www.tushumi.cc/postdate/{{page}}/\n总点击::https://www.tushumi.cc/goodnum/{{page}}/",
+  "ruleSearch": {},
+  "ruleExplore": {
+   "bookList": "//div[@id='alistbox']/div[@class='info'] | //div[@id='alistbox']/div[contains(@class,'info')]",
+   "name": "//div[contains(@class,'title')]//h2//a/text()",
+   "bookUrl": "//div[contains(@class,'title')]//h2//a/@href",
+   "author": "//div[contains(@class,'title')]/span/text()##作者：",
+   "intro": "//div[contains(@class,'intro')]/text()",
+   "coverUrl": "",
+   "kind": "",
+   "lastChapter": "",
+   "wordCount": ""
+  },
+  "ruleBookInfo": {
+   "name": "//div[@id='info']//h1/text()",
+   "author": "//div[@id='info']/p[1]/a/text()",
+   "kind": "//div[@id='info']/p[2]/text()##^[^：]*：##\\(.*$",
+   "lastChapter": "//div[@id='info']//p[contains(text(),'最新')]//a/text()",
+   "intro": "//div[@id='intro']//text()",
+   "coverUrl": "//div[@id='fmimg']//img/@src",
+   "tocUrl": "",
+   "wordCount": "",
+   "canReName": ""
+  },
+  "ruleToc": {
+   "chapterList": "//div[@id='list']//dt[2]/following-sibling::dd/a",
+   "chapterName": "text",
+   "chapterUrl": "href",
+   "nextTocUrl": "",
+   "formatJs": ""
+  },
+  "ruleContent": {
+   "content": "//*[@id='content']//text()",
+   "nextContentUrl": ""
+  }
+ }
+]
