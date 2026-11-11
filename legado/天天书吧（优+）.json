@@ -33,15 +33,15 @@
    "lastChapter": "class.new@tag.a@text",
    "intro": "meta[property=og:description]@content",
    "coverUrl": "meta[property=og:image]@content",
-   "tocUrl": "@js:result = baseUrl.replace('/info/', '/book/').replace('.html', '/')",
+   "tocUrl": "@js:result = baseUrl.replace('//m.ttshu8.com', '//www.ttshu8.com').replace('/info/', '/book/').replace('.html', '/')",
    "wordCount": "",
    "canReName": ""
   },
   "ruleToc": {
-   "chapterList": "//ul[@class='read']/li/a",
+   "chapterList": "//div[@id='list']//dd/a",
    "chapterName": "text",
-   "chapterUrl": "href",
-   "nextTocUrl": "//div[@class='caption']//a[contains(text(),'下一页')]/@href",
+   "chapterUrl": "href##^/##https://m.ttshu8.com/",
+   "nextTocUrl": "",
    "formatJs": ""
   },
   "ruleContent": {

@@ -45,7 +45,7 @@
   },
   "ruleSearch": {},
   "ruleToc": {
-   "chapterList": "//li/a[contains(@href,'chapter.php')]",
+   "chapterList": "//li[not(contains(@class,'warning'))]/a[contains(@href,'chapter.php')]",
    "chapterName": "text",
    "chapterUrl": "href",
    "nextTocUrl": "<js>\nvar out = [];\nvar h = java.ajax(baseUrl);\nvar mA = /aid=(\\d+)/.exec(baseUrl);\nvar aid = mA ? mA[1] : \"\";\nvar pc = /pagecheck=([0-9a-f]+)/.exec(h);\nif (pc) {\n  var re2 = /page=[0-9]+/g, maxp = 1, m;\n  while ((m = re2.exec(h)) != null) { var v = parseInt(m[0].substring(5)); if (v > maxp) maxp = v; }\n  for (var p = 2; p <= maxp; p++) out.push(\"https://m.wowenku.com/info.php?aid=\" + aid + \"&pagecheck=\" + pc[1] + \"&page=\" + p);\n}\nout;\n</js>",
