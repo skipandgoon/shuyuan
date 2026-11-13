@@ -1,8 +1,8 @@
 [
  {
   "sourceName": "书香门第",
-  "sourceUrl": "http://www.txtnovel.vip/forum-400-1.html",
-  "sourceIcon": "http://www.txtnovel.vip/favicon.ico",
+  "sourceUrl": "http://www.txtnovel.vip/forum.php?mod=forumdisplay&fid=17&filter=recommend&orderby=dateline&ascdesc=desc",
+  "sourceIcon": "https://cdn.jsdelivr.net/gh/skipandgoon/MyIcons/icons/more/txtnovel.png",
   "sourceComment": "无需账号即可浏览版块标题；点开文章可在浏览器里登录后下载附件（下载需登录+1金币）",
   "sourceGroup": "",
   "enabled": true,
@@ -11,7 +11,7 @@
   "customOrder": 0,
   "lastUpdateTime": 0,
   "header": "{\"User-Agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36\", \"Accept-Language\": \"zh-CN,zh;q=0.9\"}",
-  "sortUrl": "精校书籍::http://www.txtnovel.vip/forum-400-1.html\n浪漫言情::http://www.txtnovel.vip/forum-17-1.html\n耽思唯美::http://www.txtnovel.vip/forum-95-1.html\n武侠玄幻::http://www.txtnovel.vip/forum-62-1.html\n科幻恐怖::http://www.txtnovel.vip/forum-49-1.html\n军事历史::http://www.txtnovel.vip/forum-86-1.html\n现代文学::http://www.txtnovel.vip/forum-118-1.html\n小说连载::http://www.txtnovel.vip/forum-63-1.html\n合集全集::http://www.txtnovel.vip/forum-141-1.html\n国学名著::http://www.txtnovel.vip/forum-5-1.html\n海外名作::http://www.txtnovel.vip/forum-40-1.html\n学习管理::http://www.txtnovel.vip/forum-21-1.html\n时尚生活::http://www.txtnovel.vip/forum-169-1.html\n原创完结区::http://www.txtnovel.vip/forum-397-1.html\n原创文学::http://www.txtnovel.vip/forum-45-1.html\n有声小说::http://www.txtnovel.vip/forum-196-1.html\n新书预告::http://www.txtnovel.vip/forum-175-1.html",
+  "sortUrl": "上榜推荐::http://www.txtnovel.vip/forum.php?mod=forumdisplay&fid=17&filter=recommend&orderby=dateline&ascdesc=desc\n精校书籍::http://www.txtnovel.vip/forum-400-1.html\n浪漫言情::http://www.txtnovel.vip/forum-17-1.html\n耽思唯美::http://www.txtnovel.vip/forum-95-1.html\n武侠玄幻::http://www.txtnovel.vip/forum-62-1.html\n科幻恐怖::http://www.txtnovel.vip/forum-49-1.html\n军事历史::http://www.txtnovel.vip/forum-86-1.html\n现代文学::http://www.txtnovel.vip/forum-118-1.html\n小说连载::http://www.txtnovel.vip/forum-63-1.html\n合集全集::http://www.txtnovel.vip/forum-141-1.html\n国学名著::http://www.txtnovel.vip/forum-5-1.html\n海外名作::http://www.txtnovel.vip/forum-40-1.html\n学习管理::http://www.txtnovel.vip/forum-21-1.html\n时尚生活::http://www.txtnovel.vip/forum-169-1.html\n原创完结区::http://www.txtnovel.vip/forum-397-1.html\n原创文学::http://www.txtnovel.vip/forum-45-1.html\n有声小说::http://www.txtnovel.vip/forum-196-1.html\n新书预告::http://www.txtnovel.vip/forum-175-1.html",
   "singleUrl": "",
   "ruleArticles": "//tbody[starts-with(@id,'normalthread_')]",
   "ruleTitle": "a.xst@text",
