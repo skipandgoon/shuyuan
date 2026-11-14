@@ -1,0 +1,66 @@
+[
+  {
+    "bookSourceComment": "",
+    "bookSourceGroup": "",
+    "bookSourceName": "趣读",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://iread.life",
+    "bookUrlPattern": "",
+    "concurrentRate": "",
+    "customOrder": 0,
+    "enabled": true,
+    "enabledCookieJar": false,
+    "enabledExplore": true,
+    "exploreUrl": "所有故事::https://iread.life/articles?page={{page}}\n每日更新::https://iread.life/daily\n故事盐选::https://iread.life/categories/%E6%95%85%E4%BA%8B%E7%9B%90%E9%80%89?page={{page}}\n趣集精选::https://iread.life/categories/%E8%B6%A3%E9%9B%86%E7%B2%BE%E9%80%89?page={{page}}",
+    "header": "{\"User-Agent\": \"Mozilla/5.0 (Linux; Android 10; MI 5s Plus Build/OPR1.170623.032; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/71.0.3578.99 Mobile Safari/537.36\"}",
+    "jsLib": "",
+    "lastUpdateTime": 0,
+    "loginUrl": "",
+    "respondTime": 180000,
+    "ruleBookInfo": {
+      "author": "",
+      "coverUrl": "meta[property=\"og:image\"]@content",
+      "intro": "meta[name=\"description\"]@content",
+      "kind": ".story-tag@text",
+      "lastChapter": "",
+      "name": "h1@text",
+      "tocUrl": "",
+      "wordCount": ""
+    },
+    "ruleContent": {
+      "content": "div.reading-content@html"
+    },
+    "ruleExplore": {
+      "bookList": ".story-card",
+      "name": "h2@text",
+      "bookUrl": "a.story-card-link@href",
+      "intro": ".story-summary@text",
+      "kind": ".story-tag@text",
+      "coverUrl": "",
+      "lastChapter": "",
+      "wordCount": ""
+    },
+    "ruleSearch": {
+      "author": "",
+      "bookList": ".story-card",
+      "bookUrl": "a.story-card-link@href",
+      "checkKeyWord": "",
+      "coverUrl": "",
+      "intro": ".story-summary@text",
+      "kind": ".story-tag@text",
+      "lastChapter": "",
+      "name": "h2@text",
+      "wordCount": ""
+    },
+    "ruleToc": {
+      "chapterList": "h1",
+      "chapterName": "text",
+      "chapterUrl": "<js>baseUrl</js>",
+      "formatJS": "",
+      "isVolume": "",
+      "nextTocUrl": ""
+    },
+    "searchUrl": "https://iread.life/articles?q={{key}}",
+    "weight": 0
+  }
+]
