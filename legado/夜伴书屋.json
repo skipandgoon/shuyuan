@@ -42,15 +42,15 @@
       "wordCount": ""
     },
     "ruleSearch": {
-      "author": "td.1@text",
+      "author": "td:nth-child(2)@text",
       "bookList": ".table tbody tr",
-      "bookUrl": "td.0 a@href",
+      "bookUrl": "td:nth-child(1) a@href",
       "checkKeyWord": "",
       "coverUrl": "",
       "intro": "",
       "kind": "",
       "lastChapter": "",
-      "name": "td.0 a@text",
+      "name": "td:nth-child(1) a@text",
       "wordCount": ""
     },
     "ruleToc": {
