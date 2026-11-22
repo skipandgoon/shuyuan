@@ -31,7 +31,7 @@
       "content": "@js:\n\nvar base = String(baseUrl);\nfunction pick(txt) {\n  var i = txt.indexOf('id=\"cont-body\"');\n  if (i < 0) { return ''; }\n  var j = txt.indexOf('>', i) + 1;\n  var k = txt.indexOf('</div>', j);\n  if (k < 0) { k = txt.length; }\n  return txt.substring(j, k);\n}\nfunction maxPage(txt) {\n  var mx = 1, p = 0, i, j, d, c, n;\n  while ((i = txt.indexOf('_', p)) >= 0) {\n    j = i + 1; d = '';\n    while (j < txt.length) {\n      c = txt.charAt(j);\n      if (c >= '0' && c <= '9') { d = d + c; j = j + 1; } else { break; }\n    }\n    if (d.length > 0) {\n      if (txt.substring(j, j + 5) == '.html') {\n        n = parseInt(d, 10);\n        if (n > mx) { mx = n; }\n      }\n    }\n    p = i + 1;\n  }\n  return mx;\n}\n// 若当前就是 _N.html，归一到第一页\nvar cut = base.lastIndexOf('.html');\nvar pre = cut > 0 ? base.substring(0, cut) : base;\nvar us = pre.lastIndexOf('_');\nif (us > 0) {\n  var tail = pre.substring(us + 1);\n  var allNum = true;\n  for (var q = 0; q < tail.length; q++) {\n    var cc = tail.charAt(q);\n    if (cc < '0' || cc > '9') { allNum = false; break; }\n  }\n  if (allNum) { pre = pre.substring(0, us); }\n}\nvar first = pre + '.html';\nvar h = String(java.ajax(first));\nvar out = pick(h);\nvar mp = maxPage(h);\nif (mp > 1) {\n  var parts = [out];\n  for (var p = 2; p <= mp; p = p + 1) {\n    var ph = '';\n    try { ph = String(java.ajax(pre + '_' + p + '.html')); } catch (e) { ph = ''; }\n    if (ph.length > 0) { parts.push(pick(ph)); }\n  }\n  out = parts.join('');\n}\n// 去 script 段\nvar res = '', pos = 0, si, se;\nwhile (true) {\n  si = out.indexOf('<script', pos);\n  if (si < 0) { res = res + out.substring(pos); break; }\n  res = res + out.substring(pos, si);\n  se = out.indexOf('</script>', si);\n  if (se < 0) { break; }\n  pos = se + 9;\n}\nresult = res;\n"
     },
     "ruleExplore": {
-      "author": "span.dark@text",
+      "author": ".media-body .dark@text",
       "bookList": ".media",
       "bookUrl": "h4 a@href",
       "coverUrl": "img@src",
@@ -61,7 +61,7 @@
       "isVolume": "",
       "nextTocUrl": ""
     },
-    "searchUrl": "https://www.yybsw.com/plus/search.php?q={{key}}",
+    "searchUrl": "<js>\nresult = \"https://www.yybsw.com/plus/search.php?q=\" + encodeURIComponent(key);\n</js>",
     "weight": 0
   }
 ]
